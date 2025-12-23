@@ -1,10 +1,10 @@
 ![Bootcamp de Inteligencia Artificial: Zero to Hero](_assets/bootcamp-header.svg)
 
-[![License MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![36 Semanas](https://img.shields.io/badge/Duración-36%20Semanas-green)
-![216 Horas](https://img.shields.io/badge/Total-216%20Horas-orange)
-![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![License MIT](https://img.shields.io/badge/License-MIT-0969DA?style=flat&logo=opensourceinitiative&logoColor=white)](LICENSE)
+![36 Semanas](https://img.shields.io/badge/Duración-36%20Semanas-1F6FEB?style=flat)
+![216 Horas](https://img.shields.io/badge/Total-216%20Horas-FF6F00?style=flat)
+![Python](https://img.shields.io/badge/Python-3.13+-3776AB?style=flat&logo=python&logoColor=white)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-238636?style=flat&logo=git&logoColor=white)](CONTRIBUTING.md)
 
 <div align="center">
 
