@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300">
+  <!-- Background -->
+  <rect width="1200" height="300" fill="#0d1117"/>
+  
+  <!-- Grid pattern (subtle) -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="300" fill="url(#grid)" opacity="0.5"/>
+  
+  <!-- Neural network nodes - left side -->
+  <g opacity="0.6">
+    <!-- Input layer -->
+    <circle cx="80" cy="80" r="8" fill="#3776AB"/>
+    <circle cx="80" cy="130" r="8" fill="#3776AB"/>
+    <circle cx="80" cy="180" r="8" fill="#3776AB"/>
+    <circle cx="80" cy="230" r="8" fill="#3776AB"/>
+    
+    <!-- Hidden layer 1 -->
+    <circle cx="160" cy="100" r="8" fill="#FF6F00"/>
+    <circle cx="160" cy="155" r="8" fill="#FF6F00"/>
+    <circle cx="160" cy="210" r="8" fill="#FF6F00"/>
+    
+    <!-- Hidden layer 2 -->
+    <circle cx="240" cy="120" r="8" fill="#FF6F00"/>
+    <circle cx="240" cy="180" r="8" fill="#FF6F00"/>
+    
+    <!-- Connections input to hidden1 -->
+    <line x1="88" y1="80" x2="152" y2="100" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    <line x1="88" y1="80" x2="152" y2="155" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    <line x1="88" y1="130" x2="152" y2="100" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    <line x1="88" y1="130" x2="152" y2="155" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    <line x1="88" y1="130" x2="152" y2="210" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    <line x1="88" y1="180" x2="152" y2="155" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    <line x1="88" y1="180" x2="152" y2="210" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    <line x1="88" y1="230" x2="152" y2="210" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    
+    <!-- Connections hidden1 to hidden2 -->
+    <line x1="168" y1="100" x2="232" y2="120" stroke="#FF6F00" stroke-width="1" opacity="0.4"/>
+    <line x1="168" y1="100" x2="232" y2="180" stroke="#FF6F00" stroke-width="1" opacity="0.4"/>
+    <line x1="168" y1="155" x2="232" y2="120" stroke="#FF6F00" stroke-width="1" opacity="0.4"/>
+    <line x1="168" y1="155" x2="232" y2="180" stroke="#FF6F00" stroke-width="1" opacity="0.4"/>
+    <line x1="168" y1="210" x2="232" y2="180" stroke="#FF6F00" stroke-width="1" opacity="0.4"/>
+  </g>
+  
+  <!-- Neural network nodes - right side (mirrored) -->
+  <g opacity="0.6">
+    <!-- Output layer -->
+    <circle cx="1120" cy="80" r="8" fill="#3776AB"/>
+    <circle cx="1120" cy="130" r="8" fill="#3776AB"/>
+    <circle cx="1120" cy="180" r="8" fill="#3776AB"/>
+    <circle cx="1120" cy="230" r="8" fill="#3776AB"/>
+    
+    <!-- Hidden layer 1 -->
+    <circle cx="1040" cy="100" r="8" fill="#FF6F00"/>
+    <circle cx="1040" cy="155" r="8" fill="#FF6F00"/>
+    <circle cx="1040" cy="210" r="8" fill="#FF6F00"/>
+    
+    <!-- Hidden layer 2 -->
+    <circle cx="960" cy="120" r="8" fill="#FF6F00"/>
+    <circle cx="960" cy="180" r="8" fill="#FF6F00"/>
+    
+    <!-- Connections -->
+    <line x1="1112" y1="80" x2="1048" y2="100" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    <line x1="1112" y1="80" x2="1048" y2="155" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    <line x1="1112" y1="130" x2="1048" y2="100" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    <line x1="1112" y1="130" x2="1048" y2="155" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    <line x1="1112" y1="130" x2="1048" y2="210" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    <line x1="1112" y1="180" x2="1048" y2="155" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    <line x1="1112" y1="180" x2="1048" y2="210" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    <line x1="1112" y1="230" x2="1048" y2="210" stroke="#3776AB" stroke-width="1" opacity="0.4"/>
+    
+    <line x1="1032" y1="100" x2="968" y2="120" stroke="#FF6F00" stroke-width="1" opacity="0.4"/>
+    <line x1="1032" y1="100" x2="968" y2="180" stroke="#FF6F00" stroke-width="1" opacity="0.4"/>
+    <line x1="1032" y1="155" x2="968" y2="120" stroke="#FF6F00" stroke-width="1" opacity="0.4"/>
+    <line x1="1032" y1="155" x2="968" y2="180" stroke="#FF6F00" stroke-width="1" opacity="0.4"/>
+    <line x1="1032" y1="210" x2="968" y2="180" stroke="#FF6F00" stroke-width="1" opacity="0.4"/>
+  </g>
+  
+  <!-- Brain/AI Icon -->
+  <g transform="translate(540, 40)">
+    <!-- Outer glow effect -->
+    <circle cx="60" cy="60" r="55" fill="none" stroke="#FF6F00" stroke-width="2" opacity="0.3"/>
+    <circle cx="60" cy="60" r="48" fill="none" stroke="#3776AB" stroke-width="2" opacity="0.5"/>
+    
+    <!-- Brain outline -->
+    <path d="M60 20 
+             C85 20 100 35 100 55 
+             C100 70 90 80 80 85
+             C90 95 85 110 70 110
+             C65 115 55 115 50 110
+             C35 110 30 95 40 85
+             C30 80 20 70 20 55
+             C20 35 35 20 60 20Z" 
+          fill="none" stroke="#FF6F00" stroke-width="3"/>
+    
+    <!-- Brain details -->
+    <path d="M45 45 C55 40 65 40 75 45" fill="none" stroke="#3776AB" stroke-width="2"/>
+    <path d="M40 60 C50 55 70 55 80 60" fill="none" stroke="#3776AB" stroke-width="2"/>
+    <path d="M45 75 C55 70 65 70 75 75" fill="none" stroke="#3776AB" stroke-width="2"/>
+    <path d="M50 90 C55 85 65 85 70 90" fill="none" stroke="#3776AB" stroke-width="2"/>
+    
+    <!-- Center dot -->
+    <circle cx="60" cy="60" r="6" fill="#FF6F00"/>
+  </g>
+  
+  <!-- Main Title -->
+  <text x="600" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Artificial Intelligence Bootcamp
+  </text>
+  
+  <!-- Subtitle with gradient effect simulation -->
+  <text x="600" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="600" text-anchor="middle">
+    <tspan fill="#3776AB">Zero</tspan>
+    <tspan fill="#8b949e"> to </tspan>
+    <tspan fill="#FF6F00">Hero</tspan>
+  </text>
+  
+  <!-- Tagline -->
+  <text x="600" y="258" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">
+    36 weeks • 216 hours • Python • Machine Learning • Deep Learning • LLMs
+  </text>
+  
+  <!-- Bottom accent line -->
+  <rect x="300" y="280" width="600" height="3" rx="1.5" fill="#FF6F00" opacity="0.8"/>
+  
+  <!-- Python logo hint - left -->
+  <g transform="translate(320, 60)" opacity="0.15">
+    <path d="M20 0 C8 0 0 8 0 20 L0 30 C0 42 8 50 20 50 L30 50 L30 35 L15 35 L15 15 L35 15 L35 35 L50 35 L50 20 C50 8 42 0 30 0 Z" fill="#3776AB"/>
+    <circle cx="12" cy="10" r="4" fill="#3776AB"/>
+  </g>
+  
+  <!-- Python logo hint - right -->
+  <g transform="translate(830, 60) scale(-1, 1)" opacity="0.15">
+    <path d="M20 0 C8 0 0 8 0 20 L0 30 C0 42 8 50 20 50 L30 50 L30 35 L15 35 L15 15 L35 15 L35 35 L50 35 L50 20 C50 8 42 0 30 0 Z" fill="#3776AB"/>
+    <circle cx="12" cy="10" r="4" fill="#3776AB"/>
+  </g>
+</svg>

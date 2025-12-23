@@ -1,0 +1,14 @@
+[Unit]
+Description=Auto-commit AI Bootcamp repository
+After=network.target
+
+[Service]
+Type=oneshot
+User=epti
+WorkingDirectory=/home/epti/Documents/epti-dev/bc-channel/bc-aidev
+ExecStart=/home/epti/Documents/epti-dev/bc-channel/bc-aidev/_scripts/autocommit.sh
+StandardOutput=append:/home/epti/Documents/epti-dev/bc-channel/bc-aidev/_scripts/logs/systemd.log
+StandardError=append:/home/epti/Documents/epti-dev/bc-channel/bc-aidev/_scripts/logs/systemd-error.log
+
+[Install]
+WantedBy=multi-user.target

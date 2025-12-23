@@ -1,0 +1,38 @@
+# ============================================
+# 🕐 Cron Configuration for Auto-commit
+# ============================================
+# Fedora 43 / systemd-based systems
+# ============================================
+
+# -----------------------------------------
+# Option 1: User Crontab (Recommended)
+# -----------------------------------------
+# Run every 5 minutes
+
+# Edit user crontab:
+# crontab -e
+
+# Add this line:
+*/5 * * * * /home/epti/Documents/epti-dev/bc-channel/bc-aidev/_scripts/autocommit.sh >> /home/epti/Documents/epti-dev/bc-channel/bc-aidev/_scripts/logs/cron.log 2>&1
+
+
+# -----------------------------------------
+# Option 2: Systemd Timer (Modern approach)
+# -----------------------------------------
+# See: autocommit.service and autocommit.timer
+
+
+# -----------------------------------------
+# Verification Commands
+# -----------------------------------------
+# List current cron jobs:
+# crontab -l
+
+# Check cron service status:
+# systemctl status crond
+
+# View cron logs:
+# journalctl -u crond -f
+
+# Test script manually:
+# bash /home/epti/Documents/epti-dev/bc-channel/bc-aidev/_scripts/autocommit.sh
