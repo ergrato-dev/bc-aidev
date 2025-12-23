@@ -611,7 +611,7 @@ Cuando trabajes en este proyecto:
 
 ### Generación de Código
 
-1. **Usa siempre Python moderno (3.14+)**
+1. **Usa siempre Python moderno (3.13+)**
 
    - Type hints
    - f-strings
