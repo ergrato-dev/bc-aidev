@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400">
+  <!-- Background -->
+  <rect width="700" height="400" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="350" y="35" font-family="Inter, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Encapsulamiento con @property</text>
+  
+  <!-- Without property (left) -->
+  <rect x="30" y="60" width="300" height="160" rx="8" fill="#16213e" stroke="#e94560" stroke-width="2"/>
+  <text x="180" y="85" font-family="Inter, sans-serif" font-size="14" fill="#e94560" text-anchor="middle" font-weight="bold">❌ Sin Encapsulamiento</text>
+  
+  <text x="45" y="115" font-family="monospace" font-size="11" fill="#e94560">class </text>
+  <text x="83" y="115" font-family="monospace" font-size="11" fill="#ffd369">Circle</text>
+  <text x="117" y="115" font-family="monospace" font-size="11" fill="#ffffff">:</text>
+  <text x="45" y="135" font-family="monospace" font-size="11" fill="#ffffff">    self.radius = radius</text>
+  <text x="45" y="165" font-family="monospace" font-size="11" fill="#888"># Acceso directo - SIN validación</text>
+  <text x="45" y="185" font-family="monospace" font-size="11" fill="#ffffff">circle.radius = </text>
+  <text x="165" y="185" font-family="monospace" font-size="11" fill="#e94560">-5</text>
+  <text x="185" y="185" font-family="monospace" font-size="11" fill="#888">  # ¡Válido!</text>
+  <text x="45" y="205" font-family="monospace" font-size="11" fill="#888"># Radio negativo no tiene sentido</text>
+  
+  <!-- With property (right) -->
+  <rect x="370" y="60" width="300" height="160" rx="8" fill="#16213e" stroke="#4ecca3" stroke-width="2"/>
+  <text x="520" y="85" font-family="Inter, sans-serif" font-size="14" fill="#4ecca3" text-anchor="middle" font-weight="bold">✅ Con @property</text>
+  
+  <text x="385" y="115" font-family="monospace" font-size="11" fill="#ffd369">@property</text>
+  <text x="385" y="135" font-family="monospace" font-size="11" fill="#e94560">def </text>
+  <text x="413" y="135" font-family="monospace" font-size="11" fill="#ffd369">radius</text>
+  <text x="455" y="135" font-family="monospace" font-size="11" fill="#ffffff">(self): ...</text>
+  <text x="385" y="160" font-family="monospace" font-size="11" fill="#ffd369">@radius.setter</text>
+  <text x="385" y="180" font-family="monospace" font-size="11" fill="#e94560">def </text>
+  <text x="413" y="180" font-family="monospace" font-size="11" fill="#ffd369">radius</text>
+  <text x="455" y="180" font-family="monospace" font-size="11" fill="#ffffff">(self, value):</text>
+  <text x="385" y="200" font-family="monospace" font-size="11" fill="#e94560">    if </text>
+  <text x="413" y="200" font-family="monospace" font-size="11" fill="#ffffff">value &lt;= 0:</text>
+  <text x="505" y="200" font-family="monospace" font-size="11" fill="#e94560"> raise</text>
+  <text x="543" y="200" font-family="monospace" font-size="11" fill="#ffffff">...</text>
+  
+  <!-- Flow diagram -->
+  <rect x="30" y="240" width="640" height="140" rx="8" fill="#0f3460"/>
+  <text x="350" y="265" font-family="Inter, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Flujo de Acceso</text>
+  
+  <!-- Access box -->
+  <rect x="60" y="285" width="130" height="40" rx="6" fill="#16213e" stroke="#ffffff" stroke-width="1"/>
+  <text x="125" y="310" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">obj.radius</text>
+  
+  <!-- Arrow 1 -->
+  <line x1="190" y1="305" x2="240" y2="305" stroke="#4ecca3" stroke-width="2"/>
+  <polygon points="240,300 255,305 240,310" fill="#4ecca3"/>
+  
+  <!-- Property getter -->
+  <rect x="260" y="285" width="130" height="40" rx="6" fill="#4ecca3" fill-opacity="0.3" stroke="#4ecca3" stroke-width="1"/>
+  <text x="325" y="310" font-family="monospace" font-size="12" fill="#4ecca3" text-anchor="middle">@property</text>
+  
+  <!-- Arrow 2 -->
+  <line x1="390" y1="305" x2="440" y2="305" stroke="#ffd369" stroke-width="2"/>
+  <polygon points="440,300 455,305 440,310" fill="#ffd369"/>
+  
+  <!-- Internal attribute -->
+  <rect x="460" y="285" width="130" height="40" rx="6" fill="#16213e" stroke="#ffd369" stroke-width="1"/>
+  <text x="525" y="310" font-family="monospace" font-size="12" fill="#ffd369" text-anchor="middle">self._radius</text>
+  
+  <!-- Labels -->
+  <text x="125" y="345" font-family="Inter, sans-serif" font-size="10" fill="#888" text-anchor="middle">Usuario accede</text>
+  <text x="325" y="345" font-family="Inter, sans-serif" font-size="10" fill="#888" text-anchor="middle">Getter controla</text>
+  <text x="525" y="345" font-family="Inter, sans-serif" font-size="10" fill="#888" text-anchor="middle">Dato real</text>
+  
+  <!-- Bottom note -->
+  <text x="350" y="370" font-family="Inter, sans-serif" font-size="11" fill="#4ecca3" text-anchor="middle">Sintaxis de atributo + Control de método</text>
+</svg>

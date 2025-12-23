@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420">
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ecca3"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="700" height="420" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="350" y="35" font-family="Inter, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Sistema de Biblioteca - Arquitectura</text>
+  
+  <!-- Library class (center) -->
+  <rect x="230" y="60" width="240" height="130" rx="8" fill="#16213e" stroke="#4ecca3" stroke-width="3"/>
+  <rect x="230" y="60" width="240" height="35" rx="8" fill="#4ecca3"/>
+  <rect x="230" y="80" width="240" height="15" fill="#4ecca3"/>
+  <text x="350" y="85" font-family="monospace" font-size="16" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Library</text>
+  <text x="250" y="115" font-family="monospace" font-size="11" fill="#888">name: str</text>
+  <text x="250" y="133" font-family="monospace" font-size="11" fill="#888">_books: list[Book]</text>
+  <text x="250" y="151" font-family="monospace" font-size="11" fill="#888">_users: list[User]</text>
+  <text x="250" y="175" font-family="monospace" font-size="11" fill="#ffd369">loan_book(), return_book()</text>
+  
+  <!-- Book class (left) -->
+  <rect x="30" y="230" width="200" height="130" rx="8" fill="#16213e" stroke="#ffd369" stroke-width="2"/>
+  <rect x="30" y="230" width="200" height="30" rx="8" fill="#ffd369"/>
+  <rect x="30" y="245" width="200" height="15" fill="#ffd369"/>
+  <text x="130" y="252" font-family="monospace" font-size="14" fill="#1a1a2e" text-anchor="middle" font-weight="bold">Book</text>
+  <text x="45" y="280" font-family="monospace" font-size="11" fill="#888">title: str</text>
+  <text x="45" y="298" font-family="monospace" font-size="11" fill="#888">author: str</text>
+  <text x="45" y="316" font-family="monospace" font-size="11" fill="#888">isbn: str</text>
+  <text x="45" y="340" font-family="monospace" font-size="11" fill="#4ecca3">@property available</text>
+  
+  <!-- User class (right) -->
+  <rect x="470" y="230" width="200" height="130" rx="8" fill="#16213e" stroke="#e94560" stroke-width="2"/>
+  <rect x="470" y="230" width="200" height="30" rx="8" fill="#e94560"/>
+  <rect x="470" y="245" width="200" height="15" fill="#e94560"/>
+  <text x="570" y="252" font-family="monospace" font-size="14" fill="#1a1a2e" text-anchor="middle" font-weight="bold">User</text>
+  <text x="485" y="280" font-family="monospace" font-size="11" fill="#888">name: str</text>
+  <text x="485" y="298" font-family="monospace" font-size="11" fill="#888">user_id: str</text>
+  <text x="485" y="316" font-family="monospace" font-size="11" fill="#888">_borrowed_books: list</text>
+  <text x="485" y="340" font-family="monospace" font-size="11" fill="#4ecca3">@property can_borrow</text>
+  
+  <!-- Connection arrows -->
+  <line x1="230" y1="140" x2="130" y2="230" stroke="#4ecca3" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="470" y1="140" x2="570" y2="230" stroke="#4ecca3" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  
+  <!-- Relationship labels -->
+  <text x="160" y="180" font-family="Inter, sans-serif" font-size="10" fill="#4ecca3">contiene</text>
+  <text x="510" y="180" font-family="Inter, sans-serif" font-size="10" fill="#4ecca3">contiene</text>
+  
+  <!-- Loan flow -->
+  <rect x="30" y="380" width="640" height="30" rx="6" fill="#0f3460"/>
+  <text x="50" y="400" font-family="monospace" font-size="11" fill="#ffd369">library.loan_book(isbn, user_id)</text>
+  <text x="280" y="400" font-family="monospace" font-size="11" fill="#ffffff">→ book.available = False</text>
+  <text x="480" y="400" font-family="monospace" font-size="11" fill="#ffffff">→ user.add_book(isbn)</text>
+  
+  <!-- Legend -->
+  <rect x="520" y="70" width="15" height="15" rx="2" fill="#4ecca3"/>
+  <text x="545" y="82" font-family="Inter, sans-serif" font-size="11" fill="#ffffff">Principal</text>
+  
+  <rect x="520" y="95" width="15" height="15" rx="2" fill="#ffd369"/>
+  <text x="545" y="107" font-family="Inter, sans-serif" font-size="11" fill="#ffffff">Entidad</text>
+  
+  <rect x="520" y="120" width="15" height="15" rx="2" fill="#e94560"/>
+  <text x="545" y="132" font-family="Inter, sans-serif" font-size="11" fill="#ffffff">Usuario</text>
+</svg>
