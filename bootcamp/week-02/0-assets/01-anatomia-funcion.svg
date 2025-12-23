@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #a0a0a0; font-family: system-ui, sans-serif; font-size: 14px; }
+      .box { fill: #16213e; stroke: #0f3460; stroke-width: 2; rx: 8; }
+      .box-highlight { fill: #1a1a2e; stroke: #e94560; stroke-width: 2; rx: 6; }
+      .code { fill: #4ecca3; font-family: monospace; font-size: 13px; }
+      .code-keyword { fill: #e94560; font-family: monospace; font-size: 13px; }
+      .code-string { fill: #ffd369; font-family: monospace; font-size: 13px; }
+      .code-comment { fill: #6c757d; font-family: monospace; font-size: 12px; }
+      .label { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 12px; }
+      .label-small { fill: #a0a0a0; font-family: system-ui, sans-serif; font-size: 11px; }
+      .arrow { stroke: #4ecca3; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .line { stroke: #0f3460; stroke-width: 1; stroke-dasharray: 4,4; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ecca3"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+  
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Anatomía de una Función en Python</text>
+  
+  <!-- Main code box -->
+  <rect class="box" x="50" y="60" width="420" height="200"/>
+  
+  <!-- Code -->
+  <text class="code-keyword" x="70" y="95">def</text>
+  <text class="code" x="100" y="95">calculate_mean</text>
+  <text class="code" x="215" y="95">(</text>
+  <text class="code" x="222" y="95">numbers</text>
+  <text class="code" x="280" y="95">:</text>
+  <text class="code" x="290" y="95">list</text>
+  <text class="code" x="315" y="95">)</text>
+  <text class="code" x="325" y="95">-></text>
+  <text class="code" x="350" y="95">float</text>
+  <text class="code" x="385" y="95">:</text>
+  
+  <text class="code-string" x="90" y="120">"""Calculate arithmetic mean."""</text>
+  
+  <text class="code-keyword" x="90" y="150">if</text>
+  <text class="code" x="110" y="150">not numbers:</text>
+  
+  <text class="code-keyword" x="110" y="175">return</text>
+  <text class="code" x="160" y="175">0.0</text>
+  
+  <text class="code" x="90" y="205">total = </text>
+  <text class="code-keyword" x="150" y="205">sum</text>
+  <text class="code" x="175" y="205">(numbers)</text>
+  
+  <text class="code-keyword" x="90" y="235">return</text>
+  <text class="code" x="140" y="235">total / </text>
+  <text class="code-keyword" x="195" y="235">len</text>
+  <text class="code" x="220" y="235">(numbers)</text>
+  
+  <!-- Annotations -->
+  <!-- def keyword -->
+  <line class="arrow" x1="85" y1="85" x2="85" y2="70" x3="500" y3="70"/>
+  <path class="arrow" d="M 85 85 L 85 70 L 500 70"/>
+  <rect class="box-highlight" x="500" y="55" width="130" height="35"/>
+  <text class="label" x="565" y="77" text-anchor="middle">def keyword</text>
+  
+  <!-- Function name -->
+  <path class="arrow" d="M 155 85 L 155 50 L 540 50"/>
+  <rect class="box-highlight" x="540" y="95" width="140" height="35"/>
+  <text class="label" x="610" y="117" text-anchor="middle">Nombre (snake_case)</text>
+  
+  <!-- Parameters -->
+  <rect class="box-highlight" x="540" y="140" width="140" height="35"/>
+  <text class="label" x="610" y="162" text-anchor="middle">Parámetros + tipos</text>
+  
+  <!-- Return type -->
+  <rect class="box-highlight" x="540" y="185" width="140" height="35"/>
+  <text class="label" x="610" y="207" text-anchor="middle">Tipo de retorno</text>
+  
+  <!-- Docstring -->
+  <rect class="box-highlight" x="540" y="230" width="140" height="35"/>
+  <text class="label" x="610" y="252" text-anchor="middle">Docstring</text>
+  
+  <!-- Components section -->
+  <rect class="box" x="50" y="280" width="700" height="200"/>
+  <text class="subtitle" x="70" y="305">Componentes clave:</text>
+  
+  <!-- Parameters types -->
+  <rect fill="#0f3460" x="70" y="320" width="200" height="70" rx="6"/>
+  <text class="label" x="170" y="345" text-anchor="middle">Parámetros</text>
+  <text class="code" x="170" y="370" text-anchor="middle">positional, *args, **kwargs</text>
+  
+  <!-- Return -->
+  <rect fill="#0f3460" x="290" y="320" width="200" height="70" rx="6"/>
+  <text class="label" x="390" y="345" text-anchor="middle">Return</text>
+  <text class="code" x="390" y="370" text-anchor="middle">valor, tupla, None</text>
+  
+  <!-- Scope -->
+  <rect fill="#0f3460" x="510" y="320" width="220" height="70" rx="6"/>
+  <text class="label" x="620" y="345" text-anchor="middle">Scope (LEGB)</text>
+  <text class="code" x="620" y="370" text-anchor="middle">Local, Enclosing, Global, Built-in</text>
+  
+  <!-- Lambda -->
+  <rect fill="#0f3460" x="70" y="405" width="320" height="55" rx="6"/>
+  <text class="label" x="230" y="425" text-anchor="middle">Lambda (función anónima)</text>
+  <text class="code" x="230" y="447" text-anchor="middle">square = lambda x: x ** 2</text>
+  
+  <!-- Default values -->
+  <rect fill="#0f3460" x="410" y="405" width="320" height="55" rx="6"/>
+  <text class="label" x="570" y="425" text-anchor="middle">Valores por defecto</text>
+  <text class="code" x="570" y="447" text-anchor="middle">def func(x, y=10, z="default")</text>
+</svg>

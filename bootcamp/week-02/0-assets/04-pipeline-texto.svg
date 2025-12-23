@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 22px; font-weight: bold; }
+      .subtitle { fill: #a0a0a0; font-family: system-ui, sans-serif; font-size: 13px; }
+      .box { fill: #16213e; stroke: #0f3460; stroke-width: 2; rx: 8; }
+      .box-func { fill: #0f3460; stroke: #4ecca3; stroke-width: 2; rx: 6; }
+      .code { fill: #4ecca3; font-family: monospace; font-size: 12px; }
+      .label { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 11px; }
+      .arrow { stroke: #4ecca3; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .data { fill: #ffd369; font-family: monospace; font-size: 11px; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ecca3"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="450"/>
+  
+  <!-- Title -->
+  <text class="title" x="400" y="30" text-anchor="middle">Pipeline: Analizador de Texto</text>
+  
+  <!-- Input -->
+  <rect class="box" x="30" y="55" width="150" height="80"/>
+  <text class="label" x="105" y="75" text-anchor="middle" font-weight="bold">INPUT</text>
+  <text class="data" x="105" y="95" text-anchor="middle">Texto crudo</text>
+  <text class="subtitle" x="105" y="115" text-anchor="middle">"Machine Learning..."</text>
+  
+  <path class="arrow" d="M 180 95 L 210 95"/>
+  
+  <!-- clean_text -->
+  <rect class="box-func" x="220" y="55" width="140" height="80"/>
+  <text class="code" x="290" y="80" text-anchor="middle">clean_text()</text>
+  <text class="subtitle" x="290" y="100" text-anchor="middle">lowercase</text>
+  <text class="subtitle" x="290" y="115" text-anchor="middle">sin puntuación</text>
+  
+  <path class="arrow" d="M 360 95 L 390 95"/>
+  
+  <!-- count functions -->
+  <rect class="box-func" x="400" y="55" width="140" height="80"/>
+  <text class="code" x="470" y="75" text-anchor="middle">count_words()</text>
+  <text class="code" x="470" y="95" text-anchor="middle">count_unique()</text>
+  <text class="subtitle" x="470" y="115" text-anchor="middle">int, set</text>
+  
+  <path class="arrow" d="M 540 95 L 570 95"/>
+  
+  <!-- word_frequency -->
+  <rect class="box-func" x="580" y="55" width="140" height="80"/>
+  <text class="code" x="650" y="80" text-anchor="middle">word_frequency()</text>
+  <text class="subtitle" x="650" y="100" text-anchor="middle">dict</text>
+  <text class="data" x="650" y="115" text-anchor="middle">{word: count}</text>
+  
+  <!-- Second row -->
+  <path class="arrow" d="M 650 135 L 650 165 L 470 165 L 470 195"/>
+  
+  <!-- top_n_words -->
+  <rect class="box-func" x="400" y="200" width="140" height="80"/>
+  <text class="code" x="470" y="225" text-anchor="middle">top_n_words()</text>
+  <text class="subtitle" x="470" y="245" text-anchor="middle">sorted, lambda</text>
+  <text class="data" x="470" y="265" text-anchor="middle">[(word, n), ...]</text>
+  
+  <path class="arrow" d="M 400 240 L 360 240"/>
+  
+  <!-- text_statistics -->
+  <rect class="box-func" x="220" y="200" width="140" height="80"/>
+  <text class="code" x="290" y="225" text-anchor="middle">text_statistics()</text>
+  <text class="subtitle" x="290" y="245" text-anchor="middle">integra todo</text>
+  <text class="data" x="290" y="265" text-anchor="middle">dict completo</text>
+  
+  <path class="arrow" d="M 220 240 L 180 240"/>
+  
+  <!-- Output -->
+  <rect class="box" x="30" y="200" width="150" height="80"/>
+  <text class="label" x="105" y="220" text-anchor="middle" font-weight="bold">OUTPUT</text>
+  <text class="data" x="105" y="240" text-anchor="middle">Estadísticas</text>
+  <text class="subtitle" x="105" y="260" text-anchor="middle">Reporte completo</text>
+  
+  <!-- Data structures used -->
+  <rect class="box" x="30" y="310" width="740" height="125"/>
+  <text class="label" x="50" y="335" font-weight="bold">Estructuras de datos utilizadas:</text>
+  
+  <rect fill="#0f3460" x="50" y="350" width="160" height="70" rx="6"/>
+  <text class="label" x="130" y="375" text-anchor="middle">str</text>
+  <text class="subtitle" x="130" y="395" text-anchor="middle">Texto limpio</text>
+  <text class="code" x="130" y="410" text-anchor="middle">clean_text()</text>
+  
+  <rect fill="#0f3460" x="230" y="350" width="160" height="70" rx="6"/>
+  <text class="label" x="310" y="375" text-anchor="middle">list</text>
+  <text class="subtitle" x="310" y="395" text-anchor="middle">Palabras, top N</text>
+  <text class="code" x="310" y="410" text-anchor="middle">text.split()</text>
+  
+  <rect fill="#0f3460" x="410" y="350" width="160" height="70" rx="6"/>
+  <text class="label" x="490" y="375" text-anchor="middle">set</text>
+  <text class="subtitle" x="490" y="395" text-anchor="middle">Palabras únicas</text>
+  <text class="code" x="490" y="410" text-anchor="middle">set(words)</text>
+  
+  <rect fill="#0f3460" x="590" y="350" width="160" height="70" rx="6"/>
+  <text class="label" x="670" y="375" text-anchor="middle">dict</text>
+  <text class="subtitle" x="670" y="395" text-anchor="middle">Frecuencias, stats</text>
+  <text class="code" x="670" y="410" text-anchor="middle">Counter(words)</text>
+</svg>

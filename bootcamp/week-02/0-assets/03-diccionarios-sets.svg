@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #a0a0a0; font-family: system-ui, sans-serif; font-size: 14px; }
+      .box { fill: #16213e; stroke: #0f3460; stroke-width: 2; rx: 8; }
+      .code { fill: #4ecca3; font-family: monospace; font-size: 13px; }
+      .label { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 12px; }
+      .key { fill: #e94560; font-family: monospace; font-size: 13px; }
+      .value { fill: #ffd369; font-family: monospace; font-size: 13px; }
+      .arrow { stroke: #4ecca3; stroke-width: 2; }
+      .circle { fill: #0f3460; stroke: #4ecca3; stroke-width: 2; }
+      .circle-a { fill: #e94560; }
+      .circle-b { fill: #4ecca3; }
+      .circle-both { fill: #ffd369; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+  
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Diccionarios y Sets</text>
+  
+  <!-- Dictionary section -->
+  <rect class="box" x="50" y="55" width="350" height="220"/>
+  <text class="subtitle" x="70" y="80">Diccionario: pares key-value</text>
+  
+  <!-- Dict visualization -->
+  <rect fill="#0f3460" x="70" y="95" width="310" height="160" rx="6"/>
+  
+  <text class="key" x="90" y="125">"name"</text>
+  <text class="label" x="170" y="125">→</text>
+  <text class="value" x="190" y="125">"Ana"</text>
+  
+  <text class="key" x="90" y="155">"age"</text>
+  <text class="label" x="170" y="155">→</text>
+  <text class="value" x="190" y="155">25</text>
+  
+  <text class="key" x="90" y="185">"city"</text>
+  <text class="label" x="170" y="185">→</text>
+  <text class="value" x="190" y="185">"Madrid"</text>
+  
+  <text class="key" x="90" y="215">"skills"</text>
+  <text class="label" x="170" y="215">→</text>
+  <text class="value" x="190" y="215">["Python", "ML"]</text>
+  
+  <!-- Access methods -->
+  <text class="code" x="260" y="125">dict["name"]</text>
+  <text class="code" x="260" y="155">dict.get("age")</text>
+  <text class="code" x="260" y="185">dict.keys()</text>
+  <text class="code" x="260" y="215">dict.items()</text>
+  
+  <!-- Sets section -->
+  <rect class="box" x="420" y="55" width="330" height="220"/>
+  <text class="subtitle" x="440" y="80">Set: elementos únicos</text>
+  
+  <!-- Venn diagram -->
+  <circle class="circle-a" cx="520" cy="170" r="60" opacity="0.6"/>
+  <circle class="circle-b" cx="600" cy="170" r="60" opacity="0.6"/>
+  
+  <text class="label" x="490" y="145">A</text>
+  <text class="label" x="630" y="145">B</text>
+  
+  <text class="value" x="490" y="175" text-anchor="middle">1,2</text>
+  <text class="value" x="560" y="175" text-anchor="middle">3,4</text>
+  <text class="value" x="630" y="175" text-anchor="middle">5,6</text>
+  
+  <!-- Set operations -->
+  <text class="code" x="440" y="250">A | B</text>
+  <text class="label" x="500" y="250">Unión</text>
+  
+  <text class="code" x="580" y="250">A &amp; B</text>
+  <text class="label" x="640" y="250">Intersección</text>
+  
+  <!-- Comprehensions -->
+  <rect class="box" x="50" y="290" width="700" height="190"/>
+  <text class="subtitle" x="70" y="315">Comprensiones (Comprehensions)</text>
+  
+  <!-- Dict comprehension -->
+  <rect fill="#0f3460" x="70" y="330" width="320" height="65" rx="6"/>
+  <text class="label" x="230" y="355" text-anchor="middle">Dict Comprehension</text>
+  <text class="code" x="230" y="380" text-anchor="middle">{x: x**2 for x in range(5)}</text>
+  
+  <!-- Set comprehension -->
+  <rect fill="#0f3460" x="410" y="330" width="320" height="65" rx="6"/>
+  <text class="label" x="570" y="355" text-anchor="middle">Set Comprehension</text>
+  <text class="code" x="570" y="380" text-anchor="middle">{x**2 for x in [1,1,2,2,3]}</text>
+  
+  <!-- When to use -->
+  <rect fill="#0f3460" x="70" y="405" width="200" height="60" rx="6"/>
+  <text class="label" x="170" y="428" text-anchor="middle">Usa Dict cuando:</text>
+  <text class="label" x="170" y="450" text-anchor="middle" fill="#a0a0a0">Mapear keys → valores</text>
+  
+  <rect fill="#0f3460" x="290" y="405" width="200" height="60" rx="6"/>
+  <text class="label" x="390" y="428" text-anchor="middle">Usa Set cuando:</text>
+  <text class="label" x="390" y="450" text-anchor="middle" fill="#a0a0a0">Elementos únicos</text>
+  
+  <rect fill="#0f3460" x="510" y="405" width="220" height="60" rx="6"/>
+  <text class="label" x="620" y="428" text-anchor="middle">Usa List cuando:</text>
+  <text class="label" x="620" y="450" text-anchor="middle" fill="#a0a0a0">Orden + duplicados OK</text>
+</svg>

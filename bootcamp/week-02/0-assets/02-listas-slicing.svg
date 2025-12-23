@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #a0a0a0; font-family: system-ui, sans-serif; font-size: 14px; }
+      .box { fill: #16213e; stroke: #0f3460; stroke-width: 2; rx: 8; }
+      .cell { fill: #0f3460; stroke: #4ecca3; stroke-width: 2; }
+      .cell-highlight { fill: #e94560; stroke: #e94560; stroke-width: 2; }
+      .code { fill: #4ecca3; font-family: monospace; font-size: 14px; }
+      .label { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 12px; }
+      .index { fill: #ffd369; font-family: monospace; font-size: 11px; }
+      .index-neg { fill: #e94560; font-family: monospace; font-size: 11px; }
+      .value { fill: #ffffff; font-family: monospace; font-size: 14px; }
+      .arrow { stroke: #4ecca3; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+  
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Listas: Indexing y Slicing</text>
+  
+  <!-- List visualization -->
+  <rect class="box" x="50" y="55" width="700" height="140"/>
+  <text class="code" x="70" y="80">fruits = ["apple", "banana", "cherry", "date", "elder"]</text>
+  
+  <!-- List cells -->
+  <rect class="cell" x="70" y="95" width="110" height="40"/>
+  <text class="value" x="125" y="120" text-anchor="middle">"apple"</text>
+  
+  <rect class="cell" x="190" y="95" width="110" height="40"/>
+  <text class="value" x="245" y="120" text-anchor="middle">"banana"</text>
+  
+  <rect class="cell" x="310" y="95" width="110" height="40"/>
+  <text class="value" x="365" y="120" text-anchor="middle">"cherry"</text>
+  
+  <rect class="cell" x="430" y="95" width="110" height="40"/>
+  <text class="value" x="485" y="120" text-anchor="middle">"date"</text>
+  
+  <rect class="cell" x="550" y="95" width="110" height="40"/>
+  <text class="value" x="605" y="120" text-anchor="middle">"elder"</text>
+  
+  <!-- Positive indices -->
+  <text class="index" x="125" y="155" text-anchor="middle">0</text>
+  <text class="index" x="245" y="155" text-anchor="middle">1</text>
+  <text class="index" x="365" y="155" text-anchor="middle">2</text>
+  <text class="index" x="485" y="155" text-anchor="middle">3</text>
+  <text class="index" x="605" y="155" text-anchor="middle">4</text>
+  
+  <!-- Negative indices -->
+  <text class="index-neg" x="125" y="175" text-anchor="middle">-5</text>
+  <text class="index-neg" x="245" y="175" text-anchor="middle">-4</text>
+  <text class="index-neg" x="365" y="175" text-anchor="middle">-3</text>
+  <text class="index-neg" x="485" y="175" text-anchor="middle">-2</text>
+  <text class="index-neg" x="605" y="175" text-anchor="middle">-1</text>
+  
+  <!-- Legend -->
+  <text class="label" x="680" y="155">Índice +</text>
+  <text class="label" x="680" y="175" fill="#e94560">Índice -</text>
+  
+  <!-- Slicing examples -->
+  <rect class="box" x="50" y="210" width="340" height="270"/>
+  <text class="subtitle" x="70" y="235">Slicing: [start:stop:step]</text>
+  
+  <text class="code" x="70" y="265">fruits[1:4]</text>
+  <text class="label" x="200" y="265">→ ["banana", "cherry", "date"]</text>
+  
+  <text class="code" x="70" y="295">fruits[:3]</text>
+  <text class="label" x="200" y="295">→ ["apple", "banana", "cherry"]</text>
+  
+  <text class="code" x="70" y="325">fruits[2:]</text>
+  <text class="label" x="200" y="325">→ ["cherry", "date", "elder"]</text>
+  
+  <text class="code" x="70" y="355">fruits[::2]</text>
+  <text class="label" x="200" y="355">→ ["apple", "cherry", "elder"]</text>
+  
+  <text class="code" x="70" y="385">fruits[::-1]</text>
+  <text class="label" x="200" y="385">→ Lista al revés</text>
+  
+  <text class="code" x="70" y="415">fruits[-2:]</text>
+  <text class="label" x="200" y="415">→ ["date", "elder"]</text>
+  
+  <text class="code" x="70" y="445">fruits[1:-1]</text>
+  <text class="label" x="200" y="445">→ ["banana", "cherry", "date"]</text>
+  
+  <!-- Lista vs Tupla -->
+  <rect class="box" x="410" y="210" width="340" height="270"/>
+  <text class="subtitle" x="430" y="235">Lista vs Tupla</text>
+  
+  <!-- Lista -->
+  <rect fill="#0f3460" x="430" y="250" width="140" height="100" rx="6"/>
+  <text class="label" x="500" y="275" text-anchor="middle" font-weight="bold">Lista [ ]</text>
+  <text class="label" x="500" y="300" text-anchor="middle">Mutable</text>
+  <text class="label" x="500" y="320" text-anchor="middle">Más memoria</text>
+  <text class="label" x="500" y="340" text-anchor="middle">No hashable</text>
+  
+  <!-- Tupla -->
+  <rect fill="#0f3460" x="590" y="250" width="140" height="100" rx="6"/>
+  <text class="label" x="660" y="275" text-anchor="middle" font-weight="bold">Tupla ( )</text>
+  <text class="label" x="660" y="300" text-anchor="middle">Inmutable</text>
+  <text class="label" x="660" y="320" text-anchor="middle">Menos memoria</text>
+  <text class="label" x="660" y="340" text-anchor="middle">Hashable</text>
+  
+  <!-- Comprehension -->
+  <rect fill="#0f3460" x="430" y="365" width="300" height="100" rx="6"/>
+  <text class="label" x="580" y="390" text-anchor="middle" font-weight="bold">List Comprehension</text>
+  <text class="code" x="580" y="420" text-anchor="middle">[x**2 for x in range(5)]</text>
+  <text class="label" x="580" y="450" text-anchor="middle">→ [0, 1, 4, 9, 16]</text>
+</svg>
