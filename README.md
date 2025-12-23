@@ -6,7 +6,11 @@
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-[🇺🇸 English Version](README_EN.md)
+<div align="center">
+
+[![🇺🇸 English Version](https://img.shields.io/badge/🇺🇸_English-Version-blue?style=for-the-badge)](README_EN.md)
+
+</div>
 
 ---
 
