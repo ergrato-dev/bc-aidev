@@ -11,6 +11,8 @@
 
 ## 📋 Contenido
 
+![Estructuras de control de flujo](../0-assets/04-control-flujo.svg)
+
 ### 1. Condicionales: if / elif / else
 
 Permiten ejecutar código basado en condiciones:

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A2E"/>
+      <stop offset="100%" style="stop-color:#16213E"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bgGrad)"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#FF6F00" font-family="Arial, sans-serif" font-size="24" font-weight="bold">
+    Ecosistema Python para IA
+  </text>
+  
+  <!-- Central Python Logo -->
+  <circle cx="400" cy="200" r="60" fill="#3776AB" opacity="0.9"/>
+  <text x="400" y="210" text-anchor="middle" fill="#FFD43B" font-family="Arial, sans-serif" font-size="36" font-weight="bold">
+    Py
+  </text>
+  
+  <!-- Data Section (Left) -->
+  <g transform="translate(100, 120)">
+    <rect x="0" y="0" width="140" height="100" rx="10" fill="#2D3748" stroke="#4FD1C5" stroke-width="2"/>
+    <text x="70" y="30" text-anchor="middle" fill="#4FD1C5" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      📊 DATOS
+    </text>
+    <text x="70" y="55" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="12">NumPy</text>
+    <text x="70" y="75" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="12">Pandas</text>
+    <text x="70" y="95" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="12">Matplotlib</text>
+  </g>
+  
+  <!-- Arrow Left to Center -->
+  <path d="M 250 170 L 330 190" stroke="#4FD1C5" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- ML Section (Top Right) -->
+  <g transform="translate(560, 80)">
+    <rect x="0" y="0" width="160" height="100" rx="10" fill="#2D3748" stroke="#F6AD55" stroke-width="2"/>
+    <text x="80" y="30" text-anchor="middle" fill="#F6AD55" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      🤖 MACHINE LEARNING
+    </text>
+    <text x="80" y="55" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="12">Scikit-learn</text>
+    <text x="80" y="75" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="12">XGBoost</text>
+    <text x="80" y="95" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="12">LightGBM</text>
+  </g>
+  
+  <!-- Arrow Center to ML -->
+  <path d="M 460 180 L 550 150" stroke="#F6AD55" stroke-width="2" fill="none"/>
+  
+  <!-- DL Section (Bottom Right) -->
+  <g transform="translate(560, 220)">
+    <rect x="0" y="0" width="160" height="100" rx="10" fill="#2D3748" stroke="#FC8181" stroke-width="2"/>
+    <text x="80" y="30" text-anchor="middle" fill="#FC8181" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      🧠 DEEP LEARNING
+    </text>
+    <text x="80" y="55" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="12">TensorFlow</text>
+    <text x="80" y="75" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="12">PyTorch</text>
+    <text x="80" y="95" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="12">Keras</text>
+  </g>
+  
+  <!-- Arrow Center to DL -->
+  <path d="M 460 210 L 550 250" stroke="#FC8181" stroke-width="2" fill="none"/>
+  
+  <!-- NLP Section (Bottom Left) -->
+  <g transform="translate(100, 260)">
+    <rect x="0" y="0" width="140" height="100" rx="10" fill="#2D3748" stroke="#B794F4" stroke-width="2"/>
+    <text x="70" y="30" text-anchor="middle" fill="#B794F4" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      📝 NLP &amp; LLMs
+    </text>
+    <text x="70" y="55" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="12">Hugging Face</text>
+    <text x="70" y="75" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="12">spaCy</text>
+    <text x="70" y="95" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="12">Transformers</text>
+  </g>
+  
+  <!-- Arrow Center to NLP -->
+  <path d="M 350 230 L 250 280" stroke="#B794F4" stroke-width="2" fill="none"/>
+  
+  <!-- Footer -->
+  <text x="400" y="385" text-anchor="middle" fill="#718096" font-family="Arial, sans-serif" font-size="12">
+    Python: El lenguaje que une todo el ecosistema de IA
+  </text>
+</svg>

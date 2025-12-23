@@ -43,6 +43,8 @@ Variable          Memoria
 
 Python tiene varios tipos de datos fundamentales:
 
+![Tipos de datos en Python](../0-assets/02-tipos-datos-python.svg)
+
 #### 📊 Tipos Numéricos
 
 ```python

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A2E"/>
+      <stop offset="100%" style="stop-color:#16213E"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="700" height="350" fill="url(#bgGrad2)"/>
+  
+  <!-- Title -->
+  <text x="350" y="35" text-anchor="middle" fill="#FF6F00" font-family="Arial, sans-serif" font-size="22" font-weight="bold">
+    Tipos de Datos en Python
+  </text>
+  
+  <!-- Numeric Types -->
+  <g transform="translate(30, 60)">
+    <rect x="0" y="0" width="200" height="120" rx="8" fill="#2D3748" stroke="#4FD1C5" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#4FD1C5" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      NUMÉRICOS
+    </text>
+    <text x="20" y="55" fill="#68D391" font-family="monospace" font-size="13">int</text>
+    <text x="80" y="55" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="12">→ 42, -10</text>
+    <text x="20" y="80" fill="#68D391" font-family="monospace" font-size="13">float</text>
+    <text x="80" y="80" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="12">→ 3.14, 2.5e-3</text>
+    <text x="20" y="105" fill="#68D391" font-family="monospace" font-size="13">complex</text>
+    <text x="80" y="105" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="12">→ 2+3j</text>
+  </g>
+  
+  <!-- Text Types -->
+  <g transform="translate(250, 60)">
+    <rect x="0" y="0" width="200" height="120" rx="8" fill="#2D3748" stroke="#F6AD55" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#F6AD55" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      TEXTO
+    </text>
+    <text x="20" y="55" fill="#68D391" font-family="monospace" font-size="13">str</text>
+    <text x="80" y="55" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="12">→ "hello"</text>
+    <text x="20" y="80" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="11">Comillas simples</text>
+    <text x="20" y="100" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="11">o dobles</text>
+  </g>
+  
+  <!-- Boolean Types -->
+  <g transform="translate(470, 60)">
+    <rect x="0" y="0" width="200" height="120" rx="8" fill="#2D3748" stroke="#FC8181" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#FC8181" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      BOOLEANOS
+    </text>
+    <text x="20" y="55" fill="#68D391" font-family="monospace" font-size="13">bool</text>
+    <text x="80" y="55" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="12">→ True, False</text>
+    <text x="20" y="80" fill="#68D391" font-family="monospace" font-size="13">None</text>
+    <text x="80" y="80" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="12">→ Ausencia</text>
+  </g>
+  
+  <!-- Sequence Types -->
+  <g transform="translate(30, 200)">
+    <rect x="0" y="0" width="200" height="120" rx="8" fill="#2D3748" stroke="#B794F4" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#B794F4" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      SECUENCIAS
+    </text>
+    <text x="20" y="55" fill="#68D391" font-family="monospace" font-size="13">list</text>
+    <text x="80" y="55" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="12">→ [1, 2, 3]</text>
+    <text x="20" y="80" fill="#68D391" font-family="monospace" font-size="13">tuple</text>
+    <text x="80" y="80" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="12">→ (1, 2, 3)</text>
+    <text x="20" y="105" fill="#68D391" font-family="monospace" font-size="13">range</text>
+    <text x="80" y="105" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="12">→ range(10)</text>
+  </g>
+  
+  <!-- Mapping Types -->
+  <g transform="translate(250, 200)">
+    <rect x="0" y="0" width="200" height="120" rx="8" fill="#2D3748" stroke="#63B3ED" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#63B3ED" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      MAPPINGS
+    </text>
+    <text x="20" y="55" fill="#68D391" font-family="monospace" font-size="13">dict</text>
+    <text x="80" y="55" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="12">→ {"k": "v"}</text>
+    <text x="20" y="80" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="11">Pares clave-valor</text>
+  </g>
+  
+  <!-- Set Types -->
+  <g transform="translate(470, 200)">
+    <rect x="0" y="0" width="200" height="120" rx="8" fill="#2D3748" stroke="#68D391" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#68D391" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      CONJUNTOS
+    </text>
+    <text x="20" y="55" fill="#68D391" font-family="monospace" font-size="13">set</text>
+    <text x="80" y="55" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="12">→ {1, 2, 3}</text>
+    <text x="20" y="80" fill="#68D391" font-family="monospace" font-size="13">frozenset</text>
+    <text x="80" y="80" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="12">→ inmutable</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="350" y="340" text-anchor="middle" fill="#718096" font-family="Arial, sans-serif" font-size="11">
+    Usa type(variable) para verificar el tipo de cualquier objeto
+  </text>
+</svg>

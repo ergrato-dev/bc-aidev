@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A2E"/>
+      <stop offset="100%" style="stop-color:#16213E"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="700" height="400" fill="url(#bgGrad4)"/>
+  
+  <!-- Title -->
+  <text x="350" y="35" text-anchor="middle" fill="#FF6F00" font-family="Arial, sans-serif" font-size="22" font-weight="bold">
+    Control de Flujo en Python
+  </text>
+  
+  <!-- IF Section -->
+  <g transform="translate(50, 60)">
+    <rect x="0" y="0" width="180" height="150" rx="10" fill="#2D3748" stroke="#4FD1C5" stroke-width="2"/>
+    <text x="90" y="25" text-anchor="middle" fill="#4FD1C5" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      CONDICIONALES
+    </text>
+    
+    <!-- Flowchart -->
+    <polygon points="90,45 130,70 90,95 50,70" fill="#4A5568" stroke="#4FD1C5" stroke-width="1"/>
+    <text x="90" y="75" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="10">if?</text>
+    
+    <line x1="50" y1="70" x2="25" y2="70" stroke="#68D391" stroke-width="2"/>
+    <text x="20" y="65" fill="#68D391" font-family="Arial, sans-serif" font-size="9">True</text>
+    <rect x="10" y="80" width="50" height="25" rx="4" fill="#276749"/>
+    <text x="35" y="97" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="9">código</text>
+    
+    <line x1="130" y1="70" x2="155" y2="70" stroke="#FC8181" stroke-width="2"/>
+    <text x="150" y="65" fill="#FC8181" font-family="Arial, sans-serif" font-size="9">False</text>
+    <rect x="120" y="80" width="50" height="25" rx="4" fill="#742A2A"/>
+    <text x="145" y="97" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="9">else</text>
+    
+    <text x="90" y="130" text-anchor="middle" fill="#A0AEC0" font-family="monospace" font-size="10">
+      if / elif / else
+    </text>
+  </g>
+  
+  <!-- FOR Section -->
+  <g transform="translate(260, 60)">
+    <rect x="0" y="0" width="180" height="150" rx="10" fill="#2D3748" stroke="#F6AD55" stroke-width="2"/>
+    <text x="90" y="25" text-anchor="middle" fill="#F6AD55" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      BUCLE FOR
+    </text>
+    
+    <!-- Flowchart -->
+    <rect x="55" y="40" width="70" height="25" rx="4" fill="#4A5568"/>
+    <text x="90" y="57" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="9">inicio</text>
+    
+    <line x1="90" y1="65" x2="90" y2="75" stroke="#F6AD55" stroke-width="2"/>
+    
+    <polygon points="90,75 130,95 90,115 50,95" fill="#4A5568" stroke="#F6AD55" stroke-width="1"/>
+    <text x="90" y="100" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="9">más?</text>
+    
+    <line x1="90" y1="115" x2="90" y2="130" stroke="#68D391" stroke-width="2"/>
+    <rect x="60" y="130" width="60" height="20" rx="4" fill="#276749"/>
+    <text x="90" y="143" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="8">procesar</text>
+    
+    <text x="90" y="170" text-anchor="middle" fill="#A0AEC0" font-family="monospace" font-size="10">
+      for i in range()
+    </text>
+  </g>
+  
+  <!-- WHILE Section -->
+  <g transform="translate(470, 60)">
+    <rect x="0" y="0" width="180" height="150" rx="10" fill="#2D3748" stroke="#B794F4" stroke-width="2"/>
+    <text x="90" y="25" text-anchor="middle" fill="#B794F4" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      BUCLE WHILE
+    </text>
+    
+    <!-- Flowchart -->
+    <polygon points="90,50 130,75 90,100 50,75" fill="#4A5568" stroke="#B794F4" stroke-width="1"/>
+    <text x="90" y="80" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="9">cond?</text>
+    
+    <line x1="90" y1="100" x2="90" y2="115" stroke="#68D391" stroke-width="2"/>
+    <rect x="55" y="115" width="70" height="25" rx="4" fill="#276749"/>
+    <text x="90" y="132" text-anchor="middle" fill="#FFF" font-family="Arial, sans-serif" font-size="8">ejecutar</text>
+    
+    <!-- Loop back arrow -->
+    <path d="M 125 127 L 155 127 L 155 75 L 130 75" stroke="#B794F4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <text x="90" y="165" text-anchor="middle" fill="#A0AEC0" font-family="monospace" font-size="10">
+      while condición:
+    </text>
+  </g>
+  
+  <!-- Control Keywords -->
+  <g transform="translate(50, 230)">
+    <rect x="0" y="0" width="600" height="80" rx="10" fill="#2D3748" stroke="#718096" stroke-width="1"/>
+    <text x="300" y="25" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      CONTROL DE BUCLES
+    </text>
+    
+    <g transform="translate(30, 45)">
+      <rect x="0" y="0" width="80" height="25" rx="4" fill="#742A2A"/>
+      <text x="40" y="17" text-anchor="middle" fill="#FFF" font-family="monospace" font-size="11">break</text>
+    </g>
+    <text x="140" y="62" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="10">Termina bucle</text>
+    
+    <g transform="translate(220, 45)">
+      <rect x="0" y="0" width="100" height="25" rx="4" fill="#744210"/>
+      <text x="50" y="17" text-anchor="middle" fill="#FFF" font-family="monospace" font-size="11">continue</text>
+    </g>
+    <text x="350" y="62" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="10">Salta iteración</text>
+    
+    <g transform="translate(430, 45)">
+      <rect x="0" y="0" width="70" height="25" rx="4" fill="#276749"/>
+      <text x="35" y="17" text-anchor="middle" fill="#FFF" font-family="monospace" font-size="11">else</text>
+    </g>
+    <text x="530" y="62" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="10">Si no break</text>
+  </g>
+  
+  <!-- List Comprehension -->
+  <g transform="translate(50, 330)">
+    <rect x="0" y="0" width="600" height="50" rx="10" fill="#2D3748" stroke="#68D391" stroke-width="2"/>
+    <text x="20" y="30" fill="#68D391" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+      LIST COMPREHENSION:
+    </text>
+    <text x="180" y="30" fill="#E2E8F0" font-family="monospace" font-size="12">
+      [expresión for item in iterable if condición]
+    </text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="350" y="395" text-anchor="middle" fill="#718096" font-family="Arial, sans-serif" font-size="11">
+    Dominar el control de flujo es esencial para escribir algoritmos de ML
+  </text>
+</svg>

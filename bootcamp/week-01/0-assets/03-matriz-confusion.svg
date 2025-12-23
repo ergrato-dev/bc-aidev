@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 400">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A2E"/>
+      <stop offset="100%" style="stop-color:#16213E"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="750" height="400" fill="url(#bgGrad3)"/>
+  
+  <!-- Title -->
+  <text x="375" y="35" text-anchor="middle" fill="#FF6F00" font-family="Arial, sans-serif" font-size="22" font-weight="bold">
+    Matriz de Confusión
+  </text>
+  
+  <!-- Matrix Grid -->
+  <g transform="translate(175, 70)">
+    <!-- Headers -->
+    <text x="200" y="0" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      PREDICCIÓN
+    </text>
+    <text x="100" y="40" text-anchor="middle" fill="#68D391" font-family="Arial, sans-serif" font-size="13">Positivo</text>
+    <text x="250" y="40" text-anchor="middle" fill="#FC8181" font-family="Arial, sans-serif" font-size="13">Negativo</text>
+    
+    <!-- Vertical header -->
+    <text x="-30" y="130" text-anchor="middle" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" transform="rotate(-90, -30, 130)">
+      REAL
+    </text>
+    <text x="0" y="100" text-anchor="end" fill="#68D391" font-family="Arial, sans-serif" font-size="13">Positivo</text>
+    <text x="0" y="180" text-anchor="end" fill="#FC8181" font-family="Arial, sans-serif" font-size="13">Negativo</text>
+    
+    <!-- TP Cell -->
+    <rect x="25" y="55" width="150" height="70" rx="8" fill="#276749" stroke="#68D391" stroke-width="2"/>
+    <text x="100" y="85" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+      TP
+    </text>
+    <text x="100" y="110" text-anchor="middle" fill="#C6F6D5" font-family="Arial, sans-serif" font-size="11">
+      True Positive
+    </text>
+    
+    <!-- FN Cell -->
+    <rect x="175" y="55" width="150" height="70" rx="8" fill="#744210" stroke="#F6AD55" stroke-width="2"/>
+    <text x="250" y="85" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+      FN
+    </text>
+    <text x="250" y="110" text-anchor="middle" fill="#FEEBC8" font-family="Arial, sans-serif" font-size="11">
+      False Negative
+    </text>
+    
+    <!-- FP Cell -->
+    <rect x="25" y="130" width="150" height="70" rx="8" fill="#742A2A" stroke="#FC8181" stroke-width="2"/>
+    <text x="100" y="160" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+      FP
+    </text>
+    <text x="100" y="185" text-anchor="middle" fill="#FED7D7" font-family="Arial, sans-serif" font-size="11">
+      False Positive
+    </text>
+    
+    <!-- TN Cell -->
+    <rect x="175" y="130" width="150" height="70" rx="8" fill="#276749" stroke="#68D391" stroke-width="2"/>
+    <text x="250" y="160" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+      TN
+    </text>
+    <text x="250" y="185" text-anchor="middle" fill="#C6F6D5" font-family="Arial, sans-serif" font-size="11">
+      True Negative
+    </text>
+  </g>
+  
+  <!-- Formulas Section -->
+  <g transform="translate(50, 290)">
+    <text x="0" y="0" fill="#4FD1C5" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      MÉTRICAS:
+    </text>
+    
+    <text x="0" y="30" fill="#E2E8F0" font-family="monospace" font-size="12">
+      Accuracy  = (TP + TN) / Total
+    </text>
+    <text x="0" y="55" fill="#E2E8F0" font-family="monospace" font-size="12">
+      Precision = TP / (TP + FP)
+    </text>
+    <text x="300" y="30" fill="#E2E8F0" font-family="monospace" font-size="12">
+      Recall    = TP / (TP + FN)
+    </text>
+    <text x="300" y="55" fill="#E2E8F0" font-family="monospace" font-size="12">
+      F1-Score  = 2×(P×R)/(P+R)
+    </text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(550, 100)">
+    <text x="0" y="0" fill="#A0AEC0" font-family="Arial, sans-serif" font-size="13" font-weight="bold">
+      LEYENDA
+    </text>
+    <rect x="0" y="15" width="20" height="15" fill="#276749"/>
+    <text x="30" y="27" fill="#68D391" font-family="Arial, sans-serif" font-size="11">Correctos</text>
+    
+    <rect x="0" y="40" width="20" height="15" fill="#742A2A"/>
+    <text x="30" y="52" fill="#FC8181" font-family="Arial, sans-serif" font-size="11">Tipo I Error</text>
+    
+    <rect x="0" y="65" width="20" height="15" fill="#744210"/>
+    <text x="30" y="77" fill="#F6AD55" font-family="Arial, sans-serif" font-size="11">Tipo II Error</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="375" y="385" text-anchor="middle" fill="#718096" font-family="Arial, sans-serif" font-size="11">
+    La matriz de confusión es fundamental para evaluar modelos de clasificación
+  </text>
+</svg>
