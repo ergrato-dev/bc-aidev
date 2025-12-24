@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="22" font-weight="bold">Tipos de Merge en Pandas</text>
+  
+  <!-- Left DataFrame A -->
+  <rect x="30" y="70" width="140" height="120" rx="8" fill="#2d3748" stroke="#4dabcf" stroke-width="2"/>
+  <text x="100" y="95" text-anchor="middle" fill="#4dabcf" font-family="Inter, sans-serif" font-size="14" font-weight="bold">DataFrame A</text>
+  <line x1="30" y1="105" x2="170" y2="105" stroke="#4dabcf" stroke-width="1"/>
+  <text x="60" y="125" fill="#ffffff" font-family="monospace" font-size="12">1  Ana</text>
+  <text x="60" y="145" fill="#ffffff" font-family="monospace" font-size="12">2  Bob</text>
+  <text x="60" y="165" fill="#ffffff" font-family="monospace" font-size="12">3  Carlos</text>
+  
+  <!-- Right DataFrame B -->
+  <rect x="30" y="210" width="140" height="120" rx="8" fill="#2d3748" stroke="#f7931e" stroke-width="2"/>
+  <text x="100" y="235" text-anchor="middle" fill="#f7931e" font-family="Inter, sans-serif" font-size="14" font-weight="bold">DataFrame B</text>
+  <line x1="30" y1="245" x2="170" y2="245" stroke="#f7931e" stroke-width="1"/>
+  <text x="60" y="265" fill="#ffffff" font-family="monospace" font-size="12">1  IT</text>
+  <text x="60" y="285" fill="#ffffff" font-family="monospace" font-size="12">2  Ventas</text>
+  <text x="60" y="305" fill="#ffffff" font-family="monospace" font-size="12">4  RRHH</text>
+  
+  <!-- Inner Join -->
+  <rect x="200" y="70" width="130" height="130" rx="8" fill="#2d3748" stroke="#10b981" stroke-width="2"/>
+  <text x="265" y="95" text-anchor="middle" fill="#10b981" font-family="Inter, sans-serif" font-size="13" font-weight="bold">INNER</text>
+  <line x1="200" y1="105" x2="330" y2="105" stroke="#10b981" stroke-width="1"/>
+  <text x="215" y="130" fill="#ffffff" font-family="monospace" font-size="11">1  Ana    IT</text>
+  <text x="215" y="150" fill="#ffffff" font-family="monospace" font-size="11">2  Bob    Ventas</text>
+  <text x="265" y="185" text-anchor="middle" fill="#888888" font-family="Inter, sans-serif" font-size="10">Solo coincidencias</text>
+  
+  <!-- Left Join -->
+  <rect x="350" y="70" width="130" height="130" rx="8" fill="#2d3748" stroke="#3b82f6" stroke-width="2"/>
+  <text x="415" y="95" text-anchor="middle" fill="#3b82f6" font-family="Inter, sans-serif" font-size="13" font-weight="bold">LEFT</text>
+  <line x1="350" y1="105" x2="480" y2="105" stroke="#3b82f6" stroke-width="1"/>
+  <text x="365" y="130" fill="#ffffff" font-family="monospace" font-size="11">1  Ana    IT</text>
+  <text x="365" y="150" fill="#ffffff" font-family="monospace" font-size="11">2  Bob    Ventas</text>
+  <text x="365" y="170" fill="#888888" font-family="monospace" font-size="11">3  Carlos NaN</text>
+  <text x="415" y="185" text-anchor="middle" fill="#888888" font-family="Inter, sans-serif" font-size="10">Todo de A</text>
+  
+  <!-- Right Join -->
+  <rect x="500" y="70" width="130" height="130" rx="8" fill="#2d3748" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="565" y="95" text-anchor="middle" fill="#8b5cf6" font-family="Inter, sans-serif" font-size="13" font-weight="bold">RIGHT</text>
+  <line x1="500" y1="105" x2="630" y2="105" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="515" y="130" fill="#ffffff" font-family="monospace" font-size="11">1  Ana    IT</text>
+  <text x="515" y="150" fill="#ffffff" font-family="monospace" font-size="11">2  Bob    Ventas</text>
+  <text x="515" y="170" fill="#888888" font-family="monospace" font-size="11">4  NaN    RRHH</text>
+  <text x="565" y="185" text-anchor="middle" fill="#888888" font-family="Inter, sans-serif" font-size="10">Todo de B</text>
+  
+  <!-- Outer Join -->
+  <rect x="650" y="70" width="130" height="150" rx="8" fill="#2d3748" stroke="#ec4899" stroke-width="2"/>
+  <text x="715" y="95" text-anchor="middle" fill="#ec4899" font-family="Inter, sans-serif" font-size="13" font-weight="bold">OUTER</text>
+  <line x1="650" y1="105" x2="780" y2="105" stroke="#ec4899" stroke-width="1"/>
+  <text x="665" y="130" fill="#ffffff" font-family="monospace" font-size="11">1  Ana    IT</text>
+  <text x="665" y="150" fill="#ffffff" font-family="monospace" font-size="11">2  Bob    Ventas</text>
+  <text x="665" y="170" fill="#888888" font-family="monospace" font-size="11">3  Carlos NaN</text>
+  <text x="665" y="190" fill="#888888" font-family="monospace" font-size="11">4  NaN    RRHH</text>
+  <text x="715" y="210" text-anchor="middle" fill="#888888" font-family="Inter, sans-serif" font-size="10">Todo de A y B</text>
+  
+  <!-- Code examples -->
+  <rect x="200" y="250" width="580" height="100" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="220" y="275" fill="#79c0ff" font-family="monospace" font-size="12">pd.merge(A, B, on=</text>
+  <text x="362" y="275" fill="#a5d6ff" font-family="monospace" font-size="12">'id'</text>
+  <text x="395" y="275" fill="#79c0ff" font-family="monospace" font-size="12">, how=</text>
+  <text x="455" y="275" fill="#a5d6ff" font-family="monospace" font-size="12">'inner'</text>
+  <text x="510" y="275" fill="#79c0ff" font-family="monospace" font-size="12">)</text>
+  <text x="530" y="275" fill="#8b949e" font-family="monospace" font-size="12"># default</text>
+  
+  <text x="220" y="300" fill="#79c0ff" font-family="monospace" font-size="12">pd.merge(A, B, on=</text>
+  <text x="362" y="300" fill="#a5d6ff" font-family="monospace" font-size="12">'id'</text>
+  <text x="395" y="300" fill="#79c0ff" font-family="monospace" font-size="12">, how=</text>
+  <text x="455" y="300" fill="#a5d6ff" font-family="monospace" font-size="12">'left'</text>
+  <text x="503" y="300" fill="#79c0ff" font-family="monospace" font-size="12">)</text>
+  
+  <text x="220" y="325" fill="#79c0ff" font-family="monospace" font-size="12">pd.merge(A, B, on=</text>
+  <text x="362" y="325" fill="#a5d6ff" font-family="monospace" font-size="12">'id'</text>
+  <text x="395" y="325" fill="#79c0ff" font-family="monospace" font-size="12">, how=</text>
+  <text x="455" y="325" fill="#a5d6ff" font-family="monospace" font-size="12">'outer'</text>
+  <text x="510" y="325" fill="#79c0ff" font-family="monospace" font-size="12">)</text>
+</svg>

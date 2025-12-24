@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="pandasGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#150458"/>
+      <stop offset="100%" style="stop-color:#150458"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="24" font-weight="bold">Ecosistema Pandas</text>
+  
+  <!-- Central Pandas Box -->
+  <rect x="300" y="180" width="200" height="80" rx="12" fill="#150458" stroke="#e70488" stroke-width="3"/>
+  <text x="400" y="228" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="22" font-weight="bold">Pandas</text>
+  
+  <!-- NumPy - Left -->
+  <rect x="50" y="100" width="160" height="60" rx="10" fill="#4dabcf" stroke="#4dabcf" stroke-width="2"/>
+  <text x="130" y="138" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="18" font-weight="bold">NumPy</text>
+  <text x="130" y="158" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11">Arrays numéricos</text>
+  
+  <!-- Arrow NumPy to Pandas -->
+  <path d="M 210 130 L 300 200" stroke="#4dabcf" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4dabcf"/>
+    </marker>
+  </defs>
+  
+  <!-- Matplotlib - Right Top -->
+  <rect x="590" y="100" width="160" height="60" rx="10" fill="#11557c" stroke="#11557c" stroke-width="2"/>
+  <text x="670" y="138" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="18" font-weight="bold">Matplotlib</text>
+  <text x="670" y="158" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11">Visualización</text>
+  
+  <!-- Arrow Pandas to Matplotlib -->
+  <path d="M 500 200 L 590 130" stroke="#11557c" stroke-width="2" fill="none" marker-end="url(#arrowMpl)"/>
+  <defs>
+    <marker id="arrowMpl" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#11557c"/>
+    </marker>
+  </defs>
+  
+  <!-- Scikit-learn - Right Bottom -->
+  <rect x="590" y="280" width="160" height="60" rx="10" fill="#f7931e" stroke="#f7931e" stroke-width="2"/>
+  <text x="670" y="318" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="18" font-weight="bold">Scikit-learn</text>
+  <text x="670" y="338" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11">Machine Learning</text>
+  
+  <!-- Arrow Pandas to Scikit-learn -->
+  <path d="M 500 240 L 590 300" stroke="#f7931e" stroke-width="2" fill="none" marker-end="url(#arrowSk)"/>
+  <defs>
+    <marker id="arrowSk" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f7931e"/>
+    </marker>
+  </defs>
+  
+  <!-- Seaborn - Left Bottom -->
+  <rect x="50" y="280" width="160" height="60" rx="10" fill="#76b7b2" stroke="#76b7b2" stroke-width="2"/>
+  <text x="130" y="318" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="18" font-weight="bold">Seaborn</text>
+  <text x="130" y="338" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="11">Visualización estadística</text>
+  
+  <!-- Arrow Pandas to Seaborn -->
+  <path d="M 300 240 L 210 300" stroke="#76b7b2" stroke-width="2" fill="none" marker-end="url(#arrowSb)"/>
+  <defs>
+    <marker id="arrowSb" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#76b7b2"/>
+    </marker>
+  </defs>
+  
+  <!-- Data Sources - Bottom -->
+  <rect x="200" y="400" width="120" height="50" rx="8" fill="#3d5a80" stroke="#3d5a80" stroke-width="2"/>
+  <text x="260" y="432" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">CSV/Excel</text>
+  
+  <rect x="340" y="400" width="120" height="50" rx="8" fill="#3d5a80" stroke="#3d5a80" stroke-width="2"/>
+  <text x="400" y="432" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">SQL/JSON</text>
+  
+  <rect x="480" y="400" width="120" height="50" rx="8" fill="#3d5a80" stroke="#3d5a80" stroke-width="2"/>
+  <text x="540" y="432" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">APIs/Web</text>
+  
+  <!-- Arrows from data sources -->
+  <path d="M 260 400 L 340 260" stroke="#3d5a80" stroke-width="2" fill="none" marker-end="url(#arrowData)"/>
+  <path d="M 400 400 L 400 260" stroke="#3d5a80" stroke-width="2" fill="none" marker-end="url(#arrowData)"/>
+  <path d="M 540 400 L 460 260" stroke="#3d5a80" stroke-width="2" fill="none" marker-end="url(#arrowData)"/>
+  <defs>
+    <marker id="arrowData" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3d5a80"/>
+    </marker>
+  </defs>
+  
+  <!-- Labels -->
+  <text x="400" y="380" text-anchor="middle" fill="#888888" font-family="Inter, sans-serif" font-size="12">Fuentes de Datos</text>
+</svg>
