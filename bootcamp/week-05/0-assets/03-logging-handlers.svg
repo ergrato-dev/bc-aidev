@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <defs>
+    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#60A5FA"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="550" fill="#1E1E2E"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#CDD6F4" text-anchor="middle">Arquitectura del Módulo logging</text>
+  
+  <!-- Logger Source -->
+  <rect x="50" y="80" width="160" height="80" rx="10" fill="#313244" stroke="#89B4FA" stroke-width="2"/>
+  <text x="130" y="105" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#89B4FA" text-anchor="middle">Logger</text>
+  <text x="130" y="130" font-family="JetBrains Mono, monospace" font-size="11" fill="#CDD6F4" text-anchor="middle">logging.getLogger()</text>
+  <text x="130" y="150" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086" text-anchor="middle">Punto de entrada</text>
+  
+  <!-- Arrow to Level Filter -->
+  <line x1="210" y1="120" x2="280" y2="120" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow3)"/>
+  
+  <!-- Level Filter -->
+  <rect x="290" y="80" width="140" height="80" rx="10" fill="#313244" stroke="#F9E2AF" stroke-width="2"/>
+  <text x="360" y="105" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#F9E2AF" text-anchor="middle">Level Filter</text>
+  <text x="360" y="128" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#CDD6F4" text-anchor="middle">DEBUG → INFO →</text>
+  <text x="360" y="145" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#CDD6F4" text-anchor="middle">WARNING → ERROR</text>
+  
+  <!-- Arrow to Handlers -->
+  <line x1="430" y1="120" x2="500" y2="120" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow3)"/>
+  
+  <!-- Handlers Section -->
+  <rect x="510" y="60" width="360" height="200" rx="10" fill="#252536" stroke="#A6E3A1" stroke-width="2"/>
+  <text x="690" y="90" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#A6E3A1" text-anchor="middle">Handlers</text>
+  
+  <!-- StreamHandler -->
+  <rect x="530" y="110" width="150" height="55" rx="6" fill="#313244" stroke="#89B4FA" stroke-width="1"/>
+  <text x="605" y="132" font-family="JetBrains Mono, monospace" font-size="11" fill="#89B4FA" text-anchor="middle">StreamHandler</text>
+  <text x="605" y="152" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086" text-anchor="middle">→ Console/Terminal</text>
+  
+  <!-- FileHandler -->
+  <rect x="700" y="110" width="150" height="55" rx="6" fill="#313244" stroke="#A6E3A1" stroke-width="1"/>
+  <text x="775" y="132" font-family="JetBrains Mono, monospace" font-size="11" fill="#A6E3A1" text-anchor="middle">FileHandler</text>
+  <text x="775" y="152" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086" text-anchor="middle">→ app.log</text>
+  
+  <!-- RotatingFileHandler -->
+  <rect x="530" y="180" width="150" height="55" rx="6" fill="#313244" stroke="#CBA6F7" stroke-width="1"/>
+  <text x="605" y="202" font-family="JetBrains Mono, monospace" font-size="10" fill="#CBA6F7" text-anchor="middle">RotatingFileHandler</text>
+  <text x="605" y="222" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086" text-anchor="middle">→ app.log.1, .2, .3</text>
+  
+  <!-- SMTPHandler -->
+  <rect x="700" y="180" width="150" height="55" rx="6" fill="#313244" stroke="#F38BA8" stroke-width="1"/>
+  <text x="775" y="202" font-family="JetBrains Mono, monospace" font-size="11" fill="#F38BA8" text-anchor="middle">SMTPHandler</text>
+  <text x="775" y="222" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086" text-anchor="middle">→ Email alerts</text>
+  
+  <!-- Formatter Section -->
+  <rect x="290" y="290" width="580" height="100" rx="10" fill="#252536" stroke="#FAB387" stroke-width="2"/>
+  <text x="580" y="320" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#FAB387" text-anchor="middle">Formatter</text>
+  
+  <!-- Format string -->
+  <rect x="310" y="335" width="540" height="40" rx="6" fill="#313244"/>
+  <text x="580" y="360" font-family="JetBrains Mono, monospace" font-size="11" fill="#CDD6F4" text-anchor="middle">'%(asctime)s | %(levelname)s | %(name)s | %(message)s'</text>
+  
+  <!-- Arrow from Handlers to Formatter -->
+  <line x1="690" y1="260" x2="690" y2="280" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow3)"/>
+  
+  <!-- Output Section -->
+  <rect x="50" y="420" width="820" height="110" rx="10" fill="#1E3A29" stroke="#A6E3A1" stroke-width="2"/>
+  <text x="460" y="450" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#A6E3A1" text-anchor="middle">Output Formateado</text>
+  
+  <text x="460" y="485" font-family="JetBrains Mono, monospace" font-size="12" fill="#CDD6F4" text-anchor="middle">2024-01-15 10:30:45 | INFO     | app.main | Application started</text>
+  <text x="460" y="510" font-family="JetBrains Mono, monospace" font-size="12" fill="#F9E2AF" text-anchor="middle">2024-01-15 10:30:46 | WARNING  | app.db   | Connection pool low</text>
+  <text x="460" y="535" font-family="JetBrains Mono, monospace" font-size="12" fill="#F38BA8" text-anchor="middle">2024-01-15 10:30:47 | ERROR    | app.api  | Request timeout</text>
+  
+  <!-- Arrow from Formatter to Output -->
+  <line x1="580" y1="390" x2="580" y2="410" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow3)"/>
+  
+  <!-- Level Colors Legend -->
+  <rect x="50" y="290" width="180" height="115" rx="8" fill="#313244" stroke="#6C7086" stroke-width="1"/>
+  <text x="140" y="315" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#CDD6F4" text-anchor="middle">Niveles de Log</text>
+  
+  <rect x="65" y="330" width="60" height="18" rx="3" fill="#6C7086"/>
+  <text x="95" y="343" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#1E1E2E" text-anchor="middle">DEBUG</text>
+  <text x="140" y="343" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086">10</text>
+  
+  <rect x="65" y="355" width="60" height="18" rx="3" fill="#89B4FA"/>
+  <text x="95" y="368" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#1E1E2E" text-anchor="middle">INFO</text>
+  <text x="140" y="368" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086">20</text>
+  
+  <rect x="65" y="380" width="60" height="18" rx="3" fill="#F9E2AF"/>
+  <text x="95" y="393" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#1E1E2E" text-anchor="middle">WARNING</text>
+  <text x="145" y="393" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086">30</text>
+</svg>

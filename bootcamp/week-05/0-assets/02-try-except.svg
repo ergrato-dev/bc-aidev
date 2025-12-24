@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 580">
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#60A5FA"/>
+    </marker>
+    <marker id="arrow2g" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#A6E3A1"/>
+    </marker>
+    <marker id="arrow2r" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#F38BA8"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="850" height="580" fill="#1E1E2E"/>
+  
+  <!-- Title -->
+  <text x="425" y="35" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#CDD6F4" text-anchor="middle">Flujo de Excepciones: try / except / else / finally</text>
+  
+  <!-- START -->
+  <ellipse cx="425" cy="80" rx="50" ry="25" fill="#313244" stroke="#89B4FA" stroke-width="2"/>
+  <text x="425" y="85" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#89B4FA" text-anchor="middle">START</text>
+  
+  <!-- Arrow to try -->
+  <line x1="425" y1="105" x2="425" y2="135" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow2)"/>
+  
+  <!-- TRY block -->
+  <rect x="300" y="145" width="250" height="60" rx="8" fill="#1E3A5F" stroke="#89B4FA" stroke-width="2"/>
+  <text x="325" y="170" font-family="JetBrains Mono, monospace" font-size="14" fill="#89B4FA">try:</text>
+  <text x="345" y="192" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#CDD6F4">Código que puede fallar</text>
+  
+  <!-- Decision diamond -->
+  <polygon points="425,230 525,280 425,330 325,280" fill="#313244" stroke="#F9E2AF" stroke-width="2"/>
+  <text x="425" y="285" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#F9E2AF" text-anchor="middle">¿Excepción?</text>
+  
+  <!-- NO path (right to else) -->
+  <line x1="525" y1="280" x2="630" y2="280" stroke="#A6E3A1" stroke-width="2" marker-end="url(#arrow2g)"/>
+  <text x="570" y="270" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#A6E3A1">No</text>
+  
+  <!-- ELSE block -->
+  <rect x="640" y="250" width="160" height="60" rx="8" fill="#1E3A29" stroke="#A6E3A1" stroke-width="2"/>
+  <text x="665" y="275" font-family="JetBrains Mono, monospace" font-size="14" fill="#A6E3A1">else:</text>
+  <text x="685" y="297" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#CDD6F4">Si no hay error</text>
+  
+  <!-- YES path (left to except) -->
+  <line x1="325" y1="280" x2="220" y2="280" stroke="#F38BA8" stroke-width="2" marker-end="url(#arrow2r)"/>
+  <text x="280" y="270" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#F38BA8">Sí</text>
+  
+  <!-- EXCEPT block -->
+  <rect x="50" y="250" width="160" height="60" rx="8" fill="#3A1E1E" stroke="#F38BA8" stroke-width="2"/>
+  <text x="75" y="275" font-family="JetBrains Mono, monospace" font-size="14" fill="#F38BA8">except:</text>
+  <text x="95" y="297" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#CDD6F4">Manejar error</text>
+  
+  <!-- Arrow from else down -->
+  <line x1="720" y1="310" x2="720" y2="370" stroke="#A6E3A1" stroke-width="2"/>
+  <line x1="720" y1="370" x2="475" y2="370" stroke="#60A5FA" stroke-width="2"/>
+  
+  <!-- Arrow from except down -->
+  <line x1="130" y1="310" x2="130" y2="370" stroke="#F38BA8" stroke-width="2"/>
+  <line x1="130" y1="370" x2="375" y2="370" stroke="#60A5FA" stroke-width="2"/>
+  
+  <!-- Merge point -->
+  <circle cx="425" cy="370" r="8" fill="#60A5FA"/>
+  
+  <!-- Arrow to finally -->
+  <line x1="425" y1="378" x2="425" y2="405" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow2)"/>
+  
+  <!-- FINALLY block -->
+  <rect x="300" y="415" width="250" height="60" rx="8" fill="#3A2E1E" stroke="#FAB387" stroke-width="2"/>
+  <text x="325" y="440" font-family="JetBrains Mono, monospace" font-size="14" fill="#FAB387">finally:</text>
+  <text x="345" y="462" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#CDD6F4">Siempre se ejecuta</text>
+  
+  <!-- Arrow to END -->
+  <line x1="425" y1="475" x2="425" y2="505" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow2)"/>
+  
+  <!-- END -->
+  <ellipse cx="425" cy="535" rx="50" ry="25" fill="#313244" stroke="#89B4FA" stroke-width="2"/>
+  <text x="425" y="540" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#89B4FA" text-anchor="middle">END</text>
+  
+  <!-- Legend -->
+  <rect x="50" y="420" width="180" height="120" rx="8" fill="#313244" stroke="#6C7086" stroke-width="1"/>
+  <text x="140" y="445" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#CDD6F4" text-anchor="middle">Orden de ejecución</text>
+  
+  <circle cx="70" cy="468" r="10" fill="#1E3A5F" stroke="#89B4FA" stroke-width="2"/>
+  <text x="75" y="472" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#89B4FA" text-anchor="middle">1</text>
+  <text x="95" y="472" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#CDD6F4">try (siempre)</text>
+  
+  <circle cx="70" cy="493" r="10" fill="#3A1E1E" stroke="#F38BA8" stroke-width="2"/>
+  <text x="75" y="497" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#F38BA8" text-anchor="middle">2</text>
+  <text x="95" y="497" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#CDD6F4">except (si error)</text>
+  
+  <circle cx="70" cy="518" r="10" fill="#1E3A29" stroke="#A6E3A1" stroke-width="2"/>
+  <text x="75" y="522" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#A6E3A1" text-anchor="middle">2</text>
+  <text x="95" y="522" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#CDD6F4">else (si OK)</text>
+  
+  <!-- Multiple except note -->
+  <rect x="620" y="420" width="180" height="120" rx="8" fill="#313244" stroke="#6C7086" stroke-width="1"/>
+  <text x="710" y="445" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#CDD6F4" text-anchor="middle">Múltiples except</text>
+  <text x="640" y="470" font-family="JetBrains Mono, monospace" font-size="10" fill="#F38BA8">except ValueError:</text>
+  <text x="640" y="490" font-family="JetBrains Mono, monospace" font-size="10" fill="#F38BA8">except TypeError:</text>
+  <text x="640" y="510" font-family="JetBrains Mono, monospace" font-size="10" fill="#F38BA8">except Exception as e:</text>
+  <text x="640" y="530" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086">↑ De específico a general</text>
+</svg>

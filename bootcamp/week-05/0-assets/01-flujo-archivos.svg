@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arrow1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#60A5FA"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1E1E2E"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#CDD6F4" text-anchor="middle">Flujo de Operaciones con Archivos</text>
+  
+  <!-- open() box -->
+  <rect x="60" y="70" width="140" height="50" rx="8" fill="#313244" stroke="#89B4FA" stroke-width="2"/>
+  <text x="130" y="100" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#CDD6F4" text-anchor="middle">open(file, mode)</text>
+  
+  <!-- Arrow to File Object -->
+  <line x1="200" y1="95" x2="270" y2="95" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow1)"/>
+  
+  <!-- File Object box -->
+  <rect x="280" y="70" width="140" height="50" rx="8" fill="#313244" stroke="#A6E3A1" stroke-width="2"/>
+  <text x="350" y="100" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#CDD6F4" text-anchor="middle">File Object</text>
+  
+  <!-- Arrow to Operations -->
+  <line x1="420" y1="95" x2="490" y2="95" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow1)"/>
+  
+  <!-- Operations box -->
+  <rect x="500" y="60" width="140" height="70" rx="8" fill="#313244" stroke="#F9E2AF" stroke-width="2"/>
+  <text x="570" y="85" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#CDD6F4" text-anchor="middle">read() / write()</text>
+  <text x="570" y="105" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#CDD6F4" text-anchor="middle">readline()</text>
+  <text x="570" y="125" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#6C7086" text-anchor="middle">readlines()</text>
+  
+  <!-- Arrow to close -->
+  <line x1="640" y1="95" x2="710" y2="95" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow1)"/>
+  
+  <!-- close() box -->
+  <rect x="720" y="70" width="60" height="50" rx="8" fill="#313244" stroke="#F38BA8" stroke-width="2"/>
+  <text x="750" y="100" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#CDD6F4" text-anchor="middle">close()</text>
+  
+  <!-- WITH Statement Section -->
+  <text x="400" y="180" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#A6E3A1" text-anchor="middle">✓ Forma Recomendada: Context Manager (with)</text>
+  
+  <!-- With block -->
+  <rect x="100" y="210" width="600" height="120" rx="10" fill="#1E3A29" stroke="#A6E3A1" stroke-width="2"/>
+  
+  <!-- With statement -->
+  <text x="130" y="240" font-family="JetBrains Mono, monospace" font-size="13" fill="#89B4FA">with</text>
+  <text x="165" y="240" font-family="JetBrains Mono, monospace" font-size="13" fill="#CDD6F4">open(</text>
+  <text x="210" y="240" font-family="JetBrains Mono, monospace" font-size="13" fill="#F9E2AF">'data.txt'</text>
+  <text x="290" y="240" font-family="JetBrains Mono, monospace" font-size="13" fill="#CDD6F4">,</text>
+  <text x="300" y="240" font-family="JetBrains Mono, monospace" font-size="13" fill="#F9E2AF">'r'</text>
+  <text x="320" y="240" font-family="JetBrains Mono, monospace" font-size="13" fill="#CDD6F4">)</text>
+  <text x="335" y="240" font-family="JetBrains Mono, monospace" font-size="13" fill="#89B4FA">as</text>
+  <text x="365" y="240" font-family="JetBrains Mono, monospace" font-size="13" fill="#CDD6F4">f:</text>
+  
+  <!-- Body -->
+  <text x="150" y="270" font-family="JetBrains Mono, monospace" font-size="13" fill="#CDD6F4">content = f.read()</text>
+  
+  <!-- Auto-close annotation -->
+  <rect x="450" y="250" width="220" height="60" rx="6" fill="#313244" stroke="#6C7086" stroke-width="1"/>
+  <text x="560" y="275" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#A6E3A1" text-anchor="middle">✓ Auto-cierre garantizado</text>
+  <text x="560" y="295" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#A6E3A1" text-anchor="middle">✓ Manejo de excepciones</text>
+  
+  <!-- Modes Section -->
+  <text x="400" y="370" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#F9E2AF" text-anchor="middle">Modos de Apertura</text>
+  
+  <!-- Mode boxes -->
+  <rect x="50" y="390" width="80" height="45" rx="6" fill="#313244" stroke="#89B4FA" stroke-width="2"/>
+  <text x="90" y="410" font-family="JetBrains Mono, monospace" font-size="14" fill="#89B4FA" text-anchor="middle">'r'</text>
+  <text x="90" y="428" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086" text-anchor="middle">Read</text>
+  
+  <rect x="145" y="390" width="80" height="45" rx="6" fill="#313244" stroke="#A6E3A1" stroke-width="2"/>
+  <text x="185" y="410" font-family="JetBrains Mono, monospace" font-size="14" fill="#A6E3A1" text-anchor="middle">'w'</text>
+  <text x="185" y="428" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086" text-anchor="middle">Write</text>
+  
+  <rect x="240" y="390" width="80" height="45" rx="6" fill="#313244" stroke="#F9E2AF" stroke-width="2"/>
+  <text x="280" y="410" font-family="JetBrains Mono, monospace" font-size="14" fill="#F9E2AF" text-anchor="middle">'a'</text>
+  <text x="280" y="428" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086" text-anchor="middle">Append</text>
+  
+  <rect x="335" y="390" width="80" height="45" rx="6" fill="#313244" stroke="#F38BA8" stroke-width="2"/>
+  <text x="375" y="410" font-family="JetBrains Mono, monospace" font-size="14" fill="#F38BA8" text-anchor="middle">'x'</text>
+  <text x="375" y="428" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086" text-anchor="middle">Exclusive</text>
+  
+  <rect x="430" y="390" width="80" height="45" rx="6" fill="#313244" stroke="#CBA6F7" stroke-width="2"/>
+  <text x="470" y="410" font-family="JetBrains Mono, monospace" font-size="14" fill="#CBA6F7" text-anchor="middle">'rb'</text>
+  <text x="470" y="428" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086" text-anchor="middle">Binary Read</text>
+  
+  <rect x="525" y="390" width="80" height="45" rx="6" fill="#313244" stroke="#94E2D5" stroke-width="2"/>
+  <text x="565" y="410" font-family="JetBrains Mono, monospace" font-size="14" fill="#94E2D5" text-anchor="middle">'wb'</text>
+  <text x="565" y="428" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086" text-anchor="middle">Binary Write</text>
+  
+  <rect x="620" y="390" width="80" height="45" rx="6" fill="#313244" stroke="#FAB387" stroke-width="2"/>
+  <text x="660" y="410" font-family="JetBrains Mono, monospace" font-size="14" fill="#FAB387" text-anchor="middle">'r+'</text>
+  <text x="660" y="428" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086" text-anchor="middle">Read/Write</text>
+  
+  <!-- Encoding note -->
+  <rect x="50" y="450" width="700" height="35" rx="6" fill="#313244"/>
+  <text x="400" y="473" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#6C7086" text-anchor="middle">💡 Siempre especifica encoding: open('file.txt', 'r', encoding='utf-8')</text>
+</svg>

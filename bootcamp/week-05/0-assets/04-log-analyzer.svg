@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <marker id="arrow4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#60A5FA"/>
+    </marker>
+    <marker id="arrow4g" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#A6E3A1"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="600" fill="#1E1E2E"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#CDD6F4" text-anchor="middle">Arquitectura del Proyecto: Log Analyzer</text>
+  
+  <!-- Input Section -->
+  <rect x="50" y="70" width="150" height="80" rx="10" fill="#313244" stroke="#89B4FA" stroke-width="2"/>
+  <text x="125" y="100" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#89B4FA" text-anchor="middle">Log File</text>
+  <text x="125" y="125" font-family="JetBrains Mono, monospace" font-size="11" fill="#6C7086" text-anchor="middle">sample.log</text>
+  <text x="125" y="142" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6C7086" text-anchor="middle">Entrada</text>
+  
+  <!-- Arrow to Parser -->
+  <line x1="200" y1="110" x2="270" y2="110" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow4)"/>
+  
+  <!-- Parser Module -->
+  <rect x="280" y="60" width="180" height="100" rx="10" fill="#1E3A5F" stroke="#89B4FA" stroke-width="2"/>
+  <text x="370" y="90" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#89B4FA" text-anchor="middle">parser.py</text>
+  <text x="370" y="115" font-family="JetBrains Mono, monospace" font-size="10" fill="#CDD6F4" text-anchor="middle">LogParser</text>
+  <text x="370" y="135" font-family="JetBrains Mono, monospace" font-size="10" fill="#CDD6F4" text-anchor="middle">LogEntry</text>
+  <text x="370" y="152" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6C7086" text-anchor="middle">Regex + Dataclass</text>
+  
+  <!-- Arrow to Filters -->
+  <line x1="460" y1="110" x2="530" y2="110" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow4)"/>
+  
+  <!-- Filters Module -->
+  <rect x="540" y="60" width="180" height="100" rx="10" fill="#1E3A29" stroke="#A6E3A1" stroke-width="2"/>
+  <text x="630" y="90" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#A6E3A1" text-anchor="middle">filters.py</text>
+  <text x="630" y="115" font-family="JetBrains Mono, monospace" font-size="10" fill="#CDD6F4" text-anchor="middle">LogFilter</text>
+  <text x="630" y="135" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6C7086" text-anchor="middle">by_level, by_date</text>
+  <text x="630" y="152" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6C7086" text-anchor="middle">by_pattern, custom</text>
+  
+  <!-- Arrow down to Stats -->
+  <line x1="630" y1="160" x2="630" y2="200" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow4)"/>
+  
+  <!-- Stats Module -->
+  <rect x="540" y="210" width="180" height="100" rx="10" fill="#3A2E1E" stroke="#FAB387" stroke-width="2"/>
+  <text x="630" y="240" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#FAB387" text-anchor="middle">stats.py</text>
+  <text x="630" y="265" font-family="JetBrains Mono, monospace" font-size="10" fill="#CDD6F4" text-anchor="middle">StatsAnalyzer</text>
+  <text x="630" y="285" font-family="JetBrains Mono, monospace" font-size="10" fill="#CDD6F4" text-anchor="middle">LogStats</text>
+  <text x="630" y="302" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6C7086" text-anchor="middle">Counter, summary()</text>
+  
+  <!-- Arrow to Exporters -->
+  <line x1="630" y1="310" x2="630" y2="350" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrow4)"/>
+  
+  <!-- Exporters Module -->
+  <rect x="540" y="360" width="180" height="100" rx="10" fill="#2E1E3A" stroke="#CBA6F7" stroke-width="2"/>
+  <text x="630" y="390" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#CBA6F7" text-anchor="middle">exporters.py</text>
+  <text x="630" y="415" font-family="JetBrains Mono, monospace" font-size="10" fill="#CDD6F4" text-anchor="middle">export_to_json()</text>
+  <text x="630" y="435" font-family="JetBrains Mono, monospace" font-size="10" fill="#CDD6F4" text-anchor="middle">export_to_csv()</text>
+  <text x="630" y="452" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6C7086" text-anchor="middle">json, csv modules</text>
+  
+  <!-- Output files -->
+  <line x1="720" y1="410" x2="790" y2="410" stroke="#A6E3A1" stroke-width="2" marker-end="url(#arrow4g)"/>
+  
+  <rect x="800" y="360" width="80" height="40" rx="6" fill="#313244" stroke="#A6E3A1" stroke-width="1"/>
+  <text x="840" y="385" font-family="JetBrains Mono, monospace" font-size="10" fill="#A6E3A1" text-anchor="middle">.json</text>
+  
+  <rect x="800" y="410" width="80" height="40" rx="6" fill="#313244" stroke="#A6E3A1" stroke-width="1"/>
+  <text x="840" y="435" font-family="JetBrains Mono, monospace" font-size="10" fill="#A6E3A1" text-anchor="middle">.csv</text>
+  
+  <!-- CLI Module (center) -->
+  <rect x="280" y="210" width="180" height="100" rx="10" fill="#3A1E1E" stroke="#F38BA8" stroke-width="2"/>
+  <text x="370" y="240" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#F38BA8" text-anchor="middle">cli.py</text>
+  <text x="370" y="265" font-family="JetBrains Mono, monospace" font-size="10" fill="#CDD6F4" text-anchor="middle">argparse</text>
+  <text x="370" y="285" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6C7086" text-anchor="middle">analyze | stats | export</text>
+  <text x="370" y="302" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6C7086" text-anchor="middle">Orquestador</text>
+  
+  <!-- CLI connections -->
+  <line x1="460" y1="260" x2="530" y2="260" stroke="#60A5FA" stroke-width="1" stroke-dasharray="5,3"/>
+  <line x1="460" y1="260" x2="530" y2="110" stroke="#60A5FA" stroke-width="1" stroke-dasharray="5,3"/>
+  <line x1="460" y1="260" x2="530" y2="410" stroke="#60A5FA" stroke-width="1" stroke-dasharray="5,3"/>
+  
+  <!-- Exceptions Module -->
+  <rect x="50" y="210" width="160" height="100" rx="10" fill="#313244" stroke="#F9E2AF" stroke-width="2"/>
+  <text x="130" y="240" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#F9E2AF" text-anchor="middle">exceptions.py</text>
+  <text x="130" y="265" font-family="JetBrains Mono, monospace" font-size="9" fill="#CDD6F4" text-anchor="middle">LogAnalyzerError</text>
+  <text x="130" y="282" font-family="JetBrains Mono, monospace" font-size="9" fill="#CDD6F4" text-anchor="middle">ParseError</text>
+  <text x="130" y="299" font-family="JetBrains Mono, monospace" font-size="9" fill="#CDD6F4" text-anchor="middle">FilterError</text>
+  
+  <!-- Arrow from exceptions to CLI -->
+  <line x1="210" y1="260" x2="270" y2="260" stroke="#F9E2AF" stroke-width="1" stroke-dasharray="5,3"/>
+  
+  <!-- Terminal Section -->
+  <rect x="50" y="370" width="420" height="130" rx="10" fill="#0D0D14" stroke="#6C7086" stroke-width="1"/>
+  <rect x="50" y="370" width="420" height="25" rx="10" fill="#313244"/>
+  <circle cx="70" cy="382" r="6" fill="#F38BA8"/>
+  <circle cx="90" cy="382" r="6" fill="#F9E2AF"/>
+  <circle cx="110" cy="382" r="6" fill="#A6E3A1"/>
+  <text x="260" y="387" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#6C7086" text-anchor="middle">Terminal</text>
+  
+  <text x="70" y="420" font-family="JetBrains Mono, monospace" font-size="11" fill="#A6E3A1">$</text>
+  <text x="90" y="420" font-family="JetBrains Mono, monospace" font-size="11" fill="#CDD6F4">python -m log_analyzer analyze sample.log</text>
+  
+  <text x="70" y="445" font-family="JetBrains Mono, monospace" font-size="11" fill="#A6E3A1">$</text>
+  <text x="90" y="445" font-family="JetBrains Mono, monospace" font-size="11" fill="#CDD6F4">python -m log_analyzer stats sample.log</text>
+  
+  <text x="70" y="470" font-family="JetBrains Mono, monospace" font-size="11" fill="#A6E3A1">$</text>
+  <text x="90" y="470" font-family="JetBrains Mono, monospace" font-size="11" fill="#CDD6F4">python -m log_analyzer export -f json -o out.json</text>
+  
+  <!-- Package Structure -->
+  <rect x="50" y="510" width="830" height="70" rx="10" fill="#313244" stroke="#6C7086" stroke-width="1"/>
+  <text x="100" y="540" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#CDD6F4">Estructura:</text>
+  <text x="200" y="540" font-family="JetBrains Mono, monospace" font-size="11" fill="#89B4FA">log_analyzer/</text>
+  <text x="310" y="540" font-family="JetBrains Mono, monospace" font-size="10" fill="#6C7086">__init__.py</text>
+  <text x="410" y="540" font-family="JetBrains Mono, monospace" font-size="10" fill="#6C7086">__main__.py</text>
+  <text x="520" y="540" font-family="JetBrains Mono, monospace" font-size="10" fill="#6C7086">cli.py</text>
+  <text x="580" y="540" font-family="JetBrains Mono, monospace" font-size="10" fill="#6C7086">parser.py</text>
+  <text x="660" y="540" font-family="JetBrains Mono, monospace" font-size="10" fill="#6C7086">filters.py</text>
+  <text x="100" y="565" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#CDD6F4">Conceptos:</text>
+  <text x="200" y="565" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#A6E3A1">pathlib</text>
+  <text x="260" y="565" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#A6E3A1">dataclasses</text>
+  <text x="350" y="565" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#A6E3A1">regex</text>
+  <text x="400" y="565" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#A6E3A1">argparse</text>
+  <text x="470" y="565" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#A6E3A1">json/csv</text>
+  <text x="540" y="565" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#A6E3A1">exceptions</text>
+  <text x="620" y="565" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#A6E3A1">logging</text>
+  <text x="690" y="565" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#A6E3A1">context managers</text>
+</svg>
