@@ -1,0 +1,114 @@
+<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="480" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#4ecca3" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">Entornos Virtuales - Aislamiento de Dependencias</text>
+  
+  <!-- WITHOUT VENV - Left side -->
+  <g transform="translate(30, 60)">
+    <text x="160" y="20" text-anchor="middle" fill="#e94560" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">❌ Sin entorno virtual</text>
+    
+    <!-- Global Python -->
+    <rect x="10" y="40" width="300" height="180" rx="8" fill="#16213e" stroke="#e94560" stroke-width="2"/>
+    <text x="160" y="65" text-anchor="middle" fill="#e94560" font-family="monospace" font-size="14">Python Global del Sistema</text>
+    
+    <!-- Packages conflicting -->
+    <rect x="30" y="85" width="120" height="35" rx="4" fill="#0f3460" stroke="#ffd369" stroke-width="1"/>
+    <text x="90" y="107" text-anchor="middle" fill="#ffd369" font-family="monospace" font-size="11">requests 2.25</text>
+    
+    <rect x="170" y="85" width="120" height="35" rx="4" fill="#0f3460" stroke="#ffd369" stroke-width="1"/>
+    <text x="230" y="107" text-anchor="middle" fill="#ffd369" font-family="monospace" font-size="11">requests 2.28</text>
+    
+    <!-- Conflict indicator -->
+    <text x="155" y="102" fill="#e94560" font-size="20">⚡</text>
+    
+    <rect x="30" y="130" width="120" height="35" rx="4" fill="#0f3460" stroke="#4ecca3" stroke-width="1"/>
+    <text x="90" y="152" text-anchor="middle" fill="#4ecca3" font-family="monospace" font-size="11">numpy 1.21</text>
+    
+    <rect x="170" y="130" width="120" height="35" rx="4" fill="#0f3460" stroke="#4ecca3" stroke-width="1"/>
+    <text x="230" y="152" text-anchor="middle" fill="#4ecca3" font-family="monospace" font-size="11">pandas 1.3</text>
+    
+    <!-- Projects pointing to global -->
+    <rect x="30" y="175" width="100" height="30" rx="4" fill="#e94560" fill-opacity="0.3" stroke="#e94560" stroke-width="1"/>
+    <text x="80" y="195" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="10">Proyecto A</text>
+    
+    <rect x="190" y="175" width="100" height="30" rx="4" fill="#e94560" fill-opacity="0.3" stroke="#e94560" stroke-width="1"/>
+    <text x="240" y="195" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="10">Proyecto B</text>
+    
+    <!-- Problem text -->
+    <text x="160" y="245" text-anchor="middle" fill="#e94560" font-family="system-ui, sans-serif" font-size="12">Conflictos de versiones</text>
+    <text x="160" y="262" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">Solo UNA versión por paquete</text>
+  </g>
+  
+  <!-- WITH VENV - Right side -->
+  <g transform="translate(420, 60)">
+    <text x="175" y="20" text-anchor="middle" fill="#4ecca3" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">✅ Con entornos virtuales</text>
+    
+    <!-- Project A venv -->
+    <rect x="10" y="40" width="160" height="150" rx="8" fill="#16213e" stroke="#4ecca3" stroke-width="2"/>
+    <rect x="10" y="40" width="160" height="30" rx="8" fill="#4ecca3"/>
+    <rect x="10" y="55" width="160" height="15" fill="#4ecca3"/>
+    <text x="90" y="62" text-anchor="middle" fill="#1a1a2e" font-family="monospace" font-size="12" font-weight="bold">Proyecto A/.venv</text>
+    
+    <rect x="25" y="85" width="130" height="28" rx="4" fill="#0f3460" stroke="#ffd369" stroke-width="1"/>
+    <text x="90" y="104" text-anchor="middle" fill="#ffd369" font-family="monospace" font-size="10">requests==2.25.0</text>
+    
+    <rect x="25" y="120" width="130" height="28" rx="4" fill="#0f3460" stroke="#4ecca3" stroke-width="1"/>
+    <text x="90" y="139" text-anchor="middle" fill="#4ecca3" font-family="monospace" font-size="10">numpy==1.21.0</text>
+    
+    <rect x="25" y="155" width="130" height="25" rx="4" fill="#0f3460" stroke="#a0a0a0" stroke-width="1" stroke-dasharray="3"/>
+    <text x="90" y="172" text-anchor="middle" fill="#a0a0a0" font-family="monospace" font-size="9">aislado</text>
+    
+    <!-- Project B venv -->
+    <rect x="190" y="40" width="160" height="150" rx="8" fill="#16213e" stroke="#4ecca3" stroke-width="2"/>
+    <rect x="190" y="40" width="160" height="30" rx="8" fill="#4ecca3"/>
+    <rect x="190" y="55" width="160" height="15" fill="#4ecca3"/>
+    <text x="270" y="62" text-anchor="middle" fill="#1a1a2e" font-family="monospace" font-size="12" font-weight="bold">Proyecto B/.venv</text>
+    
+    <rect x="205" y="85" width="130" height="28" rx="4" fill="#0f3460" stroke="#ffd369" stroke-width="1"/>
+    <text x="270" y="104" text-anchor="middle" fill="#ffd369" font-family="monospace" font-size="10">requests==2.31.0</text>
+    
+    <rect x="205" y="120" width="130" height="28" rx="4" fill="#0f3460" stroke="#4ecca3" stroke-width="1"/>
+    <text x="270" y="139" text-anchor="middle" fill="#4ecca3" font-family="monospace" font-size="10">pandas==2.0.0</text>
+    
+    <rect x="205" y="155" width="130" height="25" rx="4" fill="#0f3460" stroke="#a0a0a0" stroke-width="1" stroke-dasharray="3"/>
+    <text x="270" y="172" text-anchor="middle" fill="#a0a0a0" font-family="monospace" font-size="9">aislado</text>
+    
+    <!-- Benefits -->
+    <text x="175" y="215" text-anchor="middle" fill="#4ecca3" font-family="system-ui, sans-serif" font-size="12">Sin conflictos</text>
+    <text x="175" y="232" text-anchor="middle" fill="#a0a0a0" font-family="system-ui, sans-serif" font-size="11">Cada proyecto tiene sus versiones</text>
+  </g>
+  
+  <!-- Commands section -->
+  <rect x="30" y="310" width="740" height="155" rx="8" fill="#16213e" stroke="#4ecca3" stroke-width="1"/>
+  <text x="400" y="335" text-anchor="middle" fill="#4ecca3" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Comandos Esenciales</text>
+  
+  <g font-family="monospace" font-size="12">
+    <text x="60" y="365" fill="#ffd369">$</text>
+    <text x="80" y="365" fill="#ffffff">python -m venv .venv</text>
+    <text x="320" y="365" fill="#a0a0a0"># Crear entorno</text>
+    
+    <text x="60" y="390" fill="#ffd369">$</text>
+    <text x="80" y="390" fill="#ffffff">source .venv/bin/activate</text>
+    <text x="320" y="390" fill="#a0a0a0"># Activar (Linux/Mac)</text>
+    
+    <text x="60" y="415" fill="#ffd369">$</text>
+    <text x="80" y="415" fill="#ffffff">pip install -r requirements.txt</text>
+    <text x="320" y="415" fill="#a0a0a0"># Instalar dependencias</text>
+    
+    <text x="60" y="440" fill="#ffd369">$</text>
+    <text x="80" y="440" fill="#ffffff">deactivate</text>
+    <text x="320" y="440" fill="#a0a0a0"># Desactivar</text>
+    
+    <!-- Right column -->
+    <text x="480" y="365" fill="#ffd369">$</text>
+    <text x="500" y="365" fill="#ffffff">pip freeze > requirements.txt</text>
+    
+    <text x="480" y="390" fill="#ffd369">$</text>
+    <text x="500" y="390" fill="#ffffff">pip list</text>
+    
+    <text x="480" y="415" fill="#ffd369">$</text>
+    <text x="500" y="415" fill="#ffffff">which python</text>
+  </g>
+</svg>

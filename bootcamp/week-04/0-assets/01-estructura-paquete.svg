@@ -1,0 +1,85 @@
+<svg viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4ecca3"/>
+      <stop offset="100%" style="stop-color:#45b393"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="700" height="500" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="350" y="35" text-anchor="middle" fill="#4ecca3" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">Estructura de un Paquete Python</text>
+  
+  <!-- Main package box -->
+  <rect x="50" y="60" width="280" height="380" rx="8" fill="#16213e" stroke="#4ecca3" stroke-width="2"/>
+  
+  <!-- Package header -->
+  <rect x="50" y="60" width="280" height="40" rx="8" fill="url(#headerGrad)"/>
+  <rect x="50" y="85" width="280" height="15" fill="url(#headerGrad)"/>
+  <text x="190" y="87" text-anchor="middle" fill="#1a1a2e" font-family="monospace" font-size="16" font-weight="bold">mypackage/</text>
+  
+  <!-- Files in package -->
+  <g font-family="monospace" font-size="14">
+    <!-- __init__.py -->
+    <rect x="70" y="115" width="240" height="55" rx="4" fill="#0f3460" stroke="#ffd369" stroke-width="1"/>
+    <text x="85" y="135" fill="#ffd369">__init__.py</text>
+    <text x="85" y="155" fill="#a0a0a0" font-size="11">API pública + metadatos</text>
+    
+    <!-- module_a.py -->
+    <rect x="70" y="180" width="240" height="45" rx="4" fill="#0f3460" stroke="#4ecca3" stroke-width="1"/>
+    <text x="85" y="200" fill="#4ecca3">module_a.py</text>
+    <text x="85" y="218" fill="#a0a0a0" font-size="11">Funciones y clases</text>
+    
+    <!-- module_b.py -->
+    <rect x="70" y="235" width="240" height="45" rx="4" fill="#0f3460" stroke="#4ecca3" stroke-width="1"/>
+    <text x="85" y="255" fill="#4ecca3">module_b.py</text>
+    <text x="85" y="273" fill="#a0a0a0" font-size="11">Más funciones</text>
+    
+    <!-- Subpackage -->
+    <rect x="70" y="295" width="240" height="130" rx="4" fill="#1a1a2e" stroke="#e94560" stroke-width="1"/>
+    <text x="85" y="318" fill="#e94560">subpackage/</text>
+    
+    <!-- Subpackage files -->
+    <rect x="90" y="330" width="200" height="35" rx="4" fill="#0f3460" stroke="#ffd369" stroke-width="1" stroke-dasharray="3"/>
+    <text x="105" y="352" fill="#ffd369" font-size="12">__init__.py</text>
+    
+    <rect x="90" y="375" width="200" height="35" rx="4" fill="#0f3460" stroke="#4ecca3" stroke-width="1" stroke-dasharray="3"/>
+    <text x="105" y="397" fill="#4ecca3" font-size="12">module_c.py</text>
+  </g>
+  
+  <!-- Annotations -->
+  <g font-family="system-ui, sans-serif" font-size="12">
+    <!-- Arrow to __init__ -->
+    <line x1="320" y1="142" x2="370" y2="142" stroke="#ffd369" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="380" y="115" width="270" height="55" rx="6" fill="#0f3460"/>
+    <text x="395" y="135" fill="#ffd369" font-weight="bold">__init__.py define:</text>
+    <text x="395" y="152" fill="#ffffff">• __version__, __author__</text>
+    <text x="395" y="165" fill="#ffffff">• from .module import func</text>
+    
+    <!-- Arrow to module -->
+    <line x1="320" y1="202" x2="370" y2="202" stroke="#4ecca3" stroke-width="2"/>
+    <rect x="380" y="182" width="270" height="45" rx="6" fill="#0f3460"/>
+    <text x="395" y="202" fill="#4ecca3" font-weight="bold">Módulos contienen:</text>
+    <text x="395" y="218" fill="#ffffff">Funciones, clases, constantes</text>
+    
+    <!-- Arrow to subpackage -->
+    <line x1="320" y1="360" x2="370" y2="360" stroke="#e94560" stroke-width="2"/>
+    <rect x="380" y="330" width="270" height="70" rx="6" fill="#0f3460"/>
+    <text x="395" y="352" fill="#e94560" font-weight="bold">Subpaquete:</text>
+    <text x="395" y="370" fill="#ffffff">• Carpeta con __init__.py</text>
+    <text x="395" y="386" fill="#ffffff">• Import: from pkg.sub import x</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(400, 440)">
+    <rect x="0" y="0" width="250" height="50" rx="6" fill="#16213e" stroke="#4ecca3" stroke-width="1"/>
+    <circle cx="20" cy="17" r="6" fill="#ffd369"/>
+    <text x="35" y="21" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">__init__.py (requerido)</text>
+    <circle cx="20" cy="37" r="6" fill="#4ecca3"/>
+    <text x="35" y="41" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">Módulos (.py)</text>
+    <circle cx="140" cy="37" r="6" fill="#e94560"/>
+    <text x="155" y="41" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11">Subpaquetes</text>
+  </g>
+</svg>
