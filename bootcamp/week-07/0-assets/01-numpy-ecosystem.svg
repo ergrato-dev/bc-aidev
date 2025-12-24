@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="24" font-weight="bold">Ecosistema NumPy</text>
+  
+  <!-- NumPy Core (Center) -->
+  <rect x="300" y="180" width="200" height="80" rx="12" fill="#4B8BBE" stroke="#FFD43B" stroke-width="3"/>
+  <text x="400" y="215" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">NumPy</text>
+  <text x="400" y="240" text-anchor="middle" fill="#e0e0e0" font-family="system-ui, sans-serif" font-size="12">Arrays N-dimensionales</text>
+  
+  <!-- Python Base -->
+  <rect x="300" y="400" width="200" height="60" rx="10" fill="#3776AB" stroke="#FFD43B" stroke-width="2"/>
+  <text x="400" y="435" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">Python</text>
+  
+  <!-- Arrow from Python to NumPy -->
+  <path d="M400 400 L400 265" stroke="#FFD43B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#FFD43B"/>
+    </marker>
+  </defs>
+  
+  <!-- Data Analysis Stack -->
+  <g transform="translate(50, 80)">
+    <rect width="160" height="55" rx="8" fill="#150458" stroke="#E70488" stroke-width="2"/>
+    <text x="80" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Pandas</text>
+    <text x="80" y="42" text-anchor="middle" fill="#b0b0b0" font-family="system-ui, sans-serif" font-size="10">DataFrames</text>
+  </g>
+  
+  <!-- Scientific Stack -->
+  <g transform="translate(50, 150)">
+    <rect width="160" height="55" rx="8" fill="#0054A6" stroke="#8CAAE6" stroke-width="2"/>
+    <text x="80" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">SciPy</text>
+    <text x="80" y="42" text-anchor="middle" fill="#b0b0b0" font-family="system-ui, sans-serif" font-size="10">Computación científica</text>
+  </g>
+  
+  <!-- Visualization -->
+  <g transform="translate(50, 220)">
+    <rect width="160" height="55" rx="8" fill="#11557C" stroke="#76B7B2" stroke-width="2"/>
+    <text x="80" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Matplotlib</text>
+    <text x="80" y="42" text-anchor="middle" fill="#b0b0b0" font-family="system-ui, sans-serif" font-size="10">Visualización</text>
+  </g>
+  
+  <!-- ML Stack -->
+  <g transform="translate(590, 80)">
+    <rect width="160" height="55" rx="8" fill="#F89939" stroke="#3499CD" stroke-width="2"/>
+    <text x="80" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Scikit-learn</text>
+    <text x="80" y="42" text-anchor="middle" fill="#333333" font-family="system-ui, sans-serif" font-size="10">Machine Learning</text>
+  </g>
+  
+  <!-- Deep Learning -->
+  <g transform="translate(590, 150)">
+    <rect width="160" height="55" rx="8" fill="#FF6F00" stroke="#ffffff" stroke-width="2"/>
+    <text x="80" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">TensorFlow</text>
+    <text x="80" y="42" text-anchor="middle" fill="#e0e0e0" font-family="system-ui, sans-serif" font-size="10">Deep Learning</text>
+  </g>
+  
+  <g transform="translate(590, 220)">
+    <rect width="160" height="55" rx="8" fill="#EE4C2C" stroke="#ffffff" stroke-width="2"/>
+    <text x="80" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">PyTorch</text>
+    <text x="80" y="42" text-anchor="middle" fill="#e0e0e0" font-family="system-ui, sans-serif" font-size="10">Deep Learning</text>
+  </g>
+  
+  <!-- Connecting lines to NumPy -->
+  <line x1="210" y1="107" x2="300" y2="200" stroke="#666666" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <line x1="210" y1="177" x2="300" y2="210" stroke="#666666" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <line x1="210" y1="247" x2="300" y2="230" stroke="#666666" stroke-width="1.5" stroke-dasharray="5,5"/>
+  
+  <line x1="590" y1="107" x2="500" y2="200" stroke="#666666" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <line x1="590" y1="177" x2="500" y2="210" stroke="#666666" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <line x1="590" y1="247" x2="500" y2="230" stroke="#666666" stroke-width="1.5" stroke-dasharray="5,5"/>
+  
+  <!-- Labels -->
+  <text x="130" y="320" text-anchor="middle" fill="#888888" font-family="system-ui, sans-serif" font-size="11">Análisis de Datos</text>
+  <text x="670" y="320" text-anchor="middle" fill="#888888" font-family="system-ui, sans-serif" font-size="11">Machine Learning</text>
+  
+  <!-- Footer note -->
+  <text x="400" y="480" text-anchor="middle" fill="#666666" font-family="system-ui, sans-serif" font-size="11">NumPy es la base del stack científico de Python</text>
+</svg>
