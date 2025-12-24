@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #569cd6; font-family: 'Segoe UI', sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #9cdcfe; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .parent-box { fill: #2d2d30; stroke: #c586c0; stroke-width: 3; rx: 8; }
+      .child-box { fill: #2d2d30; stroke: #4ec9b0; stroke-width: 2; rx: 8; }
+      .class-name { fill: #4ec9b0; font-family: 'Consolas', monospace; font-size: 15px; font-weight: bold; }
+      .parent-name { fill: #c586c0; font-family: 'Consolas', monospace; font-size: 15px; font-weight: bold; }
+      .attribute { fill: #9cdcfe; font-family: 'Consolas', monospace; font-size: 11px; }
+      .method { fill: #dcdcaa; font-family: 'Consolas', monospace; font-size: 11px; }
+      .inherited { fill: #6a9955; font-family: 'Consolas', monospace; font-size: 11px; font-style: italic; }
+      .arrow { stroke: #808080; stroke-width: 2; fill: none; }
+      .arrow-head { fill: #808080; }
+      .label { fill: #808080; font-family: 'Segoe UI', sans-serif; font-size: 11px; }
+      .note { fill: #6a9955; font-family: 'Segoe UI', sans-serif; font-size: 11px; font-style: italic; }
+      .super-call { fill: #ce9178; font-family: 'Consolas', monospace; font-size: 10px; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="550"/>
+  
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Herencia en Python</text>
+  <text class="subtitle" x="400" y="55" text-anchor="middle">Las clases hijas heredan atributos y métodos de la clase padre</text>
+  
+  <!-- Parent Class (Animal) -->
+  <rect class="parent-box" x="300" y="75" width="200" height="140"/>
+  <text class="parent-name" x="400" y="100" text-anchor="middle">Animal (Padre)</text>
+  <line x1="320" y1="110" x2="480" y2="110" stroke="#444" stroke-width="1"/>
+  <text class="attribute" x="320" y="130">name: str</text>
+  <text class="attribute" x="320" y="147">age: int</text>
+  <line x1="320" y1="157" x2="480" y2="157" stroke="#444" stroke-width="1"/>
+  <text class="method" x="320" y="177">__init__(name, age)</text>
+  <text class="method" x="320" y="194">speak() → str</text>
+  
+  <!-- Inheritance Arrows -->
+  <line x1="300" y1="215" x2="130" y2="280" stroke="#808080" stroke-width="2"/>
+  <polygon class="arrow-head" points="130,280 140,275 140,285"/>
+  
+  <line x1="400" y1="215" x2="400" y2="280" stroke="#808080" stroke-width="2"/>
+  <polygon class="arrow-head" points="400,280 395,270 405,270"/>
+  
+  <line x1="500" y1="215" x2="670" y2="280" stroke="#808080" stroke-width="2"/>
+  <polygon class="arrow-head" points="670,280 660,275 660,285"/>
+  
+  <text class="label" x="400" y="250" text-anchor="middle">hereda de</text>
+  
+  <!-- Child Class: Dog -->
+  <rect class="child-box" x="30" y="285" width="200" height="160"/>
+  <text class="class-name" x="130" y="310" text-anchor="middle">Dog(Animal)</text>
+  <line x1="50" y1="320" x2="210" y2="320" stroke="#444" stroke-width="1"/>
+  <text class="inherited" x="50" y="340">name (heredado)</text>
+  <text class="inherited" x="50" y="355">age (heredado)</text>
+  <text class="attribute" x="50" y="370">breed: str</text>
+  <line x1="50" y1="380" x2="210" y2="380" stroke="#444" stroke-width="1"/>
+  <text class="method" x="50" y="400">speak() → "Woof!"</text>
+  <text class="super-call" x="50" y="420">super().__init__()</text>
+  
+  <!-- Child Class: Cat -->
+  <rect class="child-box" x="300" y="285" width="200" height="160"/>
+  <text class="class-name" x="400" y="310" text-anchor="middle">Cat(Animal)</text>
+  <line x1="320" y1="320" x2="480" y2="320" stroke="#444" stroke-width="1"/>
+  <text class="inherited" x="320" y="340">name (heredado)</text>
+  <text class="inherited" x="320" y="355">age (heredado)</text>
+  <text class="attribute" x="320" y="370">indoor: bool</text>
+  <line x1="320" y1="380" x2="480" y2="380" stroke="#444" stroke-width="1"/>
+  <text class="method" x="320" y="400">speak() → "Meow!"</text>
+  <text class="super-call" x="320" y="420">super().__init__()</text>
+  
+  <!-- Child Class: Bird -->
+  <rect class="child-box" x="570" y="285" width="200" height="160"/>
+  <text class="class-name" x="670" y="310" text-anchor="middle">Bird(Animal)</text>
+  <line x1="590" y1="320" x2="750" y2="320" stroke="#444" stroke-width="1"/>
+  <text class="inherited" x="590" y="340">name (heredado)</text>
+  <text class="inherited" x="590" y="355">age (heredado)</text>
+  <text class="attribute" x="590" y="370">can_fly: bool</text>
+  <line x1="590" y1="380" x2="750" y2="380" stroke="#444" stroke-width="1"/>
+  <text class="method" x="590" y="400">speak() → "Tweet!"</text>
+  <text class="super-call" x="590" y="420">super().__init__()</text>
+  
+  <!-- Notes -->
+  <rect fill="#252526" x="30" y="470" width="740" height="65" rx="5"/>
+  <text class="note" x="50" y="490">Beneficios de la herencia:</text>
+  <text class="note" x="50" y="507">• Reutilización de código - no repetir atributos/métodos comunes</text>
+  <text class="note" x="50" y="524">• Polimorfismo - cada clase puede sobrescribir speak() con su propio comportamiento</text>
+  <text class="note" x="400" y="490">super() llama al método del padre:</text>
+  <text class="super-call" x="400" y="507">def __init__(self, name, breed):</text>
+  <text class="super-call" x="420" y="524">super().__init__(name)  # Animal.__init__</text>
+</svg>

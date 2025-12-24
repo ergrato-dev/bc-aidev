@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #569cd6; font-family: 'Segoe UI', sans-serif; font-size: 22px; font-weight: bold; }
+      .subtitle { fill: #9cdcfe; font-family: 'Segoe UI', sans-serif; font-size: 13px; }
+      .parent-box { fill: #2d2d30; stroke: #c586c0; stroke-width: 3; rx: 8; }
+      .child-box { fill: #2d2d30; stroke: #4ec9b0; stroke-width: 2; rx: 8; }
+      .class-name { fill: #4ec9b0; font-family: 'Consolas', monospace; font-size: 14px; font-weight: bold; }
+      .parent-name { fill: #c586c0; font-family: 'Consolas', monospace; font-size: 14px; font-weight: bold; }
+      .attr { fill: #9cdcfe; font-family: 'Consolas', monospace; font-size: 11px; }
+      .method { fill: #dcdcaa; font-family: 'Consolas', monospace; font-size: 11px; }
+      .inherited { fill: #6a9955; font-family: 'Consolas', monospace; font-size: 10px; font-style: italic; }
+      .super { fill: #ce9178; font-family: 'Consolas', monospace; font-size: 10px; }
+      .arrow { stroke: #808080; stroke-width: 2; fill: none; }
+      .arrow-head { fill: #808080; }
+      .label { fill: #808080; font-family: 'Segoe UI', sans-serif; font-size: 11px; }
+      .note { fill: #6a9955; font-family: 'Segoe UI', sans-serif; font-size: 10px; font-style: italic; }
+      .mro-box { fill: #252526; stroke: #569cd6; stroke-width: 1; rx: 5; }
+      .mro-text { fill: #d4d4d4; font-family: 'Consolas', monospace; font-size: 10px; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="520"/>
+  
+  <!-- Title -->
+  <text class="title" x="400" y="30" text-anchor="middle">Herencia: Reutilización y Especialización</text>
+  <text class="subtitle" x="400" y="50" text-anchor="middle">Las clases hijas heredan y pueden extender/sobrescribir comportamiento del padre</text>
+  
+  <!-- Parent Class -->
+  <rect class="parent-box" x="300" y="65" width="200" height="130"/>
+  <text class="parent-name" x="400" y="90" text-anchor="middle">Animal</text>
+  <line x1="315" y1="100" x2="485" y2="100" stroke="#444" stroke-width="1"/>
+  <text class="attr" x="320" y="120">name: str</text>
+  <text class="attr" x="320" y="137">age: int</text>
+  <line x1="315" y1="147" x2="485" y2="147" stroke="#444" stroke-width="1"/>
+  <text class="method" x="320" y="167">__init__(name, age)</text>
+  <text class="method" x="320" y="184">speak() → "..."</text>
+  
+  <!-- Inheritance Arrows -->
+  <line class="arrow" x1="330" y1="195" x2="150" y2="260"/>
+  <polygon class="arrow-head" points="150,260 162,255 160,265"/>
+  
+  <line class="arrow" x1="400" y1="195" x2="400" y2="260"/>
+  <polygon class="arrow-head" points="400,260 395,248 405,248"/>
+  
+  <line class="arrow" x1="470" y1="195" x2="650" y2="260"/>
+  <polygon class="arrow-head" points="650,260 638,265 640,255"/>
+  
+  <text class="label" x="400" y="235" text-anchor="middle">hereda de (is-a)</text>
+  
+  <!-- Dog Class -->
+  <rect class="child-box" x="50" y="265" width="200" height="145"/>
+  <text class="class-name" x="150" y="290" text-anchor="middle">Dog(Animal)</text>
+  <line x1="65" y1="300" x2="235" y2="300" stroke="#444" stroke-width="1"/>
+  <text class="inherited" x="70" y="318">↑ name (heredado)</text>
+  <text class="inherited" x="70" y="333">↑ age (heredado)</text>
+  <text class="attr" x="70" y="348">breed: str</text>
+  <line x1="65" y1="358" x2="235" y2="358" stroke="#444" stroke-width="1"/>
+  <text class="method" x="70" y="376">speak() → "Woof!"</text>
+  <text class="super" x="70" y="393">super().__init__(name, age)</text>
+  
+  <!-- Cat Class -->
+  <rect class="child-box" x="300" y="265" width="200" height="145"/>
+  <text class="class-name" x="400" y="290" text-anchor="middle">Cat(Animal)</text>
+  <line x1="315" y1="300" x2="485" y2="300" stroke="#444" stroke-width="1"/>
+  <text class="inherited" x="320" y="318">↑ name (heredado)</text>
+  <text class="inherited" x="320" y="333">↑ age (heredado)</text>
+  <text class="attr" x="320" y="348">indoor: bool</text>
+  <line x1="315" y1="358" x2="485" y2="358" stroke="#444" stroke-width="1"/>
+  <text class="method" x="320" y="376">speak() → "Meow!"</text>
+  <text class="super" x="320" y="393">super().__init__(name, age)</text>
+  
+  <!-- Bird Class -->
+  <rect class="child-box" x="550" y="265" width="200" height="145"/>
+  <text class="class-name" x="650" y="290" text-anchor="middle">Bird(Animal)</text>
+  <line x1="565" y1="300" x2="735" y2="300" stroke="#444" stroke-width="1"/>
+  <text class="inherited" x="570" y="318">↑ name (heredado)</text>
+  <text class="inherited" x="570" y="333">↑ age (heredado)</text>
+  <text class="attr" x="570" y="348">can_fly: bool</text>
+  <line x1="565" y1="358" x2="735" y2="358" stroke="#444" stroke-width="1"/>
+  <text class="method" x="570" y="376">speak() → "Tweet!"</text>
+  <text class="super" x="570" y="393">super().__init__(name, age)</text>
+  
+  <!-- MRO Example -->
+  <rect class="mro-box" x="50" y="430" width="350" height="75"/>
+  <text class="label" x="60" y="450">Method Resolution Order (MRO):</text>
+  <text class="mro-text" x="60" y="470">Dog.__mro__ = (Dog, Animal, object)</text>
+  <text class="mro-text" x="60" y="487">Python busca métodos en este orden</text>
+  
+  <!-- Notes -->
+  <rect class="mro-box" x="420" y="430" width="350" height="75"/>
+  <text class="label" x="430" y="450">Beneficios de la herencia:</text>
+  <text class="note" x="430" y="470">• Reutilización de código (DRY)</text>
+  <text class="note" x="430" y="487">• Jerarquía lógica de tipos</text>
+  <text class="note" x="600" y="470">• Polimorfismo</text>
+  <text class="note" x="600" y="487">• Extensibilidad</text>
+</svg>

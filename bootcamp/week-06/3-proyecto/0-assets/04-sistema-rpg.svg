@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #569cd6; font-family: 'Segoe UI', sans-serif; font-size: 22px; font-weight: bold; }
+      .subtitle { fill: #9cdcfe; font-family: 'Segoe UI', sans-serif; font-size: 13px; }
+      .parent-box { fill: #2d2d30; stroke: #c586c0; stroke-width: 3; rx: 8; }
+      .child-box { fill: #2d2d30; stroke: #4ec9b0; stroke-width: 2; rx: 8; }
+      .support-box { fill: #2d2d30; stroke: #569cd6; stroke-width: 2; rx: 8; }
+      .class-name { fill: #4ec9b0; font-family: 'Consolas', monospace; font-size: 13px; font-weight: bold; }
+      .parent-name { fill: #c586c0; font-family: 'Consolas', monospace; font-size: 13px; font-weight: bold; }
+      .support-name { fill: #569cd6; font-family: 'Consolas', monospace; font-size: 13px; font-weight: bold; }
+      .attribute { fill: #9cdcfe; font-family: 'Consolas', monospace; font-size: 10px; }
+      .method { fill: #dcdcaa; font-family: 'Consolas', monospace; font-size: 10px; }
+      .property { fill: #4fc1ff; font-family: 'Consolas', monospace; font-size: 10px; }
+      .arrow { stroke: #808080; stroke-width: 1.5; fill: none; }
+      .arrow-head { fill: #808080; }
+      .comp-arrow { stroke: #569cd6; stroke-width: 1.5; stroke-dasharray: 5,3; }
+      .label { fill: #808080; font-family: 'Segoe UI', sans-serif; font-size: 10px; }
+      .note { fill: #6a9955; font-family: 'Segoe UI', sans-serif; font-size: 10px; font-style: italic; }
+      .pillar { fill: #252526; stroke: #444; stroke-width: 1; rx: 5; }
+      .pillar-title { fill: #ce9178; font-family: 'Segoe UI', sans-serif; font-size: 11px; font-weight: bold; }
+      .pillar-text { fill: #d4d4d4; font-family: 'Segoe UI', sans-serif; font-size: 9px; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="900" height="600"/>
+  
+  <!-- Title -->
+  <text class="title" x="450" y="30" text-anchor="middle">🎮 Sistema RPG - Arquitectura de Clases</text>
+  <text class="subtitle" x="450" y="48" text-anchor="middle">Aplicando los 4 pilares de POO: Abstracción, Encapsulamiento, Herencia, Polimorfismo</text>
+  
+  <!-- Character (Parent) -->
+  <rect class="parent-box" x="350" y="65" width="200" height="135"/>
+  <text class="parent-name" x="450" y="85" text-anchor="middle">Character</text>
+  <line x1="365" y1="93" x2="535" y2="93" stroke="#444" stroke-width="1"/>
+  <text class="property" x="365" y="108">@property name</text>
+  <text class="property" x="365" y="120">@property health</text>
+  <text class="attribute" x="365" y="132">_level: int</text>
+  <text class="attribute" x="365" y="144">inventory: Inventory</text>
+  <line x1="365" y1="152" x2="535" y2="152" stroke="#444" stroke-width="1"/>
+  <text class="method" x="365" y="165">attack(target)</text>
+  <text class="method" x="365" y="177">take_damage(dmg)</text>
+  <text class="method" x="365" y="189">__str__, __eq__</text>
+  
+  <!-- Inheritance arrows -->
+  <line x1="380" y1="200" x2="150" y2="270" stroke="#808080" stroke-width="1.5"/>
+  <polygon class="arrow-head" points="150,270 160,262 162,272"/>
+  
+  <line x1="450" y1="200" x2="450" y2="270" stroke="#808080" stroke-width="1.5"/>
+  <polygon class="arrow-head" points="450,270 445,260 455,260"/>
+  
+  <line x1="520" y1="200" x2="750" y2="270" stroke="#808080" stroke-width="1.5"/>
+  <polygon class="arrow-head" points="750,270 738,272 740,262"/>
+  
+  <text class="label" x="450" y="240" text-anchor="middle">herencia</text>
+  
+  <!-- Warrior -->
+  <rect class="child-box" x="50" y="275" width="180" height="120"/>
+  <text class="class-name" x="140" y="295" text-anchor="middle">Warrior</text>
+  <line x1="65" y1="303" x2="215" y2="303" stroke="#444" stroke-width="1"/>
+  <text class="property" x="65" y="318">@property rage</text>
+  <text class="attribute" x="65" y="330">defense: int (alto)</text>
+  <line x1="65" y1="340" x2="215" y2="340" stroke="#444" stroke-width="1"/>
+  <text class="method" x="65" y="355">attack() +rage bonus</text>
+  <text class="method" x="65" y="367">berserk()</text>
+  <text class="method" x="65" y="379">__str__()</text>
+  
+  <!-- Mage -->
+  <rect class="child-box" x="360" y="275" width="180" height="120"/>
+  <text class="class-name" x="450" y="295" text-anchor="middle">Mage</text>
+  <line x1="375" y1="303" x2="525" y2="303" stroke="#444" stroke-width="1"/>
+  <text class="property" x="375" y="318">@property mana</text>
+  <text class="attribute" x="375" y="330">SPELLS: dict</text>
+  <line x1="375" y1="340" x2="525" y2="340" stroke="#444" stroke-width="1"/>
+  <text class="method" x="375" y="355">attack() (bajo)</text>
+  <text class="method" x="375" y="367">cast_spell(name)</text>
+  <text class="method" x="375" y="379">meditate()</text>
+  
+  <!-- Archer -->
+  <rect class="child-box" x="670" y="275" width="180" height="120"/>
+  <text class="class-name" x="760" y="295" text-anchor="middle">Archer</text>
+  <line x1="685" y1="303" x2="835" y2="303" stroke="#444" stroke-width="1"/>
+  <text class="property" x="685" y="318">@property arrows</text>
+  <text class="attribute" x="685" y="330">max_arrows: int</text>
+  <line x1="685" y1="340" x2="835" y2="340" stroke="#444" stroke-width="1"/>
+  <text class="method" x="685" y="355">attack() -1 arrow</text>
+  <text class="method" x="685" y="367">shoot() (crítico)</text>
+  <text class="method" x="685" y="379">resupply()</text>
+  
+  <!-- Inventory System -->
+  <rect class="support-box" x="50" y="420" width="180" height="105"/>
+  <text class="support-name" x="140" y="440" text-anchor="middle">Inventory</text>
+  <line x1="65" y1="448" x2="215" y2="448" stroke="#444" stroke-width="1"/>
+  <text class="attribute" x="65" y="463">_items: list[Item]</text>
+  <text class="attribute" x="65" y="475">capacity: int</text>
+  <line x1="65" y1="485" x2="215" y2="485" stroke="#444" stroke-width="1"/>
+  <text class="method" x="65" y="500">__len__, __iter__</text>
+  <text class="method" x="65" y="512">__getitem__</text>
+  
+  <!-- Item Hierarchy -->
+  <rect class="support-box" x="260" y="420" width="130" height="75"/>
+  <text class="support-name" x="325" y="440" text-anchor="middle">Item</text>
+  <line x1="275" y1="448" x2="375" y2="448" stroke="#444" stroke-width="1"/>
+  <text class="attribute" x="275" y="463">name: str</text>
+  <text class="attribute" x="275" y="475">value: int</text>
+  <text class="method" x="275" y="487">__str__, __eq__</text>
+  
+  <!-- Item children -->
+  <rect fill="#3c3c3c" x="260" y="510" width="40" height="25" rx="3" stroke="#569cd6"/>
+  <text class="attribute" x="280" y="527" text-anchor="middle">Weapon</text>
+  
+  <rect fill="#3c3c3c" x="305" y="510" width="40" height="25" rx="3" stroke="#569cd6"/>
+  <text class="attribute" x="325" y="527" text-anchor="middle">Armor</text>
+  
+  <rect fill="#3c3c3c" x="350" y="510" width="40" height="25" rx="3" stroke="#569cd6"/>
+  <text class="attribute" x="370" y="527" text-anchor="middle">Potion</text>
+  
+  <!-- Combat System -->
+  <rect class="support-box" x="420" y="420" width="180" height="105"/>
+  <text class="support-name" x="510" y="440" text-anchor="middle">Combat</text>
+  <line x1="435" y1="448" x2="585" y2="448" stroke="#444" stroke-width="1"/>
+  <text class="attribute" x="435" y="463">char1, char2</text>
+  <text class="attribute" x="435" y="475">turn: int</text>
+  <line x1="435" y1="485" x2="585" y2="485" stroke="#444" stroke-width="1"/>
+  <text class="method" x="435" y="500">execute_turn()</text>
+  <text class="method" x="435" y="512">run() → winner</text>
+  
+  <!-- Composition arrows -->
+  <path class="comp-arrow" d="M 140 395 L 140 420" marker-end="url(#diamond)"/>
+  <path class="comp-arrow" d="M 510 200 C 560 250, 560 380, 510 420"/>
+  <text class="label" x="145" y="410">tiene</text>
+  <text class="label" x="570" y="310">usa</text>
+  
+  <!-- 4 Pillars Legend -->
+  <rect class="pillar" x="630" y="420" width="250" height="155"/>
+  <text class="pillar-title" x="755" y="440" text-anchor="middle">4 Pilares de POO aplicados:</text>
+  
+  <text class="pillar-title" x="645" y="460">Abstracción</text>
+  <text class="pillar-text" x="645" y="473">Character define interfaz común</text>
+  
+  <text class="pillar-title" x="645" y="490">Encapsulamiento</text>
+  <text class="pillar-text" x="645" y="503">@property valida health, mana</text>
+  
+  <text class="pillar-title" x="645" y="520">Herencia</text>
+  <text class="pillar-text" x="645" y="533">Warrior/Mage/Archer ← Character</text>
+  
+  <text class="pillar-title" x="645" y="550">Polimorfismo</text>
+  <text class="pillar-text" x="645" y="563">Cada clase su propio attack()</text>
+</svg>

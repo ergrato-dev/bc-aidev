@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #569cd6; font-family: 'Segoe UI', sans-serif; font-size: 22px; font-weight: bold; }
+      .pillar-box { fill: #2d2d30; stroke-width: 3; rx: 10; }
+      .pillar-title { font-family: 'Segoe UI', sans-serif; font-size: 16px; font-weight: bold; }
+      .pillar-desc { fill: #d4d4d4; font-family: 'Segoe UI', sans-serif; font-size: 11px; }
+      .pillar-code { fill: #9cdcfe; font-family: 'Consolas', monospace; font-size: 10px; }
+      .center-box { fill: #252526; stroke: #569cd6; stroke-width: 2; rx: 50; }
+      .center-text { fill: #4ec9b0; font-family: 'Segoe UI', sans-serif; font-size: 14px; font-weight: bold; }
+      .arrow { stroke: #808080; stroke-width: 2; fill: none; }
+      .note { fill: #6a9955; font-family: 'Segoe UI', sans-serif; font-size: 10px; font-style: italic; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="450"/>
+  
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Los 4 Pilares de la Programación Orientada a Objetos</text>
+  
+  <!-- Center circle -->
+  <ellipse class="center-box" cx="400" cy="225" rx="70" ry="35"/>
+  <text class="center-text" x="400" y="230" text-anchor="middle">POO</text>
+  
+  <!-- Abstraction (Top) -->
+  <rect class="pillar-box" x="300" y="60" width="200" height="90" stroke="#c586c0"/>
+  <text class="pillar-title" x="400" y="85" text-anchor="middle" fill="#c586c0">Abstracción</text>
+  <text class="pillar-desc" x="400" y="105" text-anchor="middle">Ocultar complejidad</text>
+  <text class="pillar-desc" x="400" y="120" text-anchor="middle">Mostrar solo lo esencial</text>
+  <text class="pillar-code" x="400" y="140" text-anchor="middle">class Vehicle(ABC):</text>
+  
+  <!-- Encapsulation (Left) -->
+  <rect class="pillar-box" x="50" y="170" width="200" height="110" stroke="#4ec9b0"/>
+  <text class="pillar-title" x="150" y="195" text-anchor="middle" fill="#4ec9b0">Encapsulamiento</text>
+  <text class="pillar-desc" x="150" y="215" text-anchor="middle">Proteger datos internos</text>
+  <text class="pillar-desc" x="150" y="230" text-anchor="middle">Controlar acceso</text>
+  <text class="pillar-code" x="150" y="255" text-anchor="middle">self._private = value</text>
+  <text class="pillar-code" x="150" y="270" text-anchor="middle">@property</text>
+  
+  <!-- Inheritance (Right) -->
+  <rect class="pillar-box" x="550" y="170" width="200" height="110" stroke="#dcdcaa"/>
+  <text class="pillar-title" x="650" y="195" text-anchor="middle" fill="#dcdcaa">Herencia</text>
+  <text class="pillar-desc" x="650" y="215" text-anchor="middle">Reutilizar código</text>
+  <text class="pillar-desc" x="650" y="230" text-anchor="middle">Extender funcionalidad</text>
+  <text class="pillar-code" x="650" y="255" text-anchor="middle">class Dog(Animal):</text>
+  <text class="pillar-code" x="650" y="270" text-anchor="middle">super().__init__()</text>
+  
+  <!-- Polymorphism (Bottom) -->
+  <rect class="pillar-box" x="300" y="300" width="200" height="100" stroke="#ce9178"/>
+  <text class="pillar-title" x="400" y="325" text-anchor="middle" fill="#ce9178">Polimorfismo</text>
+  <text class="pillar-desc" x="400" y="345" text-anchor="middle">Mismo método</text>
+  <text class="pillar-desc" x="400" y="360" text-anchor="middle">Diferente comportamiento</text>
+  <text class="pillar-code" x="400" y="385" text-anchor="middle">dog.speak() vs cat.speak()</text>
+  
+  <!-- Arrows connecting to center -->
+  <line class="arrow" x1="400" y1="150" x2="400" y2="190"/>
+  <line class="arrow" x1="250" y1="225" x2="330" y2="225"/>
+  <line class="arrow" x1="550" y1="225" x2="470" y2="225"/>
+  <line class="arrow" x1="400" y1="300" x2="400" y2="260"/>
+  
+  <!-- Notes -->
+  <text class="note" x="400" y="430" text-anchor="middle">Estos pilares trabajan juntos para crear código modular, reutilizable y mantenible</text>
+</svg>

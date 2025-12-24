@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #569cd6; font-family: 'Segoe UI', sans-serif; font-size: 22px; font-weight: bold; }
+      .subtitle { fill: #9cdcfe; font-family: 'Segoe UI', sans-serif; font-size: 13px; }
+      .box { fill: #2d2d30; stroke: #569cd6; stroke-width: 2; rx: 8; }
+      .bad-box { fill: #2d2d30; stroke: #f14c4c; stroke-width: 2; rx: 8; }
+      .good-box { fill: #2d2d30; stroke: #4ec9b0; stroke-width: 2; rx: 8; }
+      .class-name { fill: #4ec9b0; font-family: 'Consolas', monospace; font-size: 14px; font-weight: bold; }
+      .code { fill: #d4d4d4; font-family: 'Consolas', monospace; font-size: 11px; }
+      .keyword { fill: #c586c0; font-family: 'Consolas', monospace; font-size: 11px; }
+      .decorator { fill: #dcdcaa; font-family: 'Consolas', monospace; font-size: 11px; }
+      .private { fill: #f14c4c; font-family: 'Consolas', monospace; font-size: 11px; }
+      .protected { fill: #ce9178; font-family: 'Consolas', monospace; font-size: 11px; }
+      .string { fill: #ce9178; font-family: 'Consolas', monospace; font-size: 11px; }
+      .comment { fill: #6a9955; font-family: 'Consolas', monospace; font-size: 10px; font-style: italic; }
+      .label { fill: #808080; font-family: 'Segoe UI', sans-serif; font-size: 12px; }
+      .bad-label { fill: #f14c4c; font-family: 'Segoe UI', sans-serif; font-size: 12px; font-weight: bold; }
+      .good-label { fill: #4ec9b0; font-family: 'Segoe UI', sans-serif; font-size: 12px; font-weight: bold; }
+      .note { fill: #6a9955; font-family: 'Segoe UI', sans-serif; font-size: 10px; font-style: italic; }
+      .arrow { stroke: #808080; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#808080"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="480"/>
+  
+  <!-- Title -->
+  <text class="title" x="400" y="30" text-anchor="middle">Encapsulamiento con @property</text>
+  <text class="subtitle" x="400" y="50" text-anchor="middle">Proteger datos y validar acceso mediante getters y setters</text>
+  
+  <!-- BAD Example (without encapsulation) -->
+  <text class="bad-label" x="200" y="80" text-anchor="middle">❌ Sin Encapsulamiento</text>
+  
+  <rect class="bad-box" x="50" y="90" width="300" height="150"/>
+  <text class="keyword" x="70" y="115">class</text>
+  <text class="class-name" x="110" y="115">Person:</text>
+  <text class="keyword" x="90" y="140">def</text>
+  <text class="code" x="120" y="140">__init__(self, age):</text>
+  <text class="code" x="110" y="160">self.age = age</text>
+  <text class="comment" x="210" y="160"># ¡Sin validación!</text>
+  
+  <text class="code" x="70" y="190">p = Person(25)</text>
+  <text class="code" x="70" y="210">p.age = -10</text>
+  <text class="comment" x="165" y="210"># ¡Edad inválida permitida!</text>
+  <text class="code" x="70" y="230">p.age = "old"</text>
+  <text class="comment" x="175" y="230"># ¡Tipo incorrecto!</text>
+  
+  <!-- Arrow -->
+  <line class="arrow" x1="380" y1="165" x2="420" y2="165"/>
+  <text class="label" x="400" y="155" text-anchor="middle">mejora</text>
+  
+  <!-- GOOD Example (with encapsulation) -->
+  <text class="good-label" x="600" y="80" text-anchor="middle">✅ Con @property</text>
+  
+  <rect class="good-box" x="450" y="90" width="320" height="200"/>
+  <text class="keyword" x="470" y="115">class</text>
+  <text class="class-name" x="510" y="115">Person:</text>
+  
+  <text class="keyword" x="490" y="140">def</text>
+  <text class="code" x="520" y="140">__init__(self, age):</text>
+  <text class="code" x="510" y="160">self.age = age</text>
+  <text class="comment" x="630" y="160"># Usa el setter</text>
+  
+  <text class="decorator" x="490" y="185">@property</text>
+  <text class="keyword" x="490" y="205">def</text>
+  <text class="code" x="520" y="205">age(self):</text>
+  <text class="keyword" x="510" y="225">return</text>
+  <text class="code" x="558" y="225">self.</text>
+  <text class="protected" x="595" y="225">_age</text>
+  
+  <text class="decorator" x="490" y="250">@age.setter</text>
+  <text class="keyword" x="490" y="270">def</text>
+  <text class="code" x="520" y="270">age(self, value):</text>
+  <text class="comment" x="650" y="270"># Validación</text>
+  
+  <!-- Validation logic -->
+  <rect fill="#252526" x="50" y="260" width="300" height="100" rx="5"/>
+  <text class="label" x="200" y="280" text-anchor="middle">Lógica del setter:</text>
+  <text class="keyword" x="70" y="305">if</text>
+  <text class="code" x="90" y="305">value &lt; 0:</text>
+  <text class="keyword" x="90" y="325">raise</text>
+  <text class="code" x="128" y="325">ValueError(</text>
+  <text class="string" x="200" y="325">"Age &lt; 0"</text>
+  <text class="code" x="260" y="325">)</text>
+  <text class="code" x="70" y="345">self.</text>
+  <text class="protected" x="105" y="345">_age</text>
+  <text class="code" x="140" y="345">= value</text>
+  
+  <!-- Usage example -->
+  <rect fill="#252526" x="450" y="305" width="320" height="80" rx="5"/>
+  <text class="label" x="610" y="325" text-anchor="middle">Uso:</text>
+  <text class="code" x="470" y="345">p = Person(25)</text>
+  <text class="comment" x="590" y="345"># OK</text>
+  <text class="code" x="470" y="365">p.age = -10</text>
+  <text class="comment" x="570" y="365"># ValueError!</text>
+  <text class="code" x="470" y="385">print(p.age)</text>
+  <text class="comment" x="580" y="385"># 25</text>
+  
+  <!-- Naming conventions -->
+  <rect fill="#252526" x="50" y="390" width="700" height="75" rx="5"/>
+  <text class="label" x="400" y="410" text-anchor="middle">Convenciones de nombres en Python:</text>
+  <text class="code" x="70" y="435">public</text>
+  <text class="comment" x="130" y="435">= acceso libre</text>
+  <text class="protected" x="270" y="435">_protected</text>
+  <text class="comment" x="350" y="435">= "privado" por convención</text>
+  <text class="private" x="550" y="435">__private</text>
+  <text class="comment" x="620" y="435">= name mangling</text>
+  <text class="note" x="400" y="455" text-anchor="middle">Python confía en el programador: "We're all consenting adults here"</text>
+</svg>

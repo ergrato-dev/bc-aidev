@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #569cd6; font-family: 'Segoe UI', sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #9cdcfe; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .box { fill: #2d2d30; stroke: #569cd6; stroke-width: 2; rx: 8; }
+      .class-name { fill: #4ec9b0; font-family: 'Consolas', monospace; font-size: 14px; font-weight: bold; }
+      .code { fill: #d4d4d4; font-family: 'Consolas', monospace; font-size: 11px; }
+      .keyword { fill: #c586c0; font-family: 'Consolas', monospace; font-size: 11px; }
+      .decorator { fill: #dcdcaa; font-family: 'Consolas', monospace; font-size: 11px; }
+      .string { fill: #ce9178; font-family: 'Consolas', monospace; font-size: 11px; }
+      .comment { fill: #6a9955; font-family: 'Consolas', monospace; font-size: 11px; font-style: italic; }
+      .same-method { fill: #4fc1ff; font-family: 'Consolas', monospace; font-size: 11px; }
+      .arrow { stroke: #808080; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .label { fill: #808080; font-family: 'Segoe UI', sans-serif; font-size: 12px; }
+      .output { fill: #b5cea8; font-family: 'Consolas', monospace; font-size: 11px; }
+      .note { fill: #9cdcfe; font-family: 'Segoe UI', sans-serif; font-size: 11px; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#808080"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+  
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Polimorfismo: Mismo Método, Diferente Comportamiento</text>
+  <text class="subtitle" x="400" y="55" text-anchor="middle">Duck Typing: "Si camina como pato y hace cuac como pato, es un pato"</text>
+  
+  <!-- Class Boxes -->
+  <!-- Animal (Parent) -->
+  <rect class="box" x="300" y="75" width="200" height="80"/>
+  <text class="class-name" x="400" y="100" text-anchor="middle">Animal</text>
+  <line x1="320" y1="110" x2="480" y2="110" stroke="#444" stroke-width="1"/>
+  <text class="keyword" x="330" y="130">def</text>
+  <text class="same-method" x="360" y="130">speak</text>
+  <text class="code" x="395" y="130">(self): ...</text>
+  
+  <!-- Dog -->
+  <rect class="box" x="50" y="200" width="200" height="90"/>
+  <text class="class-name" x="150" y="225" text-anchor="middle">Dog</text>
+  <line x1="70" y1="235" x2="230" y2="235" stroke="#444" stroke-width="1"/>
+  <text class="keyword" x="70" y="255">def</text>
+  <text class="same-method" x="100" y="255">speak</text>
+  <text class="code" x="135" y="255">(self):</text>
+  <text class="keyword" x="80" y="275">return</text>
+  <text class="string" x="125" y="275">"Woof!"</text>
+  
+  <!-- Cat -->
+  <rect class="box" x="300" y="200" width="200" height="90"/>
+  <text class="class-name" x="400" y="225" text-anchor="middle">Cat</text>
+  <line x1="320" y1="235" x2="480" y2="235" stroke="#444" stroke-width="1"/>
+  <text class="keyword" x="320" y="255">def</text>
+  <text class="same-method" x="350" y="255">speak</text>
+  <text class="code" x="385" y="255">(self):</text>
+  <text class="keyword" x="330" y="275">return</text>
+  <text class="string" x="375" y="275">"Meow!"</text>
+  
+  <!-- Bird -->
+  <rect class="box" x="550" y="200" width="200" height="90"/>
+  <text class="class-name" x="650" y="225" text-anchor="middle">Bird</text>
+  <line x1="570" y1="235" x2="730" y2="235" stroke="#444" stroke-width="1"/>
+  <text class="keyword" x="570" y="255">def</text>
+  <text class="same-method" x="600" y="255">speak</text>
+  <text class="code" x="635" y="255">(self):</text>
+  <text class="keyword" x="580" y="275">return</text>
+  <text class="string" x="625" y="275">"Tweet!"</text>
+  
+  <!-- Inheritance arrows -->
+  <line x1="320" y1="155" x2="200" y2="200" stroke="#808080" stroke-width="1.5"/>
+  <line x1="400" y1="155" x2="400" y2="200" stroke="#808080" stroke-width="1.5"/>
+  <line x1="480" y1="155" x2="600" y2="200" stroke="#808080" stroke-width="1.5"/>
+  
+  <!-- Polymorphic usage example -->
+  <rect fill="#252526" x="50" y="320" width="700" height="160" rx="8"/>
+  <text class="comment" x="70" y="345"># El mismo código funciona con diferentes tipos</text>
+  <text class="code" x="70" y="365">animals = [Dog(), Cat(), Bird()]</text>
+  <text class="keyword" x="70" y="390">for</text>
+  <text class="code" x="95" y="390">animal</text>
+  <text class="keyword" x="145" y="390">in</text>
+  <text class="code" x="165" y="390">animals:</text>
+  <text class="code" x="90" y="410">print(animal.</text>
+  <text class="same-method" x="195" y="410">speak</text>
+  <text class="code" x="230" y="410">())</text>
+  
+  <!-- Output -->
+  <text class="comment" x="350" y="345"># Salida:</text>
+  <text class="output" x="350" y="365">"Woof!"</text>
+  <text class="comment" x="420" y="365">← Dog.speak()</text>
+  <text class="output" x="350" y="385">"Meow!"</text>
+  <text class="comment" x="420" y="385">← Cat.speak()</text>
+  <text class="output" x="350" y="405">"Tweet!"</text>
+  <text class="comment" x="420" y="405">← Bird.speak()</text>
+  
+  <text class="note" x="70" y="445">Polimorfismo permite que el mismo método</text>
+  <text class="note" x="70" y="462">tenga diferentes implementaciones según el tipo</text>
+  
+  <text class="note" x="450" y="445">Python usa Duck Typing: no importa el tipo,</text>
+  <text class="note" x="450" y="462">solo que el objeto tenga el método requerido</text>
+</svg>

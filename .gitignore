@@ -211,3 +211,7 @@ site/
 *.tmp
 *.temp
 .scratch/
+# --------------------------------------------
+# Soluciones de Proyectos (ocultas para estudiantes)
+# --------------------------------------------
+**/.solution/

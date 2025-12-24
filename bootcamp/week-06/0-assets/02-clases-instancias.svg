@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #569cd6; font-family: 'Segoe UI', sans-serif; font-size: 22px; font-weight: bold; }
+      .subtitle { fill: #9cdcfe; font-family: 'Segoe UI', sans-serif; font-size: 13px; }
+      .class-box { fill: #2d2d30; stroke: #569cd6; stroke-width: 2; rx: 8; }
+      .class-name { fill: #4ec9b0; font-family: 'Consolas', monospace; font-size: 14px; font-weight: bold; }
+      .section { fill: #569cd6; font-family: 'Consolas', monospace; font-size: 11px; }
+      .attr { fill: #9cdcfe; font-family: 'Consolas', monospace; font-size: 11px; }
+      .method { fill: #dcdcaa; font-family: 'Consolas', monospace; font-size: 11px; }
+      .keyword { fill: #c586c0; font-family: 'Consolas', monospace; font-size: 11px; }
+      .self { fill: #569cd6; font-family: 'Consolas', monospace; font-size: 11px; }
+      .instance-box { fill: #3c3c3c; stroke: #4ec9b0; stroke-width: 2; rx: 8; }
+      .instance-name { fill: #ce9178; font-family: 'Consolas', monospace; font-size: 12px; font-weight: bold; }
+      .value { fill: #b5cea8; font-family: 'Consolas', monospace; font-size: 11px; }
+      .arrow { stroke: #808080; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .label { fill: #808080; font-family: 'Segoe UI', sans-serif; font-size: 11px; }
+      .note { fill: #6a9955; font-family: 'Segoe UI', sans-serif; font-size: 10px; font-style: italic; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#808080"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+  
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Clases y Objetos: La Base de POO</text>
+  <text class="subtitle" x="400" y="55" text-anchor="middle">Una clase es la plantilla, los objetos son instancias concretas</text>
+  
+  <!-- Class Definition -->
+  <rect class="class-box" x="50" y="80" width="300" height="220"/>
+  <text class="section" x="200" y="100" text-anchor="middle">── CLASE (Blueprint) ──</text>
+  
+  <text class="keyword" x="70" y="125">class</text>
+  <text class="class-name" x="110" y="125">Person:</text>
+  
+  <text class="keyword" x="90" y="150">def</text>
+  <text class="method" x="120" y="150">__init__</text>
+  <text class="attr" x="170" y="150">(</text>
+  <text class="self" x="178" y="150">self</text>
+  <text class="attr" x="205" y="150">, name, age):</text>
+  
+  <text class="self" x="110" y="175">self</text>
+  <text class="attr" x="140" y="175">.name = name</text>
+  <text class="self" x="110" y="195">self</text>
+  <text class="attr" x="140" y="195">.age = age</text>
+  
+  <text class="keyword" x="90" y="225">def</text>
+  <text class="method" x="120" y="225">greet</text>
+  <text class="attr" x="158" y="225">(</text>
+  <text class="self" x="166" y="225">self</text>
+  <text class="attr" x="193" y="225">):</text>
+  
+  <text class="keyword" x="110" y="250">return</text>
+  <text class="value" x="158" y="250">f"Hi, I'm {</text>
+  <text class="self" x="235" y="250">self</text>
+  <text class="value" x="262" y="250">.name}"</text>
+  
+  <!-- Explanation boxes -->
+  <rect fill="#252526" x="70" y="275" width="260" height="20" rx="3"/>
+  <text class="note" x="200" y="289" text-anchor="middle">self = referencia al objeto actual</text>
+  
+  <!-- Arrow to instances -->
+  <path class="arrow" d="M 350 190 C 420 190, 420 130, 470 130"/>
+  <path class="arrow" d="M 350 190 C 420 190, 420 250, 470 250"/>
+  <path class="arrow" d="M 350 190 C 420 190, 420 370, 470 370"/>
+  
+  <text class="label" x="395" y="175">instanciar</text>
+  
+  <!-- Instance 1 -->
+  <rect class="instance-box" x="470" y="80" width="280" height="100"/>
+  <text class="instance-name" x="480" y="105">alice = Person("Alice", 30)</text>
+  <line x1="480" y1="115" x2="740" y2="115" stroke="#444" stroke-width="1"/>
+  <text class="attr" x="490" y="140">name =</text>
+  <text class="value" x="545" y="140">"Alice"</text>
+  <text class="attr" x="630" y="140">age =</text>
+  <text class="value" x="675" y="140">30</text>
+  <text class="method" x="490" y="165">greet() →</text>
+  <text class="value" x="570" y="165">"Hi, I'm Alice"</text>
+  
+  <!-- Instance 2 -->
+  <rect class="instance-box" x="470" y="200" width="280" height="100"/>
+  <text class="instance-name" x="480" y="225">bob = Person("Bob", 25)</text>
+  <line x1="480" y1="235" x2="740" y2="235" stroke="#444" stroke-width="1"/>
+  <text class="attr" x="490" y="260">name =</text>
+  <text class="value" x="545" y="260">"Bob"</text>
+  <text class="attr" x="630" y="260">age =</text>
+  <text class="value" x="675" y="260">25</text>
+  <text class="method" x="490" y="285">greet() →</text>
+  <text class="value" x="570" y="285">"Hi, I'm Bob"</text>
+  
+  <!-- Instance 3 -->
+  <rect class="instance-box" x="470" y="320" width="280" height="100"/>
+  <text class="instance-name" x="480" y="345">carol = Person("Carol", 35)</text>
+  <line x1="480" y1="355" x2="740" y2="355" stroke="#444" stroke-width="1"/>
+  <text class="attr" x="490" y="380">name =</text>
+  <text class="value" x="545" y="380">"Carol"</text>
+  <text class="attr" x="630" y="380">age =</text>
+  <text class="value" x="675" y="380">35</text>
+  <text class="method" x="490" y="405">greet() →</text>
+  <text class="value" x="570" y="405">"Hi, I'm Carol"</text>
+  
+  <!-- Notes -->
+  <text class="note" x="50" y="470">• __init__ es el constructor - se ejecuta al crear cada objeto</text>
+  <text class="note" x="50" y="485">• Cada instancia tiene sus propios valores de atributos</text>
+  <text class="note" x="450" y="470">• Los métodos son compartidos pero operan sobre self</text>
+  <text class="note" x="450" y="485">• alice, bob, carol son objetos independientes en memoria</text>
+</svg>

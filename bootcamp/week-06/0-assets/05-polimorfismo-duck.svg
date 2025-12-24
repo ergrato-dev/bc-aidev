@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #569cd6; font-family: 'Segoe UI', sans-serif; font-size: 22px; font-weight: bold; }
+      .subtitle { fill: #9cdcfe; font-family: 'Segoe UI', sans-serif; font-size: 13px; }
+      .box { fill: #2d2d30; stroke: #569cd6; stroke-width: 2; rx: 8; }
+      .class-name { fill: #4ec9b0; font-family: 'Consolas', monospace; font-size: 13px; font-weight: bold; }
+      .code { fill: #d4d4d4; font-family: 'Consolas', monospace; font-size: 11px; }
+      .keyword { fill: #c586c0; font-family: 'Consolas', monospace; font-size: 11px; }
+      .method { fill: #dcdcaa; font-family: 'Consolas', monospace; font-size: 11px; }
+      .string { fill: #ce9178; font-family: 'Consolas', monospace; font-size: 11px; }
+      .output { fill: #b5cea8; font-family: 'Consolas', monospace; font-size: 11px; }
+      .comment { fill: #6a9955; font-family: 'Consolas', monospace; font-size: 10px; font-style: italic; }
+      .label { fill: #808080; font-family: 'Segoe UI', sans-serif; font-size: 12px; }
+      .highlight { fill: #4fc1ff; font-family: 'Consolas', monospace; font-size: 11px; }
+      .note { fill: #9cdcfe; font-family: 'Segoe UI', sans-serif; font-size: 11px; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+  
+  <!-- Title -->
+  <text class="title" x="400" y="30" text-anchor="middle">Polimorfismo: Mismo Mensaje, Diferente Respuesta</text>
+  <text class="subtitle" x="400" y="50" text-anchor="middle">Duck Typing: "Si camina como pato y hace cuac, es un pato"</text>
+  
+  <!-- Dog class -->
+  <rect class="box" x="50" y="70" width="200" height="90"/>
+  <text class="class-name" x="150" y="95" text-anchor="middle">Dog</text>
+  <line x1="65" y1="105" x2="235" y2="105" stroke="#444" stroke-width="1"/>
+  <text class="keyword" x="70" y="125">def</text>
+  <text class="highlight" x="100" y="125">speak</text>
+  <text class="code" x="135" y="125">(self):</text>
+  <text class="keyword" x="85" y="145">return</text>
+  <text class="string" x="133" y="145">"Woof!"</text>
+  
+  <!-- Cat class -->
+  <rect class="box" x="300" y="70" width="200" height="90"/>
+  <text class="class-name" x="400" y="95" text-anchor="middle">Cat</text>
+  <line x1="315" y1="105" x2="485" y2="105" stroke="#444" stroke-width="1"/>
+  <text class="keyword" x="320" y="125">def</text>
+  <text class="highlight" x="350" y="125">speak</text>
+  <text class="code" x="385" y="125">(self):</text>
+  <text class="keyword" x="335" y="145">return</text>
+  <text class="string" x="383" y="145">"Meow!"</text>
+  
+  <!-- Duck class -->
+  <rect class="box" x="550" y="70" width="200" height="90"/>
+  <text class="class-name" x="650" y="95" text-anchor="middle">Duck</text>
+  <line x1="565" y1="105" x2="735" y2="105" stroke="#444" stroke-width="1"/>
+  <text class="keyword" x="570" y="125">def</text>
+  <text class="highlight" x="600" y="125">speak</text>
+  <text class="code" x="635" y="125">(self):</text>
+  <text class="keyword" x="585" y="145">return</text>
+  <text class="string" x="633" y="145">"Quack!"</text>
+  
+  <!-- Polymorphic usage -->
+  <rect fill="#252526" x="50" y="180" width="700" height="130" rx="8"/>
+  <text class="label" x="400" y="205" text-anchor="middle">Código polimórfico - funciona con cualquier objeto que tenga speak():</text>
+  
+  <text class="code" x="70" y="235">animals = [Dog(), Cat(), Duck()]</text>
+  
+  <text class="keyword" x="70" y="260">for</text>
+  <text class="code" x="95" y="260">animal</text>
+  <text class="keyword" x="145" y="260">in</text>
+  <text class="code" x="165" y="260">animals:</text>
+  
+  <text class="code" x="90" y="285">print(animal.</text>
+  <text class="highlight" x="190" y="285">speak</text>
+  <text class="code" x="225" y="285">())</text>
+  
+  <!-- Output -->
+  <text class="comment" x="400" y="235"># Salida:</text>
+  <text class="output" x="400" y="260">"Woof!"</text>
+  <text class="comment" x="460" y="260">← Dog</text>
+  <text class="output" x="400" y="280">"Meow!"</text>
+  <text class="comment" x="460" y="280">← Cat</text>
+  <text class="output" x="400" y="300">"Quack!"</text>
+  <text class="comment" x="465" y="300">← Duck</text>
+  
+  <!-- Duck typing explanation -->
+  <rect fill="#252526" x="50" y="330" width="340" height="150" rx="8"/>
+  <text class="label" x="220" y="355" text-anchor="middle">🦆 Duck Typing</text>
+  <text class="note" x="70" y="380">No importa el tipo de la clase</text>
+  <text class="note" x="70" y="400">Solo que tenga el método requerido</text>
+  <text class="code" x="70" y="430">def make_speak(obj):</text>
+  <text class="comment" x="220" y="430"># Acepta cualquier</text>
+  <text class="code" x="90" y="450">print(obj.speak())</text>
+  <text class="comment" x="240" y="450"># con speak()</text>
+  
+  <!-- isinstance vs duck typing -->
+  <rect fill="#252526" x="410" y="330" width="340" height="150" rx="8"/>
+  <text class="label" x="580" y="355" text-anchor="middle">isinstance() vs Duck Typing</text>
+  <text class="comment" x="430" y="380"># ❌ Antipatrón en Python:</text>
+  <text class="keyword" x="430" y="400">if</text>
+  <text class="code" x="450" y="400">isinstance(obj, Dog):</text>
+  <text class="code" x="450" y="420">obj.speak()</text>
+  
+  <text class="comment" x="430" y="445"># ✅ Pythonic (Duck typing):</text>
+  <text class="code" x="430" y="465">obj.speak()</text>
+  <text class="comment" x="530" y="465"># Confía en el objeto</text>
+</svg>

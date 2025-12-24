@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 550">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #569cd6; font-family: 'Segoe UI', sans-serif; font-size: 20px; font-weight: bold; }
+      .section { fill: #c586c0; font-family: 'Segoe UI', sans-serif; font-size: 14px; font-weight: bold; }
+      .box { fill: #2d2d30; stroke: #569cd6; stroke-width: 1; rx: 5; }
+      .method { fill: #dcdcaa; font-family: 'Consolas', monospace; font-size: 11px; }
+      .desc { fill: #9cdcfe; font-family: 'Segoe UI', sans-serif; font-size: 10px; }
+      .usage { fill: #d4d4d4; font-family: 'Consolas', monospace; font-size: 10px; }
+      .note { fill: #6a9955; font-family: 'Segoe UI', sans-serif; font-size: 10px; font-style: italic; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="850" height="550"/>
+  
+  <!-- Title -->
+  <text class="title" x="425" y="30" text-anchor="middle">Métodos Especiales (Dunder Methods) en Python</text>
+  
+  <!-- Representación -->
+  <text class="section" x="30" y="60">📝 Representación</text>
+  <rect class="box" x="20" y="70" width="250" height="80"/>
+  <text class="method" x="35" y="90">__str__(self)</text>
+  <text class="desc" x="35" y="105">Para usuarios: print(obj)</text>
+  <text class="usage" x="35" y="120">return "Point(3, 4)"</text>
+  
+  <text class="method" x="35" y="140">__repr__(self)</text>
+  <text class="desc" x="155" y="140">Para devs: repr(obj)</text>
+  
+  <!-- Comparación -->
+  <text class="section" x="300" y="60">⚖️ Comparación</text>
+  <rect class="box" x="290" y="70" width="250" height="80"/>
+  <text class="method" x="305" y="90">__eq__(self, other)</text>
+  <text class="desc" x="305" y="105">Igualdad: obj1 == obj2</text>
+  <text class="method" x="305" y="125">__lt__(self, other)</text>
+  <text class="desc" x="305" y="140">Menor que: obj1 &lt; obj2</text>
+  
+  <!-- Aritméticos -->
+  <text class="section" x="570" y="60">➕ Aritméticos</text>
+  <rect class="box" x="560" y="70" width="270" height="80"/>
+  <text class="method" x="575" y="90">__add__(self, other)</text>
+  <text class="desc" x="575" y="105">Suma: obj1 + obj2</text>
+  <text class="method" x="575" y="125">__mul__(self, other)</text>
+  <text class="desc" x="575" y="140">Mult: obj * 3</text>
+  
+  <!-- Colecciones -->
+  <text class="section" x="30" y="175">📦 Colecciones</text>
+  <rect class="box" x="20" y="185" width="250" height="100"/>
+  <text class="method" x="35" y="205">__len__(self)</text>
+  <text class="desc" x="35" y="220">Longitud: len(obj)</text>
+  <text class="method" x="35" y="240">__getitem__(self, key)</text>
+  <text class="desc" x="35" y="255">Indexación: obj[0]</text>
+  <text class="method" x="35" y="275">__iter__(self)</text>
+  <text class="desc" x="155" y="275">Iteración</text>
+  
+  <!-- Contenedor -->
+  <text class="section" x="300" y="175">🔍 Contenedor</text>
+  <rect class="box" x="290" y="185" width="250" height="100"/>
+  <text class="method" x="305" y="205">__contains__(self, item)</text>
+  <text class="desc" x="305" y="220">Membresía: x in obj</text>
+  <text class="method" x="305" y="240">__setitem__(self, k, v)</text>
+  <text class="desc" x="305" y="255">Asignar: obj[k] = v</text>
+  <text class="method" x="305" y="275">__delitem__(self, key)</text>
+  <text class="desc" x="445" y="275">del obj[k]</text>
+  
+  <!-- Ciclo de vida -->
+  <text class="section" x="570" y="175">🔄 Ciclo de Vida</text>
+  <rect class="box" x="560" y="185" width="270" height="100"/>
+  <text class="method" x="575" y="205">__init__(self, ...)</text>
+  <text class="desc" x="575" y="220">Constructor</text>
+  <text class="method" x="575" y="240">__del__(self)</text>
+  <text class="desc" x="575" y="255">Destructor</text>
+  <text class="method" x="575" y="275">__new__(cls, ...)</text>
+  <text class="desc" x="710" y="275">Crear instancia</text>
+  
+  <!-- Ejemplo completo -->
+  <rect fill="#252526" x="20" y="310" width="810" height="220" rx="8"/>
+  <text class="section" x="425" y="335" text-anchor="middle">💡 Ejemplo: Clase Point con métodos especiales</text>
+  
+  <!-- Código -->
+  <text class="usage" x="40" y="360">class Point:</text>
+  <text class="usage" x="60" y="380">def __init__(self, x, y):</text>
+  <text class="usage" x="80" y="395">self.x, self.y = x, y</text>
+  
+  <text class="usage" x="60" y="420">def __str__(self):</text>
+  <text class="usage" x="80" y="435">return f"({self.x}, {self.y})"</text>
+  
+  <text class="usage" x="60" y="460">def __eq__(self, other):</text>
+  <text class="usage" x="80" y="475">return self.x == other.x and self.y == other.y</text>
+  
+  <text class="usage" x="60" y="500">def __add__(self, other):</text>
+  <text class="usage" x="80" y="515">return Point(self.x + other.x, self.y + other.y)</text>
+  
+  <!-- Uso -->
+  <text class="usage" x="450" y="360">p1 = Point(1, 2)</text>
+  <text class="usage" x="450" y="380">p2 = Point(3, 4)</text>
+  
+  <text class="usage" x="450" y="410">print(p1)</text>
+  <text class="note" x="540" y="410"># (1, 2) ← __str__</text>
+  
+  <text class="usage" x="450" y="435">p1 == Point(1, 2)</text>
+  <text class="note" x="575" y="435"># True ← __eq__</text>
+  
+  <text class="usage" x="450" y="460">p3 = p1 + p2</text>
+  <text class="note" x="545" y="460"># Point(4, 6) ← __add__</text>
+  
+  <text class="usage" x="450" y="490">sorted([p2, p1])</text>
+  <text class="note" x="565" y="490"># Necesita __lt__</text>
+  
+  <text class="usage" x="450" y="515">len(points)</text>
+  <text class="note" x="545" y="515"># Necesita __len__</text>
+</svg>
