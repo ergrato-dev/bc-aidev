@@ -1,0 +1,77 @@
+<svg viewBox="0 0 650 480" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="650" height="480" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="325" y="30" text-anchor="middle" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">Regresión Lineal Múltiple</text>
+  <text x="325" y="50" text-anchor="middle" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="12">y = β₀ + β₁x₁ + β₂x₂ + ... + βₙxₙ</text>
+  
+  <!-- Left: Multiple features illustration -->
+  <rect x="30" y="70" width="300" height="200" fill="#16213e" rx="10"/>
+  <text x="180" y="95" text-anchor="middle" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Múltiples Features → Modelo</text>
+  
+  <!-- Feature boxes -->
+  <rect x="50" y="115" width="80" height="30" fill="#3B82F6" rx="6"/>
+  <text x="90" y="135" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11">x₁ (área)</text>
+  
+  <rect x="50" y="155" width="80" height="30" fill="#8B5CF6" rx="6"/>
+  <text x="90" y="175" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11">x₂ (habit.)</text>
+  
+  <rect x="50" y="195" width="80" height="30" fill="#EC4899" rx="6"/>
+  <text x="90" y="215" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11">x₃ (edad)</text>
+  
+  <!-- Arrows to model -->
+  <line x1="135" y1="130" x2="175" y2="165" stroke="#3B82F6" stroke-width="2"/>
+  <line x1="135" y1="170" x2="175" y2="170" stroke="#8B5CF6" stroke-width="2"/>
+  <line x1="135" y1="210" x2="175" y2="175" stroke="#EC4899" stroke-width="2"/>
+  
+  <!-- Model box -->
+  <rect x="180" y="145" width="70" height="50" fill="#10B981" rx="8"/>
+  <text x="215" y="175" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12">Modelo</text>
+  
+  <!-- Output arrow and label -->
+  <line x1="255" y1="170" x2="295" y2="170" stroke="#10B981" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#10B981"/>
+    </marker>
+  </defs>
+  <text x="300" y="175" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="12">ŷ (precio)</text>
+  
+  <!-- Right: Coefficient interpretation -->
+  <rect x="345" y="70" width="280" height="200" fill="#16213e" rx="10"/>
+  <text x="485" y="95" text-anchor="middle" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Interpretación de Coeficientes</text>
+  
+  <!-- Coefficients -->
+  <text x="365" y="125" fill="#3B82F6" font-family="system-ui, sans-serif" font-size="12">β₁ = +150</text>
+  <text x="470" y="125" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">+1m² → +$150</text>
+  
+  <text x="365" y="155" fill="#8B5CF6" font-family="system-ui, sans-serif" font-size="12">β₂ = +8000</text>
+  <text x="470" y="155" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">+1 hab → +$8000</text>
+  
+  <text x="365" y="185" fill="#EC4899" font-family="system-ui, sans-serif" font-size="12">β₃ = -500</text>
+  <text x="470" y="185" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">+1 año → -$500</text>
+  
+  <text x="365" y="215" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="12">β₀ = 50000</text>
+  <text x="470" y="215" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">Precio base</text>
+  
+  <!-- Example calculation -->
+  <rect x="365" y="235" width="240" height="25" fill="#1a1a2e" rx="4"/>
+  <text x="485" y="252" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="10">ŷ = 50000 + 150·área + 8000·hab - 500·edad</text>
+  
+  <!-- Bottom: Important notes - Single column layout -->
+  <rect x="30" y="290" width="595" height="175" fill="#16213e" rx="10"/>
+  <text x="50" y="315" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Consideraciones Importantes:</text>
+  
+  <circle cx="50" cy="345" r="4" fill="#EF4444"/>
+  <text x="65" y="350" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="11">Escalar features con StandardScaler para poder comparar la magnitud de los coeficientes</text>
+  
+  <circle cx="50" cy="375" r="4" fill="#F59E0B"/>
+  <text x="65" y="380" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="11">Multicolinealidad: si features están muy correlacionadas, los coeficientes se distorsionan</text>
+  
+  <circle cx="50" cy="405" r="4" fill="#10B981"/>
+  <text x="65" y="410" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="11">R² ajustado penaliza agregar features innecesarias (evita sobreajuste)</text>
+  
+  <circle cx="50" cy="435" r="4" fill="#3B82F6"/>
+  <text x="65" y="440" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="11">VIF (Variance Inflation Factor) > 5 indica problemas de multicolinealidad</text>
+</svg>
