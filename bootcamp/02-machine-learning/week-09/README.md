@@ -86,9 +86,9 @@ pip install scikit-learn pandas numpy matplotlib seaborn
 
 ## 🔗 Navegación
 
-| Anterior                                    | Siguiente                                             |
-| ------------------------------------------- | ----------------------------------------------------- |
-| [← Semana 08: Pandas](../week-08/README.md) | [Semana 10: Regresión Lineal →](../week-10/README.md) |
+| Anterior                                         | Índice                            | Siguiente                                             |
+| ------------------------------------------------ | --------------------------------- | ----------------------------------------------------- |
+| [← Módulo 1: Fundamentos](../../01-fundamentos/) | [📚 Bootcamp](../../../README.md) | [Semana 10: Regresión Lineal →](../week-10/README.md) |
 
 ---
 

@@ -119,9 +119,9 @@ week-12/
 
 ## 🔗 Navegación
 
-| Anterior                                                    | Siguiente                                      |
-| ----------------------------------------------------------- | ---------------------------------------------- |
-| [⬅️ Week-11: Árboles y Random Forest](../week-11/README.md) | [Week-13: Clustering ➡️](../week-13/README.md) |
+| Anterior                                                    | Índice                            | Siguiente                          |
+| ----------------------------------------------------------- | --------------------------------- | ---------------------------------- |
+| [⬅️ Week-11: Árboles y Random Forest](../week-11/README.md) | [📚 Bootcamp](../../../README.md) | Week-13: Clustering (próximamente) |
 
 ---
 

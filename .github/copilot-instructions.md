@@ -84,10 +84,25 @@ Al finalizar el bootcamp, los estudiantes serán capaces de:
 
 ## 🗂️ Estructura de Carpetas
 
+El bootcamp está organizado por módulos:
+
+```
+bootcamp/
+├── 01-fundamentos/           # Semanas 1-8 (48h)
+│   ├── README.md             # Descripción del módulo
+│   ├── week-01/
+│   ├── week-02/
+│   └── ...
+├── 02-machine-learning/      # Semanas 9-18 (60h)
+├── 03-deep-learning/         # Semanas 19-28 (60h)
+├── 04-especializacion/       # Semanas 29-34 (36h)
+└── 05-proyecto-final/        # Semanas 35-36 (12h)
+```
+
 Cada semana sigue esta estructura estándar:
 
 ```
-bootcamp/week-XX/
+week-XX/
 ├── README.md                 # Descripción y objetivos de la semana
 ├── rubrica-evaluacion.md     # Criterios de evaluación detallados
 ├── 0-assets/                 # Imágenes, diagramas, datasets
@@ -758,8 +773,8 @@ Cuando trabajes en este proyecto:
 ## 🔗 Enlaces Importantes
 
 - **Repositorio**: https://github.com/epti-dev/bc-aidev
-- **Documentación general**: [\_docs/README.md](_docs/README.md)
-- **Primera semana**: [bootcamp/week-01/README.md](bootcamp/week-01/README.md)
+- **Documentación general**: [\_docs/README.md](../_docs/README.md)
+- **Primera semana**: [bootcamp/01-fundamentos/week-01](../bootcamp/01-fundamentos/week-01/README.md)
 
 ---
 

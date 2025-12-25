@@ -49,16 +49,18 @@ Este bootcamp se enfoca en el aprendizaje práctico con proyectos del mundo real
 
 Base sólida en Python y herramientas esenciales para Data Science.
 
-| Semana                 | Tema                 | Descripción                                     |
-| ---------------------- | -------------------- | ----------------------------------------------- |
-| [01](bootcamp/week-01) | Python Moderno       | Sintaxis, tipos, funciones, OOP, type hints     |
-| [02](bootcamp/week-02) | Estructuras de Datos | Listas, diccionarios, sets, comprensiones       |
-| [03](bootcamp/week-03) | Matemáticas I        | Álgebra lineal: vectores, matrices, operaciones |
-| [04](bootcamp/week-04) | Matemáticas II       | Estadística descriptiva, probabilidad           |
-| [05](bootcamp/week-05) | NumPy                | Arrays, broadcasting, operaciones vectorizadas  |
-| [06](bootcamp/week-06) | Pandas I             | Series, DataFrames, indexación, filtrado        |
-| [07](bootcamp/week-07) | Pandas II            | Limpieza, merge, groupby, pivot tables          |
-| [08](bootcamp/week-08) | Visualización        | Matplotlib, Seaborn, gráficos estadísticos      |
+| Semana                                | Tema                 | Descripción                                     |
+| ------------------------------------- | -------------------- | ----------------------------------------------- |
+| [01](bootcamp/01-fundamentos/week-01) | Python Moderno       | Sintaxis, tipos, funciones, OOP, type hints     |
+| [02](bootcamp/01-fundamentos/week-02) | Estructuras de Datos | Listas, diccionarios, sets, comprensiones       |
+| [03](bootcamp/01-fundamentos/week-03) | Matemáticas I        | Álgebra lineal: vectores, matrices, operaciones |
+| [04](bootcamp/01-fundamentos/week-04) | Matemáticas II       | Estadística descriptiva, probabilidad           |
+| [05](bootcamp/01-fundamentos/week-05) | NumPy                | Arrays, broadcasting, operaciones vectorizadas  |
+| [06](bootcamp/01-fundamentos/week-06) | Pandas I             | Series, DataFrames, indexación, filtrado        |
+| [07](bootcamp/01-fundamentos/week-07) | Pandas II            | Limpieza, merge, groupby, pivot tables          |
+| [08](bootcamp/01-fundamentos/week-08) | Visualización        | Matplotlib, Seaborn, gráficos estadísticos      |
+
+📂 **[Ver módulo completo →](bootcamp/01-fundamentos)**
 
 ---
 
@@ -66,18 +68,20 @@ Base sólida en Python y herramientas esenciales para Data Science.
 
 Algoritmos clásicos de ML y metodología de trabajo con datos.
 
-| Semana                 | Tema                  | Descripción                                       |
-| ---------------------- | --------------------- | ------------------------------------------------- |
-| [09](bootcamp/week-09) | Intro a ML            | Tipos de aprendizaje, workflow, scikit-learn      |
-| [10](bootcamp/week-10) | Regresión             | Lineal, polinomial, regularización (Ridge, Lasso) |
-| [11](bootcamp/week-11) | Árboles de Decisión   | Decision Trees, Random Forest, Gradient Boosting  |
-| [12](bootcamp/week-12) | SVM, KNN, Naive Bayes | Clasificadores clásicos, kernels, distancias      |
-| 13                     | Clustering            | K-Means, DBSCAN, clustering jerárquico            |
-| 14                     | Reducción Dimensional | PCA, t-SNE, selección de features                 |
-| 15                     | Feature Engineering   | Transformaciones, encoding, pipelines             |
-| 16                     | Validación y Métricas | Cross-validation, métricas, curvas ROC            |
-| 17                     | Optimización          | GridSearch, RandomSearch, Optuna                  |
-| 18                     | Proyecto ML           | End-to-end ML pipeline, Kaggle challenge          |
+| Semana                                     | Tema                  | Descripción                                       |
+| ------------------------------------------ | --------------------- | ------------------------------------------------- |
+| [09](bootcamp/02-machine-learning/week-09) | Intro a ML            | Tipos de aprendizaje, workflow, scikit-learn      |
+| [10](bootcamp/02-machine-learning/week-10) | Regresión             | Lineal, polinomial, regularización (Ridge, Lasso) |
+| [11](bootcamp/02-machine-learning/week-11) | Árboles de Decisión   | Decision Trees, Random Forest, Gradient Boosting  |
+| [12](bootcamp/02-machine-learning/week-12) | SVM, KNN, Naive Bayes | Clasificadores clásicos, kernels, distancias      |
+| 13                                         | Clustering            | K-Means, DBSCAN, clustering jerárquico            |
+| 14                                         | Reducción Dimensional | PCA, t-SNE, selección de features                 |
+| 15                                         | Feature Engineering   | Transformaciones, encoding, pipelines             |
+| 16                                         | Validación y Métricas | Cross-validation, métricas, curvas ROC            |
+| 17                                         | Optimización          | GridSearch, RandomSearch, Optuna                  |
+| 18                                         | Proyecto ML           | End-to-end ML pipeline, Kaggle challenge          |
+
+📂 **[Ver módulo completo →](bootcamp/02-machine-learning)**
 
 ---
 
@@ -98,6 +102,8 @@ Redes neuronales desde los fundamentos hasta arquitecturas avanzadas.
 | 27     | Optimización DL  | Optimizers, learning rate schedules, callbacks       |
 | 28     | Proyecto DL      | Computer Vision o NLP con deep learning              |
 
+📂 **[Ver módulo completo →](bootcamp/03-deep-learning)**
+
 ---
 
 ### 📕 Módulo 4: Especialización (Semanas 29-34) — 36 horas
@@ -113,6 +119,8 @@ NLP avanzado, LLMs y despliegue de modelos.
 | 33     | Computer Vision | Detección de objetos, segmentación, YOLO                |
 | 34     | MLOps           | APIs (FastAPI), Docker, deployment, monitoreo           |
 
+📂 **[Ver módulo completo →](bootcamp/04-especializacion)**
+
 ---
 
 ### 🎓 Módulo 5: Proyecto Final (Semanas 35-36) — 12 horas
@@ -123,6 +131,8 @@ Proyecto integrador end-to-end en producción.
 | ------ | --------------------- | --------------------------------------------- |
 | 35     | Desarrollo            | Implementación del proyecto final completo    |
 | 36     | Deploy y Presentación | Despliegue en producción, documentación, demo |
+
+📂 **[Ver módulo completo →](bootcamp/05-proyecto-final)**
 
 ---
 
@@ -328,7 +338,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 _De cero a desarrollador IA/ML Junior en 9 meses_
 
-[Comenzar Semana 1](bootcamp/week-01) • [Ver Documentación](_docs) • [Reportar Issue](https://github.com/epti-dev/bc-aidev/issues) • [Contribuir](CONTRIBUTING.md)
+[Comenzar Semana 1](bootcamp/01-fundamentos/week-01) • [Ver Documentación](_docs) • [Reportar Issue](https://github.com/epti-dev/bc-aidev/issues) • [Contribuir](CONTRIBUTING.md)
 
 ---
 
