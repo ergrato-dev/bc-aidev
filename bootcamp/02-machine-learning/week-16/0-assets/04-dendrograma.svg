@@ -1,0 +1,138 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Clustering Jerárquico y Dendrograma</text>
+  
+  <!-- Agglomerative Process -->
+  <rect x="30" y="60" width="400" height="200" rx="10" fill="#1e3a5f" stroke="#9b59b6" stroke-width="2"/>
+  <text x="230" y="90" text-anchor="middle" fill="#9b59b6" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Clustering Aglomerativo</text>
+  
+  <!-- Step 1 -->
+  <text x="50" y="120" fill="#3498db" font-family="Arial, sans-serif" font-size="13" font-weight="bold">1.</text>
+  <text x="70" y="120" fill="#cccccc" font-family="Arial, sans-serif" font-size="12">Cada punto es un cluster</text>
+  <circle cx="320" cy="115" r="6" fill="#e74c3c"/>
+  <circle cx="340" cy="115" r="6" fill="#3498db"/>
+  <circle cx="360" cy="115" r="6" fill="#2ecc71"/>
+  <circle cx="380" cy="115" r="6" fill="#f39c12"/>
+  <circle cx="400" cy="115" r="6" fill="#9b59b6"/>
+  
+  <!-- Step 2 -->
+  <text x="50" y="150" fill="#3498db" font-family="Arial, sans-serif" font-size="13" font-weight="bold">2.</text>
+  <text x="70" y="150" fill="#cccccc" font-family="Arial, sans-serif" font-size="12">Unir los 2 clusters más cercanos</text>
+  <circle cx="330" cy="145" r="10" fill="none" stroke="#e74c3c" stroke-width="1"/>
+  <circle cx="325" cy="145" r="4" fill="#e74c3c"/>
+  <circle cx="335" cy="145" r="4" fill="#3498db"/>
+  <circle cx="360" cy="145" r="6" fill="#2ecc71"/>
+  <circle cx="380" cy="145" r="6" fill="#f39c12"/>
+  <circle cx="400" cy="145" r="6" fill="#9b59b6"/>
+  
+  <!-- Step 3 -->
+  <text x="50" y="180" fill="#3498db" font-family="Arial, sans-serif" font-size="13" font-weight="bold">3.</text>
+  <text x="70" y="180" fill="#cccccc" font-family="Arial, sans-serif" font-size="12">Repetir hasta 1 cluster</text>
+  <ellipse cx="350" cy="175" rx="35" ry="12" fill="none" stroke="#9b59b6" stroke-width="1"/>
+  <circle cx="330" cy="175" r="4" fill="#e74c3c"/>
+  <circle cx="345" cy="175" r="4" fill="#3498db"/>
+  <circle cx="360" cy="175" r="4" fill="#2ecc71"/>
+  <circle cx="390" cy="175" r="10" fill="none" stroke="#f39c12" stroke-width="1"/>
+  <circle cx="385" cy="175" r="4" fill="#f39c12"/>
+  <circle cx="395" cy="175" r="4" fill="#9b59b6"/>
+  
+  <!-- Step 4 -->
+  <text x="50" y="210" fill="#3498db" font-family="Arial, sans-serif" font-size="13" font-weight="bold">4.</text>
+  <text x="70" y="210" fill="#cccccc" font-family="Arial, sans-serif" font-size="12">Cortar dendrograma en K clusters</text>
+  <text x="50" y="240" fill="#aaaaaa" font-family="Arial, sans-serif" font-size="11">El corte determina el número de clusters</text>
+  
+  <!-- Linkage Methods -->
+  <rect x="470" y="60" width="400" height="200" rx="10" fill="#1e3a5f" stroke="#f39c12" stroke-width="2"/>
+  <text x="670" y="90" text-anchor="middle" fill="#f39c12" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Métodos de Enlace (Linkage)</text>
+  
+  <!-- Single -->
+  <text x="490" y="125" fill="#e74c3c" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Single</text>
+  <text x="550" y="125" fill="#cccccc" font-family="Arial, sans-serif" font-size="12">min(dist) - puntos más cercanos</text>
+  
+  <!-- Complete -->
+  <text x="490" y="155" fill="#3498db" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Complete</text>
+  <text x="570" y="155" fill="#cccccc" font-family="Arial, sans-serif" font-size="12">max(dist) - puntos más lejanos</text>
+  
+  <!-- Average -->
+  <text x="490" y="185" fill="#2ecc71" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Average</text>
+  <text x="565" y="185" fill="#cccccc" font-family="Arial, sans-serif" font-size="12">promedio de todas las distancias</text>
+  
+  <!-- Ward -->
+  <text x="490" y="215" fill="#9b59b6" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Ward</text>
+  <text x="540" y="215" fill="#cccccc" font-family="Arial, sans-serif" font-size="12">minimiza varianza intra-cluster</text>
+  <text x="490" y="240" fill="#aaaaaa" font-family="Arial, sans-serif" font-size="11">↑ Más usado, produce clusters compactos</text>
+  
+  <!-- Dendrogram Example -->
+  <rect x="30" y="280" width="840" height="200" rx="10" fill="#2c3e50" stroke="#3498db" stroke-width="2"/>
+  <text x="450" y="310" text-anchor="middle" fill="#3498db" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Dendrograma</text>
+  
+  <!-- Y axis -->
+  <line x1="80" y1="340" x2="80" y2="450" stroke="#666666" stroke-width="1"/>
+  <text x="60" y="345" fill="#888888" font-family="Arial, sans-serif" font-size="10">Distancia</text>
+  <text x="70" y="365" fill="#888888" font-family="Arial, sans-serif" font-size="9">4</text>
+  <text x="70" y="395" fill="#888888" font-family="Arial, sans-serif" font-size="9">2</text>
+  <text x="70" y="425" fill="#888888" font-family="Arial, sans-serif" font-size="9">1</text>
+  <text x="70" y="450" fill="#888888" font-family="Arial, sans-serif" font-size="9">0</text>
+  
+  <!-- Dendrogram tree -->
+  <!-- Leaves -->
+  <line x1="150" y1="450" x2="150" y2="420" stroke="#e74c3c" stroke-width="2"/>
+  <line x1="220" y1="450" x2="220" y2="420" stroke="#e74c3c" stroke-width="2"/>
+  <line x1="150" y1="420" x2="220" y2="420" stroke="#e74c3c" stroke-width="2"/>
+  <line x1="185" y1="420" x2="185" y2="390" stroke="#e74c3c" stroke-width="2"/>
+  
+  <line x1="300" y1="450" x2="300" y2="400" stroke="#3498db" stroke-width="2"/>
+  <line x1="370" y1="450" x2="370" y2="400" stroke="#3498db" stroke-width="2"/>
+  <line x1="300" y1="400" x2="370" y2="400" stroke="#3498db" stroke-width="2"/>
+  <line x1="335" y1="400" x2="335" y2="370" stroke="#3498db" stroke-width="2"/>
+  
+  <line x1="185" y1="390" x2="335" y2="370" stroke="#9b59b6" stroke-width="2"/>
+  <line x1="260" y1="380" x2="260" y2="355" stroke="#9b59b6" stroke-width="2"/>
+  
+  <line x1="500" y1="450" x2="500" y2="410" stroke="#2ecc71" stroke-width="2"/>
+  <line x1="570" y1="450" x2="570" y2="410" stroke="#2ecc71" stroke-width="2"/>
+  <line x1="500" y1="410" x2="570" y2="410" stroke="#2ecc71" stroke-width="2"/>
+  <line x1="535" y1="410" x2="535" y2="380" stroke="#2ecc71" stroke-width="2"/>
+  
+  <line x1="650" y1="450" x2="650" y2="430" stroke="#f39c12" stroke-width="2"/>
+  <line x1="720" y1="450" x2="720" y2="430" stroke="#f39c12" stroke-width="2"/>
+  <line x1="650" y1="430" x2="720" y2="430" stroke="#f39c12" stroke-width="2"/>
+  <line x1="685" y1="430" x2="685" y2="380" stroke="#f39c12" stroke-width="2"/>
+  
+  <line x1="535" y1="380" x2="685" y2="380" stroke="#ffffff" stroke-width="2"/>
+  <line x1="610" y1="380" x2="610" y2="355" stroke="#ffffff" stroke-width="2"/>
+  
+  <line x1="260" y1="355" x2="610" y2="355" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Cut line -->
+  <line x1="100" y1="385" x2="800" y2="385" stroke="#e74c3c" stroke-width="2" stroke-dasharray="10,5"/>
+  <text x="815" y="390" fill="#e74c3c" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Corte</text>
+  <text x="815" y="405" fill="#e74c3c" font-family="Arial, sans-serif" font-size="10">K=2</text>
+  
+  <!-- Labels -->
+  <text x="150" y="465" text-anchor="middle" fill="#888888" font-family="Arial, sans-serif" font-size="10">A</text>
+  <text x="220" y="465" text-anchor="middle" fill="#888888" font-family="Arial, sans-serif" font-size="10">B</text>
+  <text x="300" y="465" text-anchor="middle" fill="#888888" font-family="Arial, sans-serif" font-size="10">C</text>
+  <text x="370" y="465" text-anchor="middle" fill="#888888" font-family="Arial, sans-serif" font-size="10">D</text>
+  <text x="500" y="465" text-anchor="middle" fill="#888888" font-family="Arial, sans-serif" font-size="10">E</text>
+  <text x="570" y="465" text-anchor="middle" fill="#888888" font-family="Arial, sans-serif" font-size="10">F</text>
+  <text x="650" y="465" text-anchor="middle" fill="#888888" font-family="Arial, sans-serif" font-size="10">G</text>
+  <text x="720" y="465" text-anchor="middle" fill="#888888" font-family="Arial, sans-serif" font-size="10">H</text>
+  
+  <!-- Cluster labels -->
+  <rect x="130" y="340" width="260" height="20" rx="5" fill="#9b59b6" opacity="0.2"/>
+  <text x="260" y="355" text-anchor="middle" fill="#9b59b6" font-family="Arial, sans-serif" font-size="11">Cluster 1</text>
+  
+  <rect x="480" y="340" width="260" height="20" rx="5" fill="#2ecc71" opacity="0.2"/>
+  <text x="610" y="355" text-anchor="middle" fill="#2ecc71" font-family="Arial, sans-serif" font-size="11">Cluster 2</text>
+</svg>

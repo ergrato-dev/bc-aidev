@@ -1,0 +1,91 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="520" fill="url(#bgGrad)"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Evaluación de Clustering</text>
+  
+  <!-- Elbow Method -->
+  <rect x="30" y="60" width="410" height="210" rx="10" fill="#1e3a5f" stroke="#f39c12" stroke-width="2"/>
+  <text x="235" y="90" text-anchor="middle" fill="#f39c12" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Método del Codo (Elbow)</text>
+  
+  <!-- Elbow graph -->
+  <line x1="70" y1="230" x2="400" y2="230" stroke="#666666" stroke-width="1"/>
+  <line x1="70" y1="230" x2="70" y2="110" stroke="#666666" stroke-width="1"/>
+  <text x="235" y="255" text-anchor="middle" fill="#888888" font-family="Arial, sans-serif" font-size="11">Número de Clusters (K)</text>
+  <text x="55" y="170" fill="#888888" font-family="Arial, sans-serif" font-size="10" transform="rotate(-90, 55, 170)">Inercia (WCSS)</text>
+  
+  <!-- Elbow curve -->
+  <path d="M 90 120 Q 130 140 170 180 Q 210 210 250 218 L 380 225" fill="none" stroke="#3498db" stroke-width="3"/>
+  
+  <!-- Elbow point -->
+  <circle cx="170" cy="180" r="8" fill="#e74c3c"/>
+  <line x1="170" y1="180" x2="170" y2="230" stroke="#e74c3c" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="170" y="245" text-anchor="middle" fill="#e74c3c" font-family="Arial, sans-serif" font-size="10" font-weight="bold">K=3</text>
+  <text x="280" y="180" fill="#aaaaaa" font-family="Arial, sans-serif" font-size="10">← "Codo": K óptimo</text>
+  
+  <!-- K values -->
+  <text x="90" y="245" fill="#888888" font-family="Arial, sans-serif" font-size="9">1</text>
+  <text x="130" y="245" fill="#888888" font-family="Arial, sans-serif" font-size="9">2</text>
+  <text x="210" y="245" fill="#888888" font-family="Arial, sans-serif" font-size="9">4</text>
+  <text x="250" y="245" fill="#888888" font-family="Arial, sans-serif" font-size="9">5</text>
+  
+  <!-- Silhouette Score -->
+  <rect x="460" y="60" width="410" height="210" rx="10" fill="#1e3a5f" stroke="#2ecc71" stroke-width="2"/>
+  <text x="665" y="90" text-anchor="middle" fill="#2ecc71" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Silhouette Score</text>
+  
+  <!-- Formula -->
+  <text x="665" y="125" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="16">s(i) = (b - a) / max(a, b)</text>
+  <text x="540" y="155" fill="#3498db" font-family="Arial, sans-serif" font-size="12">a = distancia promedio intra-cluster</text>
+  <text x="540" y="175" fill="#e74c3c" font-family="Arial, sans-serif" font-size="12">b = distancia promedio al cluster más cercano</text>
+  
+  <!-- Silhouette interpretation -->
+  <rect x="490" y="195" width="350" height="60" rx="5" fill="#2c3e50"/>
+  <text x="510" y="215" fill="#2ecc71" font-family="Arial, sans-serif" font-size="11">s ≈ 1</text>
+  <text x="560" y="215" fill="#cccccc" font-family="Arial, sans-serif" font-size="11">Bien agrupado</text>
+  <text x="510" y="235" fill="#f39c12" font-family="Arial, sans-serif" font-size="11">s ≈ 0</text>
+  <text x="560" y="235" fill="#cccccc" font-family="Arial, sans-serif" font-size="11">En el borde entre clusters</text>
+  <text x="700" y="215" fill="#e74c3c" font-family="Arial, sans-serif" font-size="11">s &lt; 0</text>
+  <text x="750" y="215" fill="#cccccc" font-family="Arial, sans-serif" font-size="11">Mal asignado</text>
+  
+  <!-- Other Metrics -->
+  <rect x="30" y="290" width="840" height="100" rx="10" fill="#2c3e50" stroke="#9b59b6" stroke-width="2"/>
+  <text x="450" y="320" text-anchor="middle" fill="#9b59b6" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Otras Métricas de Evaluación</text>
+  
+  <!-- Davies-Bouldin -->
+  <rect x="50" y="340" width="250" height="35" rx="5" fill="#1e3a5f"/>
+  <text x="175" y="363" text-anchor="middle" fill="#f39c12" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Davies-Bouldin Index</text>
+  <text x="65" y="383" fill="#aaaaaa" font-family="Arial, sans-serif" font-size="10">Menor = mejor (buscar mínimo)</text>
+  
+  <!-- Calinski-Harabasz -->
+  <rect x="325" y="340" width="250" height="35" rx="5" fill="#1e3a5f"/>
+  <text x="450" y="363" text-anchor="middle" fill="#3498db" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Calinski-Harabasz Index</text>
+  <text x="340" y="383" fill="#aaaaaa" font-family="Arial, sans-serif" font-size="10">Mayor = mejor (buscar máximo)</text>
+  
+  <!-- ARI/NMI -->
+  <rect x="600" y="340" width="250" height="35" rx="5" fill="#1e3a5f"/>
+  <text x="725" y="363" text-anchor="middle" fill="#2ecc71" font-family="Arial, sans-serif" font-size="13" font-weight="bold">ARI / NMI</text>
+  <text x="615" y="383" fill="#aaaaaa" font-family="Arial, sans-serif" font-size="10">Si tienes ground truth (supervisado)</text>
+  
+  <!-- Decision Guide -->
+  <rect x="30" y="410" width="840" height="90" rx="10" fill="#1e3a5f" stroke="#e74c3c" stroke-width="2"/>
+  <text x="450" y="440" text-anchor="middle" fill="#e74c3c" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Guía de Selección de K</text>
+  
+  <text x="50" y="470" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">1.</text>
+  <text x="70" y="470" fill="#cccccc" font-family="Arial, sans-serif" font-size="12">Elbow method: buscar el "codo" en la curva de inercia</text>
+  
+  <text x="350" y="470" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">2.</text>
+  <text x="370" y="470" fill="#cccccc" font-family="Arial, sans-serif" font-size="12">Silhouette: maximizar score promedio</text>
+  
+  <text x="600" y="470" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">3.</text>
+  <text x="620" y="470" fill="#cccccc" font-family="Arial, sans-serif" font-size="12">Validar con interpretación del negocio</text>
+  
+  <text x="450" y="492" text-anchor="middle" fill="#f39c12" font-family="Arial, sans-serif" font-size="11">💡 Las métricas guían, pero los clusters deben tener sentido en el contexto del problema</text>
+</svg>
