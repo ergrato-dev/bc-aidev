@@ -1,0 +1,66 @@
+<svg viewBox="0 0 650 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="650" height="450" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="325" y="30" text-anchor="middle" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">Árbol de Decisión - Estructura</text>
+  
+  <!-- Root Node -->
+  <rect x="250" y="55" width="150" height="50" fill="#3B82F6" rx="8"/>
+  <text x="325" y="75" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11">Nodo Raíz</text>
+  <text x="325" y="92" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10">¿edad > 30?</text>
+  
+  <!-- Lines from root -->
+  <line x1="290" y1="105" x2="170" y2="155" stroke="#10B981" stroke-width="2"/>
+  <line x1="360" y1="105" x2="480" y2="155" stroke="#EF4444" stroke-width="2"/>
+  <text x="220" y="125" fill="#10B981" font-family="system-ui, sans-serif" font-size="10">Sí</text>
+  <text x="420" y="125" fill="#EF4444" font-family="system-ui, sans-serif" font-size="10">No</text>
+  
+  <!-- Level 1 - Left Node -->
+  <rect x="95" y="155" width="150" height="50" fill="#8B5CF6" rx="8"/>
+  <text x="170" y="175" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11">Nodo Interno</text>
+  <text x="170" y="192" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10">¿ingresos > 50k?</text>
+  
+  <!-- Level 1 - Right Node -->
+  <rect x="405" y="155" width="150" height="50" fill="#8B5CF6" rx="8"/>
+  <text x="480" y="175" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11">Nodo Interno</text>
+  <text x="480" y="192" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10">¿estudiante?</text>
+  
+  <!-- Lines from Level 1 Left -->
+  <line x1="130" y1="205" x2="80" y2="255" stroke="#10B981" stroke-width="2"/>
+  <line x1="210" y1="205" x2="260" y2="255" stroke="#EF4444" stroke-width="2"/>
+  
+  <!-- Lines from Level 1 Right -->
+  <line x1="445" y1="205" x2="395" y2="255" stroke="#10B981" stroke-width="2"/>
+  <line x1="515" y1="205" x2="565" y2="255" stroke="#EF4444" stroke-width="2"/>
+  
+  <!-- Leaf Nodes -->
+  <rect x="30" y="255" width="100" height="40" fill="#10B981" rx="8"/>
+  <text x="80" y="280" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11">Aprueba ✓</text>
+  
+  <rect x="210" y="255" width="100" height="40" fill="#EF4444" rx="8"/>
+  <text x="260" y="280" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11">Rechaza ✗</text>
+  
+  <rect x="345" y="255" width="100" height="40" fill="#10B981" rx="8"/>
+  <text x="395" y="280" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11">Aprueba ✓</text>
+  
+  <rect x="515" y="255" width="100" height="40" fill="#EF4444" rx="8"/>
+  <text x="565" y="280" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11">Rechaza ✗</text>
+  
+  <!-- Legend -->
+  <rect x="30" y="320" width="590" height="115" fill="#16213e" rx="10"/>
+  <text x="50" y="345" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Componentes del Árbol:</text>
+  
+  <rect x="50" y="360" width="15" height="15" fill="#3B82F6" rx="3"/>
+  <text x="75" y="372" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="11">Nodo Raíz: Primera división, feature más importante</text>
+  
+  <rect x="50" y="385" width="15" height="15" fill="#8B5CF6" rx="3"/>
+  <text x="75" y="397" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="11">Nodo Interno: Divisiones intermedias</text>
+  
+  <rect x="50" y="410" width="15" height="15" fill="#10B981" rx="3"/>
+  <text x="75" y="422" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="11">Nodo Hoja: Predicción final (clase o valor)</text>
+  
+  <text x="350" y="372" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">Profundidad (depth) = niveles del árbol</text>
+  <text x="350" y="397" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">Cada división usa 1 feature y 1 threshold</text>
+  <text x="350" y="422" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">CART: Classification And Regression Trees</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg viewBox="0 0 650 380" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="650" height="380" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="325" y="30" text-anchor="middle" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">Overfitting en Árboles de Decisión</text>
+  
+  <!-- Left: Underfitting -->
+  <rect x="25" y="55" width="185" height="200" fill="#16213e" rx="10"/>
+  <text x="117" y="80" text-anchor="middle" fill="#3B82F6" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Underfitting</text>
+  <text x="117" y="100" text-anchor="middle" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">max_depth = 1</text>
+  
+  <!-- Simple tree visualization -->
+  <rect x="82" y="115" width="70" height="25" fill="#3B82F6" rx="5"/>
+  <rect x="52" y="155" width="50" height="20" fill="#10B981" rx="4"/>
+  <rect x="132" y="155" width="50" height="20" fill="#EF4444" rx="4"/>
+  <line x1="100" y1="140" x2="77" y2="155" stroke="#9CA3AF" stroke-width="1"/>
+  <line x1="134" y1="140" x2="157" y2="155" stroke="#9CA3AF" stroke-width="1"/>
+  
+  <text x="117" y="200" text-anchor="middle" fill="#EF4444" font-family="system-ui, sans-serif" font-size="10">Alto sesgo (bias)</text>
+  <text x="117" y="215" text-anchor="middle" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="10">No captura patrones</text>
+  <text x="117" y="240" text-anchor="middle" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="10">Train acc: 70%</text>
+  
+  <!-- Center: Just right -->
+  <rect x="232" y="55" width="185" height="200" fill="#16213e" rx="10"/>
+  <text x="324" y="80" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Óptimo</text>
+  <text x="324" y="100" text-anchor="middle" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">max_depth = 4</text>
+  
+  <!-- Medium tree -->
+  <rect x="289" y="112" width="70" height="20" fill="#10B981" rx="4"/>
+  <rect x="259" y="142" width="50" height="18" fill="#8B5CF6" rx="3"/>
+  <rect x="339" y="142" width="50" height="18" fill="#8B5CF6" rx="3"/>
+  <rect x="244" y="168" width="35" height="15" fill="#3B82F6" rx="3"/>
+  <rect x="289" y="168" width="35" height="15" fill="#EF4444" rx="3"/>
+  <rect x="354" y="168" width="35" height="15" fill="#10B981" rx="3"/>
+  <line x1="310" y1="132" x2="284" y2="142" stroke="#9CA3AF" stroke-width="1"/>
+  <line x1="338" y1="132" x2="364" y2="142" stroke="#9CA3AF" stroke-width="1"/>
+  
+  <text x="324" y="200" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="10">Balance bias-varianza</text>
+  <text x="324" y="215" text-anchor="middle" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="10">Generaliza bien</text>
+  <text x="324" y="240" text-anchor="middle" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="10">Train: 92% Test: 90%</text>
+  
+  <!-- Right: Overfitting -->
+  <rect x="440" y="55" width="185" height="200" fill="#16213e" rx="10"/>
+  <text x="532" y="80" text-anchor="middle" fill="#EF4444" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Overfitting</text>
+  <text x="532" y="100" text-anchor="middle" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">max_depth = None</text>
+  
+  <!-- Complex tree -->
+  <rect x="500" y="108" width="60" height="16" fill="#EF4444" rx="3"/>
+  <rect x="465" y="130" width="40" height="14" fill="#8B5CF6" rx="2"/>
+  <rect x="535" y="130" width="40" height="14" fill="#8B5CF6" rx="2"/>
+  <rect x="455" y="150" width="25" height="12" fill="#3B82F6" rx="2"/>
+  <rect x="485" y="150" width="25" height="12" fill="#3B82F6" rx="2"/>
+  <rect x="530" y="150" width="25" height="12" fill="#3B82F6" rx="2"/>
+  <rect x="560" y="150" width="25" height="12" fill="#3B82F6" rx="2"/>
+  <rect x="450" y="168" width="18" height="10" fill="#10B981" rx="1"/>
+  <rect x="472" y="168" width="18" height="10" fill="#EF4444" rx="1"/>
+  
+  <text x="532" y="200" text-anchor="middle" fill="#EF4444" font-family="system-ui, sans-serif" font-size="10">Alta varianza</text>
+  <text x="532" y="215" text-anchor="middle" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="10">Memoriza ruido</text>
+  <text x="532" y="240" text-anchor="middle" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="10">Train: 100% Test: 75%</text>
+  
+  <!-- Bottom: Solutions -->
+  <rect x="25" y="270" width="600" height="95" fill="#16213e" rx="10"/>
+  <text x="45" y="295" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Técnicas para evitar Overfitting:</text>
+  
+  <circle cx="50" cy="320" r="4" fill="#3B82F6"/>
+  <text x="65" y="325" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="10">max_depth: limitar profundidad</text>
+  
+  <circle cx="50" cy="345" r="4" fill="#8B5CF6"/>
+  <text x="65" y="350" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="10">min_samples_split: mín muestras para dividir</text>
+  
+  <circle cx="330" cy="320" r="4" fill="#10B981"/>
+  <text x="345" y="325" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="10">min_samples_leaf: mín muestras en hojas</text>
+  
+  <circle cx="330" cy="345" r="4" fill="#F59E0B"/>
+  <text x="345" y="350" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="10">ccp_alpha: pruning (poda) post-entrenamiento</text>
+</svg>
