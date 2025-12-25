@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1e293b"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">Comparación: KNN vs SVM vs Naive Bayes</text>
+  
+  <!-- Table Header -->
+  <rect x="30" y="55" width="740" height="40" rx="4" fill="#334155"/>
+  <text x="130" y="82" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Criterio</text>
+  <text x="300" y="82" text-anchor="middle" fill="#22c55e" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">KNN</text>
+  <text x="480" y="82" text-anchor="middle" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">SVM</text>
+  <text x="660" y="82" text-anchor="middle" fill="#a855f7" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Naive Bayes</text>
+  
+  <!-- Row 1: Training Speed -->
+  <rect x="30" y="100" width="180" height="45" rx="0" fill="#1e293b"/>
+  <rect x="215" y="100" width="180" height="45" rx="0" fill="#0f172a"/>
+  <rect x="400" y="100" width="180" height="45" rx="0" fill="#1e293b"/>
+  <rect x="585" y="100" width="185" height="45" rx="0" fill="#0f172a"/>
+  <text x="130" y="128" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Velocidad Train</text>
+  <text x="300" y="128" text-anchor="middle" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12">⚡ Instantáneo</text>
+  <text x="480" y="128" text-anchor="middle" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="12">🐢 Lento</text>
+  <text x="660" y="128" text-anchor="middle" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12">⚡ Muy rápido</text>
+  
+  <!-- Row 2: Prediction Speed -->
+  <rect x="30" y="150" width="180" height="45" rx="0" fill="#0f172a"/>
+  <rect x="215" y="150" width="180" height="45" rx="0" fill="#1e293b"/>
+  <rect x="400" y="150" width="180" height="45" rx="0" fill="#0f172a"/>
+  <rect x="585" y="150" width="185" height="45" rx="0" fill="#1e293b"/>
+  <text x="130" y="178" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Velocidad Predict</text>
+  <text x="300" y="178" text-anchor="middle" fill="#ef4444" font-family="system-ui, sans-serif" font-size="12">🐢 Lento (n grande)</text>
+  <text x="480" y="178" text-anchor="middle" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12">⚡ Rápido</text>
+  <text x="660" y="178" text-anchor="middle" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12">⚡ Muy rápido</text>
+  
+  <!-- Row 3: Memory -->
+  <rect x="30" y="200" width="180" height="45" rx="0" fill="#1e293b"/>
+  <rect x="215" y="200" width="180" height="45" rx="0" fill="#0f172a"/>
+  <rect x="400" y="200" width="180" height="45" rx="0" fill="#1e293b"/>
+  <rect x="585" y="200" width="185" height="45" rx="0" fill="#0f172a"/>
+  <text x="130" y="228" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Memoria</text>
+  <text x="300" y="228" text-anchor="middle" fill="#ef4444" font-family="system-ui, sans-serif" font-size="12">📦 Guarda todo</text>
+  <text x="480" y="228" text-anchor="middle" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="12">📦 Solo SVs</text>
+  <text x="660" y="228" text-anchor="middle" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12">📦 Solo params</text>
+  
+  <!-- Row 4: Non-linear -->
+  <rect x="30" y="250" width="180" height="45" rx="0" fill="#0f172a"/>
+  <rect x="215" y="250" width="180" height="45" rx="0" fill="#1e293b"/>
+  <rect x="400" y="250" width="180" height="45" rx="0" fill="#0f172a"/>
+  <rect x="585" y="250" width="185" height="45" rx="0" fill="#1e293b"/>
+  <text x="130" y="278" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">No Lineal</text>
+  <text x="300" y="278" text-anchor="middle" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12">✓ Natural</text>
+  <text x="480" y="278" text-anchor="middle" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12">✓ Kernels</text>
+  <text x="660" y="278" text-anchor="middle" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="12">✗ Asume lineal</text>
+  
+  <!-- Row 5: Best Use -->
+  <rect x="30" y="300" width="180" height="55" rx="0" fill="#1e293b"/>
+  <rect x="215" y="300" width="180" height="55" rx="0" fill="#0f172a"/>
+  <rect x="400" y="300" width="180" height="55" rx="0" fill="#1e293b"/>
+  <rect x="585" y="300" width="185" height="55" rx="0" fill="#0f172a"/>
+  <text x="130" y="325" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Mejor Uso</text>
+  <text x="300" y="325" text-anchor="middle" fill="#22c55e" font-family="system-ui, sans-serif" font-size="11">Datasets pequeños</text>
+  <text x="300" y="343" text-anchor="middle" fill="#22c55e" font-family="system-ui, sans-serif" font-size="11">Sistemas recomendación</text>
+  <text x="480" y="325" text-anchor="middle" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="11">Alta dimensionalidad</text>
+  <text x="480" y="343" text-anchor="middle" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="11">Márgenes claros</text>
+  <text x="660" y="325" text-anchor="middle" fill="#a855f7" font-family="system-ui, sans-serif" font-size="11">Clasificación texto</text>
+  <text x="660" y="343" text-anchor="middle" fill="#a855f7" font-family="system-ui, sans-serif" font-size="11">Spam, sentimiento</text>
+  
+  <!-- Decision Guide -->
+  <rect x="30" y="370" width="740" height="110" rx="8" fill="#334155"/>
+  <text x="400" y="400" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Guía de Decisión</text>
+  
+  <text x="60" y="430" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12">KNN:</text>
+  <text x="100" y="430" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Pocos datos, interpretable, baseline rápido</text>
+  
+  <text x="330" y="430" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="12">SVM:</text>
+  <text x="370" y="430" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Alto rendimiento, kernel RBF, datos complejos</text>
+  
+  <text x="60" y="460" fill="#a855f7" font-family="system-ui, sans-serif" font-size="12">NB:</text>
+  <text x="90" y="460" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Texto, probabilidades, muy rápido, escalable</text>
+  
+  <text x="330" y="460" fill="#64748b" font-family="system-ui, sans-serif" font-size="12">TIP:</text>
+  <text x="360" y="460" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">Siempre probar los 3 y comparar con cross-validation</text>
+</svg>

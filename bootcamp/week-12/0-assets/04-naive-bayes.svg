@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1e293b"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">Naive Bayes: Teorema de Bayes</text>
+  
+  <!-- Main formula -->
+  <rect x="150" y="55" width="500" height="80" rx="8" fill="#334155"/>
+  <text x="400" y="100" text-anchor="middle" fill="#22c55e" font-family="system-ui, sans-serif" font-size="24" font-weight="bold">P(y|X) = P(X|y) · P(y) / P(X)</text>
+  
+  <!-- Formula explanation -->
+  <rect x="30" y="150" width="740" height="120" rx="8" fill="#334155"/>
+  <text x="400" y="180" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Componentes de la Fórmula</text>
+  
+  <rect x="50" y="195" width="160" height="60" rx="4" fill="#1e293b"/>
+  <text x="130" y="218" text-anchor="middle" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">P(y|X)</text>
+  <text x="130" y="240" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Posterior</text>
+  
+  <rect x="230" y="195" width="160" height="60" rx="4" fill="#1e293b"/>
+  <text x="310" y="218" text-anchor="middle" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">P(X|y)</text>
+  <text x="310" y="240" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Likelihood</text>
+  
+  <rect x="410" y="195" width="160" height="60" rx="4" fill="#1e293b"/>
+  <text x="490" y="218" text-anchor="middle" fill="#a855f7" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">P(y)</text>
+  <text x="490" y="240" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Prior</text>
+  
+  <rect x="590" y="195" width="160" height="60" rx="4" fill="#1e293b"/>
+  <text x="670" y="218" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">P(X)</text>
+  <text x="670" y="240" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Evidence</text>
+  
+  <!-- Naive Assumption -->
+  <rect x="30" y="285" width="360" height="195" rx="8" fill="#334155"/>
+  <text x="210" y="315" text-anchor="middle" fill="#f472b6" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Asunción "Naive"</text>
+  
+  <text x="50" y="345" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Las features son independientes:</text>
+  <text x="210" y="380" text-anchor="middle" fill="#22c55e" font-family="monospace" font-size="14">P(X|y) = Π P(xᵢ|y)</text>
+  
+  <text x="50" y="420" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">• Simplifica el cálculo drásticamente</text>
+  <text x="50" y="440" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">• Raramente cierto, pero funciona bien</text>
+  <text x="50" y="460" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">• Especialmente efectivo en texto</text>
+  
+  <!-- Types of Naive Bayes -->
+  <rect x="410" y="285" width="360" height="195" rx="8" fill="#334155"/>
+  <text x="590" y="315" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Tipos de Naive Bayes</text>
+  
+  <!-- Gaussian -->
+  <rect x="430" y="335" width="160" height="55" rx="4" fill="#1e293b"/>
+  <text x="510" y="355" text-anchor="middle" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">GaussianNB</text>
+  <text x="510" y="375" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Features continuas</text>
+  
+  <!-- Multinomial -->
+  <rect x="600" y="335" width="160" height="55" rx="4" fill="#1e293b"/>
+  <text x="680" y="355" text-anchor="middle" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">MultinomialNB</text>
+  <text x="680" y="375" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Conteos (texto)</text>
+  
+  <!-- Bernoulli -->
+  <rect x="430" y="400" width="160" height="55" rx="4" fill="#1e293b"/>
+  <text x="510" y="420" text-anchor="middle" fill="#a855f7" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">BernoulliNB</text>
+  <text x="510" y="440" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Binario (0/1)</text>
+  
+  <!-- Complement -->
+  <rect x="600" y="400" width="160" height="55" rx="4" fill="#1e293b"/>
+  <text x="680" y="420" text-anchor="middle" fill="#ef4444" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">ComplementNB</text>
+  <text x="680" y="440" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Clases desbalanceadas</text>
+  
+  <!-- Use case note -->
+  <text x="590" y="475" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">MultinomialNB es el más usado para clasificación de texto</text>
+</svg>

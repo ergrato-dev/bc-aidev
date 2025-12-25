@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1e293b"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">K-Nearest Neighbors: Distancias</text>
+  
+  <!-- Left Panel: Distance Types -->
+  <rect x="30" y="60" width="350" height="420" rx="8" fill="#334155"/>
+  <text x="205" y="90" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">Tipos de Distancia</text>
+  
+  <!-- Euclidean -->
+  <rect x="50" y="110" width="310" height="90" rx="6" fill="#1e293b"/>
+  <text x="70" y="135" fill="#22c55e" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Euclidiana (L2)</text>
+  <text x="70" y="160" fill="#94a3b8" font-family="monospace" font-size="12">d = √[(x₂-x₁)² + (y₂-y₁)²]</text>
+  <text x="70" y="185" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">Línea recta entre puntos</text>
+  
+  <!-- Manhattan -->
+  <rect x="50" y="210" width="310" height="90" rx="6" fill="#1e293b"/>
+  <text x="70" y="235" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Manhattan (L1)</text>
+  <text x="70" y="260" fill="#94a3b8" font-family="monospace" font-size="12">d = |x₂-x₁| + |y₂-y₁|</text>
+  <text x="70" y="285" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">Suma de diferencias absolutas</text>
+  
+  <!-- Minkowski -->
+  <rect x="50" y="310" width="310" height="90" rx="6" fill="#1e293b"/>
+  <text x="70" y="335" fill="#a855f7" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Minkowski (Lp)</text>
+  <text x="70" y="360" fill="#94a3b8" font-family="monospace" font-size="12">d = (Σ|xᵢ-yᵢ|ᵖ)^(1/p)</text>
+  <text x="70" y="385" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">Generalización (p=1: Manhattan, p=2: Euclidiana)</text>
+  
+  <!-- Right Panel: Visual -->
+  <rect x="420" y="60" width="350" height="420" rx="8" fill="#334155"/>
+  <text x="595" y="90" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">Visualización</text>
+  
+  <!-- Coordinate system -->
+  <line x1="460" y1="400" x2="460" y2="130" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="460" y1="400" x2="730" y2="400" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Point A -->
+  <circle cx="500" cy="350" r="8" fill="#22c55e"/>
+  <text x="485" y="375" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12">A</text>
+  
+  <!-- Point B -->
+  <circle cx="680" cy="200" r="8" fill="#ef4444"/>
+  <text x="690" y="205" fill="#ef4444" font-family="system-ui, sans-serif" font-size="12">B</text>
+  
+  <!-- Euclidean line -->
+  <line x1="500" y1="350" x2="680" y2="200" stroke="#22c55e" stroke-width="2" stroke-dasharray="5,3"/>
+  
+  <!-- Manhattan path -->
+  <path d="M500,350 L680,350 L680,200" stroke="#f59e0b" stroke-width="2" fill="none"/>
+  
+  <!-- Legend -->
+  <rect x="440" y="420" width="15" height="3" fill="#22c55e"/>
+  <text x="460" y="425" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Euclidiana</text>
+  
+  <rect x="540" y="420" width="15" height="3" fill="#f59e0b"/>
+  <text x="560" y="425" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Manhattan</text>
+  
+  <!-- Formula box -->
+  <rect x="440" y="440" width="310" height="30" rx="4" fill="#1e293b"/>
+  <text x="595" y="460" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">sklearn: metric='euclidean' | 'manhattan' | 'minkowski'</text>
+</svg>
