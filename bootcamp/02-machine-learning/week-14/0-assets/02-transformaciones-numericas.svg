@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <!-- Background -->
+  <rect width="900" height="650" fill="#1e1e2e"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#cdd6f4" font-family="sans-serif" font-size="24" font-weight="bold">Transformaciones Numéricas</text>
+  
+  <!-- StandardScaler Box -->
+  <rect x="50" y="80" width="380" height="180" rx="10" fill="#313244" stroke="#89b4fa" stroke-width="2"/>
+  <text x="240" y="110" text-anchor="middle" fill="#89b4fa" font-family="sans-serif" font-size="16" font-weight="bold">StandardScaler</text>
+  <text x="240" y="140" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="14">z = (x - μ) / σ</text>
+  <text x="240" y="170" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12">Centra datos con media=0, std=1</text>
+  <text x="240" y="195" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="11">✓ Ideal para: SVM, Logistic Regression, PCA</text>
+  <text x="240" y="215" text-anchor="middle" fill="#f38ba8" font-family="sans-serif" font-size="11">✗ Sensible a outliers</text>
+  <text x="240" y="245" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">from sklearn.preprocessing import StandardScaler</text>
+  
+  <!-- MinMaxScaler Box -->
+  <rect x="470" y="80" width="380" height="180" rx="10" fill="#313244" stroke="#a6e3a1" stroke-width="2"/>
+  <text x="660" y="110" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="16" font-weight="bold">MinMaxScaler</text>
+  <text x="660" y="140" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="14">x' = (x - min) / (max - min)</text>
+  <text x="660" y="170" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12">Escala datos a rango [0, 1]</text>
+  <text x="660" y="195" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="11">✓ Ideal para: Redes Neuronales, KNN</text>
+  <text x="660" y="215" text-anchor="middle" fill="#f38ba8" font-family="sans-serif" font-size="11">✗ Muy sensible a outliers</text>
+  <text x="660" y="245" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">from sklearn.preprocessing import MinMaxScaler</text>
+  
+  <!-- RobustScaler Box -->
+  <rect x="50" y="290" width="380" height="180" rx="10" fill="#313244" stroke="#fab387" stroke-width="2"/>
+  <text x="240" y="320" text-anchor="middle" fill="#fab387" font-family="sans-serif" font-size="16" font-weight="bold">RobustScaler</text>
+  <text x="240" y="350" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="14">x' = (x - Q2) / (Q3 - Q1)</text>
+  <text x="240" y="380" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12">Usa mediana e IQR (percentiles)</text>
+  <text x="240" y="405" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="11">✓ Robusto a outliers</text>
+  <text x="240" y="425" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="11">✓ Ideal para: datos con outliers</text>
+  <text x="240" y="455" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">from sklearn.preprocessing import RobustScaler</text>
+  
+  <!-- PowerTransformer Box -->
+  <rect x="470" y="290" width="380" height="180" rx="10" fill="#313244" stroke="#cba6f7" stroke-width="2"/>
+  <text x="660" y="320" text-anchor="middle" fill="#cba6f7" font-family="sans-serif" font-size="16" font-weight="bold">PowerTransformer</text>
+  <text x="660" y="350" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="14">Box-Cox / Yeo-Johnson</text>
+  <text x="660" y="380" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12">Normaliza distribuciones sesgadas</text>
+  <text x="660" y="405" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="11">✓ Box-Cox: solo valores positivos</text>
+  <text x="660" y="425" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="11">✓ Yeo-Johnson: cualquier valor</text>
+  <text x="660" y="455" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">from sklearn.preprocessing import PowerTransformer</text>
+  
+  <!-- Log Transform Box -->
+  <rect x="50" y="500" width="380" height="130" rx="10" fill="#313244" stroke="#94e2d5" stroke-width="2"/>
+  <text x="240" y="530" text-anchor="middle" fill="#94e2d5" font-family="sans-serif" font-size="16" font-weight="bold">Log Transform</text>
+  <text x="240" y="560" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="14">x' = log(x + 1)</text>
+  <text x="240" y="590" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12">Reduce skewness en distribuciones exponenciales</text>
+  <text x="240" y="615" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">np.log1p(x)  |  np.expm1(x) para inversa</text>
+  
+  <!-- QuantileTransformer Box -->
+  <rect x="470" y="500" width="380" height="130" rx="10" fill="#313244" stroke="#f38ba8" stroke-width="2"/>
+  <text x="660" y="530" text-anchor="middle" fill="#f38ba8" font-family="sans-serif" font-size="16" font-weight="bold">QuantileTransformer</text>
+  <text x="660" y="560" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="14">Uniform / Normal distribution</text>
+  <text x="660" y="590" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12">Fuerza distribución uniforme o normal</text>
+  <text x="660" y="615" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">QuantileTransformer(output_distribution='normal')</text>
+</svg>

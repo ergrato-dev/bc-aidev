@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <!-- Background -->
+  <rect width="900" height="700" fill="#1e1e2e"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#cdd6f4" font-family="sans-serif" font-size="24" font-weight="bold">Codificación de Variables Categóricas</text>
+  
+  <!-- Original Data -->
+  <rect x="50" y="70" width="120" height="140" rx="8" fill="#313244" stroke="#6c7086" stroke-width="2"/>
+  <text x="110" y="95" text-anchor="middle" fill="#cdd6f4" font-family="sans-serif" font-size="12" font-weight="bold">Color</text>
+  <line x1="50" y1="105" x2="170" y2="105" stroke="#6c7086" stroke-width="1"/>
+  <text x="110" y="125" text-anchor="middle" fill="#f38ba8" font-family="sans-serif" font-size="11">Rojo</text>
+  <text x="110" y="145" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="11">Verde</text>
+  <text x="110" y="165" text-anchor="middle" fill="#89b4fa" font-family="sans-serif" font-size="11">Azul</text>
+  <text x="110" y="185" text-anchor="middle" fill="#f38ba8" font-family="sans-serif" font-size="11">Rojo</text>
+  <text x="110" y="205" text-anchor="middle" fill="#89b4fa" font-family="sans-serif" font-size="11">Azul</text>
+  
+  <!-- OneHotEncoder -->
+  <rect x="220" y="70" width="300" height="180" rx="10" fill="#313244" stroke="#89b4fa" stroke-width="2"/>
+  <text x="370" y="95" text-anchor="middle" fill="#89b4fa" font-family="sans-serif" font-size="14" font-weight="bold">OneHotEncoder</text>
+  
+  <!-- OneHot Table -->
+  <text x="270" y="120" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">Rojo</text>
+  <text x="330" y="120" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">Verde</text>
+  <text x="390" y="120" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">Azul</text>
+  <text x="270" y="140" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="11">1</text>
+  <text x="330" y="140" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">0</text>
+  <text x="390" y="140" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">0</text>
+  <text x="270" y="160" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">0</text>
+  <text x="330" y="160" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="11">1</text>
+  <text x="390" y="160" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">0</text>
+  <text x="270" y="180" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">0</text>
+  <text x="330" y="180" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">0</text>
+  <text x="390" y="180" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="11">1</text>
+  
+  <text x="370" y="210" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="10">✓ Sin orden implícito</text>
+  <text x="370" y="225" text-anchor="middle" fill="#f38ba8" font-family="sans-serif" font-size="10">✗ Alta dimensionalidad</text>
+  <text x="370" y="240" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="9">OneHotEncoder(sparse_output=False)</text>
+  
+  <!-- LabelEncoder -->
+  <rect x="560" y="70" width="300" height="180" rx="10" fill="#313244" stroke="#a6e3a1" stroke-width="2"/>
+  <text x="710" y="95" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="14" font-weight="bold">LabelEncoder</text>
+  
+  <text x="640" y="120" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">Original</text>
+  <text x="780" y="120" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">Encoded</text>
+  <text x="640" y="145" text-anchor="middle" fill="#f38ba8" font-family="sans-serif" font-size="11">Rojo</text>
+  <text x="780" y="145" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="11">2</text>
+  <text x="640" y="165" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="11">Verde</text>
+  <text x="780" y="165" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="11">1</text>
+  <text x="640" y="185" text-anchor="middle" fill="#89b4fa" font-family="sans-serif" font-size="11">Azul</text>
+  <text x="780" y="185" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="11">0</text>
+  
+  <text x="710" y="210" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="10">✓ Compacto (1 columna)</text>
+  <text x="710" y="225" text-anchor="middle" fill="#f38ba8" font-family="sans-serif" font-size="10">✗ Introduce orden artificial</text>
+  <text x="710" y="240" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="9">Solo para target variable</text>
+  
+  <!-- OrdinalEncoder -->
+  <rect x="50" y="280" width="380" height="180" rx="10" fill="#313244" stroke="#fab387" stroke-width="2"/>
+  <text x="240" y="305" text-anchor="middle" fill="#fab387" font-family="sans-serif" font-size="14" font-weight="bold">OrdinalEncoder</text>
+  <text x="240" y="330" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Para variables con orden natural</text>
+  
+  <text x="130" y="360" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">Tamaño</text>
+  <text x="280" y="360" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">Encoded</text>
+  <text x="130" y="380" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Pequeño</text>
+  <text x="280" y="380" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="11">0</text>
+  <text x="130" y="400" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Mediano</text>
+  <text x="280" y="400" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="11">1</text>
+  <text x="130" y="420" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Grande</text>
+  <text x="280" y="420" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="11">2</text>
+  
+  <text x="240" y="450" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="10">✓ Preserva orden: Bajo &lt; Medio &lt; Alto</text>
+  
+  <!-- TargetEncoder -->
+  <rect x="470" y="280" width="380" height="180" rx="10" fill="#313244" stroke="#cba6f7" stroke-width="2"/>
+  <text x="660" y="305" text-anchor="middle" fill="#cba6f7" font-family="sans-serif" font-size="14" font-weight="bold">TargetEncoder</text>
+  <text x="660" y="330" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Codifica con media del target por categoría</text>
+  
+  <text x="550" y="360" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">Ciudad</text>
+  <text x="660" y="360" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">Target Mean</text>
+  <text x="770" y="360" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">Encoded</text>
+  <text x="550" y="385" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Madrid</text>
+  <text x="660" y="385" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">0.75</text>
+  <text x="770" y="385" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="11">0.75</text>
+  <text x="550" y="405" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Barcelona</text>
+  <text x="660" y="405" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">0.60</text>
+  <text x="770" y="405" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="11">0.60</text>
+  
+  <text x="660" y="435" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="10">✓ Alta cardinalidad</text>
+  <text x="660" y="450" text-anchor="middle" fill="#f38ba8" font-family="sans-serif" font-size="10">⚠ Usar cross-validation para evitar leakage</text>
+  
+  <!-- Decision Guide -->
+  <rect x="50" y="490" width="800" height="190" rx="10" fill="#313244" stroke="#f9e2af" stroke-width="2"/>
+  <text x="450" y="520" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="16" font-weight="bold">Guía de Selección</text>
+  
+  <text x="250" y="555" text-anchor="middle" fill="#89b4fa" font-family="sans-serif" font-size="13" font-weight="bold">OneHotEncoder</text>
+  <text x="250" y="575" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">• Sin orden natural</text>
+  <text x="250" y="595" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">• Pocas categorías (&lt;10)</text>
+  <text x="250" y="615" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">• Modelos lineales</text>
+  
+  <text x="450" y="555" text-anchor="middle" fill="#fab387" font-family="sans-serif" font-size="13" font-weight="bold">OrdinalEncoder</text>
+  <text x="450" y="575" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">• Orden natural existe</text>
+  <text x="450" y="595" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">• Bajo &lt; Medio &lt; Alto</text>
+  <text x="450" y="615" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">• Tree-based models OK</text>
+  
+  <text x="650" y="555" text-anchor="middle" fill="#cba6f7" font-family="sans-serif" font-size="13" font-weight="bold">TargetEncoder</text>
+  <text x="650" y="575" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">• Alta cardinalidad</text>
+  <text x="650" y="595" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">• Muchas categorías</text>
+  <text x="650" y="615" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">• Con regularización</text>
+  
+  <text x="450" y="665" text-anchor="middle" fill="#f38ba8" font-family="sans-serif" font-size="11">⚠ LabelEncoder: Solo para variable target en clasificación, NUNCA para features</text>
+</svg>
