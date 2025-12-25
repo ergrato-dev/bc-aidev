@@ -1,0 +1,140 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="520" fill="#0F172A"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">Métricas de Evaluación de Clusters</text>
+  
+  <!-- Silhouette Score -->
+  <g transform="translate(50, 60)">
+    <rect x="0" y="0" width="400" height="200" rx="12" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+    <text x="200" y="25" text-anchor="middle" fill="#3B82F6" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Silhouette Score</text>
+    
+    <!-- Formula -->
+    <g transform="translate(20, 50)">
+      <text x="0" y="0" fill="#E2E8F0" font-family="monospace" font-size="12">s(i) = (b(i) - a(i)) / max(a(i), b(i))</text>
+      
+      <text x="0" y="30" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="11">a(i):</text>
+      <text x="35" y="30" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Distancia media a puntos del mismo cluster</text>
+      
+      <text x="0" y="50" fill="#8B5CF6" font-family="system-ui, sans-serif" font-size="11">b(i):</text>
+      <text x="35" y="50" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Distancia media al cluster más cercano</text>
+    </g>
+    
+    <!-- Interpretation scale -->
+    <g transform="translate(20, 120)">
+      <text x="0" y="0" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Interpretación:</text>
+      
+      <!-- Scale bar -->
+      <rect x="0" y="15" width="360" height="20" rx="4" fill="#1E3A5F"/>
+      <rect x="0" y="15" width="90" height="20" rx="4" fill="#EF4444" fill-opacity="0.6"/>
+      <rect x="90" y="15" width="90" height="20" fill="#F59E0B" fill-opacity="0.6"/>
+      <rect x="180" y="15" width="90" height="20" fill="#10B981" fill-opacity="0.6"/>
+      <rect x="270" y="15" width="90" height="20" rx="4" fill="#3B82F6" fill-opacity="0.6"/>
+      
+      <text x="45" y="29" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="9">-1 a 0</text>
+      <text x="135" y="29" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="9">0 a 0.25</text>
+      <text x="225" y="29" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="9">0.25 a 0.5</text>
+      <text x="315" y="29" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="9">0.5 a 1</text>
+      
+      <text x="45" y="50" text-anchor="middle" fill="#EF4444" font-family="system-ui, sans-serif" font-size="9">Mal</text>
+      <text x="135" y="50" text-anchor="middle" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="9">Débil</text>
+      <text x="225" y="50" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="9">Bueno</text>
+      <text x="315" y="50" text-anchor="middle" fill="#3B82F6" font-family="system-ui, sans-serif" font-size="9">Excelente</text>
+    </g>
+    
+    <text x="200" y="190" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="10">Rango: [-1, 1] | Mayor = mejor separación</text>
+  </g>
+  
+  <!-- Inertia / WCSS -->
+  <g transform="translate(470, 60)">
+    <rect x="0" y="0" width="400" height="200" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+    <text x="200" y="25" text-anchor="middle" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Inercia (WCSS)</text>
+    
+    <!-- Formula -->
+    <g transform="translate(20, 50)">
+      <text x="0" y="0" fill="#E2E8F0" font-family="monospace" font-size="12">WCSS = Σₖ Σᵢ∈Cₖ ||xᵢ - μₖ||²</text>
+      
+      <text x="0" y="30" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Within-Cluster Sum of Squares</text>
+      <text x="0" y="50" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Suma de distancias² al centroide</text>
+    </g>
+    
+    <!-- Elbow visualization -->
+    <g transform="translate(30, 100)">
+      <line x1="0" y1="70" x2="150" y2="70" stroke="#475569" stroke-width="1"/>
+      <line x1="0" y1="0" x2="0" y2="70" stroke="#475569" stroke-width="1"/>
+      
+      <path d="M 0 5 Q 25 15, 50 35 Q 75 50, 100 58 L 140 62" fill="none" stroke="#F59E0B" stroke-width="2"/>
+      
+      <circle cx="50" cy="35" r="5" fill="#EF4444"/>
+      <line x1="50" y1="35" x2="50" y2="70" stroke="#EF4444" stroke-width="1" stroke-dasharray="3,2"/>
+      
+      <text x="75" y="85" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9">K</text>
+      <text x="50" y="85" text-anchor="middle" fill="#EF4444" font-family="system-ui, sans-serif" font-size="9">codo</text>
+    </g>
+    
+    <g transform="translate(200, 100)">
+      <text x="0" y="0" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Método del Codo:</text>
+      <text x="0" y="20" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Buscar K donde la</text>
+      <text x="0" y="35" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">mejora se estabiliza</text>
+      <text x="0" y="60" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="10">Menor = clusters más compactos</text>
+    </g>
+  </g>
+  
+  <!-- Davies-Bouldin -->
+  <g transform="translate(50, 280)">
+    <rect x="0" y="0" width="400" height="120" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="200" y="25" text-anchor="middle" fill="#8B5CF6" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Davies-Bouldin Index</text>
+    
+    <g transform="translate(20, 45)">
+      <text x="0" y="0" fill="#E2E8F0" font-family="monospace" font-size="11">DB = (1/K) Σₖ maxⱼ≠ₖ (σₖ + σⱼ) / d(cₖ, cⱼ)</text>
+      
+      <text x="0" y="25" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">σ: dispersión intra-cluster | d: distancia entre centroides</text>
+      
+      <text x="0" y="50" fill="#10B981" font-family="system-ui, sans-serif" font-size="11">Rango: [0, ∞)</text>
+      <text x="120" y="50" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">| Menor = mejor separación</text>
+    </g>
+  </g>
+  
+  <!-- Calinski-Harabasz -->
+  <g transform="translate(470, 280)">
+    <rect x="0" y="0" width="400" height="120" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+    <text x="200" y="25" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Calinski-Harabasz (VRC)</text>
+    
+    <g transform="translate(20, 45)">
+      <text x="0" y="0" fill="#E2E8F0" font-family="monospace" font-size="11">CH = [B/(K-1)] / [W/(n-K)]</text>
+      
+      <text x="0" y="25" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">B: dispersión between-cluster | W: dispersión within-cluster</text>
+      
+      <text x="0" y="50" fill="#10B981" font-family="system-ui, sans-serif" font-size="11">Rango: [0, ∞)</text>
+      <text x="120" y="50" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">| Mayor = mejor separación</text>
+    </g>
+  </g>
+  
+  <!-- Comparison table -->
+  <g transform="translate(50, 420)">
+    <rect x="0" y="0" width="820" height="85" rx="12" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+    <text x="410" y="22" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Resumen de Métricas</text>
+    
+    <!-- Headers -->
+    <text x="100" y="45" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">Métrica</text>
+    <text x="250" y="45" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">Rango</text>
+    <text x="380" y="45" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">Mejor es</text>
+    <text x="540" y="45" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">Uso Principal</text>
+    <text x="720" y="45" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">sklearn</text>
+    
+    <!-- Silhouette row -->
+    <text x="100" y="65" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10">Silhouette</text>
+    <text x="250" y="65" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">[-1, 1]</text>
+    <text x="380" y="65" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="10">Mayor</text>
+    <text x="540" y="65" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Selección K, calidad global</text>
+    <text x="720" y="65" text-anchor="middle" fill="#F59E0B" font-family="monospace" font-size="9">silhouette_score()</text>
+    
+    <!-- Inertia row -->
+    <text x="100" y="80" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10">Inercia</text>
+    <text x="250" y="80" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">[0, ∞)</text>
+    <text x="380" y="80" text-anchor="middle" fill="#EF4444" font-family="system-ui, sans-serif" font-size="10">Menor</text>
+    <text x="540" y="80" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Método del codo (K-Means)</text>
+    <text x="720" y="80" text-anchor="middle" fill="#F59E0B" font-family="monospace" font-size="9">kmeans.inertia_</text>
+  </g>
+</svg>

@@ -1,0 +1,160 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#60A5FA"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="550" fill="#0F172A"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">DBSCAN: Clustering Basado en Densidad</text>
+  
+  <!-- Core, Border, Noise visualization -->
+  <g transform="translate(50, 60)">
+    <rect x="0" y="0" width="380" height="200" rx="12" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+    <text x="190" y="25" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Tipos de Puntos</text>
+    
+    <!-- Visualization area -->
+    <g transform="translate(30, 45)">
+      <!-- Dense cluster -->
+      <!-- Core points -->
+      <circle cx="60" cy="60" r="6" fill="#10B981"/>
+      <circle cx="80" cy="50" r="6" fill="#10B981"/>
+      <circle cx="70" cy="80" r="6" fill="#10B981"/>
+      <circle cx="90" cy="70" r="6" fill="#10B981"/>
+      <circle cx="50" cy="70" r="6" fill="#10B981"/>
+      
+      <!-- Epsilon circles (faint) -->
+      <circle cx="70" cy="65" r="35" fill="none" stroke="#10B981" stroke-width="1" stroke-dasharray="3,2" opacity="0.3"/>
+      
+      <!-- Border points -->
+      <circle cx="110" cy="85" r="6" fill="#F59E0B"/>
+      <circle cx="35" cy="45" r="6" fill="#F59E0B"/>
+      
+      <!-- Second cluster -->
+      <circle cx="200" cy="80" r="6" fill="#3B82F6"/>
+      <circle cx="220" cy="70" r="6" fill="#3B82F6"/>
+      <circle cx="210" cy="100" r="6" fill="#3B82F6"/>
+      <circle cx="230" cy="90" r="6" fill="#3B82F6"/>
+      
+      <!-- Noise points -->
+      <circle cx="150" cy="30" r="6" fill="#EF4444"/>
+      <circle cx="280" cy="120" r="6" fill="#EF4444"/>
+      <circle cx="300" cy="50" r="6" fill="#EF4444"/>
+    </g>
+    
+    <!-- Legend -->
+    <g transform="translate(30, 160)">
+      <circle cx="10" cy="0" r="6" fill="#10B981"/>
+      <text x="25" y="4" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">Core Point (≥ minPts en ε)</text>
+      
+      <circle cx="130" cy="0" r="6" fill="#F59E0B"/>
+      <text x="145" y="4" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">Border Point</text>
+      
+      <circle cx="250" cy="0" r="6" fill="#EF4444"/>
+      <text x="265" y="4" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">Noise (Outlier)</text>
+    </g>
+  </g>
+  
+  <!-- Parameters section -->
+  <g transform="translate(450, 60)">
+    <rect x="0" y="0" width="420" height="200" rx="12" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+    <text x="210" y="25" text-anchor="middle" fill="#3B82F6" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Parámetros de DBSCAN</text>
+    
+    <!-- Epsilon -->
+    <g transform="translate(20, 50)">
+      <rect x="0" y="0" width="180" height="70" rx="8" fill="#1E3A5F"/>
+      <text x="90" y="20" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">ε (epsilon)</text>
+      <text x="90" y="40" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">Radio de vecindad</text>
+      <text x="90" y="58" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Distancia máxima entre vecinos</text>
+    </g>
+    
+    <!-- MinPts -->
+    <g transform="translate(220, 50)">
+      <rect x="0" y="0" width="180" height="70" rx="8" fill="#1E3A5F"/>
+      <text x="90" y="20" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">minPts</text>
+      <text x="90" y="40" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">Mínimo de vecinos</text>
+      <text x="90" y="58" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Para ser punto core</text>
+    </g>
+    
+    <!-- Recommendations -->
+    <g transform="translate(20, 135)">
+      <text x="0" y="0" fill="#10B981" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Reglas Prácticas:</text>
+      <text x="0" y="20" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• minPts ≥ dimensiones + 1 (mín. 3)</text>
+      <text x="0" y="38" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• ε: usar gráfico k-distance (k = minPts)</text>
+      <text x="0" y="56" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Buscar el "codo" en la curva de distancias</text>
+    </g>
+  </g>
+  
+  <!-- Algorithm steps -->
+  <g transform="translate(50, 280)">
+    <rect x="0" y="0" width="820" height="130" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="410" y="25" text-anchor="middle" fill="#8B5CF6" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Algoritmo DBSCAN - Pasos</text>
+    
+    <!-- Step 1 -->
+    <g transform="translate(20, 45)">
+      <rect x="0" y="0" width="180" height="70" rx="8" fill="#312E81"/>
+      <text x="90" y="18" text-anchor="middle" fill="#A5B4FC" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">1. Clasificar Puntos</text>
+      <text x="90" y="38" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10">Contar vecinos en ε</text>
+      <text x="90" y="53" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10">para cada punto</text>
+    </g>
+    
+    <!-- Arrow -->
+    <text x="215" y="80" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="20">→</text>
+    
+    <!-- Step 2 -->
+    <g transform="translate(230, 45)">
+      <rect x="0" y="0" width="180" height="70" rx="8" fill="#312E81"/>
+      <text x="90" y="18" text-anchor="middle" fill="#A5B4FC" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">2. Expandir Clusters</text>
+      <text x="90" y="38" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10">Desde core points,</text>
+      <text x="90" y="53" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10">conectar vecinos density-reachable</text>
+    </g>
+    
+    <!-- Arrow -->
+    <text x="425" y="80" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="20">→</text>
+    
+    <!-- Step 3 -->
+    <g transform="translate(440, 45)">
+      <rect x="0" y="0" width="180" height="70" rx="8" fill="#312E81"/>
+      <text x="90" y="18" text-anchor="middle" fill="#A5B4FC" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">3. Asignar Border</text>
+      <text x="90" y="38" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10">Puntos no-core en ε</text>
+      <text x="90" y="53" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10">de un core → su cluster</text>
+    </g>
+    
+    <!-- Arrow -->
+    <text x="635" y="80" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="20">→</text>
+    
+    <!-- Step 4 -->
+    <g transform="translate(650, 45)">
+      <rect x="0" y="0" width="150" height="70" rx="8" fill="#312E81"/>
+      <text x="75" y="18" text-anchor="middle" fill="#A5B4FC" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">4. Marcar Noise</text>
+      <text x="75" y="38" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10">Puntos sin cluster</text>
+      <text x="75" y="53" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10">→ outliers</text>
+    </g>
+  </g>
+  
+  <!-- Advantages vs Disadvantages -->
+  <g transform="translate(50, 425)">
+    <!-- Advantages -->
+    <rect x="0" y="0" width="400" height="110" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+    <text x="200" y="22" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">✓ Ventajas</text>
+    
+    <text x="20" y="45" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• No requiere especificar número de clusters</text>
+    <text x="20" y="63" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Detecta clusters de forma arbitraria</text>
+    <text x="20" y="81" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Identifica outliers automáticamente</text>
+    <text x="20" y="99" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Robusto al ruido</text>
+  </g>
+  
+  <g transform="translate(470, 425)">
+    <!-- Disadvantages -->
+    <rect x="0" y="0" width="400" height="110" rx="12" fill="#1E293B" stroke="#EF4444" stroke-width="2"/>
+    <text x="200" y="22" text-anchor="middle" fill="#EF4444" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">✗ Limitaciones</text>
+    
+    <text x="20" y="45" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Sensible a la elección de ε y minPts</text>
+    <text x="20" y="63" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Difícil con clusters de densidad variable</text>
+    <text x="20" y="81" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• Complejidad O(n²) sin índices espaciales</text>
+    <text x="20" y="99" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">• No funciona bien en alta dimensionalidad</text>
+  </g>
+</svg>

@@ -1,0 +1,222 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#60A5FA"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0F172A"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="24" font-weight="bold">Algoritmo K-Means: Proceso Iterativo</text>
+  
+  <!-- Step 1: Initialize -->
+  <g transform="translate(50, 80)">
+    <rect x="0" y="0" width="180" height="140" rx="12" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+    <text x="90" y="25" text-anchor="middle" fill="#3B82F6" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">1. Inicializar Centroides</text>
+    
+    <!-- Scatter plot with random centroids -->
+    <g transform="translate(20, 40)">
+      <!-- Data points -->
+      <circle cx="30" cy="20" r="4" fill="#94A3B8"/>
+      <circle cx="45" cy="35" r="4" fill="#94A3B8"/>
+      <circle cx="25" cy="45" r="4" fill="#94A3B8"/>
+      <circle cx="100" cy="25" r="4" fill="#94A3B8"/>
+      <circle cx="115" cy="40" r="4" fill="#94A3B8"/>
+      <circle cx="95" cy="50" r="4" fill="#94A3B8"/>
+      <circle cx="60" cy="70" r="4" fill="#94A3B8"/>
+      <circle cx="75" cy="80" r="4" fill="#94A3B8"/>
+      
+      <!-- Random centroids -->
+      <circle cx="50" cy="30" r="8" fill="#EF4444" stroke="#FFF" stroke-width="2"/>
+      <circle cx="90" cy="60" r="8" fill="#10B981" stroke="#FFF" stroke-width="2"/>
+      <text x="50" y="8" text-anchor="middle" fill="#EF4444" font-family="system-ui, sans-serif" font-size="10">C₁</text>
+      <text x="90" y="88" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="10">C₂</text>
+    </g>
+  </g>
+  
+  <!-- Arrow 1-2 -->
+  <line x1="240" y1="150" x2="280" y2="150" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 2: Assign -->
+  <g transform="translate(290, 80)">
+    <rect x="0" y="0" width="180" height="140" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="90" y="25" text-anchor="middle" fill="#8B5CF6" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">2. Asignar Puntos</text>
+    
+    <!-- Scatter with assigned colors -->
+    <g transform="translate(20, 40)">
+      <!-- Cluster 1 (red) -->
+      <circle cx="30" cy="20" r="4" fill="#EF4444"/>
+      <circle cx="45" cy="35" r="4" fill="#EF4444"/>
+      <circle cx="25" cy="45" r="4" fill="#EF4444"/>
+      
+      <!-- Cluster 2 (green) -->
+      <circle cx="100" cy="25" r="4" fill="#10B981"/>
+      <circle cx="115" cy="40" r="4" fill="#10B981"/>
+      <circle cx="95" cy="50" r="4" fill="#10B981"/>
+      <circle cx="60" cy="70" r="4" fill="#10B981"/>
+      <circle cx="75" cy="80" r="4" fill="#10B981"/>
+      
+      <!-- Centroids -->
+      <circle cx="50" cy="30" r="8" fill="#EF4444" stroke="#FFF" stroke-width="2"/>
+      <circle cx="90" cy="60" r="8" fill="#10B981" stroke="#FFF" stroke-width="2"/>
+    </g>
+    
+    <text x="90" y="130" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">min(distancia al centroide)</text>
+  </g>
+  
+  <!-- Arrow 2-3 -->
+  <line x1="480" y1="150" x2="520" y2="150" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 3: Update -->
+  <g transform="translate(530, 80)">
+    <rect x="0" y="0" width="180" height="140" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+    <text x="90" y="25" text-anchor="middle" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">3. Actualizar Centroides</text>
+    
+    <!-- Scatter with new centroids -->
+    <g transform="translate(20, 40)">
+      <!-- Cluster 1 -->
+      <circle cx="30" cy="20" r="4" fill="#EF4444"/>
+      <circle cx="45" cy="35" r="4" fill="#EF4444"/>
+      <circle cx="25" cy="45" r="4" fill="#EF4444"/>
+      
+      <!-- Cluster 2 -->
+      <circle cx="100" cy="25" r="4" fill="#10B981"/>
+      <circle cx="115" cy="40" r="4" fill="#10B981"/>
+      <circle cx="95" cy="50" r="4" fill="#10B981"/>
+      <circle cx="60" cy="70" r="4" fill="#10B981"/>
+      <circle cx="75" cy="80" r="4" fill="#10B981"/>
+      
+      <!-- New centroids (moved) -->
+      <circle cx="33" cy="33" r="8" fill="#EF4444" stroke="#FFF" stroke-width="2"/>
+      <circle cx="89" cy="53" r="8" fill="#10B981" stroke="#FFF" stroke-width="2"/>
+      
+      <!-- Movement arrows -->
+      <line x1="50" y1="30" x2="36" y2="33" stroke="#EF4444" stroke-width="1" stroke-dasharray="3,2"/>
+      <line x1="90" y1="60" x2="89" y2="55" stroke="#10B981" stroke-width="1" stroke-dasharray="3,2"/>
+    </g>
+    
+    <text x="90" y="130" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">media de puntos asignados</text>
+  </g>
+  
+  <!-- Arrow 3-4 -->
+  <line x1="720" y1="150" x2="760" y2="150" stroke="#60A5FA" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 4: Converge -->
+  <g transform="translate(770, 80)">
+    <rect x="0" y="0" width="110" height="140" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+    <text x="55" y="25" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">4. ¿Converge?</text>
+    
+    <text x="55" y="60" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Centroides</text>
+    <text x="55" y="75" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">no cambian</text>
+    
+    <text x="55" y="105" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="12">Sí → FIN</text>
+    <text x="55" y="125" text-anchor="middle" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="12">No → Paso 2</text>
+  </g>
+  
+  <!-- Loop arrow back to step 2 -->
+  <path d="M 825 220 L 825 250 L 380 250 L 380 220" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="380,225 375,235 385,235" fill="#F59E0B"/>
+  
+  <!-- Mathematical formulas section -->
+  <g transform="translate(50, 290)">
+    <rect x="0" y="0" width="400" height="130" rx="12" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+    <text x="200" y="25" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Fórmulas Clave</text>
+    
+    <!-- Assignment formula -->
+    <text x="20" y="55" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Asignación:</text>
+    <text x="20" y="75" fill="#E2E8F0" font-family="monospace" font-size="11">cᵢ = argmin‖x - μₖ‖²</text>
+    <text x="180" y="75" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">(cluster más cercano)</text>
+    
+    <!-- Update formula -->
+    <text x="20" y="100" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Actualización:</text>
+    <text x="20" y="120" fill="#E2E8F0" font-family="monospace" font-size="11">μₖ = (1/|Cₖ|) Σ xᵢ</text>
+    <text x="180" y="120" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">(media del cluster)</text>
+  </g>
+  
+  <!-- Elbow method section -->
+  <g transform="translate(470, 290)">
+    <rect x="0" y="0" width="400" height="130" rx="12" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+    <text x="200" y="25" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Método del Codo (Elbow Method)</text>
+    
+    <!-- Elbow plot -->
+    <g transform="translate(30, 40)">
+      <!-- Axes -->
+      <line x1="0" y1="70" x2="150" y2="70" stroke="#475569" stroke-width="1"/>
+      <line x1="0" y1="0" x2="0" y2="70" stroke="#475569" stroke-width="1"/>
+      
+      <!-- Curve -->
+      <path d="M 0 5 Q 20 10, 40 30 Q 60 45, 80 55 Q 100 60, 120 62 L 140 63" fill="none" stroke="#3B82F6" stroke-width="2"/>
+      
+      <!-- Elbow point -->
+      <circle cx="40" cy="30" r="5" fill="#EF4444"/>
+      <line x1="40" y1="30" x2="40" y2="70" stroke="#EF4444" stroke-width="1" stroke-dasharray="3,2"/>
+      
+      <!-- Labels -->
+      <text x="75" y="85" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">K (clusters)</text>
+      <text x="-10" y="35" text-anchor="end" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9" transform="rotate(-90, -10, 35)">WCSS</text>
+      <text x="40" y="95" text-anchor="middle" fill="#EF4444" font-family="system-ui, sans-serif" font-size="10">K óptimo</text>
+    </g>
+    
+    <!-- WCSS formula -->
+    <g transform="translate(200, 45)">
+      <text x="0" y="0" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">WCSS (Inercia):</text>
+      <text x="0" y="20" fill="#E2E8F0" font-family="monospace" font-size="10">Σₖ Σᵢ∈Cₖ ‖xᵢ - μₖ‖²</text>
+      <text x="0" y="45" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Within-Cluster Sum</text>
+      <text x="0" y="60" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">of Squares</text>
+    </g>
+  </g>
+  
+  <!-- K-Means++ section -->
+  <g transform="translate(50, 440)">
+    <rect x="0" y="0" width="400" height="140" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+    <text x="200" y="25" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">K-Means++ (Inicialización Inteligente)</text>
+    
+    <g transform="translate(20, 45)">
+      <circle cx="10" cy="0" r="6" fill="#3B82F6"/>
+      <text x="25" y="4" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">1. Elegir primer centroide al azar</text>
+    </g>
+    
+    <g transform="translate(20, 70)">
+      <circle cx="10" cy="0" r="6" fill="#8B5CF6"/>
+      <text x="25" y="4" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">2. Para cada punto, calcular D(x)² al centroide más cercano</text>
+    </g>
+    
+    <g transform="translate(20, 95)">
+      <circle cx="10" cy="0" r="6" fill="#F59E0B"/>
+      <text x="25" y="4" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">3. Elegir nuevo centroide con probabilidad ∝ D(x)²</text>
+    </g>
+    
+    <g transform="translate(20, 120)">
+      <circle cx="10" cy="0" r="6" fill="#10B981"/>
+      <text x="25" y="4" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">4. Repetir hasta tener K centroides</text>
+    </g>
+  </g>
+  
+  <!-- Limitations section -->
+  <g transform="translate(470, 440)">
+    <rect x="0" y="0" width="400" height="140" rx="12" fill="#1E293B" stroke="#EF4444" stroke-width="2"/>
+    <text x="200" y="25" text-anchor="middle" fill="#EF4444" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Limitaciones de K-Means</text>
+    
+    <g transform="translate(20, 50)">
+      <text x="0" y="0" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="12">⚠️</text>
+      <text x="25" y="0" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">Requiere especificar K de antemano</text>
+    </g>
+    
+    <g transform="translate(20, 75)">
+      <text x="0" y="0" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="12">⚠️</text>
+      <text x="25" y="0" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">Sensible a outliers y escala de datos</text>
+    </g>
+    
+    <g transform="translate(20, 100)">
+      <text x="0" y="0" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="12">⚠️</text>
+      <text x="25" y="0" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">Asume clusters esféricos de tamaño similar</text>
+    </g>
+    
+    <g transform="translate(20, 125)">
+      <text x="0" y="0" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="12">⚠️</text>
+      <text x="25" y="0" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">Puede converger a mínimos locales</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,226 @@
+<svg viewBox="0 0 900 580" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="580" fill="#0F172A"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">Clustering Jerárquico y Dendrogramas</text>
+  
+  <!-- Agglomerative vs Divisive -->
+  <g transform="translate(50, 60)">
+    <rect x="0" y="0" width="380" height="180" rx="12" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+    <text x="190" y="25" text-anchor="middle" fill="#3B82F6" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Tipos de Clustering Jerárquico</text>
+    
+    <!-- Agglomerative -->
+    <g transform="translate(20, 50)">
+      <text x="80" y="0" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Aglomerativo (Bottom-Up)</text>
+      
+      <!-- Visual: points merging up -->
+      <circle cx="20" cy="90" r="6" fill="#60A5FA"/>
+      <circle cx="50" cy="90" r="6" fill="#60A5FA"/>
+      <circle cx="90" cy="90" r="6" fill="#8B5CF6"/>
+      <circle cx="120" cy="90" r="6" fill="#8B5CF6"/>
+      <circle cx="150" cy="90" r="6" fill="#F59E0B"/>
+      
+      <line x1="20" y1="84" x2="35" y2="65" stroke="#60A5FA" stroke-width="1"/>
+      <line x1="50" y1="84" x2="35" y2="65" stroke="#60A5FA" stroke-width="1"/>
+      <circle cx="35" cy="60" r="4" fill="#60A5FA"/>
+      
+      <line x1="90" y1="84" x2="105" y2="65" stroke="#8B5CF6" stroke-width="1"/>
+      <line x1="120" y1="84" x2="105" y2="65" stroke="#8B5CF6" stroke-width="1"/>
+      <circle cx="105" cy="60" r="4" fill="#8B5CF6"/>
+      
+      <line x1="35" y1="55" x2="70" y2="35" stroke="#10B981" stroke-width="1"/>
+      <line x1="105" y1="55" x2="70" y2="35" stroke="#10B981" stroke-width="1"/>
+      <circle cx="70" cy="30" r="5" fill="#10B981"/>
+      
+      <text x="80" y="115" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Más común en práctica</text>
+    </g>
+    
+    <!-- Divisive -->
+    <g transform="translate(200, 50)">
+      <text x="80" y="0" text-anchor="middle" fill="#EF4444" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Divisivo (Top-Down)</text>
+      
+      <!-- Visual: cluster splitting down -->
+      <circle cx="80" cy="25" r="6" fill="#EF4444"/>
+      
+      <line x1="80" y1="31" x2="45" y2="50" stroke="#EF4444" stroke-width="1"/>
+      <line x1="80" y1="31" x2="115" y2="50" stroke="#EF4444" stroke-width="1"/>
+      <circle cx="45" cy="55" r="5" fill="#F59E0B"/>
+      <circle cx="115" cy="55" r="5" fill="#8B5CF6"/>
+      
+      <line x1="45" y1="61" x2="25" y2="80" stroke="#F59E0B" stroke-width="1"/>
+      <line x1="45" y1="61" x2="65" y2="80" stroke="#F59E0B" stroke-width="1"/>
+      <line x1="115" y1="61" x2="100" y2="80" stroke="#8B5CF6" stroke-width="1"/>
+      <line x1="115" y1="61" x2="135" y2="80" stroke="#8B5CF6" stroke-width="1"/>
+      
+      <circle cx="25" cy="85" r="4" fill="#60A5FA"/>
+      <circle cx="65" cy="85" r="4" fill="#60A5FA"/>
+      <circle cx="100" cy="85" r="4" fill="#60A5FA"/>
+      <circle cx="135" cy="85" r="4" fill="#60A5FA"/>
+      
+      <text x="80" y="115" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Computacionalmente costoso</text>
+    </g>
+  </g>
+  
+  <!-- Linkage methods -->
+  <g transform="translate(450, 60)">
+    <rect x="0" y="0" width="420" height="180" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="210" y="25" text-anchor="middle" fill="#8B5CF6" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Métodos de Enlace (Linkage)</text>
+    
+    <!-- Single -->
+    <g transform="translate(20, 45)">
+      <rect x="0" y="0" width="120" height="55" rx="6" fill="#1E3A5F"/>
+      <text x="60" y="18" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Single</text>
+      <text x="60" y="35" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="9">Distancia mínima</text>
+      <text x="60" y="48" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="8">Chains, sensible a ruido</text>
+    </g>
+    
+    <!-- Complete -->
+    <g transform="translate(150, 45)">
+      <rect x="0" y="0" width="120" height="55" rx="6" fill="#1E3A5F"/>
+      <text x="60" y="18" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Complete</text>
+      <text x="60" y="35" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="9">Distancia máxima</text>
+      <text x="60" y="48" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="8">Clusters compactos</text>
+    </g>
+    
+    <!-- Average -->
+    <g transform="translate(280, 45)">
+      <rect x="0" y="0" width="120" height="55" rx="6" fill="#1E3A5F"/>
+      <text x="60" y="18" text-anchor="middle" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Average</text>
+      <text x="60" y="35" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="9">Distancia promedio</text>
+      <text x="60" y="48" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="8">Balance entre ambos</text>
+    </g>
+    
+    <!-- Ward -->
+    <g transform="translate(85, 110)">
+      <rect x="0" y="0" width="250" height="55" rx="6" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1"/>
+      <text x="125" y="18" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Ward (Recomendado)</text>
+      <text x="125" y="35" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="9">Minimiza varianza intra-cluster</text>
+      <text x="125" y="48" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="8">Similar a K-Means, clusters esféricos</text>
+    </g>
+  </g>
+  
+  <!-- Dendrogram example -->
+  <g transform="translate(50, 260)">
+    <rect x="0" y="0" width="500" height="220" rx="12" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+    <text x="250" y="25" text-anchor="middle" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Dendrograma - Lectura e Interpretación</text>
+    
+    <!-- Dendrogram visualization -->
+    <g transform="translate(50, 50)">
+      <!-- Y-axis (distance) -->
+      <line x1="0" y1="0" x2="0" y2="140" stroke="#475569" stroke-width="1"/>
+      <text x="-10" y="70" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9" transform="rotate(-90, -10, 70)">Distancia</text>
+      
+      <!-- Distance markers -->
+      <line x1="-5" y1="20" x2="0" y2="20" stroke="#475569" stroke-width="1"/>
+      <text x="-10" y="23" text-anchor="end" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="8">4</text>
+      <line x1="-5" y1="60" x2="0" y2="60" stroke="#475569" stroke-width="1"/>
+      <text x="-10" y="63" text-anchor="end" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="8">2</text>
+      <line x1="-5" y1="100" x2="0" y2="100" stroke="#475569" stroke-width="1"/>
+      <text x="-10" y="103" text-anchor="end" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="8">1</text>
+      
+      <!-- Sample labels -->
+      <text x="40" y="155" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="9">A</text>
+      <text x="80" y="155" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="9">B</text>
+      <text x="120" y="155" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="9">C</text>
+      <text x="200" y="155" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="9">D</text>
+      <text x="280" y="155" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="9">E</text>
+      <text x="320" y="155" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="9">F</text>
+      <text x="360" y="155" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="9">G</text>
+      
+      <!-- Vertical lines from samples -->
+      <line x1="40" y1="140" x2="40" y2="110" stroke="#60A5FA" stroke-width="2"/>
+      <line x1="80" y1="140" x2="80" y2="110" stroke="#60A5FA" stroke-width="2"/>
+      <line x1="120" y1="140" x2="120" y2="80" stroke="#60A5FA" stroke-width="2"/>
+      <line x1="200" y1="140" x2="200" y2="50" stroke="#8B5CF6" stroke-width="2"/>
+      <line x1="280" y1="140" x2="280" y2="100" stroke="#10B981" stroke-width="2"/>
+      <line x1="320" y1="140" x2="320" y2="100" stroke="#10B981" stroke-width="2"/>
+      <line x1="360" y1="140" x2="360" y2="70" stroke="#10B981" stroke-width="2"/>
+      
+      <!-- Merge A-B -->
+      <line x1="40" y1="110" x2="80" y2="110" stroke="#60A5FA" stroke-width="2"/>
+      <line x1="60" y1="110" x2="60" y2="80" stroke="#60A5FA" stroke-width="2"/>
+      
+      <!-- Merge (A-B)-C -->
+      <line x1="60" y1="80" x2="120" y2="80" stroke="#60A5FA" stroke-width="2"/>
+      <line x1="90" y1="80" x2="90" y2="50" stroke="#60A5FA" stroke-width="2"/>
+      
+      <!-- Merge E-F -->
+      <line x1="280" y1="100" x2="320" y2="100" stroke="#10B981" stroke-width="2"/>
+      <line x1="300" y1="100" x2="300" y2="70" stroke="#10B981" stroke-width="2"/>
+      
+      <!-- Merge (E-F)-G -->
+      <line x1="300" y1="70" x2="360" y2="70" stroke="#10B981" stroke-width="2"/>
+      <line x1="330" y1="70" x2="330" y2="50" stroke="#10B981" stroke-width="2"/>
+      
+      <!-- Merge clusters -->
+      <line x1="90" y1="50" x2="200" y2="50" stroke="#F59E0B" stroke-width="2"/>
+      <line x1="145" y1="50" x2="145" y2="20" stroke="#F59E0B" stroke-width="2"/>
+      
+      <line x1="145" y1="20" x2="330" y2="20" stroke="#EF4444" stroke-width="2"/>
+      <line x1="237" y1="20" x2="237" y2="5" stroke="#EF4444" stroke-width="2"/>
+      <line x1="200" y1="50" x2="330" y2="50" stroke="#F59E0B" stroke-width="2"/>
+      <line x1="265" y1="50" x2="265" y2="20" stroke="#F59E0B" stroke-width="2"/>
+      
+      <!-- Cut line -->
+      <line x1="0" y1="65" x2="380" y2="65" stroke="#EF4444" stroke-width="1" stroke-dasharray="5,3"/>
+      <text x="390" y="68" fill="#EF4444" font-family="system-ui, sans-serif" font-size="9">Corte</text>
+    </g>
+    
+    <!-- Interpretation -->
+    <text x="250" y="205" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Cortar a altura 2.5 → 3 clusters: (A,B,C), (D), (E,F,G)</text>
+  </g>
+  
+  <!-- Cutting strategies -->
+  <g transform="translate(570, 260)">
+    <rect x="0" y="0" width="300" height="220" rx="12" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+    <text x="150" y="25" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Estrategias de Corte</text>
+    
+    <g transform="translate(20, 50)">
+      <circle cx="8" cy="0" r="5" fill="#3B82F6"/>
+      <text x="22" y="4" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Número fijo de clusters</text>
+      <text x="22" y="20" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">fcluster(Z, t=k, criterion='maxclust')</text>
+    </g>
+    
+    <g transform="translate(20, 85)">
+      <circle cx="8" cy="0" r="5" fill="#8B5CF6"/>
+      <text x="22" y="4" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Distancia de corte</text>
+      <text x="22" y="20" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">fcluster(Z, t=d, criterion='distance')</text>
+    </g>
+    
+    <g transform="translate(20, 120)">
+      <circle cx="8" cy="0" r="5" fill="#F59E0B"/>
+      <text x="22" y="4" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Inconsistencia</text>
+      <text x="22" y="20" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Detecta saltos inusuales en alturas</text>
+    </g>
+    
+    <g transform="translate(20, 155)">
+      <circle cx="8" cy="0" r="5" fill="#10B981"/>
+      <text x="22" y="4" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Método del codo en dendrograma</text>
+      <text x="22" y="20" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Mayor salto vertical indica buen corte</text>
+    </g>
+    
+    <rect x="15" y="180" width="270" height="28" rx="6" fill="#1E3A5F"/>
+    <text x="150" y="198" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10">Complejidad: O(n²) espacio, O(n³) tiempo</text>
+  </g>
+  
+  <!-- Python code snippet -->
+  <g transform="translate(50, 500)">
+    <rect x="0" y="0" width="820" height="65" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+    <text x="15" y="18" fill="#10B981" font-family="monospace" font-size="11">from</text>
+    <text x="50" y="18" fill="#E2E8F0" font-family="monospace" font-size="11">scipy.cluster.hierarchy</text>
+    <text x="215" y="18" fill="#10B981" font-family="monospace" font-size="11">import</text>
+    <text x="260" y="18" fill="#E2E8F0" font-family="monospace" font-size="11">linkage, dendrogram, fcluster</text>
+    
+    <text x="15" y="38" fill="#E2E8F0" font-family="monospace" font-size="11">Z = linkage(X,</text>
+    <text x="130" y="38" fill="#F59E0B" font-family="monospace" font-size="11">method='ward'</text>
+    <text x="250" y="38" fill="#E2E8F0" font-family="monospace" font-size="11">)</text>
+    <text x="280" y="38" fill="#6B7280" font-family="monospace" font-size="11"># Matriz de enlace</text>
+    
+    <text x="15" y="55" fill="#E2E8F0" font-family="monospace" font-size="11">dendrogram(Z); clusters = fcluster(Z,</text>
+    <text x="305" y="55" fill="#F59E0B" font-family="monospace" font-size="11">t=3</text>
+    <text x="330" y="55" fill="#E2E8F0" font-family="monospace" font-size="11">,</text>
+    <text x="340" y="55" fill="#F59E0B" font-family="monospace" font-size="11">criterion='maxclust'</text>
+    <text x="510" y="55" fill="#E2E8F0" font-family="monospace" font-size="11">)</text>
+  </g>
+</svg>
