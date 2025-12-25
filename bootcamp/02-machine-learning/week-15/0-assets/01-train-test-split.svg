@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <!-- Background -->
+  <rect width="900" height="500" fill="#1e1e2e"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#cdd6f4" font-family="sans-serif" font-size="24" font-weight="bold">Train-Test Split (Holdout)</text>
+  
+  <!-- Full Dataset -->
+  <rect x="50" y="80" width="800" height="60" rx="8" fill="#313244" stroke="#89b4fa" stroke-width="2"/>
+  <text x="450" y="115" text-anchor="middle" fill="#89b4fa" font-family="sans-serif" font-size="16" font-weight="bold">Dataset Completo (100%)</text>
+  
+  <!-- Arrow -->
+  <path d="M450 140 L450 170" stroke="#6c7086" stroke-width="2" fill="none"/>
+  <polygon points="450,180 445,170 455,170" fill="#6c7086"/>
+  
+  <!-- Split -->
+  <rect x="50" y="190" width="560" height="60" rx="8" fill="#313244" stroke="#a6e3a1" stroke-width="2"/>
+  <text x="330" y="225" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="16" font-weight="bold">Training Set (70-80%)</text>
+  
+  <rect x="630" y="190" width="220" height="60" rx="8" fill="#313244" stroke="#f38ba8" stroke-width="2"/>
+  <text x="740" y="225" text-anchor="middle" fill="#f38ba8" font-family="sans-serif" font-size="16" font-weight="bold">Test Set (20-30%)</text>
+  
+  <!-- Process Flow -->
+  <rect x="150" y="290" width="200" height="50" rx="8" fill="#45475a" stroke="#a6e3a1" stroke-width="2"/>
+  <text x="250" y="320" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="14">Entrenar Modelo</text>
+  
+  <path d="M350 315 L420 315" stroke="#6c7086" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <rect x="430" y="290" width="200" height="50" rx="8" fill="#45475a" stroke="#f9e2af" stroke-width="2"/>
+  <text x="530" y="320" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="14">Evaluar en Test</text>
+  
+  <!-- Pros and Cons -->
+  <rect x="50" y="370" width="380" height="110" rx="10" fill="#313244" stroke="#a6e3a1" stroke-width="2"/>
+  <text x="240" y="400" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="14" font-weight="bold">✓ Ventajas</text>
+  <text x="240" y="425" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12">Rápido y simple</text>
+  <text x="240" y="445" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12">Fácil de entender</text>
+  <text x="240" y="465" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12">Bueno para datasets grandes</text>
+  
+  <rect x="470" y="370" width="380" height="110" rx="10" fill="#313244" stroke="#f38ba8" stroke-width="2"/>
+  <text x="660" y="400" text-anchor="middle" fill="#f38ba8" font-family="sans-serif" font-size="14" font-weight="bold">✗ Desventajas</text>
+  <text x="660" y="425" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12">Alta varianza en resultados</text>
+  <text x="660" y="445" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12">Desperdicia datos de entrenamiento</text>
+  <text x="660" y="465" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12">Un solo split puede ser engañoso</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6c7086"/>
+    </marker>
+  </defs>
+</svg>

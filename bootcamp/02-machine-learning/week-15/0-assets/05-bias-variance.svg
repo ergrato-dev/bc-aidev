@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#1e1e2e"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#cdd6f4" font-family="sans-serif" font-size="24" font-weight="bold">Bias-Variance Tradeoff</text>
+  
+  <!-- Main diagram area -->
+  <!-- Axes -->
+  <line x1="100" y1="400" x2="800" y2="400" stroke="#6c7086" stroke-width="2"/>
+  <line x1="100" y1="400" x2="100" y2="80" stroke="#6c7086" stroke-width="2"/>
+  
+  <!-- Axis labels -->
+  <text x="450" y="440" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="14">Complejidad del Modelo →</text>
+  <text x="50" y="240" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="14" transform="rotate(-90 50 240)">Error</text>
+  
+  <!-- Simple/Complex labels -->
+  <text x="150" y="420" fill="#6c7086" font-family="sans-serif" font-size="11">Simple</text>
+  <text x="750" y="420" fill="#6c7086" font-family="sans-serif" font-size="11">Complejo</text>
+  
+  <!-- Bias curve (decreasing) -->
+  <path d="M120 120 Q300 150 450 280 Q600 350 780 380" stroke="#89b4fa" stroke-width="3" fill="none"/>
+  <text x="200" y="140" fill="#89b4fa" font-family="sans-serif" font-size="13" font-weight="bold">Bias²</text>
+  
+  <!-- Variance curve (increasing) -->
+  <path d="M120 380 Q300 370 450 280 Q600 180 780 100" stroke="#f38ba8" stroke-width="3" fill="none"/>
+  <text x="700" y="120" fill="#f38ba8" font-family="sans-serif" font-size="13" font-weight="bold">Variance</text>
+  
+  <!-- Total error curve (U-shaped) -->
+  <path d="M120 200 Q250 160 450 150 Q650 180 780 280" stroke="#a6e3a1" stroke-width="3" fill="none"/>
+  <text x="550" y="140" fill="#a6e3a1" font-family="sans-serif" font-size="13" font-weight="bold">Total Error</text>
+  
+  <!-- Optimal point -->
+  <circle cx="450" cy="150" r="8" fill="#f9e2af"/>
+  <line x1="450" y1="158" x2="450" y2="400" stroke="#f9e2af" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="450" y="130" text-anchor="middle" fill="#f9e2af" font-family="sans-serif" font-size="12" font-weight="bold">Óptimo</text>
+  
+  <!-- Underfitting zone -->
+  <rect x="120" y="460" width="200" height="120" rx="10" fill="#313244" stroke="#89b4fa" stroke-width="2"/>
+  <text x="220" y="490" text-anchor="middle" fill="#89b4fa" font-family="sans-serif" font-size="14" font-weight="bold">Underfitting</text>
+  <text x="220" y="515" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Alto Bias, Baja Variance</text>
+  <text x="220" y="535" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Modelo muy simple</text>
+  <text x="220" y="555" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Error alto en train Y test</text>
+  <text x="220" y="575" text-anchor="middle" fill="#f38ba8" font-family="sans-serif" font-size="10">Solución: Más features, modelo complejo</text>
+  
+  <!-- Good fit zone -->
+  <rect x="350" y="460" width="200" height="120" rx="10" fill="#313244" stroke="#a6e3a1" stroke-width="2"/>
+  <text x="450" y="490" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="14" font-weight="bold">Good Fit</text>
+  <text x="450" y="515" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Balance Bias-Variance</text>
+  <text x="450" y="535" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Complejidad adecuada</text>
+  <text x="450" y="555" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Error bajo en train Y test</text>
+  <text x="450" y="575" text-anchor="middle" fill="#a6e3a1" font-family="sans-serif" font-size="10">✓ Objetivo a alcanzar</text>
+  
+  <!-- Overfitting zone -->
+  <rect x="580" y="460" width="200" height="120" rx="10" fill="#313244" stroke="#f38ba8" stroke-width="2"/>
+  <text x="680" y="490" text-anchor="middle" fill="#f38ba8" font-family="sans-serif" font-size="14" font-weight="bold">Overfitting</text>
+  <text x="680" y="515" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Bajo Bias, Alta Variance</text>
+  <text x="680" y="535" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Modelo muy complejo</text>
+  <text x="680" y="555" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Error bajo train, alto test</text>
+  <text x="680" y="575" text-anchor="middle" fill="#f38ba8" font-family="sans-serif" font-size="10">Solución: Regularización, más datos</text>
+</svg>

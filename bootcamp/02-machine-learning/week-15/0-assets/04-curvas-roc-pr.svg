@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <!-- Background -->
+  <rect width="900" height="650" fill="#1e1e2e"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#cdd6f4" font-family="sans-serif" font-size="24" font-weight="bold">Curvas ROC y Precision-Recall</text>
+  
+  <!-- ROC Curve Section -->
+  <text x="225" y="80" text-anchor="middle" fill="#89b4fa" font-family="sans-serif" font-size="16" font-weight="bold">Curva ROC</text>
+  
+  <!-- ROC Axes -->
+  <line x1="80" y1="350" x2="380" y2="350" stroke="#6c7086" stroke-width="2"/>
+  <line x1="80" y1="350" x2="80" y2="100" stroke="#6c7086" stroke-width="2"/>
+  <text x="230" y="380" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12">False Positive Rate (FPR)</text>
+  <text x="40" y="225" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12" transform="rotate(-90 40 225)">True Positive Rate (TPR)</text>
+  
+  <!-- Axis labels -->
+  <text x="80" y="370" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">0</text>
+  <text x="380" y="370" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">1</text>
+  <text x="70" y="355" text-anchor="end" fill="#6c7086" font-family="sans-serif" font-size="10">0</text>
+  <text x="70" y="105" text-anchor="end" fill="#6c7086" font-family="sans-serif" font-size="10">1</text>
+  
+  <!-- Diagonal (random) -->
+  <line x1="80" y1="350" x2="380" y2="100" stroke="#6c7086" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="270" y="200" fill="#6c7086" font-family="sans-serif" font-size="10">Random (AUC=0.5)</text>
+  
+  <!-- Good ROC curve -->
+  <path d="M80 350 Q120 120 180 110 Q250 105 380 100" stroke="#a6e3a1" stroke-width="3" fill="none"/>
+  <text x="150" y="150" fill="#a6e3a1" font-family="sans-serif" font-size="11">Buen modelo</text>
+  <text x="150" y="165" fill="#a6e3a1" font-family="sans-serif" font-size="10">(AUC=0.92)</text>
+  
+  <!-- Perfect point -->
+  <circle cx="80" cy="100" r="5" fill="#f9e2af"/>
+  <text x="95" y="95" fill="#f9e2af" font-family="sans-serif" font-size="10">Perfecto</text>
+  
+  <!-- AUC explanation -->
+  <rect x="80" y="400" width="300" height="80" rx="8" fill="#313244" stroke="#89b4fa" stroke-width="1"/>
+  <text x="230" y="425" text-anchor="middle" fill="#89b4fa" font-family="sans-serif" font-size="13" font-weight="bold">AUC (Area Under Curve)</text>
+  <text x="230" y="450" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">0.5 = Random | 1.0 = Perfecto</text>
+  <text x="230" y="470" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Mide capacidad de discriminación</text>
+  
+  <!-- PR Curve Section -->
+  <text x="675" y="80" text-anchor="middle" fill="#cba6f7" font-family="sans-serif" font-size="16" font-weight="bold">Curva Precision-Recall</text>
+  
+  <!-- PR Axes -->
+  <line x1="520" y1="350" x2="820" y2="350" stroke="#6c7086" stroke-width="2"/>
+  <line x1="520" y1="350" x2="520" y2="100" stroke="#6c7086" stroke-width="2"/>
+  <text x="670" y="380" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12">Recall</text>
+  <text x="480" y="225" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="12" transform="rotate(-90 480 225)">Precision</text>
+  
+  <!-- Axis labels -->
+  <text x="520" y="370" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">0</text>
+  <text x="820" y="370" text-anchor="middle" fill="#6c7086" font-family="sans-serif" font-size="10">1</text>
+  <text x="510" y="355" text-anchor="end" fill="#6c7086" font-family="sans-serif" font-size="10">0</text>
+  <text x="510" y="105" text-anchor="end" fill="#6c7086" font-family="sans-serif" font-size="10">1</text>
+  
+  <!-- PR curve -->
+  <path d="M520 110 Q600 115 700 180 Q780 280 820 350" stroke="#cba6f7" stroke-width="3" fill="none"/>
+  <text x="600" y="160" fill="#cba6f7" font-family="sans-serif" font-size="11">Buen modelo</text>
+  
+  <!-- Perfect point -->
+  <circle cx="820" cy="100" r="5" fill="#f9e2af"/>
+  <text x="805" y="90" fill="#f9e2af" font-family="sans-serif" font-size="10">Perfecto</text>
+  
+  <!-- AP explanation -->
+  <rect x="520" y="400" width="300" height="80" rx="8" fill="#313244" stroke="#cba6f7" stroke-width="1"/>
+  <text x="670" y="425" text-anchor="middle" fill="#cba6f7" font-family="sans-serif" font-size="13" font-weight="bold">AP (Average Precision)</text>
+  <text x="670" y="450" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Área bajo curva PR</text>
+  <text x="670" y="470" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">Mejor para clases desbalanceadas</text>
+  
+  <!-- Comparison -->
+  <text x="450" y="520" text-anchor="middle" fill="#cdd6f4" font-family="sans-serif" font-size="16" font-weight="bold">¿Cuándo Usar Cada Una?</text>
+  
+  <rect x="50" y="545" width="380" height="85" rx="10" fill="#313244" stroke="#89b4fa" stroke-width="2"/>
+  <text x="240" y="575" text-anchor="middle" fill="#89b4fa" font-family="sans-serif" font-size="13" font-weight="bold">ROC / AUC</text>
+  <text x="240" y="600" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">✓ Clases balanceadas</text>
+  <text x="240" y="620" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">✓ Comparar modelos en general</text>
+  
+  <rect x="470" y="545" width="380" height="85" rx="10" fill="#313244" stroke="#cba6f7" stroke-width="2"/>
+  <text x="660" y="575" text-anchor="middle" fill="#cba6f7" font-family="sans-serif" font-size="13" font-weight="bold">PR / AP</text>
+  <text x="660" y="600" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">✓ Clases muy desbalanceadas</text>
+  <text x="660" y="620" text-anchor="middle" fill="#a6adc8" font-family="sans-serif" font-size="11">✓ Cuando positivos son raros (fraude, enf.)</text>
+</svg>
