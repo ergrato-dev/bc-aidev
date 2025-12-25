@@ -41,15 +41,88 @@ Este bootcamp se enfoca en el aprendizaje práctico con proyectos del mundo real
 
 ## 🗓️ Estructura del Bootcamp
 
-| Módulo               | Semanas | Horas | Contenido                                         |
-| -------------------- | ------- | ----- | ------------------------------------------------- |
-| **Fundamentos**      | 1-8     | 48h   | Python, Matemáticas, NumPy, Pandas, Visualización |
-| **Machine Learning** | 9-18    | 60h   | Scikit-learn, Algoritmos ML, Feature Engineering  |
-| **Deep Learning**    | 19-28   | 60h   | TensorFlow, PyTorch, CNNs, RNNs, Transformers     |
-| **Especialización**  | 29-34   | 36h   | NLP, LLMs, Computer Vision, MLOps                 |
-| **Proyecto Final**   | 35-36   | 12h   | Proyecto end-to-end en producción                 |
-
 **Total: 36 semanas | 216 horas de formación intensiva**
+
+---
+
+### 📘 Módulo 1: Fundamentos (Semanas 1-8) — 48 horas
+
+Base sólida en Python y herramientas esenciales para Data Science.
+
+| Semana                 | Tema                 | Descripción                                     |
+| ---------------------- | -------------------- | ----------------------------------------------- |
+| [01](bootcamp/week-01) | Python Moderno       | Sintaxis, tipos, funciones, OOP, type hints     |
+| [02](bootcamp/week-02) | Estructuras de Datos | Listas, diccionarios, sets, comprensiones       |
+| [03](bootcamp/week-03) | Matemáticas I        | Álgebra lineal: vectores, matrices, operaciones |
+| [04](bootcamp/week-04) | Matemáticas II       | Estadística descriptiva, probabilidad           |
+| [05](bootcamp/week-05) | NumPy                | Arrays, broadcasting, operaciones vectorizadas  |
+| [06](bootcamp/week-06) | Pandas I             | Series, DataFrames, indexación, filtrado        |
+| [07](bootcamp/week-07) | Pandas II            | Limpieza, merge, groupby, pivot tables          |
+| [08](bootcamp/week-08) | Visualización        | Matplotlib, Seaborn, gráficos estadísticos      |
+
+---
+
+### 📗 Módulo 2: Machine Learning (Semanas 9-18) — 60 horas
+
+Algoritmos clásicos de ML y metodología de trabajo con datos.
+
+| Semana                 | Tema                  | Descripción                                       |
+| ---------------------- | --------------------- | ------------------------------------------------- |
+| [09](bootcamp/week-09) | Intro a ML            | Tipos de aprendizaje, workflow, scikit-learn      |
+| [10](bootcamp/week-10) | Regresión             | Lineal, polinomial, regularización (Ridge, Lasso) |
+| [11](bootcamp/week-11) | Árboles de Decisión   | Decision Trees, Random Forest, Gradient Boosting  |
+| [12](bootcamp/week-12) | SVM, KNN, Naive Bayes | Clasificadores clásicos, kernels, distancias      |
+| 13                     | Clustering            | K-Means, DBSCAN, clustering jerárquico            |
+| 14                     | Reducción Dimensional | PCA, t-SNE, selección de features                 |
+| 15                     | Feature Engineering   | Transformaciones, encoding, pipelines             |
+| 16                     | Validación y Métricas | Cross-validation, métricas, curvas ROC            |
+| 17                     | Optimización          | GridSearch, RandomSearch, Optuna                  |
+| 18                     | Proyecto ML           | End-to-end ML pipeline, Kaggle challenge          |
+
+---
+
+### 📙 Módulo 3: Deep Learning (Semanas 19-28) — 60 horas
+
+Redes neuronales desde los fundamentos hasta arquitecturas avanzadas.
+
+| Semana | Tema             | Descripción                                          |
+| ------ | ---------------- | ---------------------------------------------------- |
+| 19     | Redes Neuronales | Perceptrón, backpropagation, funciones de activación |
+| 20     | TensorFlow/Keras | API Sequential, capas, compilación, entrenamiento    |
+| 21     | PyTorch          | Tensores, autograd, nn.Module, training loop         |
+| 22     | CNNs I           | Convoluciones, pooling, arquitecturas (LeNet, VGG)   |
+| 23     | CNNs II          | ResNet, Transfer Learning, fine-tuning               |
+| 24     | RNNs             | Secuencias, LSTM, GRU, series temporales             |
+| 25     | Transformers     | Attention, arquitectura, positional encoding         |
+| 26     | Regularización   | Dropout, batch normalization, data augmentation      |
+| 27     | Optimización DL  | Optimizers, learning rate schedules, callbacks       |
+| 28     | Proyecto DL      | Computer Vision o NLP con deep learning              |
+
+---
+
+### 📕 Módulo 4: Especialización (Semanas 29-34) — 36 horas
+
+NLP avanzado, LLMs y despliegue de modelos.
+
+| Semana | Tema            | Descripción                                             |
+| ------ | --------------- | ------------------------------------------------------- |
+| 29     | NLP Fundamentos | Tokenización, embeddings, Word2Vec                      |
+| 30     | Hugging Face    | Transformers library, pipelines, modelos pre-entrenados |
+| 31     | LLMs            | GPT, BERT, prompt engineering, fine-tuning              |
+| 32     | RAG             | Retrieval Augmented Generation, vector databases        |
+| 33     | Computer Vision | Detección de objetos, segmentación, YOLO                |
+| 34     | MLOps           | APIs (FastAPI), Docker, deployment, monitoreo           |
+
+---
+
+### 🎓 Módulo 5: Proyecto Final (Semanas 35-36) — 12 horas
+
+Proyecto integrador end-to-end en producción.
+
+| Semana | Tema                  | Descripción                                   |
+| ------ | --------------------- | --------------------------------------------- |
+| 35     | Desarrollo            | Implementación del proyecto final completo    |
+| 36     | Deploy y Presentación | Despliegue en producción, documentación, demo |
 
 ---
 
