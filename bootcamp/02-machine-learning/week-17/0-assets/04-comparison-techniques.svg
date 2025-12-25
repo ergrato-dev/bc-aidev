@@ -1,0 +1,113 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGrad17d" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#059669"/>
+      <stop offset="100%" style="stop-color:#0891b2"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="520" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <rect x="200" y="15" width="500" height="40" rx="8" fill="url(#headerGrad17d)"/>
+  <text x="450" y="42" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Comparación: PCA vs t-SNE vs UMAP</text>
+  
+  <!-- Headers -->
+  <rect x="40" y="75" width="260" height="35" rx="6" fill="#1e40af"/>
+  <text x="170" y="98" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">PCA</text>
+  
+  <rect x="320" y="75" width="260" height="35" rx="6" fill="#b91c1c"/>
+  <text x="450" y="98" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">t-SNE</text>
+  
+  <rect x="600" y="75" width="260" height="35" rx="6" fill="#047857"/>
+  <text x="730" y="98" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">UMAP</text>
+  
+  <!-- PCA Column -->
+  <rect x="40" y="120" width="260" height="280" rx="8" fill="#1e293b" stroke="#1e40af" stroke-width="2"/>
+  
+  <text x="170" y="145" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Tipo: Lineal</text>
+  
+  <text x="55" y="170" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">✅ Muy rápido (O(dn²))</text>
+  <text x="55" y="190" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">✅ Determinístico</text>
+  <text x="55" y="210" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">✅ Preserva var. global</text>
+  <text x="55" y="230" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">✅ Interpretable</text>
+  <text x="55" y="250" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">✅ Escalable a big data</text>
+  
+  <text x="55" y="280" fill="#fca5a5" font-family="Arial, sans-serif" font-size="10">❌ Solo relaciones lineales</text>
+  <text x="55" y="300" fill="#fca5a5" font-family="Arial, sans-serif" font-size="10">❌ No separa clusters no-lineales</text>
+  
+  <text x="55" y="330" fill="#fbbf24" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Uso:</text>
+  <text x="55" y="348" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9">• Preprocesamiento</text>
+  <text x="55" y="364" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9">• Reducir antes de ML</text>
+  <text x="55" y="380" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9">• Análisis de varianza</text>
+  
+  <!-- t-SNE Column -->
+  <rect x="320" y="120" width="260" height="280" rx="8" fill="#1e293b" stroke="#b91c1c" stroke-width="2"/>
+  
+  <text x="450" y="145" text-anchor="middle" fill="#fca5a5" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Tipo: No Lineal</text>
+  
+  <text x="335" y="170" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">✅ Excelente visualización</text>
+  <text x="335" y="190" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">✅ Preserva estructura local</text>
+  <text x="335" y="210" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">✅ Revela clusters</text>
+  <text x="335" y="230" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">✅ Maneja no-linealidad</text>
+  
+  <text x="335" y="260" fill="#fca5a5" font-family="Arial, sans-serif" font-size="10">❌ Lento (O(n²))</text>
+  <text x="335" y="280" fill="#fca5a5" font-family="Arial, sans-serif" font-size="10">❌ Estocástico</text>
+  <text x="335" y="300" fill="#fca5a5" font-family="Arial, sans-serif" font-size="10">❌ No preserva global</text>
+  <text x="335" y="320" fill="#fca5a5" font-family="Arial, sans-serif" font-size="10">❌ No para nuevos datos</text>
+  
+  <text x="335" y="350" fill="#fbbf24" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Uso:</text>
+  <text x="335" y="368" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9">• Visualización 2D/3D</text>
+  <text x="335" y="384" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9">• Explorar datos</text>
+  
+  <!-- UMAP Column -->
+  <rect x="600" y="120" width="260" height="280" rx="8" fill="#1e293b" stroke="#047857" stroke-width="2"/>
+  
+  <text x="730" y="145" text-anchor="middle" fill="#86efac" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Tipo: No Lineal</text>
+  
+  <text x="615" y="170" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">✅ Rápido (mejor que t-SNE)</text>
+  <text x="615" y="190" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">✅ Preserva local Y global</text>
+  <text x="615" y="210" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">✅ Escalable</text>
+  <text x="615" y="230" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">✅ Soporta nuevos datos</text>
+  <text x="615" y="250" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10">✅ Visualización clara</text>
+  
+  <text x="615" y="280" fill="#fca5a5" font-family="Arial, sans-serif" font-size="10">❌ Más parámetros</text>
+  <text x="615" y="300" fill="#fca5a5" font-family="Arial, sans-serif" font-size="10">❌ Librería adicional</text>
+  
+  <text x="615" y="330" fill="#fbbf24" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Uso:</text>
+  <text x="615" y="348" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9">• Visualización moderna</text>
+  <text x="615" y="364" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9">• Clustering previo</text>
+  <text x="615" y="380" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9">• Datasets grandes</text>
+  
+  <!-- Comparison Table -->
+  <rect x="40" y="415" width="820" height="85" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  
+  <text x="450" y="438" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Resumen Comparativo</text>
+  
+  <!-- Table headers -->
+  <text x="180" y="460" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Velocidad</text>
+  <text x="320" y="460" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Estructura Local</text>
+  <text x="460" y="460" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Estructura Global</text>
+  <text x="600" y="460" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Escalabilidad</text>
+  <text x="740" y="460" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Interpretable</text>
+  
+  <!-- PCA row -->
+  <text x="70" y="480" fill="#93c5fd" font-family="Arial, sans-serif" font-size="10" font-weight="bold">PCA</text>
+  <text x="180" y="480" text-anchor="middle" fill="#22c55e" font-family="Arial, sans-serif" font-size="10">⭐⭐⭐</text>
+  <text x="320" y="480" text-anchor="middle" fill="#eab308" font-family="Arial, sans-serif" font-size="10">⭐⭐</text>
+  <text x="460" y="480" text-anchor="middle" fill="#22c55e" font-family="Arial, sans-serif" font-size="10">⭐⭐⭐</text>
+  <text x="600" y="480" text-anchor="middle" fill="#22c55e" font-family="Arial, sans-serif" font-size="10">⭐⭐⭐</text>
+  <text x="740" y="480" text-anchor="middle" fill="#22c55e" font-family="Arial, sans-serif" font-size="10">⭐⭐⭐</text>
+  
+  <!-- t-SNE row -->
+  <text x="70" y="495" fill="#fca5a5" font-family="Arial, sans-serif" font-size="10" font-weight="bold">t-SNE</text>
+  <text x="180" y="495" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-size="10">⭐</text>
+  <text x="320" y="495" text-anchor="middle" fill="#22c55e" font-family="Arial, sans-serif" font-size="10">⭐⭐⭐</text>
+  <text x="460" y="495" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-size="10">⭐</text>
+  <text x="600" y="495" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-size="10">⭐</text>
+  <text x="740" y="495" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-size="10">⭐</text>
+  
+  <!-- UMAP row (implied at bottom) -->
+  <text x="70" y="485" fill="#86efac" font-family="Arial, sans-serif" font-size="10" font-weight="bold"></text>
+</svg>

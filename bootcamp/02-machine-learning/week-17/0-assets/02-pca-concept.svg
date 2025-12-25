@@ -1,0 +1,122 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGrad17b" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="550" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <rect x="250" y="15" width="400" height="40" rx="8" fill="url(#headerGrad17b)"/>
+  <text x="450" y="42" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">PCA: Componentes Principales</text>
+  
+  <!-- Left: Original Data -->
+  <text x="180" y="85" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Datos Originales (2D)</text>
+  
+  <rect x="50" y="100" width="260" height="200" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  
+  <!-- Axes -->
+  <line x1="70" y1="280" x2="290" y2="280" stroke="#475569" stroke-width="2"/>
+  <line x1="70" y1="280" x2="70" y2="120" stroke="#475569" stroke-width="2"/>
+  <text x="290" y="295" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">X₁</text>
+  <text x="55" y="125" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">X₂</text>
+  
+  <!-- Data points with correlation -->
+  <circle cx="100" cy="260" r="5" fill="#60a5fa"/>
+  <circle cx="120" cy="245" r="5" fill="#60a5fa"/>
+  <circle cx="140" cy="230" r="5" fill="#60a5fa"/>
+  <circle cx="150" cy="215" r="5" fill="#60a5fa"/>
+  <circle cx="170" cy="200" r="5" fill="#60a5fa"/>
+  <circle cx="180" cy="190" r="5" fill="#60a5fa"/>
+  <circle cx="200" cy="175" r="5" fill="#60a5fa"/>
+  <circle cx="220" cy="160" r="5" fill="#60a5fa"/>
+  <circle cx="240" cy="145" r="5" fill="#60a5fa"/>
+  <circle cx="260" cy="130" r="5" fill="#60a5fa"/>
+  
+  <!-- PC1 direction -->
+  <line x1="80" y1="270" x2="280" y2="120" stroke="#22c55e" stroke-width="3"/>
+  <text x="275" y="110" fill="#22c55e" font-family="Arial, sans-serif" font-size="11" font-weight="bold">PC1</text>
+  
+  <!-- PC2 direction -->
+  <line x1="155" y1="140" x2="205" y2="250" stroke="#f97316" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="215" y="255" fill="#f97316" font-family="Arial, sans-serif" font-size="11">PC2</text>
+  
+  <!-- Arrow to transformation -->
+  <path d="M330 200 L400 200" stroke="#fbbf24" stroke-width="3" fill="none" marker-end="url(#arrowY17)"/>
+  <defs>
+    <marker id="arrowY17" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <text x="365" y="185" text-anchor="middle" fill="#fbbf24" font-family="Arial, sans-serif" font-size="11">PCA</text>
+  
+  <!-- Right: Transformed Data -->
+  <text x="620" y="85" text-anchor="middle" fill="#a5b4fc" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Datos Transformados</text>
+  
+  <rect x="430" y="100" width="260" height="200" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  
+  <!-- New axes -->
+  <line x1="450" y1="200" x2="670" y2="200" stroke="#22c55e" stroke-width="2"/>
+  <line x1="560" y1="280" x2="560" y2="120" stroke="#f97316" stroke-width="2"/>
+  <text x="675" y="195" fill="#22c55e" font-family="Arial, sans-serif" font-size="11" font-weight="bold">PC1</text>
+  <text x="570" y="125" fill="#f97316" font-family="Arial, sans-serif" font-size="11">PC2</text>
+  
+  <!-- Transformed points (spread on PC1) -->
+  <circle cx="470" cy="200" r="5" fill="#60a5fa"/>
+  <circle cx="490" cy="198" r="5" fill="#60a5fa"/>
+  <circle cx="510" cy="202" r="5" fill="#60a5fa"/>
+  <circle cx="530" cy="197" r="5" fill="#60a5fa"/>
+  <circle cx="550" cy="203" r="5" fill="#60a5fa"/>
+  <circle cx="570" cy="199" r="5" fill="#60a5fa"/>
+  <circle cx="590" cy="201" r="5" fill="#60a5fa"/>
+  <circle cx="610" cy="198" r="5" fill="#60a5fa"/>
+  <circle cx="630" cy="202" r="5" fill="#60a5fa"/>
+  <circle cx="650" cy="200" r="5" fill="#60a5fa"/>
+  
+  <!-- Variance bars -->
+  <rect x="720" y="120" width="150" height="80" rx="6" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="795" y="140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Varianza Explicada</text>
+  
+  <rect x="735" y="155" width="110" height="15" rx="3" fill="#22c55e"/>
+  <text x="850" y="167" fill="#22c55e" font-family="Arial, sans-serif" font-size="10">PC1: 95%</text>
+  
+  <rect x="735" y="175" width="6" height="15" rx="3" fill="#f97316"/>
+  <text x="850" y="187" fill="#f97316" font-family="Arial, sans-serif" font-size="10">PC2: 5%</text>
+  
+  <!-- Steps Section -->
+  <text x="450" y="340" text-anchor="middle" fill="#f8fafc" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Pasos del PCA</text>
+  
+  <!-- Step boxes -->
+  <rect x="40" y="360" width="160" height="80" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="120" y="385" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="11" font-weight="bold">1. Centrar datos</text>
+  <text x="120" y="405" text-anchor="middle" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="10">Restar media</text>
+  <text x="120" y="420" text-anchor="middle" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="10">μ = 0</text>
+  
+  <rect x="220" y="360" width="160" height="80" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="300" y="385" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="11" font-weight="bold">2. Covarianza</text>
+  <text x="300" y="405" text-anchor="middle" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="10">Calcular matriz</text>
+  <text x="300" y="420" text-anchor="middle" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="10">Σ = XᵀX / n</text>
+  
+  <rect x="400" y="360" width="160" height="80" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="480" y="385" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="11" font-weight="bold">3. Autovalores</text>
+  <text x="480" y="405" text-anchor="middle" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="10">Σv = λv</text>
+  <text x="480" y="420" text-anchor="middle" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="10">Ordenar por λ</text>
+  
+  <rect x="580" y="360" width="160" height="80" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="660" y="385" text-anchor="middle" fill="#93c5fd" font-family="Arial, sans-serif" font-size="11" font-weight="bold">4. Seleccionar K</text>
+  <text x="660" y="405" text-anchor="middle" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="10">Top K autovectores</text>
+  <text x="660" y="420" text-anchor="middle" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="10">95% varianza</text>
+  
+  <rect x="760" y="360" width="120" height="80" rx="8" fill="#14532d" stroke="#22c55e" stroke-width="2"/>
+  <text x="820" y="385" text-anchor="middle" fill="#86efac" font-family="Arial, sans-serif" font-size="11" font-weight="bold">5. Proyectar</text>
+  <text x="820" y="405" text-anchor="middle" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="10">X' = X · W</text>
+  <text x="820" y="420" text-anchor="middle" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="10">D → K dims</text>
+  
+  <!-- Formula -->
+  <rect x="250" y="470" width="400" height="50" rx="8" fill="#312e81" stroke="#6366f1" stroke-width="2"/>
+  <text x="450" y="495" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">Varianza explicada = Σ λᵢ / Σ λⱼ × 100%</text>
+  <text x="450" y="512" text-anchor="middle" fill="#a5b4fc" font-family="Arial, sans-serif" font-size="11">(ratio de autovalores seleccionados vs total)</text>
+</svg>
