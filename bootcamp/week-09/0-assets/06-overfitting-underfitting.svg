@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="320" fill="url(#bg6)"/>
+  
+  <!-- Title -->
+  <text x="450" y="30" font-family="Inter, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Underfitting vs Overfitting</text>
+  
+  <!-- Underfitting Section -->
+  <rect x="30" y="50" width="260" height="250" rx="10" fill="#1e2837" stroke="#fc8181" stroke-width="2"/>
+  <text x="160" y="80" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#fc8181" text-anchor="middle">UNDERFITTING</text>
+  <text x="160" y="100" font-family="Inter, sans-serif" font-size="11" fill="#a0aec0" text-anchor="middle">(Alto Sesgo)</text>
+  
+  <!-- Underfitting graph area -->
+  <rect x="50" y="115" width="220" height="120" rx="6" fill="#2d3748"/>
+  
+  <!-- Axes -->
+  <line x1="70" y1="215" x2="250" y2="215" stroke="#4a5568" stroke-width="1"/>
+  <line x1="70" y1="130" x2="70" y2="215" stroke="#4a5568" stroke-width="1"/>
+  
+  <!-- Data points (scattered) -->
+  <circle cx="90" cy="180" r="4" fill="#4fc3f7"/>
+  <circle cx="110" cy="145" r="4" fill="#4fc3f7"/>
+  <circle cx="130" cy="170" r="4" fill="#4fc3f7"/>
+  <circle cx="150" cy="155" r="4" fill="#4fc3f7"/>
+  <circle cx="170" cy="185" r="4" fill="#4fc3f7"/>
+  <circle cx="190" cy="165" r="4" fill="#4fc3f7"/>
+  <circle cx="210" cy="150" r="4" fill="#4fc3f7"/>
+  <circle cx="230" cy="175" r="4" fill="#4fc3f7"/>
+  
+  <!-- Simple line (doesn't fit) -->
+  <line x1="80" y1="190" x2="240" y2="160" stroke="#fc8181" stroke-width="2"/>
+  
+  <text x="160" y="255" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">Modelo muy simple</text>
+  <text x="160" y="270" font-family="Inter, sans-serif" font-size="10" fill="#fc8181" text-anchor="middle">Train: Bajo | Test: Bajo</text>
+  <text x="160" y="290" font-family="Inter, sans-serif" font-size="9" fill="#718096" text-anchor="middle">No captura patrones</text>
+  
+  <!-- Good Fit Section -->
+  <rect x="320" y="50" width="260" height="250" rx="10" fill="#1e2837" stroke="#48bb78" stroke-width="2"/>
+  <text x="450" y="80" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#48bb78" text-anchor="middle">GOOD FIT</text>
+  <text x="450" y="100" font-family="Inter, sans-serif" font-size="11" fill="#a0aec0" text-anchor="middle">(Balance Óptimo)</text>
+  
+  <!-- Good fit graph area -->
+  <rect x="340" y="115" width="220" height="120" rx="6" fill="#2d3748"/>
+  
+  <!-- Axes -->
+  <line x1="360" y1="215" x2="540" y2="215" stroke="#4a5568" stroke-width="1"/>
+  <line x1="360" y1="130" x2="360" y2="215" stroke="#4a5568" stroke-width="1"/>
+  
+  <!-- Data points -->
+  <circle cx="380" cy="180" r="4" fill="#4fc3f7"/>
+  <circle cx="400" cy="145" r="4" fill="#4fc3f7"/>
+  <circle cx="420" cy="170" r="4" fill="#4fc3f7"/>
+  <circle cx="440" cy="155" r="4" fill="#4fc3f7"/>
+  <circle cx="460" cy="185" r="4" fill="#4fc3f7"/>
+  <circle cx="480" cy="165" r="4" fill="#4fc3f7"/>
+  <circle cx="500" cy="150" r="4" fill="#4fc3f7"/>
+  <circle cx="520" cy="175" r="4" fill="#4fc3f7"/>
+  
+  <!-- Good curve (fits well) -->
+  <path d="M375 185 Q410 140 450 165 Q490 190 530 155" stroke="#48bb78" stroke-width="2" fill="none"/>
+  
+  <text x="450" y="255" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">Modelo adecuado</text>
+  <text x="450" y="270" font-family="Inter, sans-serif" font-size="10" fill="#48bb78" text-anchor="middle">Train: Alto | Test: Alto</text>
+  <text x="450" y="290" font-family="Inter, sans-serif" font-size="9" fill="#718096" text-anchor="middle">Generaliza bien</text>
+  
+  <!-- Overfitting Section -->
+  <rect x="610" y="50" width="260" height="250" rx="10" fill="#1e2837" stroke="#f6ad55" stroke-width="2"/>
+  <text x="740" y="80" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#f6ad55" text-anchor="middle">OVERFITTING</text>
+  <text x="740" y="100" font-family="Inter, sans-serif" font-size="11" fill="#a0aec0" text-anchor="middle">(Alta Varianza)</text>
+  
+  <!-- Overfitting graph area -->
+  <rect x="630" y="115" width="220" height="120" rx="6" fill="#2d3748"/>
+  
+  <!-- Axes -->
+  <line x1="650" y1="215" x2="830" y2="215" stroke="#4a5568" stroke-width="1"/>
+  <line x1="650" y1="130" x2="650" y2="215" stroke="#4a5568" stroke-width="1"/>
+  
+  <!-- Data points -->
+  <circle cx="670" cy="180" r="4" fill="#4fc3f7"/>
+  <circle cx="690" cy="145" r="4" fill="#4fc3f7"/>
+  <circle cx="710" cy="170" r="4" fill="#4fc3f7"/>
+  <circle cx="730" cy="155" r="4" fill="#4fc3f7"/>
+  <circle cx="750" cy="185" r="4" fill="#4fc3f7"/>
+  <circle cx="770" cy="165" r="4" fill="#4fc3f7"/>
+  <circle cx="790" cy="150" r="4" fill="#4fc3f7"/>
+  <circle cx="810" cy="175" r="4" fill="#4fc3f7"/>
+  
+  <!-- Complex curve (overfits) -->
+  <path d="M665 182 L672 178 L688 147 L692 143 L708 172 L712 168 L728 157 L732 153 L748 187 L752 183 L768 167 L772 163 L788 152 L792 148 L808 177 L815 173" stroke="#f6ad55" stroke-width="2" fill="none"/>
+  
+  <text x="740" y="255" font-family="Inter, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">Modelo muy complejo</text>
+  <text x="740" y="270" font-family="Inter, sans-serif" font-size="10" fill="#f6ad55" text-anchor="middle">Train: Muy Alto | Test: Bajo</text>
+  <text x="740" y="290" font-family="Inter, sans-serif" font-size="9" fill="#718096" text-anchor="middle">Memoriza, no generaliza</text>
+</svg>

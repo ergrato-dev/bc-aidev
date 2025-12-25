@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bg4)"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="Inter, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Tipos de Aprendizaje en Machine Learning</text>
+  
+  <!-- Main ML box -->
+  <rect x="300" y="55" width="200" height="45" rx="8" fill="#9f7aea" stroke="#9f7aea" stroke-width="2"/>
+  <text x="400" y="83" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">MACHINE LEARNING</text>
+  
+  <!-- Lines down -->
+  <line x1="200" y1="100" x2="200" y2="130" stroke="#4fc3f7" stroke-width="2"/>
+  <line x1="400" y1="100" x2="400" y2="130" stroke="#48bb78" stroke-width="2"/>
+  <line x1="600" y1="100" x2="600" y2="130" stroke="#f6ad55" stroke-width="2"/>
+  <line x1="200" y1="100" x2="600" y2="100" stroke="#4a5568" stroke-width="2"/>
+  
+  <!-- Supervisado -->
+  <rect x="100" y="135" width="200" height="50" rx="8" fill="#4fc3f7" stroke="#4fc3f7" stroke-width="2"/>
+  <text x="200" y="165" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">SUPERVISADO</text>
+  
+  <!-- Supervisado children -->
+  <line x1="150" y1="185" x2="150" y2="210" stroke="#4fc3f7" stroke-width="1.5"/>
+  <line x1="250" y1="185" x2="250" y2="210" stroke="#4fc3f7" stroke-width="1.5"/>
+  <line x1="150" y1="210" x2="250" y2="210" stroke="#4fc3f7" stroke-width="1.5"/>
+  
+  <rect x="90" y="220" width="120" height="40" rx="6" fill="#2d3748" stroke="#4fc3f7" stroke-width="1.5"/>
+  <text x="150" y="245" font-family="Inter, sans-serif" font-size="11" fill="#4fc3f7" text-anchor="middle">Clasificación</text>
+  
+  <rect x="190" y="220" width="120" height="40" rx="6" fill="#2d3748" stroke="#4fc3f7" stroke-width="1.5"/>
+  <text x="250" y="245" font-family="Inter, sans-serif" font-size="11" fill="#4fc3f7" text-anchor="middle">Regresión</text>
+  
+  <!-- Supervisado examples -->
+  <text x="150" y="280" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">spam/no spam</text>
+  <text x="250" y="280" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">precio casa</text>
+  
+  <!-- No Supervisado -->
+  <rect x="300" y="135" width="200" height="50" rx="8" fill="#48bb78" stroke="#48bb78" stroke-width="2"/>
+  <text x="400" y="165" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">NO SUPERVISADO</text>
+  
+  <!-- No Supervisado children -->
+  <line x1="350" y1="185" x2="350" y2="210" stroke="#48bb78" stroke-width="1.5"/>
+  <line x1="450" y1="185" x2="450" y2="210" stroke="#48bb78" stroke-width="1.5"/>
+  <line x1="350" y1="210" x2="450" y2="210" stroke="#48bb78" stroke-width="1.5"/>
+  
+  <rect x="290" y="220" width="120" height="40" rx="6" fill="#2d3748" stroke="#48bb78" stroke-width="1.5"/>
+  <text x="350" y="245" font-family="Inter, sans-serif" font-size="11" fill="#48bb78" text-anchor="middle">Clustering</text>
+  
+  <rect x="390" y="220" width="120" height="40" rx="6" fill="#2d3748" stroke="#48bb78" stroke-width="1.5"/>
+  <text x="450" y="238" font-family="Inter, sans-serif" font-size="10" fill="#48bb78" text-anchor="middle">Reducción</text>
+  <text x="450" y="252" font-family="Inter, sans-serif" font-size="10" fill="#48bb78" text-anchor="middle">Dimensión</text>
+  
+  <!-- No Supervisado examples -->
+  <text x="350" y="280" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">segmentar clientes</text>
+  <text x="450" y="280" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">PCA, t-SNE</text>
+  
+  <!-- Refuerzo -->
+  <rect x="500" y="135" width="200" height="50" rx="8" fill="#f6ad55" stroke="#f6ad55" stroke-width="2"/>
+  <text x="600" y="165" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">REFUERZO</text>
+  
+  <!-- Refuerzo child -->
+  <line x1="600" y1="185" x2="600" y2="215" stroke="#f6ad55" stroke-width="1.5"/>
+  
+  <rect x="530" y="220" width="140" height="40" rx="6" fill="#2d3748" stroke="#f6ad55" stroke-width="1.5"/>
+  <text x="600" y="245" font-family="Inter, sans-serif" font-size="11" fill="#f6ad55" text-anchor="middle">Agente + Ambiente</text>
+  
+  <!-- Refuerzo examples -->
+  <text x="600" y="280" font-family="Inter, sans-serif" font-size="9" fill="#a0aec0" text-anchor="middle">juegos, robótica</text>
+  
+  <!-- Legend at bottom -->
+  <rect x="100" y="320" width="600" height="60" rx="8" fill="#1e2837" stroke="#4a5568" stroke-width="1"/>
+  
+  <circle cx="180" cy="350" r="8" fill="#4fc3f7"/>
+  <text x="200" y="354" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Datos etiquetados</text>
+  
+  <circle cx="380" cy="350" r="8" fill="#48bb78"/>
+  <text x="400" y="354" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Sin etiquetas</text>
+  
+  <circle cx="560" cy="350" r="8" fill="#f6ad55"/>
+  <text x="580" y="354" font-family="Inter, sans-serif" font-size="10" fill="#ffffff">Recompensas</text>
+</svg>

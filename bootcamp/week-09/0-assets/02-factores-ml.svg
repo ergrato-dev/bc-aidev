@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="380" fill="url(#bg2)"/>
+  
+  <!-- Title -->
+  <text x="300" y="30" font-family="Inter, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">¿Por qué Machine Learning Ahora?</text>
+  <text x="300" y="50" font-family="Inter, sans-serif" font-size="12" fill="#a0aec0" text-anchor="middle">Tres Factores Clave</text>
+  
+  <!-- Center circle - ML -->
+  <circle cx="300" cy="200" r="50" fill="#2d3748" stroke="#9f7aea" stroke-width="3"/>
+  <text x="300" y="195" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Machine</text>
+  <text x="300" y="212" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Learning</text>
+  
+  <!-- DATOS - Top -->
+  <circle cx="300" cy="100" r="40" fill="#4fc3f7" stroke="#4fc3f7" stroke-width="2"/>
+  <text x="300" y="95" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">DATOS</text>
+  <text x="300" y="110" font-family="Inter, sans-serif" font-size="10" fill="#1a1a2e" text-anchor="middle">Big Data</text>
+  
+  <!-- Line from Datos to center -->
+  <line x1="300" y1="142" x2="300" y2="150" stroke="#4fc3f7" stroke-width="2"/>
+  
+  <!-- Datos description -->
+  <text x="300" y="345" font-family="Inter, sans-serif" font-size="10" fill="#4fc3f7" text-anchor="middle">Internet, IoT, Redes Sociales</text>
+  
+  <!-- COMPUTE - Bottom Left -->
+  <circle cx="180" cy="290" r="40" fill="#48bb78" stroke="#48bb78" stroke-width="2"/>
+  <text x="180" y="285" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#1a1a2e" text-anchor="middle">CÓMPUTO</text>
+  <text x="180" y="300" font-family="Inter, sans-serif" font-size="10" fill="#1a1a2e" text-anchor="middle">GPUs/TPUs</text>
+  
+  <!-- Line from Compute to center -->
+  <line x1="210" y1="260" x2="260" y2="230" stroke="#48bb78" stroke-width="2"/>
+  
+  <!-- Compute description -->
+  <text x="100" y="365" font-family="Inter, sans-serif" font-size="10" fill="#48bb78" text-anchor="middle">Cloud Computing, Hardware</text>
+  
+  <!-- ALGORITMOS - Bottom Right -->
+  <circle cx="420" cy="290" r="40" fill="#f6ad55" stroke="#f6ad55" stroke-width="2"/>
+  <text x="420" y="285" font-family="Inter, sans-serif" font-size="11" font-weight="bold" fill="#1a1a2e" text-anchor="middle">ALGORITMOS</text>
+  <text x="420" y="300" font-family="Inter, sans-serif" font-size="10" fill="#1a1a2e" text-anchor="middle">Deep Learning</text>
+  
+  <!-- Line from Algoritmos to center -->
+  <line x1="390" y1="260" x2="340" y2="230" stroke="#f6ad55" stroke-width="2"/>
+  
+  <!-- Algoritmos description -->
+  <text x="500" y="365" font-family="Inter, sans-serif" font-size="10" fill="#f6ad55" text-anchor="middle">Frameworks, Open Source</text>
+</svg>
