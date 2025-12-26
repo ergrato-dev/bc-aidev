@@ -9,6 +9,7 @@ Comprender y aplicar las principales métricas de clasificación: matriz de conf
 ## 📋 Descripción
 
 En este ejercicio aprenderás a:
+
 1. Calcular e interpretar la matriz de confusión
 2. Entender cuándo usar precision vs recall
 3. Generar curvas ROC y Precision-Recall
@@ -151,14 +152,14 @@ X_imb, y_imb = make_classification(weights=[0.9, 0.1], ...)
 
 ## ✅ Criterios de Evaluación
 
-| Criterio | Puntos |
-|----------|--------|
-| Matriz de confusión calculada e interpretada | 2 |
-| Métricas básicas correctas | 2 |
-| Curva ROC generada | 2 |
-| Curva PR generada | 2 |
-| Análisis de dataset desbalanceado | 2 |
-| **Total** | **10** |
+| Criterio                                     | Puntos |
+| -------------------------------------------- | ------ |
+| Matriz de confusión calculada e interpretada | 2      |
+| Métricas básicas correctas                   | 2      |
+| Curva ROC generada                           | 2      |
+| Curva PR generada                            | 2      |
+| Análisis de dataset desbalanceado            | 2      |
+| **Total**                                    | **10** |
 
 ---
 

@@ -42,22 +42,27 @@ Trabajaremos con el dataset **Adult Income** (Census Income), que predice si una
 ## 🚀 Requisitos del Pipeline
 
 ### 1. Preprocesamiento Numérico
+
 - Imputación con mediana
 - Escalado con StandardScaler
 
 ### 2. Preprocesamiento Categórico
+
 - Imputación con moda
 - Codificación con OneHotEncoder
 
 ### 3. Selección de Features
+
 - Aplicar SelectKBest o SelectFromModel
 - Mantener las features más relevantes
 
 ### 4. Modelo
+
 - LogisticRegression o RandomForestClassifier
 - Evaluación con cross-validation
 
 ### 5. Entregables
+
 - Pipeline funcional
 - Métricas de evaluación (accuracy, precision, recall, F1)
 - Análisis de features seleccionadas
@@ -76,15 +81,15 @@ Trabajaremos con el dataset **Adult Income** (Census Income), que predice si una
 
 ## ✅ Criterios de Evaluación
 
-| Criterio | Puntos |
-|----------|--------|
-| Pipeline funciona correctamente | 25 |
-| Maneja missing values | 15 |
-| Codificación categórica correcta | 15 |
-| Selección de features implementada | 15 |
-| Evaluación con CV | 15 |
-| Código documentado y limpio | 15 |
-| **Total** | **100** |
+| Criterio                           | Puntos  |
+| ---------------------------------- | ------- |
+| Pipeline funciona correctamente    | 25      |
+| Maneja missing values              | 15      |
+| Codificación categórica correcta   | 15      |
+| Selección de features implementada | 15      |
+| Evaluación con CV                  | 15      |
+| Código documentado y limpio        | 15      |
+| **Total**                          | **100** |
 
 ## 🎯 Métricas Objetivo
 

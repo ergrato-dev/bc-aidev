@@ -19,7 +19,7 @@ La **reducción de dimensionalidad** es el proceso de transformar datos de un es
 Datos originales: 1000 features
          ↓
 Reducción dimensional
-         ↓  
+         ↓
 Datos reducidos: 50 features (manteniendo 95% de información)
 ```
 
@@ -43,20 +43,20 @@ import numpy as np
 def compare_distances(dims, n_points=100):
     """Demuestra cómo las distancias convergen en alta dimensión."""
     np.random.seed(42)
-    
+
     for d in dims:
         X = np.random.randn(n_points, d)
-        
+
         # Calcular todas las distancias
         distances = []
         for i in range(n_points):
             for j in range(i+1, n_points):
                 dist = np.linalg.norm(X[i] - X[j])
                 distances.append(dist)
-        
+
         distances = np.array(distances)
         ratio = distances.max() / distances.min()
-        
+
         print(f"D={d:4d}: max/min ratio = {ratio:.2f}")
 
 # compare_distances([2, 10, 100, 1000])
@@ -71,11 +71,11 @@ def compare_distances(dims, n_points=100):
 Para mantener la misma densidad de datos:
 
 | Dimensiones | Puntos necesarios |
-|-------------|-------------------|
-| 1D | 10 |
-| 2D | 100 |
-| 3D | 1,000 |
-| 10D | 10,000,000,000 |
+| ----------- | ----------------- |
+| 1D          | 10                |
+| 2D          | 100               |
+| 3D          | 1,000             |
+| 10D         | 10,000,000,000    |
 
 #### 3. Volumen se Concentra en Bordes
 
@@ -133,23 +133,23 @@ Almacenar y transmitir menos información.
 
 Asumen que los datos pueden proyectarse linealmente.
 
-| Técnica | Supervisada | Descripción |
-|---------|-------------|-------------|
-| **PCA** | No | Maximiza varianza |
-| **LDA** | Sí | Maximiza separabilidad de clases |
-| **Factor Analysis** | No | Modela factores latentes |
+| Técnica             | Supervisada | Descripción                      |
+| ------------------- | ----------- | -------------------------------- |
+| **PCA**             | No          | Maximiza varianza                |
+| **LDA**             | Sí          | Maximiza separabilidad de clases |
+| **Factor Analysis** | No          | Modela factores latentes         |
 
 ### Técnicas No Lineales
 
 Capturan relaciones complejas.
 
-| Técnica | Descripción |
-|---------|-------------|
-| **t-SNE** | Preserva estructura local |
-| **UMAP** | Preserva local y global, más rápido |
-| **Isomap** | Preserva distancias geodésicas |
-| **LLE** | Locally Linear Embedding |
-| **Autoencoders** | Redes neuronales para reducción |
+| Técnica          | Descripción                         |
+| ---------------- | ----------------------------------- |
+| **t-SNE**        | Preserva estructura local           |
+| **UMAP**         | Preserva local y global, más rápido |
+| **Isomap**       | Preserva distancias geodésicas      |
+| **LLE**          | Locally Linear Embedding            |
+| **Autoencoders** | Redes neuronales para reducción     |
 
 ---
 
@@ -239,32 +239,32 @@ pipeline = Pipeline([
 
 ## 🤔 ¿Cuándo Usar Cada Técnica?
 
-| Situación | Técnica Recomendada |
-|-----------|---------------------|
-| Preprocesamiento para ML | PCA |
-| Visualización exploratoria | t-SNE, UMAP |
-| Datos muy grandes | PCA, UMAP |
-| Preservar estructura global | PCA, UMAP |
-| Revelar clusters | t-SNE, UMAP |
-| Clasificación supervisada | LDA |
-| Compresión de datos | PCA |
+| Situación                   | Técnica Recomendada |
+| --------------------------- | ------------------- |
+| Preprocesamiento para ML    | PCA                 |
+| Visualización exploratoria  | t-SNE, UMAP         |
+| Datos muy grandes           | PCA, UMAP           |
+| Preservar estructura global | PCA, UMAP           |
+| Revelar clusters            | t-SNE, UMAP         |
+| Clasificación supervisada   | LDA                 |
+| Compresión de datos         | PCA                 |
 
 ---
 
 ## ✅ Resumen
 
-| Concepto | Descripción |
-|----------|-------------|
-| Reducción dimensional | Transformar a menor número de features |
-| Maldición dimensionalidad | Problemas en alta dimensión |
-| Técnicas lineales | PCA, LDA (proyecciones lineales) |
-| Técnicas no lineales | t-SNE, UMAP (relaciones complejas) |
-| Selección vs Extracción | Elegir vs crear features |
+| Concepto                  | Descripción                            |
+| ------------------------- | -------------------------------------- |
+| Reducción dimensional     | Transformar a menor número de features |
+| Maldición dimensionalidad | Problemas en alta dimensión            |
+| Técnicas lineales         | PCA, LDA (proyecciones lineales)       |
+| Técnicas no lineales      | t-SNE, UMAP (relaciones complejas)     |
+| Selección vs Extracción   | Elegir vs crear features               |
 
 ---
 
 ## 🔗 Navegación
 
-| ⬅️ Anterior | 🏠 Semana 17 | Siguiente ➡️ |
-|-------------|--------------|--------------|
+| ⬅️ Anterior                          | 🏠 Semana 17           | Siguiente ➡️     |
+| ------------------------------------ | ---------------------- | ---------------- |
 | [Semana 16](../../week-16/README.md) | [README](../README.md) | [PCA](02-pca.md) |

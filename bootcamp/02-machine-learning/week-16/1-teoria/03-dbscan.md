@@ -16,6 +16,7 @@
 ![DBSCAN Concept](../0-assets/03-dbscan-concept.svg)
 
 ### Idea Central
+
 - Un cluster es una región de **alta densidad** separada de otras regiones por zonas de **baja densidad**
 - Los puntos aislados se marcan como **ruido (noise)**
 
@@ -24,10 +25,12 @@
 ## 2. Parámetros Clave
 
 ### eps (ε) - Radio de Vecindad
+
 - Define el radio alrededor de cada punto
 - Puntos dentro de este radio son "vecinos"
 
 ### min_samples - Mínimo de Vecinos
+
 - Mínimo de puntos necesarios para formar una región densa
 - Incluye el punto mismo
 
@@ -41,15 +44,18 @@
 ## 3. Tipos de Puntos
 
 ### Core Point (Punto Núcleo)
+
 - Tiene **≥ min_samples** vecinos dentro de eps
 - Forma el "corazón" del cluster
 
 ### Border Point (Punto Frontera)
+
 - Tiene **< min_samples** vecinos
 - PERO está en la vecindad de un core point
 - Pertenece al cluster pero no lo define
 
 ### Noise Point (Ruido/Outlier)
+
 - No es core ni border
 - Se marca con etiqueta **-1**
 
@@ -102,14 +108,14 @@ print(f"Core points: {len(dbscan.core_sample_indices_)}")
 ```python
 def plot_dbscan(X, labels, core_indices, title="DBSCAN"):
     plt.figure(figsize=(10, 6))
-    
+
     # Identificar tipos de puntos
     core_mask = np.zeros_like(labels, dtype=bool)
     core_mask[core_indices] = True
-    
+
     unique_labels = set(labels)
     colors = plt.cm.viridis(np.linspace(0, 1, len(unique_labels)))
-    
+
     for k, col in zip(unique_labels, colors):
         if k == -1:
             # Noise en gris
@@ -119,19 +125,19 @@ def plot_dbscan(X, labels, core_indices, title="DBSCAN"):
         else:
             marker = 'o'
             size = 50
-        
+
         class_mask = labels == k
-        
+
         # Core points (más grandes)
         xy_core = X[class_mask & core_mask]
-        plt.scatter(xy_core[:, 0], xy_core[:, 1], c=[col], marker=marker, 
+        plt.scatter(xy_core[:, 0], xy_core[:, 1], c=[col], marker=marker,
                    s=size*2, edgecolors='black', linewidths=1)
-        
+
         # Border points (más pequeños)
         xy_border = X[class_mask & ~core_mask]
         plt.scatter(xy_border[:, 0], xy_border[:, 1], c=[col], marker=marker,
                    s=size, alpha=0.6)
-    
+
     plt.title(f"{title}\nClusters: {len(unique_labels)-1}, Noise: {(labels==-1).sum()}")
     plt.xlabel('Feature 1')
     plt.ylabel('Feature 2')
@@ -157,11 +163,11 @@ def find_eps(X, min_samples=5):
     nn = NearestNeighbors(n_neighbors=min_samples)
     nn.fit(X)
     distances, _ = nn.kneighbors(X)
-    
+
     # Distancia al k-ésimo vecino más cercano
     k_distances = distances[:, min_samples-1]
     k_distances = np.sort(k_distances)[::-1]
-    
+
     plt.figure(figsize=(10, 5))
     plt.plot(k_distances)
     plt.xlabel('Puntos (ordenados)')
@@ -176,10 +182,10 @@ find_eps(X_scaled, min_samples=5)
 
 ### Reglas Generales
 
-| Parámetro | Guía |
-|-----------|------|
+| Parámetro       | Guía                         |
+| --------------- | ---------------------------- |
 | **min_samples** | ≥ dimensiones + 1 (mínimo 3) |
-| **eps** | Usar k-distance graph |
+| **eps**         | Usar k-distance graph        |
 
 ```python
 # Para datos 2D: min_samples >= 3
@@ -209,16 +215,16 @@ X_blobs, _ = make_blobs(n_samples=300, centers=3, cluster_std=0.5, random_state=
 
 for i, (X, name) in enumerate([(X_moons, 'Moons'), (X_blobs, 'Blobs')]):
     X_scaled = StandardScaler().fit_transform(X)
-    
+
     # Original
     axes[i, 0].scatter(X_scaled[:, 0], X_scaled[:, 1], alpha=0.6)
     axes[i, 0].set_title(f'{name} - Original')
-    
+
     # K-Means
     km = KMeans(n_clusters=2 if 'Moon' in name else 3, random_state=42)
     axes[i, 1].scatter(X_scaled[:, 0], X_scaled[:, 1], c=km.fit_predict(X_scaled), cmap='viridis')
     axes[i, 1].set_title(f'{name} - K-Means')
-    
+
     # DBSCAN
     db = DBSCAN(eps=0.3, min_samples=5)
     labels = db.fit_predict(X_scaled)
@@ -231,19 +237,20 @@ plt.show()
 
 ### Cuándo usar cada uno
 
-| Criterio | K-Means | DBSCAN |
-|----------|---------|--------|
-| Forma de clusters | Esférica | Arbitraria |
-| Número de clusters | Debe especificarse | Automático |
-| Outliers | No detecta | Detecta como noise |
-| Escalabilidad | Muy buena | Buena |
-| Densidad variable | No maneja bien | Puede tener problemas |
+| Criterio           | K-Means            | DBSCAN                |
+| ------------------ | ------------------ | --------------------- |
+| Forma de clusters  | Esférica           | Arbitraria            |
+| Número de clusters | Debe especificarse | Automático            |
+| Outliers           | No detecta         | Detecta como noise    |
+| Escalabilidad      | Muy buena          | Buena                 |
+| Densidad variable  | No maneja bien     | Puede tener problemas |
 
 ---
 
 ## 8. Variantes de DBSCAN
 
 ### OPTICS
+
 Para datasets con densidades variables.
 
 ```python
@@ -254,6 +261,7 @@ labels = optics.fit_predict(X_scaled)
 ```
 
 ### HDBSCAN
+
 Versión jerárquica, más robusta.
 
 ```python

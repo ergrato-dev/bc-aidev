@@ -45,16 +45,16 @@ evaluacion-completa-modelo/
 
 ## 📊 Criterios de Evaluación
 
-| Criterio | Puntos |
-|----------|--------|
-| Nested CV implementado correctamente | 6 |
-| Comparación de múltiples modelos | 4 |
-| Métricas de clasificación completas | 4 |
-| Curvas ROC y PR generadas | 4 |
-| Matriz de confusión e importancia de features | 4 |
-| Reporte final con conclusiones | 4 |
-| Código limpio y documentado | 4 |
-| **Total** | **30** |
+| Criterio                                      | Puntos |
+| --------------------------------------------- | ------ |
+| Nested CV implementado correctamente          | 6      |
+| Comparación de múltiples modelos              | 4      |
+| Métricas de clasificación completas           | 4      |
+| Curvas ROC y PR generadas                     | 4      |
+| Matriz de confusión e importancia de features | 4      |
+| Reporte final con conclusiones                | 4      |
+| Código limpio y documentado                   | 4      |
+| **Total**                                     | **30** |
 
 ---
 

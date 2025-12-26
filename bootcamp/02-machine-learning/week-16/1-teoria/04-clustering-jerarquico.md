@@ -17,10 +17,10 @@ Crea una **jerarquía de clusters** representada como un árbol (dendrograma).
 
 ### Dos Enfoques
 
-| Tipo | Descripción |
-|------|-------------|
+| Tipo                         | Descripción                             |
+| ---------------------------- | --------------------------------------- |
 | **Aglomerativo** (bottom-up) | Empieza con N clusters, fusiona hasta 1 |
-| **Divisivo** (top-down) | Empieza con 1 cluster, divide hasta N |
+| **Divisivo** (top-down)      | Empieza con 1 cluster, divide hasta N   |
 
 > En la práctica, el **aglomerativo** es el más usado.
 
@@ -37,6 +37,7 @@ Crea una **jerarquía de clusters** representada como un árbol (dendrograma).
 5. Cortar el dendrograma para obtener K clusters
 
 ### Complejidad
+
 - Tiempo: O(n³) para el básico, O(n² log n) optimizado
 - Espacio: O(n²) para matriz de distancias
 
@@ -47,30 +48,38 @@ Crea una **jerarquía de clusters** representada como un árbol (dendrograma).
 Define cómo medir la distancia entre clusters.
 
 ### Single Linkage (Minimum)
+
 ```
 dist(A, B) = min{d(a, b) : a ∈ A, b ∈ B}
 ```
+
 - Distancia entre los puntos **más cercanos**
 - Puede crear cadenas largas ("chaining effect")
 
 ### Complete Linkage (Maximum)
+
 ```
 dist(A, B) = max{d(a, b) : a ∈ A, b ∈ B}
 ```
+
 - Distancia entre los puntos **más lejanos**
 - Clusters más compactos
 
 ### Average Linkage
+
 ```
 dist(A, B) = mean{d(a, b) : a ∈ A, b ∈ B}
 ```
+
 - **Promedio** de todas las distancias
 - Balance entre single y complete
 
 ### Ward Linkage ⭐ (Más Usado)
+
 ```
 Minimiza la varianza intra-cluster al fusionar
 ```
+
 - Produce clusters de **tamaño similar**
 - Tiende a clusters **esféricos y compactos**
 
@@ -100,7 +109,7 @@ Z = linkage(X_scaled, method='ward')
 
 # Visualizar dendrograma
 plt.figure(figsize=(14, 6))
-dendrogram(Z, 
+dendrogram(Z,
            truncate_mode='lastp',  # Mostrar últimos p clusters
            p=12,                    # Número de hojas
            leaf_rotation=90,
@@ -175,14 +184,14 @@ fig, axes = plt.subplots(1, 4, figsize=(16, 4))
 for ax, linkage_method in zip(axes, linkages):
     # Ward requiere euclidean
     metric = 'euclidean' if linkage_method == 'ward' else 'euclidean'
-    
+
     agg = AgglomerativeClustering(
-        n_clusters=3, 
+        n_clusters=3,
         linkage=linkage_method,
         metric=metric
     )
     labels = agg.fit_predict(X_scaled)
-    
+
     ax.scatter(X_scaled[:, 0], X_scaled[:, 1], c=labels, cmap='viridis', s=30)
     ax.set_title(f'Linkage: {linkage_method}')
 
@@ -196,12 +205,14 @@ plt.show()
 ## 8. Determinar Número de Clusters
 
 ### Método Visual: Dendrograma
+
 ```python
 # Buscar el "salto" más grande en distancias
 # Cortar justo antes del salto grande
 ```
 
 ### Método de Inconsistency
+
 ```python
 from scipy.cluster.hierarchy import inconsistent
 
@@ -212,6 +223,7 @@ print(incons[-10:])  # Últimas fusiones
 ```
 
 ### Usando Silhouette
+
 ```python
 from sklearn.metrics import silhouette_score
 
@@ -236,12 +248,14 @@ plt.show()
 ## 9. Ventajas y Desventajas
 
 ### ✅ Ventajas
+
 - No requiere especificar K a priori
 - Dendrograma visualiza estructura completa
 - Flexible con diferentes linkages
 - Produce clusters anidados
 
 ### ❌ Desventajas
+
 - Costoso computacionalmente O(n²) - O(n³)
 - Sensible a outliers (especialmente single)
 - Decisiones de fusión son irreversibles
@@ -270,7 +284,7 @@ Z = linkage(X_scaled, method='ward')
 fig, axes = plt.subplots(1, 3, figsize=(16, 5))
 
 # 1. Dendrograma
-dendrogram(Z, ax=axes[0], truncate_mode='lastp', p=20, 
+dendrogram(Z, ax=axes[0], truncate_mode='lastp', p=20,
            leaf_rotation=90, leaf_font_size=8)
 axes[0].axhline(y=8, color='r', linestyle='--')
 axes[0].set_title('Dendrograma (Ward)')

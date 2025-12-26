@@ -48,12 +48,12 @@ plt.show()
 
 **Componentes:**
 
-| Término | Significado | Descripción |
-|---------|-------------|-------------|
-| **TN** | True Negative | Correctamente predicho como negativo |
-| **FP** | False Positive | Incorrectamente predicho como positivo (Error Tipo I) |
-| **FN** | False Negative | Incorrectamente predicho como negativo (Error Tipo II) |
-| **TP** | True Positive | Correctamente predicho como positivo |
+| Término | Significado    | Descripción                                            |
+| ------- | -------------- | ------------------------------------------------------ |
+| **TN**  | True Negative  | Correctamente predicho como negativo                   |
+| **FP**  | False Positive | Incorrectamente predicho como positivo (Error Tipo I)  |
+| **FN**  | False Negative | Incorrectamente predicho como negativo (Error Tipo II) |
+| **TP**  | True Positive  | Correctamente predicho como positivo                   |
 
 ---
 
@@ -104,6 +104,7 @@ print(f"Precision (manual): {precision_manual:.4f}")
 ```
 
 **Usar cuando FP es costoso:**
+
 - Filtro de spam (no quieres perder emails importantes)
 - Sistema de recomendación (no quieres recomendar mal)
 
@@ -127,6 +128,7 @@ print(f"Recall (manual): {recall_manual:.4f}")
 ```
 
 **Usar cuando FN es costoso:**
+
 - Detección de cáncer (no puedes perder ningún caso)
 - Detección de fraude (no puedes dejar pasar fraudes)
 - Seguridad (no puedes perder amenazas)
@@ -151,6 +153,7 @@ print(f"F1 (manual): {f1_manual:.4f}")
 ```
 
 **Usar cuando:**
+
 - Necesitas balance entre Precision y Recall
 - Clases desbalanceadas
 - No puedes decidir cuál priorizar
@@ -168,6 +171,7 @@ print(classification_report(y_test, y_pred, target_names=['Clase 0', 'Clase 1'])
 ```
 
 **Output:**
+
 ```
               precision    recall  f1-score   support
 
@@ -180,6 +184,7 @@ weighted avg       0.86      0.86      0.86       200
 ```
 
 **Promedios:**
+
 - `macro avg`: Promedio simple (trata clases igual)
 - `weighted avg`: Promedio ponderado por soporte (considera desbalance)
 
@@ -281,7 +286,7 @@ ap = average_precision_score(y_test, y_proba)
 # Graficar
 fig, ax = plt.subplots(figsize=(8, 6))
 PrecisionRecallDisplay(
-    precision=precision_curve, 
+    precision=precision_curve,
     recall=recall_curve,
     average_precision=ap
 ).plot(ax=ax)
@@ -296,12 +301,12 @@ print(f"Average Precision (AP): {ap:.4f}")
 
 ### 10. ROC vs PR: ¿Cuál Usar?
 
-| Escenario | Usar | Razón |
-|-----------|------|-------|
-| Clases balanceadas | ROC/AUC | Ambas funcionan bien |
-| Clases muy desbalanceadas | PR/AP | ROC puede ser engañosa |
-| Positivos raros (fraude, cáncer) | PR/AP | Más sensible a FP |
-| Comparación general de modelos | ROC/AUC | Más interpretable |
+| Escenario                        | Usar    | Razón                  |
+| -------------------------------- | ------- | ---------------------- |
+| Clases balanceadas               | ROC/AUC | Ambas funcionan bien   |
+| Clases muy desbalanceadas        | PR/AP   | ROC puede ser engañosa |
+| Positivos raros (fraude, cáncer) | PR/AP   | Más sensible a FP      |
+| Comparación general de modelos   | ROC/AUC | Más interpretable      |
 
 ```python
 # Ejemplo con clases desbalanceadas
@@ -333,11 +338,11 @@ thresholds = [0.3, 0.5, 0.7]
 
 for threshold in thresholds:
     y_pred_thresh = (y_proba >= threshold).astype(int)
-    
+
     p = precision_score(y_test, y_pred_thresh)
     r = recall_score(y_test, y_pred_thresh)
     f1 = f1_score(y_test, y_pred_thresh)
-    
+
     print(f"Umbral {threshold}: Precision={p:.3f}, Recall={r:.3f}, F1={f1:.3f}")
 ```
 
@@ -403,14 +408,14 @@ print(classification_report(y_test, y_pred, target_names=['Maligno', 'Benigno'])
 
 ## 📚 Resumen
 
-| Métrica | Fórmula | Usar cuando |
-|---------|---------|-------------|
-| **Accuracy** | (TP+TN)/Total | Clases balanceadas |
-| **Precision** | TP/(TP+FP) | FP es costoso |
-| **Recall** | TP/(TP+FN) | FN es costoso |
-| **F1** | 2×P×R/(P+R) | Balance P-R |
-| **AUC-ROC** | Área bajo ROC | Comparar modelos |
-| **AP** | Área bajo PR | Clases desbalanceadas |
+| Métrica       | Fórmula       | Usar cuando           |
+| ------------- | ------------- | --------------------- |
+| **Accuracy**  | (TP+TN)/Total | Clases balanceadas    |
+| **Precision** | TP/(TP+FP)    | FP es costoso         |
+| **Recall**    | TP/(TP+FN)    | FN es costoso         |
+| **F1**        | 2×P×R/(P+R)   | Balance P-R           |
+| **AUC-ROC**   | Área bajo ROC | Comparar modelos      |
+| **AP**        | Área bajo PR  | Clases desbalanceadas |
 
 ---
 

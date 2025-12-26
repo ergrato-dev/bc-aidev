@@ -32,12 +32,12 @@ UMAP se basa en teoría de **topología algebraica** y **variedades de Riemann**
 
 ### Diferencias con t-SNE
 
-| Aspecto | t-SNE | UMAP |
-|---------|-------|------|
-| Base teórica | Probabilidad | Topología |
-| Preserva | Solo local | Local + global |
-| Velocidad | Lenta O(n²) | Rápida O(n log n) |
-| Transform | No | Sí |
+| Aspecto      | t-SNE        | UMAP              |
+| ------------ | ------------ | ----------------- |
+| Base teórica | Probabilidad | Topología         |
+| Preserva     | Solo local   | Local + global    |
+| Velocidad    | Lenta O(n²)  | Rápida O(n log n) |
+| Transform    | No           | Sí                |
 
 ---
 
@@ -106,16 +106,16 @@ Controla el balance entre estructura **local** y **global**.
 def compare_neighbors(X, y, n_neighbors_list=[5, 15, 50, 100]):
     n = len(n_neighbors_list)
     fig, axes = plt.subplots(1, n, figsize=(5*n, 5))
-    
+
     for ax, nn in zip(axes, n_neighbors_list):
         reducer = umap.UMAP(n_neighbors=nn, random_state=42)
         X_umap = reducer.fit_transform(X)
-        
+
         ax.scatter(X_umap[:, 0], X_umap[:, 1], c=y, cmap='viridis', alpha=0.6, s=20)
         ax.set_title(f'n_neighbors = {nn}')
         ax.set_xticks([])
         ax.set_yticks([])
-    
+
     plt.tight_layout()
     plt.show()
 
@@ -134,16 +134,16 @@ Controla qué tan **juntos** pueden estar los puntos.
 def compare_min_dist(X, y, min_dist_list=[0.0, 0.1, 0.5, 1.0]):
     n = len(min_dist_list)
     fig, axes = plt.subplots(1, n, figsize=(5*n, 5))
-    
+
     for ax, md in zip(axes, min_dist_list):
         reducer = umap.UMAP(min_dist=md, random_state=42)
         X_umap = reducer.fit_transform(X)
-        
+
         ax.scatter(X_umap[:, 0], X_umap[:, 1], c=y, cmap='viridis', alpha=0.6, s=20)
         ax.set_title(f'min_dist = {md}')
         ax.set_xticks([])
         ax.set_yticks([])
-    
+
     plt.tight_layout()
     plt.show()
 
@@ -199,19 +199,19 @@ def compare_methods(X, y, title="Comparación"):
         't-SNE': TSNE(n_components=2, random_state=42, perplexity=30),
         'UMAP': umap.UMAP(n_components=2, random_state=42)
     }
-    
+
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
-    
+
     for ax, (name, method) in zip(axes, methods.items()):
         start = time.time()
         X_reduced = method.fit_transform(X)
         elapsed = time.time() - start
-        
+
         ax.scatter(X_reduced[:, 0], X_reduced[:, 1], c=y, cmap='viridis', alpha=0.6, s=20)
         ax.set_title(f'{name}\n({elapsed:.2f}s)')
         ax.set_xticks([])
         ax.set_yticks([])
-    
+
     plt.suptitle(title)
     plt.tight_layout()
     plt.show()
@@ -225,26 +225,26 @@ def compare_methods(X, y, title="Comparación"):
 def benchmark_methods(X):
     """Benchmark de tiempo para cada método."""
     results = {}
-    
+
     # PCA
     start = time.time()
     PCA(n_components=2).fit_transform(X)
     results['PCA'] = time.time() - start
-    
+
     # t-SNE
     start = time.time()
     TSNE(n_components=2, random_state=42).fit_transform(X)
     results['t-SNE'] = time.time() - start
-    
+
     # UMAP
     start = time.time()
     umap.UMAP(n_components=2, random_state=42).fit_transform(X)
     results['UMAP'] = time.time() - start
-    
+
     print("=== Benchmark de Tiempo ===")
     for name, elapsed in results.items():
         print(f"{name}: {elapsed:.2f}s")
-    
+
     return results
 
 # benchmark_methods(X_scaled)
@@ -414,8 +414,8 @@ for ax, (name, method) in zip(axes, methods.items()):
     start = time.time()
     X_reduced = method.fit_transform(X_scaled)
     elapsed = time.time() - start
-    
-    scatter = ax.scatter(X_reduced[:, 0], X_reduced[:, 1], 
+
+    scatter = ax.scatter(X_reduced[:, 0], X_reduced[:, 1],
                          c=y_mnist, cmap='tab10', alpha=0.5, s=10)
     ax.set_title(f'{name}\n({elapsed:.2f}s)')
     ax.set_xticks([])
@@ -431,21 +431,21 @@ plt.show()
 
 ## ✅ Resumen Comparativo
 
-| Característica | PCA | t-SNE | UMAP |
-|----------------|-----|-------|------|
-| **Tipo** | Lineal | No lineal | No lineal |
-| **Velocidad** | ⭐⭐⭐ Rápido | ⭐ Lento | ⭐⭐⭐ Rápido |
-| **Estructura local** | ⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
-| **Estructura global** | ⭐⭐⭐ | ⭐ | ⭐⭐⭐ |
-| **Transform nuevos** | ✅ | ❌ | ✅ |
-| **Escalabilidad** | ⭐⭐⭐ | ⭐ | ⭐⭐⭐ |
-| **Interpretable** | ⭐⭐⭐ | ⭐ | ⭐ |
-| **Uso principal** | Preproceso ML | Visualización | Visualización + ML |
+| Característica        | PCA           | t-SNE         | UMAP               |
+| --------------------- | ------------- | ------------- | ------------------ |
+| **Tipo**              | Lineal        | No lineal     | No lineal          |
+| **Velocidad**         | ⭐⭐⭐ Rápido | ⭐ Lento      | ⭐⭐⭐ Rápido      |
+| **Estructura local**  | ⭐⭐          | ⭐⭐⭐        | ⭐⭐⭐             |
+| **Estructura global** | ⭐⭐⭐        | ⭐            | ⭐⭐⭐             |
+| **Transform nuevos**  | ✅            | ❌            | ✅                 |
+| **Escalabilidad**     | ⭐⭐⭐        | ⭐            | ⭐⭐⭐             |
+| **Interpretable**     | ⭐⭐⭐        | ⭐            | ⭐                 |
+| **Uso principal**     | Preproceso ML | Visualización | Visualización + ML |
 
 ---
 
 ## 🔗 Navegación
 
-| ⬅️ Anterior | 🏠 Semana 17 | Siguiente ➡️ |
-|-------------|--------------|--------------|
+| ⬅️ Anterior         | 🏠 Semana 17           | Siguiente ➡️                                              |
+| ------------------- | ---------------------- | --------------------------------------------------------- |
 | [t-SNE](03-tsne.md) | [README](../README.md) | [Ejercicio 01](../2-practicas/ejercicio-01-pca/README.md) |

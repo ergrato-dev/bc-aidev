@@ -27,16 +27,19 @@ En este proyecto aplicarás todo lo aprendido sobre reducción de dimensionalida
 ### Requisitos Funcionales
 
 1. **Visualización Comparativa**
+
    - Aplicar PCA, t-SNE y UMAP al dataset
    - Generar gráficos lado a lado de las 3 técnicas
    - Calcular y mostrar métricas (trustworthiness, tiempo)
 
 2. **Análisis de Hiperparámetros**
+
    - Para PCA: n_components (varianza acumulada)
    - Para t-SNE: perplexity (5, 15, 30, 50)
    - Para UMAP: n_neighbors y min_dist
 
 3. **Pipeline de Clasificación**
+
    - Comparar accuracy con/sin reducción
    - Encontrar número óptimo de componentes
    - Evaluar al menos 2 clasificadores diferentes
@@ -68,13 +71,13 @@ visualizacion-mnist/
 
 ## 📊 Criterios de Evaluación
 
-| Criterio | Puntos |
-|----------|--------|
-| Visualizaciones correctas (3 técnicas) | 25% |
-| Análisis de hiperparámetros | 25% |
-| Pipeline de clasificación funcional | 30% |
-| Código limpio y documentado | 10% |
-| Conclusiones y análisis | 10% |
+| Criterio                               | Puntos |
+| -------------------------------------- | ------ |
+| Visualizaciones correctas (3 técnicas) | 25%    |
+| Análisis de hiperparámetros            | 25%    |
+| Pipeline de clasificación funcional    | 30%    |
+| Código limpio y documentado            | 10%    |
+| Conclusiones y análisis                | 10%    |
 
 ---
 

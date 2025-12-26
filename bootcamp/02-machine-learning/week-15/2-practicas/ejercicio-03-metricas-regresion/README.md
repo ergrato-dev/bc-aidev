@@ -9,6 +9,7 @@ Comprender y aplicar las métricas de regresión: MSE, RMSE, MAE, R² y analizar
 ## 📋 Descripción
 
 En este ejercicio aprenderás a:
+
 1. Calcular MSE, RMSE, MAE y R²
 2. Entender cuándo usar cada métrica
 3. Visualizar y analizar residuos
@@ -131,15 +132,15 @@ Comparamos MSE vs MAE con datos con outliers.
 
 ## ✅ Criterios de Evaluación
 
-| Criterio | Puntos |
-|----------|--------|
-| MSE y RMSE calculados correctamente | 2 |
-| MAE calculado correctamente | 1 |
-| R² calculado e interpretado | 2 |
-| Análisis de residuos completo | 2 |
-| Comparación de modelos | 2 |
-| Análisis de sensibilidad a outliers | 1 |
-| **Total** | **10** |
+| Criterio                            | Puntos |
+| ----------------------------------- | ------ |
+| MSE y RMSE calculados correctamente | 2      |
+| MAE calculado correctamente         | 1      |
+| R² calculado e interpretado         | 2      |
+| Análisis de residuos completo       | 2      |
+| Comparación de modelos              | 2      |
+| Análisis de sensibilidad a outliers | 1      |
+| **Total**                           | **10** |
 
 ---
 

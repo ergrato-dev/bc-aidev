@@ -49,6 +49,7 @@ print(df_encoded)
 ```
 
 **Salida:**
+
 ```
    color_azul  color_rojo  color_verde
 0         0.0         1.0          0.0
@@ -72,6 +73,7 @@ encoder = OneHotEncoder(
 ```
 
 **Cuándo usar:**
+
 - ✅ Variables nominales (sin orden)
 - ✅ Pocas categorías (< 10-15)
 - ✅ Modelos lineales
@@ -98,6 +100,7 @@ print(df)
 ```
 
 **Salida:**
+
 ```
   talla  talla_encoded
 0     S            0.0
@@ -109,6 +112,7 @@ print(df)
 ```
 
 **Cuándo usar:**
+
 - ✅ Variables ordinales (educación, tallas, ratings)
 - ✅ Tree-based models (RF, XGBoost)
 - ❌ Modelos lineales (interpretan como numérico continuo)
@@ -130,6 +134,7 @@ print(y_decoded)  # ['gato', 'pájaro', 'perro']
 ```
 
 ⚠️ **NUNCA usar LabelEncoder para features**:
+
 ```python
 # ❌ INCORRECTO: Introduce orden artificial
 X['color_encoded'] = LabelEncoder().fit_transform(X['color'])
@@ -150,13 +155,14 @@ df = pd.DataFrame({
 
 encoder = TargetEncoder(smooth='auto')
 df['ciudad_encoded'] = encoder.fit_transform(
-    df[['ciudad']], 
+    df[['ciudad']],
     df['precio']
 )
 print(df)
 ```
 
 **Salida:**
+
 ```
       ciudad  precio  ciudad_encoded
 0    Madrid  300000          325000
@@ -167,6 +173,7 @@ print(df)
 ```
 
 **Cuándo usar:**
+
 - ✅ Alta cardinalidad (muchas categorías)
 - ✅ Cuando otras técnicas crean demasiadas columnas
 - ⚠️ Usar con cross-validation para evitar leakage
@@ -181,12 +188,12 @@ encoder = TargetEncoder(
 
 ### 6. pd.get_dummies() vs OneHotEncoder
 
-| Aspecto | pd.get_dummies() | OneHotEncoder |
-|---------|------------------|---------------|
-| Uso | Exploración rápida | Producción |
-| Fit/Transform | No | Sí |
-| Pipeline | No compatible | Compatible |
-| Nuevas categorías | Error | Configurable |
+| Aspecto           | pd.get_dummies()   | OneHotEncoder |
+| ----------------- | ------------------ | ------------- |
+| Uso               | Exploración rápida | Producción    |
+| Fit/Transform     | No                 | Sí            |
+| Pipeline          | No compatible      | Compatible    |
+| Nuevas categorías | Error              | Configurable  |
 
 ```python
 # Exploración rápida
@@ -228,7 +235,7 @@ nominal_cols = ['color', 'marca']
 ordinal_cols = ['talla', 'calidad']
 
 preprocessor = ColumnTransformer([
-    ('nominal', OneHotEncoder(drop='first', handle_unknown='ignore'), 
+    ('nominal', OneHotEncoder(drop='first', handle_unknown='ignore'),
      nominal_cols),
     ('ordinal', OrdinalEncoder(
         categories=[['S', 'M', 'L', 'XL'], ['baja', 'media', 'alta']]

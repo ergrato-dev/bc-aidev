@@ -9,6 +9,7 @@ Dominar las técnicas de optimización de hiperparámetros usando GridSearchCV y
 ## 📋 Descripción
 
 En este ejercicio aprenderás a:
+
 1. Usar GridSearchCV para búsqueda exhaustiva
 2. Usar RandomizedSearchCV para búsqueda eficiente
 3. Optimizar pipelines completos
@@ -138,14 +139,14 @@ grid_auc = GridSearchCV(model, param_grid, cv=5, scoring='roc_auc')
 
 ## ✅ Criterios de Evaluación
 
-| Criterio | Puntos |
-|----------|--------|
-| GridSearchCV implementado correctamente | 2 |
-| Análisis de resultados completo | 2 |
-| RandomizedSearchCV funcionando | 2 |
-| Pipeline optimizado | 2 |
-| Nested CV implementado | 2 |
-| **Total** | **10** |
+| Criterio                                | Puntos |
+| --------------------------------------- | ------ |
+| GridSearchCV implementado correctamente | 2      |
+| Análisis de resultados completo         | 2      |
+| RandomizedSearchCV funcionando          | 2      |
+| Pipeline optimizado                     | 2      |
+| Nested CV implementado                  | 2      |
+| **Total**                               | **10** |
 
 ---
 

@@ -45,16 +45,16 @@ segmentacion-clientes/
 
 ## 📊 Criterios de Evaluación
 
-| Criterio | Puntos |
-|----------|--------|
-| EDA y preprocesamiento | 5 |
-| Al menos 3 algoritmos implementados | 6 |
-| Evaluación con múltiples métricas | 5 |
-| Selección justificada de K | 4 |
-| Caracterización de segmentos | 5 |
-| Visualizaciones claras | 3 |
-| Recomendaciones de negocio | 2 |
-| **Total** | **30** |
+| Criterio                            | Puntos |
+| ----------------------------------- | ------ |
+| EDA y preprocesamiento              | 5      |
+| Al menos 3 algoritmos implementados | 6      |
+| Evaluación con múltiples métricas   | 5      |
+| Selección justificada de K          | 4      |
+| Caracterización de segmentos        | 5      |
+| Visualizaciones claras              | 3      |
+| Recomendaciones de negocio          | 2      |
+| **Total**                           | **30** |
 
 ---
 

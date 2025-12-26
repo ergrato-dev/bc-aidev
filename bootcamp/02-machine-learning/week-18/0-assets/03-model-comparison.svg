@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">Comparación de Modelos - Estrategia</text>
+  
+  <!-- Stage boxes -->
+  <!-- Baseline -->
+  <rect x="40" y="70" width="200" height="160" rx="10" fill="#2d2d44" stroke="#4CAF50" stroke-width="2"/>
+  <text x="140" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4CAF50">1. Baseline</text>
+  <text x="140" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffffff">Modelo simple de referencia</text>
+  <line x1="60" y1="135" x2="220" y2="135" stroke="#444" stroke-width="1"/>
+  <text x="70" y="155" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">• DummyClassifier</text>
+  <text x="70" y="172" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">• LogisticRegression</text>
+  <text x="70" y="189" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">• Sin tuning</text>
+  <text x="70" y="206" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">• Mínimo viable</text>
+  
+  <!-- Candidates -->
+  <rect x="280" y="70" width="200" height="160" rx="10" fill="#2d2d44" stroke="#2196F3" stroke-width="2"/>
+  <text x="380" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2196F3">2. Candidatos</text>
+  <text x="380" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffffff">Múltiples algoritmos</text>
+  <line x1="300" y1="135" x2="460" y2="135" stroke="#444" stroke-width="1"/>
+  <text x="310" y="155" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">• Random Forest</text>
+  <text x="310" y="172" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">• Gradient Boosting</text>
+  <text x="310" y="189" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">• SVM</text>
+  <text x="310" y="206" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">• KNN, XGBoost...</text>
+  
+  <!-- Tuning -->
+  <rect x="520" y="70" width="200" height="160" rx="10" fill="#2d2d44" stroke="#FF9800" stroke-width="2"/>
+  <text x="620" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FF9800">3. Optimización</text>
+  <text x="620" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffffff">Top modelos + tuning</text>
+  <line x1="540" y1="135" x2="700" y2="135" stroke="#444" stroke-width="1"/>
+  <text x="550" y="155" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">• GridSearchCV</text>
+  <text x="550" y="172" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">• RandomizedSearch</text>
+  <text x="550" y="189" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">• Cross-validation</text>
+  <text x="550" y="206" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">• Feature selection</text>
+  
+  <!-- Arrows -->
+  <path d="M 240 150 L 275 150" fill="none" stroke="#64B5F6" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 480 150 L 515 150" fill="none" stroke="#64B5F6" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Results table -->
+  <rect x="100" y="270" width="600" height="160" rx="8" fill="#2d2d44" stroke="#9C27B0" stroke-width="2"/>
+  <text x="400" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#9C27B0">Tabla Comparativa de Resultados</text>
+  
+  <!-- Table header -->
+  <rect x="120" y="310" width="560" height="25" fill="#3d3d54"/>
+  <text x="200" y="327" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Modelo</text>
+  <text x="320" y="327" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Accuracy</text>
+  <text x="420" y="327" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">F1-Score</text>
+  <text x="520" y="327" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">ROC-AUC</text>
+  <text x="620" y="327" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Time</text>
+  
+  <!-- Table rows -->
+  <text x="200" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">Logistic Regression</text>
+  <text x="320" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">0.782</text>
+  <text x="420" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">0.756</text>
+  <text x="520" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">0.845</text>
+  <text x="620" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">0.02s</text>
+  
+  <text x="200" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">Random Forest</text>
+  <text x="320" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">0.821</text>
+  <text x="420" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">0.798</text>
+  <text x="520" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">0.876</text>
+  <text x="620" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">2.5s</text>
+  
+  <rect x="120" y="390" width="560" height="25" fill="#4CAF50" opacity="0.2"/>
+  <text x="200" y="407" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4CAF50">XGBoost (tuned)</text>
+  <text x="320" y="407" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4CAF50">0.843</text>
+  <text x="420" y="407" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4CAF50">0.825</text>
+  <text x="520" y="407" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4CAF50">0.891</text>
+  <text x="620" y="407" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4CAF50">5.1s</text>
+  
+  <!-- Winner badge -->
+  <circle cx="750" y="400" r="25" fill="#4CAF50"/>
+  <text x="750" y="396" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#ffffff">BEST</text>
+  <text x="750" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#ffffff">MODEL</text>
+</svg>

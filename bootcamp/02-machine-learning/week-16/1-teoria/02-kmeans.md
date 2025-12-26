@@ -42,39 +42,39 @@ class KMeansFromScratch:
         self.max_iters = max_iters
         self.tol = tol
         self.random_state = random_state
-        
+
     def fit(self, X):
         np.random.seed(self.random_state)
         n_samples = X.shape[0]
-        
+
         # 1. Inicializar centroides aleatoriamente
         random_idx = np.random.choice(n_samples, self.n_clusters, replace=False)
         self.centroids = X[random_idx].copy()
-        
+
         for iteration in range(self.max_iters):
             # 2. Asignar puntos al centroide más cercano
             self.labels_ = self._assign_clusters(X)
-            
+
             # 3. Calcular nuevos centroides
             new_centroids = self._compute_centroids(X)
-            
+
             # 4. Verificar convergencia
             shift = np.sum((new_centroids - self.centroids) ** 2)
             if shift < self.tol:
                 break
-                
+
             self.centroids = new_centroids
-        
+
         self.cluster_centers_ = self.centroids
         self.inertia_ = self._compute_inertia(X)
         return self
-    
+
     def _assign_clusters(self, X):
         distances = np.zeros((X.shape[0], self.n_clusters))
         for k in range(self.n_clusters):
             distances[:, k] = np.linalg.norm(X - self.centroids[k], axis=1)
         return np.argmin(distances, axis=1)
-    
+
     def _compute_centroids(self, X):
         centroids = np.zeros((self.n_clusters, X.shape[1]))
         for k in range(self.n_clusters):
@@ -82,14 +82,14 @@ class KMeansFromScratch:
             if mask.sum() > 0:
                 centroids[k] = X[mask].mean(axis=0)
         return centroids
-    
+
     def _compute_inertia(self, X):
         inertia = 0
         for k in range(self.n_clusters):
             mask = self.labels_ == k
             inertia += np.sum((X[mask] - self.centroids[k]) ** 2)
         return inertia
-    
+
     def predict(self, X):
         return self._assign_clusters(X)
 ```
@@ -153,16 +153,16 @@ kmeans_random = KMeans(n_clusters=4, init='random', n_init=1)
 ```python
 def plot_kmeans_result(X, kmeans, title="K-Means Clustering"):
     plt.figure(figsize=(10, 6))
-    
+
     # Scatter de puntos coloreados por cluster
-    scatter = plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_, 
+    scatter = plt.scatter(X[:, 0], X[:, 1], c=kmeans.labels_,
                           cmap='viridis', alpha=0.6, s=50)
-    
+
     # Marcar centroides
     plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1],
                 c='red', marker='X', s=200, edgecolors='black', linewidths=2,
                 label='Centroides')
-    
+
     plt.colorbar(scatter, label='Cluster')
     plt.xlabel('Feature 1')
     plt.ylabel('Feature 2')
@@ -178,12 +178,14 @@ plot_kmeans_result(X_scaled, kmeans)
 ## 6. Limitaciones de K-Means
 
 ### 6.1 Requiere especificar K
+
 ```python
 # ¿Cuántos clusters hay? No lo sabemos a priori
 # Solución: método del codo, silhouette
 ```
 
 ### 6.2 Solo clusters esféricos
+
 ```python
 from sklearn.datasets import make_moons
 
@@ -195,12 +197,14 @@ labels_moons = kmeans_moons.fit_predict(X_moons)
 ```
 
 ### 6.3 Sensible a outliers
+
 ```python
 # Un outlier puede "arrastrar" el centroide
 # Solución: K-Medoids (usa medianas)
 ```
 
 ### 6.4 Sensible a la escala
+
 ```python
 # SIEMPRE escalar los datos antes de K-Means
 from sklearn.preprocessing import StandardScaler
@@ -212,6 +216,7 @@ X_scaled = StandardScaler().fit_transform(X)
 ## 7. Variantes de K-Means
 
 ### Mini-Batch K-Means
+
 Para datasets grandes, usa mini-batches para acelerar.
 
 ```python
@@ -227,6 +232,7 @@ labels = mbkmeans.fit_predict(X_large)
 ```
 
 ### K-Medoids (PAM)
+
 Usa puntos reales como centroides (más robusto a outliers).
 
 ```python
@@ -270,7 +276,7 @@ axes[0].scatter(X_scaled[:, 0], X_scaled[:, 1], alpha=0.5)
 axes[0].set_title('Datos Originales')
 
 # Clustered
-scatter = axes[1].scatter(X_scaled[:, 0], X_scaled[:, 1], 
+scatter = axes[1].scatter(X_scaled[:, 0], X_scaled[:, 1],
                           c=labels, cmap='viridis', alpha=0.6)
 axes[1].scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1],
                 c='red', marker='X', s=200, edgecolors='black')

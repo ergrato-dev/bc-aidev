@@ -9,6 +9,7 @@ Dominar las diferentes estrategias de Cross-Validation y comparar modelos de for
 ## 📋 Descripción
 
 En este ejercicio aprenderás a:
+
 1. Implementar K-Fold y Stratified K-Fold
 2. Usar `cross_val_score` y `cross_validate`
 3. Comparar múltiples modelos con CV
@@ -154,14 +155,14 @@ for k in [3, 5, 10, 20]:
 
 ## ✅ Criterios de Evaluación
 
-| Criterio | Puntos |
-|----------|--------|
-| K-Fold manual implementado correctamente | 2 |
-| cross_val_score funcionando | 2 |
-| Comparación de modelos completa | 3 |
-| Análisis de impacto de K | 2 |
-| Código limpio y comentado | 1 |
-| **Total** | **10** |
+| Criterio                                 | Puntos |
+| ---------------------------------------- | ------ |
+| K-Fold manual implementado correctamente | 2      |
+| cross_val_score funcionando              | 2      |
+| Comparación de modelos completa          | 3      |
+| Análisis de impacto de K                 | 2      |
+| Código limpio y comentado                | 1      |
+| **Total**                                | **10** |
 
 ---
 

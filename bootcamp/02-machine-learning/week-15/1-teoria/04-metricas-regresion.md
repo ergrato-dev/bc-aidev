@@ -13,13 +13,13 @@
 
 ### 1. Panorama de Métricas de Regresión
 
-| Métrica | Fórmula | Rango | Interpretación |
-|---------|---------|-------|----------------|
-| **MSE** | Mean Squared Error | [0, ∞) | Error cuadrático promedio |
-| **RMSE** | √MSE | [0, ∞) | Error en unidades originales |
-| **MAE** | Mean Absolute Error | [0, ∞) | Error absoluto promedio |
-| **R²** | Coef. Determinación | (-∞, 1] | Varianza explicada |
-| **MAPE** | Mean Abs. % Error | [0, ∞) | Error porcentual |
+| Métrica  | Fórmula             | Rango   | Interpretación               |
+| -------- | ------------------- | ------- | ---------------------------- |
+| **MSE**  | Mean Squared Error  | [0, ∞)  | Error cuadrático promedio    |
+| **RMSE** | √MSE                | [0, ∞)  | Error en unidades originales |
+| **MAE**  | Mean Absolute Error | [0, ∞)  | Error absoluto promedio      |
+| **R²**   | Coef. Determinación | (-∞, 1] | Varianza explicada           |
+| **MAPE** | Mean Abs. % Error   | [0, ∞)  | Error porcentual             |
 
 ---
 
@@ -56,6 +56,7 @@ print(f"MSE (manual): {mse_manual:.4f}")
 ```
 
 **Características:**
+
 - ✅ Diferenciable (útil para optimización)
 - ✅ Penaliza fuertemente errores grandes
 - ❌ Sensible a outliers
@@ -79,11 +80,13 @@ print(f"RMSE (alternativo): {rmse_alt:.4f}")
 ```
 
 **Características:**
+
 - ✅ Mismas unidades que la variable objetivo
 - ✅ Fácil de interpretar
 - ❌ Sensible a outliers (como MSE)
 
 **Interpretación:**
+
 ```python
 # Si RMSE = 2.5 y prediciendo precios en miles de euros
 # → En promedio, el error es de €2,500
@@ -108,6 +111,7 @@ print(f"MAE (manual): {mae_manual:.4f}")
 ```
 
 **Características:**
+
 - ✅ Menos sensible a outliers que MSE/RMSE
 - ✅ Mismas unidades que la variable objetivo
 - ✅ Fácil de interpretar
@@ -167,6 +171,7 @@ print(f"MAPE (manual): {mape_manual:.2f}%")
 ```
 
 **Características:**
+
 - ✅ Interpretable en porcentaje
 - ✅ Escala-independiente (bueno para comparar datasets)
 - ❌ No funciona con valores cero o cercanos a cero
@@ -196,6 +201,7 @@ print(f"  RMSE: {np.sqrt(mean_squared_error(y_true, y_pred_outlier)):.4f}")
 ```
 
 **Output:**
+
 ```
 Sin outlier:
   MSE:  0.0280
@@ -209,6 +215,7 @@ Con outlier:
 ```
 
 **Conclusión:**
+
 - Datos limpios → MSE/RMSE funcionan bien
 - Datos con outliers → MAE es más robusto
 
@@ -221,6 +228,7 @@ R² regular siempre aumenta al agregar más features. R² ajustado penaliza la c
 $$R^2_{adj} = 1 - (1 - R^2) \frac{n - 1}{n - p - 1}$$
 
 Donde:
+
 - $n$ = número de muestras
 - $p$ = número de features
 
@@ -242,15 +250,15 @@ print(f"R² ajustado: {r2_adj:.4f}")
 
 ### 9. ¿Cuál Métrica Usar?
 
-| Situación | Métrica Recomendada |
-|-----------|---------------------|
-| General, sin outliers | **RMSE** |
-| Datos con outliers | **MAE** |
-| Comparar modelos | **R²** |
-| Necesitas % de error | **MAPE** |
-| Predicción de precios | RMSE o MAE |
-| Series temporales | RMSE, MAE |
-| Optimización/Entrenamiento | MSE |
+| Situación                  | Métrica Recomendada |
+| -------------------------- | ------------------- |
+| General, sin outliers      | **RMSE**            |
+| Datos con outliers         | **MAE**             |
+| Comparar modelos           | **R²**              |
+| Necesitas % de error       | **MAPE**            |
+| Predicción de precios      | RMSE o MAE          |
+| Series temporales          | RMSE, MAE           |
+| Optimización/Entrenamiento | MSE                 |
 
 ---
 
@@ -372,13 +380,13 @@ print(f"R²:   {scores_r2.mean():.4f} ± {scores_r2.std():.4f}")
 
 ## 📚 Resumen
 
-| Métrica | Sensible a Outliers | Unidades | Interpretación |
-|---------|---------------------|----------|----------------|
-| MSE | Muy sensible | Cuadradas | Penaliza errores grandes |
-| RMSE | Muy sensible | Originales | Error típico |
-| MAE | Poco sensible | Originales | Error promedio |
-| R² | Moderado | Adimensional | % varianza explicada |
-| MAPE | Poco sensible | Porcentaje | Error relativo |
+| Métrica | Sensible a Outliers | Unidades     | Interpretación           |
+| ------- | ------------------- | ------------ | ------------------------ |
+| MSE     | Muy sensible        | Cuadradas    | Penaliza errores grandes |
+| RMSE    | Muy sensible        | Originales   | Error típico             |
+| MAE     | Poco sensible       | Originales   | Error promedio           |
+| R²      | Moderado            | Adimensional | % varianza explicada     |
+| MAPE    | Poco sensible       | Porcentaje   | Error relativo           |
 
 ---
 

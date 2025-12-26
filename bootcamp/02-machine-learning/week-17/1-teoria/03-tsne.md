@@ -118,16 +118,16 @@ def compare_perplexity(X, y, perplexities=[5, 15, 30, 50]):
     """Compara diferentes valores de perplexity."""
     n = len(perplexities)
     fig, axes = plt.subplots(1, n, figsize=(5*n, 5))
-    
+
     for ax, perp in zip(axes, perplexities):
         tsne = TSNE(n_components=2, perplexity=perp, random_state=42)
         X_tsne = tsne.fit_transform(X)
-        
+
         ax.scatter(X_tsne[:, 0], X_tsne[:, 1], c=y, cmap='viridis', alpha=0.6, s=30)
         ax.set_title(f'Perplexity = {perp}')
         ax.set_xticks([])
         ax.set_yticks([])
-    
+
     plt.tight_layout()
     plt.show()
 
@@ -308,7 +308,7 @@ X_digits_tsne = tsne.fit_transform(X_digits_scaled)
 
 # Visualizar
 plt.figure(figsize=(12, 10))
-scatter = plt.scatter(X_digits_tsne[:, 0], X_digits_tsne[:, 1], 
+scatter = plt.scatter(X_digits_tsne[:, 0], X_digits_tsne[:, 1],
                       c=y_digits, cmap='tab10', alpha=0.7, s=30)
 plt.colorbar(scatter, label='Dígito')
 plt.title('t-SNE de Dígitos (64D → 2D)')
@@ -328,20 +328,20 @@ plt.show()
 
 ## ✅ Resumen
 
-| Aspecto | Detalle |
-|---------|---------|
-| **Propósito** | Visualización de datos de alta dimensión |
-| **Tipo** | No lineal, basado en probabilidades |
-| **Parámetro clave** | perplexity (5-50) |
-| **Preserva** | Estructura local (vecinos cercanos) |
-| **No preserva** | Distancias globales |
-| **Complejidad** | O(n²) - lento para datos grandes |
-| **Reproducibilidad** | Requiere random_state |
+| Aspecto              | Detalle                                  |
+| -------------------- | ---------------------------------------- |
+| **Propósito**        | Visualización de datos de alta dimensión |
+| **Tipo**             | No lineal, basado en probabilidades      |
+| **Parámetro clave**  | perplexity (5-50)                        |
+| **Preserva**         | Estructura local (vecinos cercanos)      |
+| **No preserva**      | Distancias globales                      |
+| **Complejidad**      | O(n²) - lento para datos grandes         |
+| **Reproducibilidad** | Requiere random_state                    |
 
 ---
 
 ## 🔗 Navegación
 
-| ⬅️ Anterior | 🏠 Semana 17 | Siguiente ➡️ |
-|-------------|--------------|--------------|
+| ⬅️ Anterior      | 🏠 Semana 17           | Siguiente ➡️                                 |
+| ---------------- | ---------------------- | -------------------------------------------- |
 | [PCA](02-pca.md) | [README](../README.md) | [UMAP y Comparación](04-umap-comparacion.md) |

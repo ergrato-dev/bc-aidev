@@ -2,11 +2,11 @@
 
 ## 📖 eBooks Gratuitos
 
-| Título | Autor | Enlace |
-|--------|-------|--------|
-| Introduction to Statistical Learning | James, Witten et al. | [PDF](https://www.statlearning.com/) |
-| Mining of Massive Datasets - Cap. 7 | Leskovec et al. | [Web](http://www.mmds.org/) |
-| Understanding Machine Learning | Shalev-Shwartz | [PDF](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/) |
+| Título                               | Autor                | Enlace                                                                |
+| ------------------------------------ | -------------------- | --------------------------------------------------------------------- |
+| Introduction to Statistical Learning | James, Witten et al. | [PDF](https://www.statlearning.com/)                                  |
+| Mining of Massive Datasets - Cap. 7  | Leskovec et al.      | [Web](http://www.mmds.org/)                                           |
+| Understanding Machine Learning       | Shalev-Shwartz       | [PDF](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/) |
 
 ---
 
@@ -14,18 +14,18 @@
 
 ### Clustering General
 
-| Título | Canal | Enlace |
-|--------|-------|--------|
-| Clustering with K-Means | StatQuest | [YouTube](https://www.youtube.com/watch?v=4b5d3muPQmA) |
-| Hierarchical Clustering | StatQuest | [YouTube](https://www.youtube.com/watch?v=7xHsRkOdVwo) |
+| Título                   | Canal     | Enlace                                                 |
+| ------------------------ | --------- | ------------------------------------------------------ |
+| Clustering with K-Means  | StatQuest | [YouTube](https://www.youtube.com/watch?v=4b5d3muPQmA) |
+| Hierarchical Clustering  | StatQuest | [YouTube](https://www.youtube.com/watch?v=7xHsRkOdVwo) |
 | DBSCAN Clearly Explained | StatQuest | [YouTube](https://www.youtube.com/watch?v=RDZUdRSDOok) |
 
 ### Implementación Práctica
 
-| Título | Canal | Enlace |
-|--------|-------|--------|
+| Título                | Canal      | Enlace                                                 |
+| --------------------- | ---------- | ------------------------------------------------------ |
 | Customer Segmentation | Krish Naik | [YouTube](https://www.youtube.com/watch?v=iwUli5gIcU0) |
-| Clustering en Python | Dot CSV | [YouTube](https://www.youtube.com/watch?v=8R6DGjbXhHM) |
+| Clustering en Python  | Dot CSV    | [YouTube](https://www.youtube.com/watch?v=8R6DGjbXhHM) |
 
 ---
 
@@ -53,16 +53,16 @@
 
 ## 🛠️ Herramientas
 
-| Herramienta | Descripción | Enlace |
-|-------------|-------------|--------|
-| Yellowbrick | Visualización de ML | [Web](https://www.scikit-yb.org/en/latest/api/cluster/) |
-| PyClustering | Algoritmos de clustering | [GitHub](https://github.com/annoviko/pyclustering) |
-| HDBSCAN | Clustering jerárquico basado en densidad | [Docs](https://hdbscan.readthedocs.io/) |
+| Herramienta  | Descripción                              | Enlace                                                  |
+| ------------ | ---------------------------------------- | ------------------------------------------------------- |
+| Yellowbrick  | Visualización de ML                      | [Web](https://www.scikit-yb.org/en/latest/api/cluster/) |
+| PyClustering | Algoritmos de clustering                 | [GitHub](https://github.com/annoviko/pyclustering)      |
+| HDBSCAN      | Clustering jerárquico basado en densidad | [Docs](https://hdbscan.readthedocs.io/)                 |
 
 ---
 
 ## 🔗 Navegación
 
-| ⬅️ Anterior | 🏠 Inicio | Siguiente ➡️ |
-|-------------|-----------|---------------|
+| ⬅️ Anterior                          | 🏠 Inicio                 | Siguiente ➡️                         |
+| ------------------------------------ | ------------------------- | ------------------------------------ |
 | [Semana 15](../../week-15/README.md) | [Módulo ML](../README.md) | [Semana 17](../../week-17/README.md) |

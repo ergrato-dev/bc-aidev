@@ -13,10 +13,10 @@
 
 ### 1. Parámetros vs Hiperparámetros
 
-| Tipo | Descripción | Ejemplo | Cómo se obtienen |
-|------|-------------|---------|------------------|
-| **Parámetros** | Se aprenden durante el entrenamiento | Coeficientes en regresión, pesos de red neuronal | Optimización (gradient descent) |
-| **Hiperparámetros** | Se definen ANTES del entrenamiento | n_estimators, max_depth, learning_rate | Búsqueda manual o automática |
+| Tipo                | Descripción                          | Ejemplo                                          | Cómo se obtienen                |
+| ------------------- | ------------------------------------ | ------------------------------------------------ | ------------------------------- |
+| **Parámetros**      | Se aprenden durante el entrenamiento | Coeficientes en regresión, pesos de red neuronal | Optimización (gradient descent) |
+| **Hiperparámetros** | Se definen ANTES del entrenamiento   | n_estimators, max_depth, learning_rate           | Búsqueda manual o automática    |
 
 ```python
 from sklearn.ensemble import RandomForestClassifier
@@ -81,6 +81,7 @@ print(f"Score en test: {grid_search.score(X_test, y_test):.4f}")
 ```
 
 **Output:**
+
 ```
 Fitting 5 folds for each of 36 candidates, totalling 180 fits
 Mejores hiperparámetros: {'max_depth': 10, 'min_samples_split': 2, 'n_estimators': 100}
@@ -177,13 +178,13 @@ print(f"Score en test: {random_search.score(X_test, y_test):.4f}")
 
 ### 5. GridSearch vs RandomizedSearch
 
-| Aspecto | GridSearchCV | RandomizedSearchCV |
-|---------|--------------|-------------------|
-| **Búsqueda** | Exhaustiva | Aleatoria |
-| **Complejidad** | O(combinaciones × K) | O(n_iter × K) |
-| **Cuándo usar** | Pocos hiperparámetros | Muchos hiperparámetros |
-| **Encuentra óptimo** | Garantizado (si está en grid) | Probable con suficientes iteraciones |
-| **Espacios continuos** | Discretiza | Natural |
+| Aspecto                | GridSearchCV                  | RandomizedSearchCV                   |
+| ---------------------- | ----------------------------- | ------------------------------------ |
+| **Búsqueda**           | Exhaustiva                    | Aleatoria                            |
+| **Complejidad**        | O(combinaciones × K)          | O(n_iter × K)                        |
+| **Cuándo usar**        | Pocos hiperparámetros         | Muchos hiperparámetros               |
+| **Encuentra óptimo**   | Garantizado (si está en grid) | Probable con suficientes iteraciones |
+| **Espacios continuos** | Discretiza                    | Natural                              |
 
 ```python
 # Ejemplo de eficiencia
@@ -216,10 +217,10 @@ cv_scores = []
 for depth in depths:
     model = DecisionTreeRegressor(max_depth=depth, random_state=42)
     model.fit(X, y)
-    
+
     # Score en train
     train_scores.append(model.score(X, y))
-    
+
     # Score CV
     cv = cross_val_score(model, X, y, cv=5, scoring='r2')
     cv_scores.append(cv.mean())
@@ -285,6 +286,7 @@ print(f"Nested CV Accuracy: {nested_scores.mean():.4f} ± {nested_scores.std():.
 ```
 
 **Estructura:**
+
 ```
 ┌──────────────────────────────────────────────────────┐
 │                   CV Externo (5-fold)                 │
@@ -458,11 +460,11 @@ print(f"F1 Score: {nested_scores.mean():.4f} ± {nested_scores.std():.4f}")
 
 ## 📚 Resumen
 
-| Método | Uso | Eficiencia |
-|--------|-----|------------|
-| **GridSearchCV** | Espacios pequeños, exhaustivo | O(combinaciones) |
-| **RandomizedSearchCV** | Espacios grandes | O(n_iter) |
-| **Nested CV** | Evaluación sin sesgo | Costoso pero correcto |
+| Método                 | Uso                           | Eficiencia            |
+| ---------------------- | ----------------------------- | --------------------- |
+| **GridSearchCV**       | Espacios pequeños, exhaustivo | O(combinaciones)      |
+| **RandomizedSearchCV** | Espacios grandes              | O(n_iter)             |
+| **Nested CV**          | Evaluación sin sesgo          | Costoso pero correcto |
 
 ---
 

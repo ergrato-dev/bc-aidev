@@ -57,26 +57,26 @@ week-17/
 
 ### 📖 Teoría (1.5 horas)
 
-| # | Tema | Archivo | Duración |
-|---|------|---------|----------|
-| 1 | Introducción y Maldición de Dimensionalidad | [01-intro-reduccion-dimensional.md](1-teoria/01-intro-reduccion-dimensional.md) | 20 min |
-| 2 | PCA: Análisis de Componentes Principales | [02-pca.md](1-teoria/02-pca.md) | 30 min |
-| 3 | t-SNE: Visualización No Lineal | [03-tsne.md](1-teoria/03-tsne.md) | 20 min |
-| 4 | UMAP y Comparación de Técnicas | [04-umap-comparacion.md](1-teoria/04-umap-comparacion.md) | 20 min |
+| #   | Tema                                        | Archivo                                                                         | Duración |
+| --- | ------------------------------------------- | ------------------------------------------------------------------------------- | -------- |
+| 1   | Introducción y Maldición de Dimensionalidad | [01-intro-reduccion-dimensional.md](1-teoria/01-intro-reduccion-dimensional.md) | 20 min   |
+| 2   | PCA: Análisis de Componentes Principales    | [02-pca.md](1-teoria/02-pca.md)                                                 | 30 min   |
+| 3   | t-SNE: Visualización No Lineal              | [03-tsne.md](1-teoria/03-tsne.md)                                               | 20 min   |
+| 4   | UMAP y Comparación de Técnicas              | [04-umap-comparacion.md](1-teoria/04-umap-comparacion.md)                       | 20 min   |
 
 ### 💻 Prácticas (2.5 horas)
 
-| # | Ejercicio | Carpeta | Duración |
-|---|-----------|---------|----------|
-| 1 | PCA desde Cero y Sklearn | [ejercicio-01-pca/](2-practicas/ejercicio-01-pca/) | 40 min |
-| 2 | t-SNE para Visualización | [ejercicio-02-tsne/](2-practicas/ejercicio-02-tsne/) | 35 min |
-| 3 | UMAP y Comparaciones | [ejercicio-03-umap/](2-practicas/ejercicio-03-umap/) | 35 min |
-| 4 | Pipeline Completo | [ejercicio-04-pipeline-completo/](2-practicas/ejercicio-04-pipeline-completo/) | 40 min |
+| #   | Ejercicio                | Carpeta                                                                        | Duración |
+| --- | ------------------------ | ------------------------------------------------------------------------------ | -------- |
+| 1   | PCA desde Cero y Sklearn | [ejercicio-01-pca/](2-practicas/ejercicio-01-pca/)                             | 40 min   |
+| 2   | t-SNE para Visualización | [ejercicio-02-tsne/](2-practicas/ejercicio-02-tsne/)                           | 35 min   |
+| 3   | UMAP y Comparaciones     | [ejercicio-03-umap/](2-practicas/ejercicio-03-umap/)                           | 35 min   |
+| 4   | Pipeline Completo        | [ejercicio-04-pipeline-completo/](2-practicas/ejercicio-04-pipeline-completo/) | 40 min   |
 
 ### 🎯 Proyecto (2 horas)
 
-| Proyecto | Descripción | Carpeta |
-|----------|-------------|---------|
+| Proyecto            | Descripción                                               | Carpeta                                                 |
+| ------------------- | --------------------------------------------------------- | ------------------------------------------------------- |
 | Visualización MNIST | Visualizar y clasificar dígitos con reducción dimensional | [visualizacion-mnist/](3-proyecto/visualizacion-mnist/) |
 
 ---
@@ -98,6 +98,7 @@ Total: 6 horas
 ## 📌 Entregables
 
 1. **Ejercicios Completados**
+
    - [ ] PCA implementado desde cero y con sklearn
    - [ ] Visualizaciones t-SNE funcionando
    - [ ] Comparación UMAP vs t-SNE
@@ -113,14 +114,17 @@ Total: 6 horas
 ## 🧠 Conceptos Clave
 
 ### Técnicas Lineales
+
 - **PCA**: Maximiza varianza, proyección lineal, componentes ortogonales
 - **LDA**: Maximiza separabilidad entre clases (supervisado)
 
 ### Técnicas No Lineales
+
 - **t-SNE**: Preserva estructura local, bueno para visualización
 - **UMAP**: Más rápido que t-SNE, preserva estructura global
 
 ### Métricas
+
 - Varianza explicada (PCA)
 - Preservación de vecindarios (t-SNE/UMAP)
 - Trustworthiness y continuity
@@ -129,8 +133,8 @@ Total: 6 horas
 
 ## 🔗 Navegación
 
-| ⬅️ Anterior | 🏠 Módulo | Siguiente ➡️ |
-|-------------|-----------|--------------|
+| ⬅️ Anterior                                   | 🏠 Módulo                    | Siguiente ➡️                                        |
+| --------------------------------------------- | ---------------------------- | --------------------------------------------------- |
 | [Semana 16: Clustering](../week-16/README.md) | [Módulo 2: ML](../README.md) | [Semana 18: ML en Producción](../week-18/README.md) |
 
 ---

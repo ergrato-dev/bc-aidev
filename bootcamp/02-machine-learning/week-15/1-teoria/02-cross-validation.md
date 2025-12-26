@@ -15,11 +15,11 @@
 
 Cross-Validation resuelve los problemas del holdout simple:
 
-| Problema Holdout | Solución CV |
-|-----------------|-------------|
-| Alta varianza en resultados | Múltiples evaluaciones promediadas |
-| Desperdicio de datos | Todos los datos se usan para train y test |
-| Un split puede ser engañoso | K splits diferentes |
+| Problema Holdout            | Solución CV                               |
+| --------------------------- | ----------------------------------------- |
+| Alta varianza en resultados | Múltiples evaluaciones promediadas        |
+| Desperdicio de datos        | Todos los datos se usan para train y test |
+| Un split puede ser engañoso | K splits diferentes                       |
 
 ![Cross-Validation](../0-assets/02-cross-validation.svg)
 
@@ -28,6 +28,7 @@ Cross-Validation resuelve los problemas del holdout simple:
 ### 2. K-Fold Cross-Validation
 
 El dataset se divide en **K** partes (folds). En cada iteración:
+
 - K-1 folds para entrenar
 - 1 fold para validar
 
@@ -50,18 +51,19 @@ for fold, (train_idx, val_idx) in enumerate(kfold.split(X)):
     # Dividir datos
     X_train, X_val = X[train_idx], X[val_idx]
     y_train, y_val = y[train_idx], y[val_idx]
-    
+
     # Entrenar y evaluar
     model.fit(X_train, y_train)
     score = model.score(X_val, y_val)
     scores.append(score)
-    
+
     print(f"Fold {fold+1}: {score:.4f}")
 
 print(f"\nPromedio: {np.mean(scores):.4f} ± {np.std(scores):.4f}")
 ```
 
 **Output:**
+
 ```
 Fold 1: 0.8450
 Fold 2: 0.8500
@@ -89,11 +91,11 @@ print(f"Accuracy: {scores.mean():.4f} ± {scores.std():.4f}")
 
 **Parámetros importantes:**
 
-| Parámetro | Descripción |
-|-----------|-------------|
-| `cv` | Número de folds o estrategia de CV |
-| `scoring` | Métrica a evaluar |
-| `n_jobs` | Paralelización (-1 = todos los cores) |
+| Parámetro | Descripción                           |
+| --------- | ------------------------------------- |
+| `cv`      | Número de folds o estrategia de CV    |
+| `scoring` | Métrica a evaluar                     |
+| `n_jobs`  | Paralelización (-1 = todos los cores) |
 
 ```python
 # Paralelizado
@@ -121,6 +123,7 @@ print(df_results.round(4))
 ```
 
 **Output:**
+
 ```
    fit_time  score_time  test_accuracy  train_accuracy  test_precision  ...
 0    0.0234      0.0012         0.8450          0.8713          0.8462  ...
@@ -187,6 +190,7 @@ print(f"Accuracy: {scores.mean():.4f}")
 ```
 
 **Cuándo usar LOO:**
+
 - Datasets muy pequeños (< 100 muestras)
 - Cuando necesitas máxima utilización de datos
 - Costo computacional: O(n) entrenamientos
@@ -261,13 +265,14 @@ for fold, (train_idx, val_idx) in enumerate(tscv.split(X_time)):
 
 ### 10. Elegir K (número de folds)
 
-| K | Pros | Contras |
-|---|------|---------|
-| **K=5** | Buen balance, rápido | Puede tener más varianza |
-| **K=10** | Estándar, menos varianza | Más lento |
-| **K=n (LOO)** | Máximo uso de datos | Muy costoso, alta varianza |
+| K             | Pros                     | Contras                    |
+| ------------- | ------------------------ | -------------------------- |
+| **K=5**       | Buen balance, rápido     | Puede tener más varianza   |
+| **K=10**      | Estándar, menos varianza | Más lento                  |
+| **K=n (LOO)** | Máximo uso de datos      | Muy costoso, alta varianza |
 
 **Regla general:**
+
 - K=5 para exploración rápida
 - K=10 para evaluación final
 - LOO solo para datasets muy pequeños
@@ -327,13 +332,13 @@ print(sorted(get_scorer_names()))
 
 **Métricas comunes:**
 
-| Clasificación | Regresión |
-|--------------|-----------|
-| `accuracy` | `r2` |
-| `precision` | `neg_mean_squared_error` |
-| `recall` | `neg_mean_absolute_error` |
-| `f1` | `neg_root_mean_squared_error` |
-| `roc_auc` | |
+| Clasificación | Regresión                     |
+| ------------- | ----------------------------- |
+| `accuracy`    | `r2`                          |
+| `precision`   | `neg_mean_squared_error`      |
+| `recall`      | `neg_mean_absolute_error`     |
+| `f1`          | `neg_root_mean_squared_error` |
+| `roc_auc`     |                               |
 
 ```python
 # Nota: métricas de error son NEGATIVAS (para maximizar)
@@ -345,13 +350,13 @@ mse = -scores.mean()  # Convertir a positivo
 
 ## 📚 Resumen
 
-| Estrategia | Uso | shuffle |
-|------------|-----|---------|
-| **KFold** | General | Recomendado |
-| **StratifiedKFold** | Clasificación | Recomendado |
-| **LeaveOneOut** | Datos pequeños | No aplica |
-| **GroupKFold** | Grupos | No |
-| **TimeSeriesSplit** | Series temporales | No |
+| Estrategia          | Uso               | shuffle     |
+| ------------------- | ----------------- | ----------- |
+| **KFold**           | General           | Recomendado |
+| **StratifiedKFold** | Clasificación     | Recomendado |
+| **LeaveOneOut**     | Datos pequeños    | No aplica   |
+| **GroupKFold**      | Grupos            | No          |
+| **TimeSeriesSplit** | Series temporales | No          |
 
 ---
 

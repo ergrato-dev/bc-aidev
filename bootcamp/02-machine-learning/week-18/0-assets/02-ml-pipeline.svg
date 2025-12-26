@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 400">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64B5F6"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="950" height="400" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="475" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff">Pipeline de Machine Learning End-to-End</text>
+  
+  <!-- Stage 1: Raw Data -->
+  <rect x="30" y="100" width="100" height="80" rx="8" fill="#2d2d44" stroke="#4CAF50" stroke-width="2"/>
+  <text x="80" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#4CAF50">Raw Data</text>
+  <text x="80" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#aaaaaa">CSV, DB, API</text>
+  
+  <!-- Arrow 1 -->
+  <line x1="135" y1="140" x2="165" y2="140" stroke="#64B5F6" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Stage 2: EDA -->
+  <rect x="170" y="100" width="100" height="80" rx="8" fill="#2d2d44" stroke="#2196F3" stroke-width="2"/>
+  <text x="220" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2196F3">EDA</text>
+  <text x="220" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#aaaaaa">Análisis</text>
+  <text x="220" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#aaaaaa">Exploratorio</text>
+  
+  <!-- Arrow 2 -->
+  <line x1="275" y1="140" x2="305" y2="140" stroke="#64B5F6" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Stage 3: Feature Engineering -->
+  <rect x="310" y="100" width="100" height="80" rx="8" fill="#2d2d44" stroke="#9C27B0" stroke-width="2"/>
+  <text x="360" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#9C27B0">Feature</text>
+  <text x="360" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#9C27B0">Engineering</text>
+  <text x="360" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#aaaaaa">Transformar</text>
+  
+  <!-- Arrow 3 -->
+  <line x1="415" y1="140" x2="445" y2="140" stroke="#64B5F6" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Stage 4: Train/Test Split -->
+  <rect x="450" y="100" width="100" height="80" rx="8" fill="#2d2d44" stroke="#FF9800" stroke-width="2"/>
+  <text x="500" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FF9800">Split</text>
+  <text x="500" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#aaaaaa">Train / Val</text>
+  <text x="500" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#aaaaaa">/ Test</text>
+  
+  <!-- Arrow 4 -->
+  <line x1="555" y1="140" x2="585" y2="140" stroke="#64B5F6" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Stage 5: Model Training -->
+  <rect x="590" y="100" width="100" height="80" rx="8" fill="#2d2d44" stroke="#F44336" stroke-width="2"/>
+  <text x="640" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#F44336">Model</text>
+  <text x="640" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#F44336">Training</text>
+  <text x="640" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#aaaaaa">+ CV + Tuning</text>
+  
+  <!-- Arrow 5 -->
+  <line x1="695" y1="140" x2="725" y2="140" stroke="#64B5F6" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Stage 6: Evaluation -->
+  <rect x="730" y="100" width="100" height="80" rx="8" fill="#2d2d44" stroke="#00BCD4" stroke-width="2"/>
+  <text x="780" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#00BCD4">Evaluation</text>
+  <text x="780" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#aaaaaa">Métricas</text>
+  
+  <!-- Arrow 6 -->
+  <line x1="835" y1="140" x2="865" y2="140" stroke="#64B5F6" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Stage 7: Prediction -->
+  <rect x="870" y="100" width="60" height="80" rx="8" fill="#4CAF50" opacity="0.8"/>
+  <text x="900" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Predict</text>
+  
+  <!-- Details row -->
+  <!-- EDA details -->
+  <rect x="170" y="220" width="100" height="100" rx="6" fill="#1e1e30" stroke="#2196F3" stroke-width="1"/>
+  <text x="220" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2196F3">• Distribuciones</text>
+  <text x="220" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2196F3">• Correlaciones</text>
+  <text x="220" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2196F3">• Missing values</text>
+  <text x="220" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2196F3">• Outliers</text>
+  <text x="220" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2196F3">• Target analysis</text>
+  
+  <!-- FE details -->
+  <rect x="310" y="220" width="100" height="100" rx="6" fill="#1e1e30" stroke="#9C27B0" stroke-width="1"/>
+  <text x="360" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#9C27B0">• Encoding</text>
+  <text x="360" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#9C27B0">• Scaling</text>
+  <text x="360" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#9C27B0">• Imputation</text>
+  <text x="360" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#9C27B0">• New features</text>
+  <text x="360" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#9C27B0">• Selection</text>
+  
+  <!-- Model details -->
+  <rect x="590" y="220" width="100" height="100" rx="6" fill="#1e1e30" stroke="#F44336" stroke-width="1"/>
+  <text x="640" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#F44336">• Baseline</text>
+  <text x="640" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#F44336">• Multiple models</text>
+  <text x="640" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#F44336">• Cross-validation</text>
+  <text x="640" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#F44336">• GridSearch</text>
+  <text x="640" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#F44336">• Ensemble</text>
+  
+  <!-- Evaluation details -->
+  <rect x="730" y="220" width="100" height="100" rx="6" fill="#1e1e30" stroke="#00BCD4" stroke-width="1"/>
+  <text x="780" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#00BCD4">• Accuracy</text>
+  <text x="780" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#00BCD4">• Precision/Recall</text>
+  <text x="780" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#00BCD4">• F1-Score</text>
+  <text x="780" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#00BCD4">• ROC-AUC</text>
+  <text x="780" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#00BCD4">• Confusion Matrix</text>
+  
+  <!-- Vertical connectors -->
+  <line x1="220" y1="180" x2="220" y2="220" stroke="#2196F3" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="360" y1="180" x2="360" y2="220" stroke="#9C27B0" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="640" y1="180" x2="640" y2="220" stroke="#F44336" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="780" y1="180" x2="780" y2="220" stroke="#00BCD4" stroke-width="1" stroke-dasharray="3,3"/>
+  
+  <!-- Iteration arrow -->
+  <path d="M 780 350 Q 500 380 220 350" fill="none" stroke="#FFD700" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <text x="500" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#FFD700">Iterar y Mejorar</text>
+</svg>

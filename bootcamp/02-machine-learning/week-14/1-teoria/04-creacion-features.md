@@ -95,13 +95,13 @@ plt.show()
 
 #### Estrategias de Imputación
 
-| Estrategia | Cuándo Usar |
-|------------|-------------|
-| Eliminar filas | < 5% missing, aleatorio |
-| Media/Mediana | Numéricas, distribución simétrica |
-| Moda | Categóricas |
-| KNN | Relaciones entre features |
-| Indicador de missing | El missing es informativo |
+| Estrategia           | Cuándo Usar                       |
+| -------------------- | --------------------------------- |
+| Eliminar filas       | < 5% missing, aleatorio           |
+| Media/Mediana        | Numéricas, distribución simétrica |
+| Moda                 | Categóricas                       |
+| KNN                  | Relaciones entre features         |
+| Indicador de missing | El missing es informativo         |
 
 #### SimpleImputer
 
@@ -165,7 +165,7 @@ from sklearn.preprocessing import KBinsDiscretizer
 
 # Discretizar en bins
 discretizer = KBinsDiscretizer(
-    n_bins=5, 
+    n_bins=5,
     encode='ordinal',  # o 'onehot'
     strategy='quantile'  # o 'uniform', 'kmeans'
 )
@@ -174,7 +174,7 @@ df['edad_bins'] = discretizer.fit_transform(df[['edad']])
 
 # Manual con pandas
 df['edad_grupo'] = pd.cut(
-    df['edad'], 
+    df['edad'],
     bins=[0, 18, 35, 50, 65, 100],
     labels=['joven', 'adulto_joven', 'adulto', 'senior', 'mayor']
 )
@@ -183,6 +183,7 @@ df['edad_grupo'] = pd.cut(
 ### 6. Feature Engineering por Dominio
 
 #### E-commerce
+
 ```python
 df['dias_desde_ultima_compra'] = (hoy - df['ultima_compra']).dt.days
 df['frecuencia_compra'] = df['total_compras'] / df['meses_cliente']
@@ -190,12 +191,14 @@ df['ticket_medio'] = df['total_gastado'] / df['total_compras']
 ```
 
 #### Finanzas
+
 ```python
 df['ratio_deuda_ingreso'] = df['deuda_total'] / df['ingreso_anual']
 df['utilizacion_credito'] = df['saldo_credito'] / df['limite_credito']
 ```
 
 #### Geoespacial
+
 ```python
 from math import radians, sin, cos, sqrt, atan2
 

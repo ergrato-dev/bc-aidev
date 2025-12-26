@@ -57,6 +57,7 @@ print(f"Test set: {len(X_test)} muestras")
 ```
 
 **Output:**
+
 ```
 Training set: 800 muestras
 Test set: 200 muestras
@@ -80,12 +81,12 @@ train_test_split(X, y, test_size=0.2)
 train_test_split(X, y, train_size=0.8)
 ```
 
-| Dataset Size | Recomendación test_size |
-|--------------|------------------------|
-| < 1,000 | 0.30 - 0.40 |
-| 1,000 - 10,000 | 0.20 - 0.30 |
-| 10,000 - 100,000 | 0.15 - 0.20 |
-| > 100,000 | 0.10 - 0.15 |
+| Dataset Size     | Recomendación test_size |
+| ---------------- | ----------------------- |
+| < 1,000          | 0.30 - 0.40             |
+| 1,000 - 10,000   | 0.20 - 0.30             |
+| 10,000 - 100,000 | 0.15 - 0.20             |
+| > 100,000        | 0.10 - 0.15             |
 
 #### 3.2 `random_state`
 
@@ -173,11 +174,11 @@ print(f"Test: {len(X_test)} ({len(X_test)/len(X):.0%})")
 
 **Propósito de cada conjunto:**
 
-| Conjunto | Uso | Cuándo se evalúa |
-|----------|-----|------------------|
-| **Train** | Entrenar modelo | Durante entrenamiento |
-| **Validation** | Ajustar hiperparámetros | Durante desarrollo |
-| **Test** | Evaluación final | Solo al final, UNA vez |
+| Conjunto       | Uso                     | Cuándo se evalúa       |
+| -------------- | ----------------------- | ---------------------- |
+| **Train**      | Entrenar modelo         | Durante entrenamiento  |
+| **Validation** | Ajustar hiperparámetros | Durante desarrollo     |
+| **Test**       | Evaluación final        | Solo al final, UNA vez |
 
 ---
 
@@ -215,11 +216,11 @@ X_test_scaled = scaler.transform(X_test)        # Aplica sin refit
 
 ### 7. Limitaciones de Holdout
 
-| Limitación | Explicación |
-|------------|-------------|
-| **Alta Varianza** | Un solo split puede no ser representativo |
-| **Desperdicio de Datos** | 20-30% no se usa para entrenar |
-| **Sensible al Split** | Diferentes splits dan diferentes resultados |
+| Limitación               | Explicación                                 |
+| ------------------------ | ------------------------------------------- |
+| **Alta Varianza**        | Un solo split puede no ser representativo   |
+| **Desperdicio de Datos** | 20-30% no se usa para entrenar              |
+| **Sensible al Split**    | Diferentes splits dan diferentes resultados |
 
 ```python
 # Demostración de varianza entre splits
@@ -273,12 +274,12 @@ print(f"R²: {r2_score(y_test, y_pred):.4f}")
 
 ## 📚 Resumen
 
-| Concepto | Descripción |
-|----------|-------------|
-| **Holdout** | División única en train/test |
-| **test_size** | Proporción para test (típico: 0.2) |
-| **stratify** | Mantiene proporción de clases |
-| **random_state** | Fija seed para reproducibilidad |
+| Concepto         | Descripción                        |
+| ---------------- | ---------------------------------- |
+| **Holdout**      | División única en train/test       |
+| **test_size**    | Proporción para test (típico: 0.2) |
+| **stratify**     | Mantiene proporción de clases      |
+| **random_state** | Fija seed para reproducibilidad    |
 | **Data Leakage** | Filtración de info de test a train |
 
 ---

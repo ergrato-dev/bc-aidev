@@ -35,6 +35,7 @@ Compromiso entre la complejidad del modelo: muy simple = alto bias, muy complejo
 
 **Classification Report**
 Resumen de métricas de clasificación: precision, recall, F1 por clase.
+
 ```python
 from sklearn.metrics import classification_report
 print(classification_report(y_true, y_pred))
@@ -48,6 +49,7 @@ Técnica que divide los datos en K partes para entrenar y evaluar múltiples vec
 
 **cross_val_score**
 Función de scikit-learn para realizar cross-validation en una línea.
+
 ```python
 scores = cross_val_score(model, X, y, cv=5)
 ```
@@ -82,6 +84,7 @@ Tasa de falsos positivos: FP / (FP + TN). Eje X de la curva ROC.
 
 **GridSearchCV**
 Búsqueda exhaustiva de hiperparámetros probando todas las combinaciones posibles.
+
 ```python
 grid = GridSearchCV(model, param_grid, cv=5)
 ```
@@ -231,13 +234,13 @@ Sensibilidad del modelo a cambios en los datos de entrenamiento. Alta varianza =
 ## 📊 Tabla de Métricas Rápida
 
 | Clasificación | Regresión |
-|--------------|-----------|
-| Accuracy | R² |
-| Precision | MSE |
-| Recall | RMSE |
-| F1-Score | MAE |
-| AUC-ROC | MAPE |
-| AP (PR-AUC) | |
+| ------------- | --------- |
+| Accuracy      | R²        |
+| Precision     | MSE       |
+| Recall        | RMSE      |
+| F1-Score      | MAE       |
+| AUC-ROC       | MAPE      |
+| AP (PR-AUC)   |           |
 
 ---
 

@@ -57,28 +57,28 @@ week-15/
 
 ### 📖 Teoría (1.5 horas)
 
-| #   | Tema                            | Archivo                                                                       | Duración |
-| --- | ------------------------------- | ----------------------------------------------------------------------------- | -------- |
-| 1   | Validación Holdout              | [01-validacion-holdout.md](1-teoria/01-validacion-holdout.md)                 | 15 min   |
-| 2   | Cross-Validation                | [02-cross-validation.md](1-teoria/02-cross-validation.md)                     | 25 min   |
-| 3   | Métricas de Clasificación       | [03-metricas-clasificacion.md](1-teoria/03-metricas-clasificacion.md)         | 25 min   |
-| 4   | Métricas de Regresión           | [04-metricas-regresion.md](1-teoria/04-metricas-regresion.md)                 | 15 min   |
+| #   | Tema                            | Archivo                                                                           | Duración |
+| --- | ------------------------------- | --------------------------------------------------------------------------------- | -------- |
+| 1   | Validación Holdout              | [01-validacion-holdout.md](1-teoria/01-validacion-holdout.md)                     | 15 min   |
+| 2   | Cross-Validation                | [02-cross-validation.md](1-teoria/02-cross-validation.md)                         | 25 min   |
+| 3   | Métricas de Clasificación       | [03-metricas-clasificacion.md](1-teoria/03-metricas-clasificacion.md)             | 25 min   |
+| 4   | Métricas de Regresión           | [04-metricas-regresion.md](1-teoria/04-metricas-regresion.md)                     | 15 min   |
 | 5   | Optimización de Hiperparámetros | [05-optimizacion-hiperparametros.md](1-teoria/05-optimizacion-hiperparametros.md) | 20 min   |
 
 ### 💻 Prácticas (2.5 horas)
 
-| #   | Ejercicio                    | Carpeta                                                                        | Duración |
-| --- | ---------------------------- | ------------------------------------------------------------------------------ | -------- |
-| 1   | Cross-Validation en Práctica | [ejercicio-01-cross-validation/](2-practicas/ejercicio-01-cross-validation/)   | 35 min   |
+| #   | Ejercicio                    | Carpeta                                                                                  | Duración |
+| --- | ---------------------------- | ---------------------------------------------------------------------------------------- | -------- |
+| 1   | Cross-Validation en Práctica | [ejercicio-01-cross-validation/](2-practicas/ejercicio-01-cross-validation/)             | 35 min   |
 | 2   | Métricas de Clasificación    | [ejercicio-02-metricas-clasificacion/](2-practicas/ejercicio-02-metricas-clasificacion/) | 40 min   |
-| 3   | Métricas de Regresión        | [ejercicio-03-metricas-regresion/](2-practicas/ejercicio-03-metricas-regresion/) | 30 min   |
-| 4   | GridSearch y RandomSearch    | [ejercicio-04-gridsearch/](2-practicas/ejercicio-04-gridsearch/)               | 45 min   |
+| 3   | Métricas de Regresión        | [ejercicio-03-metricas-regresion/](2-practicas/ejercicio-03-metricas-regresion/)         | 30 min   |
+| 4   | GridSearch y RandomSearch    | [ejercicio-04-gridsearch/](2-practicas/ejercicio-04-gridsearch/)                         | 45 min   |
 
 ### 📦 Proyecto (2 horas)
 
-| Proyecto                       | Descripción                                          | Carpeta                                                                    |
-| ------------------------------ | ---------------------------------------------------- | -------------------------------------------------------------------------- |
-| Evaluación Completa de Modelo  | Pipeline con CV, métricas múltiples y optimización   | [evaluacion-completa-modelo/](3-proyecto/evaluacion-completa-modelo/)      |
+| Proyecto                      | Descripción                                        | Carpeta                                                               |
+| ----------------------------- | -------------------------------------------------- | --------------------------------------------------------------------- |
+| Evaluación Completa de Modelo | Pipeline con CV, métricas múltiples y optimización | [evaluacion-completa-modelo/](3-proyecto/evaluacion-completa-modelo/) |
 
 ---
 
@@ -101,12 +101,14 @@ Total: 6 horas
 Al finalizar la semana debes entregar:
 
 1. **Ejercicios completados** (2-practicas/)
+
    - [ ] ejercicio-01: Cross-validation implementado
    - [ ] ejercicio-02: Métricas de clasificación calculadas
    - [ ] ejercicio-03: Métricas de regresión aplicadas
    - [ ] ejercicio-04: GridSearchCV optimizando modelo
 
 2. **Proyecto semanal** (3-proyecto/)
+
    - [ ] Pipeline con cross-validation anidado
    - [ ] Reporte de métricas múltiples
    - [ ] Curvas ROC y PR generadas
@@ -137,9 +139,9 @@ Al finalizar la semana debes entregar:
 
 ## 🔗 Navegación
 
-| ⬅️ Anterior                     | 🏠 Inicio                                   | Siguiente ➡️                      |
-| ------------------------------ | ------------------------------------------ | --------------------------------- |
-| [Semana 14](../week-14/README.md) | [Módulo ML](../../README.md)               | [Semana 16](../week-16/README.md) |
+| ⬅️ Anterior                       | 🏠 Inicio                    | Siguiente ➡️                      |
+| --------------------------------- | ---------------------------- | --------------------------------- |
+| [Semana 14](../week-14/README.md) | [Módulo ML](../../README.md) | [Semana 16](../week-16/README.md) |
 
 ---
 

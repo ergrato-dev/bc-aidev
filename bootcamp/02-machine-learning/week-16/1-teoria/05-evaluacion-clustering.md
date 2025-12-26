@@ -17,10 +17,10 @@ A diferencia del aprendizaje supervisado, **no hay ground truth**.
 
 ### Tipos de Métricas
 
-| Tipo | Descripción | Ejemplos |
-|------|-------------|----------|
-| **Internas** | Solo usan datos y clusters | Silhouette, Inertia, Davies-Bouldin |
-| **Externas** | Comparan con etiquetas reales | ARI, NMI, Purity |
+| Tipo         | Descripción                   | Ejemplos                            |
+| ------------ | ----------------------------- | ----------------------------------- |
+| **Internas** | Solo usan datos y clusters    | Silhouette, Inertia, Davies-Bouldin |
+| **Externas** | Comparan con etiquetas reales | ARI, NMI, Purity                    |
 
 ---
 
@@ -40,12 +40,12 @@ def elbow_method(X, max_k=10):
     """
     inertias = []
     K_range = range(1, max_k + 1)
-    
+
     for k in K_range:
         kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
         kmeans.fit(X)
         inertias.append(kmeans.inertia_)
-    
+
     # Graficar
     plt.figure(figsize=(10, 5))
     plt.plot(K_range, inertias, 'bo-', linewidth=2, markersize=8)
@@ -54,7 +54,7 @@ def elbow_method(X, max_k=10):
     plt.title('Método del Codo')
     plt.grid(True, alpha=0.3)
     plt.show()
-    
+
     return inertias
 
 # Uso
@@ -75,18 +75,18 @@ from kneed import KneeLocator
 def find_elbow(X, max_k=10):
     inertias = []
     K_range = range(1, max_k + 1)
-    
+
     for k in K_range:
         kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
         kmeans.fit(X)
         inertias.append(kmeans.inertia_)
-    
+
     # Encontrar codo automáticamente
     kl = KneeLocator(
-        K_range, inertias, 
+        K_range, inertias,
         curve='convex', direction='decreasing'
     )
-    
+
     print(f"K óptimo (Elbow): {kl.elbow}")
     return kl.elbow
 
@@ -106,16 +106,17 @@ Para cada punto i:
 $$s(i) = \frac{b(i) - a(i)}{\max(a(i), b(i))}$$
 
 Donde:
+
 - **a(i)**: Distancia promedio a puntos del mismo cluster (cohesión)
 - **b(i)**: Distancia promedio al cluster más cercano (separación)
 
 ### Interpretación
 
-| Valor | Interpretación |
-|-------|----------------|
+| Valor     | Interpretación                         |
+| --------- | -------------------------------------- |
 | **s ≈ 1** | Bien asignado, lejos de otros clusters |
-| **s ≈ 0** | En el borde entre clusters |
-| **s < 0** | Probablemente mal asignado |
+| **s ≈ 0** | En el borde entre clusters             |
+| **s < 0** | Probablemente mal asignado             |
 
 ### Implementación
 
@@ -130,14 +131,14 @@ def silhouette_analysis(X, max_k=10):
     """
     silhouette_scores = []
     K_range = range(2, max_k + 1)  # Silhouette requiere k >= 2
-    
+
     for k in K_range:
         kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
         labels = kmeans.fit_predict(X)
         score = silhouette_score(X, labels)
         silhouette_scores.append(score)
         print(f"K={k}: Silhouette = {score:.4f}")
-    
+
     # Graficar
     plt.figure(figsize=(10, 5))
     plt.plot(K_range, silhouette_scores, 'go-', linewidth=2, markersize=8)
@@ -145,13 +146,13 @@ def silhouette_analysis(X, max_k=10):
     plt.ylabel('Silhouette Score')
     plt.title('Silhouette Score por K')
     plt.grid(True, alpha=0.3)
-    
+
     # Marcar máximo
     best_k = K_range[np.argmax(silhouette_scores)]
     plt.axvline(x=best_k, color='r', linestyle='--', label=f'Mejor K={best_k}')
     plt.legend()
     plt.show()
-    
+
     return silhouette_scores
 
 silhouette_analysis(X_scaled)
@@ -169,43 +170,43 @@ def silhouette_plot(X, n_clusters):
     """
     kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
     labels = kmeans.fit_predict(X)
-    
+
     # Calcular silhouette para cada muestra
     sample_silhouette = silhouette_samples(X, labels)
     avg_silhouette = silhouette_score(X, labels)
-    
+
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
-    
+
     # Plot 1: Silhouette por cluster
     y_lower = 10
     for i in range(n_clusters):
         cluster_silhouette = sample_silhouette[labels == i]
         cluster_silhouette.sort()
-        
+
         cluster_size = cluster_silhouette.shape[0]
         y_upper = y_lower + cluster_size
-        
+
         color = cm.viridis(float(i) / n_clusters)
         ax1.fill_betweenx(np.arange(y_lower, y_upper),
                           0, cluster_silhouette,
                           facecolor=color, edgecolor=color, alpha=0.7)
         ax1.text(-0.05, y_lower + 0.5 * cluster_size, str(i))
         y_lower = y_upper + 10
-    
-    ax1.axvline(x=avg_silhouette, color='red', linestyle='--', 
+
+    ax1.axvline(x=avg_silhouette, color='red', linestyle='--',
                 label=f'Promedio: {avg_silhouette:.3f}')
     ax1.set_xlabel('Silhouette Coefficient')
     ax1.set_ylabel('Cluster')
     ax1.set_title(f'Silhouette Plot (K={n_clusters})')
     ax1.legend()
-    
+
     # Plot 2: Clusters
     colors = cm.viridis(labels.astype(float) / n_clusters)
     ax2.scatter(X[:, 0], X[:, 1], c=colors, s=50, alpha=0.6)
     ax2.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1],
                 marker='X', c='red', s=200, edgecolors='black')
     ax2.set_title('Clusters')
-    
+
     plt.tight_layout()
     plt.show()
 
@@ -217,6 +218,7 @@ silhouette_plot(X_scaled, n_clusters=4)
 ## 4. Otras Métricas Internas
 
 ### Davies-Bouldin Index
+
 Menor es mejor (buscar mínimo).
 
 ```python
@@ -225,13 +227,13 @@ from sklearn.metrics import davies_bouldin_score
 def davies_bouldin_analysis(X, max_k=10):
     db_scores = []
     K_range = range(2, max_k + 1)
-    
+
     for k in K_range:
         kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
         labels = kmeans.fit_predict(X)
         score = davies_bouldin_score(X, labels)
         db_scores.append(score)
-    
+
     plt.figure(figsize=(10, 5))
     plt.plot(K_range, db_scores, 'ro-', linewidth=2, markersize=8)
     plt.xlabel('K')
@@ -239,13 +241,14 @@ def davies_bouldin_analysis(X, max_k=10):
     plt.title('Davies-Bouldin (menor es mejor)')
     plt.grid(True, alpha=0.3)
     plt.show()
-    
+
     return db_scores
 
 davies_bouldin_analysis(X_scaled)
 ```
 
 ### Calinski-Harabasz Index
+
 Mayor es mejor (buscar máximo).
 
 ```python
@@ -254,13 +257,13 @@ from sklearn.metrics import calinski_harabasz_score
 def calinski_harabasz_analysis(X, max_k=10):
     ch_scores = []
     K_range = range(2, max_k + 1)
-    
+
     for k in K_range:
         kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
         labels = kmeans.fit_predict(X)
         score = calinski_harabasz_score(X, labels)
         ch_scores.append(score)
-    
+
     plt.figure(figsize=(10, 5))
     plt.plot(K_range, ch_scores, 'bo-', linewidth=2, markersize=8)
     plt.xlabel('K')
@@ -268,7 +271,7 @@ def calinski_harabasz_analysis(X, max_k=10):
     plt.title('Calinski-Harabasz (mayor es mejor)')
     plt.grid(True, alpha=0.3)
     plt.show()
-    
+
     return ch_scores
 
 calinski_harabasz_analysis(X_scaled)
@@ -320,24 +323,24 @@ def evaluate_clustering(X, labels, y_true=None):
         silhouette_score, davies_bouldin_score, calinski_harabasz_score,
         adjusted_rand_score, normalized_mutual_info_score
     )
-    
+
     results = {
         'n_clusters': len(np.unique(labels[labels >= 0])),
         'n_noise': (labels == -1).sum() if -1 in labels else 0
     }
-    
+
     # Métricas internas (excluir noise si existe)
     mask = labels >= 0
     if mask.sum() > 0 and len(np.unique(labels[mask])) > 1:
         results['silhouette'] = silhouette_score(X[mask], labels[mask])
         results['davies_bouldin'] = davies_bouldin_score(X[mask], labels[mask])
         results['calinski_harabasz'] = calinski_harabasz_score(X[mask], labels[mask])
-    
+
     # Métricas externas (si hay ground truth)
     if y_true is not None:
         results['ari'] = adjusted_rand_score(y_true, labels)
         results['nmi'] = normalized_mutual_info_score(y_true, labels)
-    
+
     return results
 
 # Uso
@@ -350,14 +353,14 @@ for metric, value in results.items():
 
 ## 7. Resumen de Métricas
 
-| Métrica | Rango | Óptimo | Usa Ground Truth |
-|---------|-------|--------|------------------|
-| Inertia | 0 → ∞ | Menor (codo) | No |
-| Silhouette | -1 → 1 | Mayor | No |
-| Davies-Bouldin | 0 → ∞ | Menor | No |
-| Calinski-Harabasz | 0 → ∞ | Mayor | No |
-| ARI | -1 → 1 | Mayor (1) | Sí |
-| NMI | 0 → 1 | Mayor (1) | Sí |
+| Métrica           | Rango  | Óptimo       | Usa Ground Truth |
+| ----------------- | ------ | ------------ | ---------------- |
+| Inertia           | 0 → ∞  | Menor (codo) | No               |
+| Silhouette        | -1 → 1 | Mayor        | No               |
+| Davies-Bouldin    | 0 → ∞  | Menor        | No               |
+| Calinski-Harabasz | 0 → ∞  | Mayor        | No               |
+| ARI               | -1 → 1 | Mayor (1)    | Sí               |
+| NMI               | 0 → 1  | Mayor (1)    | Sí               |
 
 ---
 
