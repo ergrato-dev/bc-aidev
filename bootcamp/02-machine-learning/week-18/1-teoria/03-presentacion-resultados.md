@@ -33,12 +33,13 @@ Un buen reporte de proyecto ML debe incluir:
 **Impacto**: Top 15% en leaderboard de Kaggle
 
 ### Métricas Clave
-| Métrica    | Valor |
-|------------|-------|
-| Accuracy   | 0.843 |
-| Precision  | 0.825 |
-| Recall     | 0.798 |
-| F1-Score   | 0.811 |
+
+| Métrica   | Valor |
+| --------- | ----- |
+| Accuracy  | 0.843 |
+| Precision | 0.825 |
+| Recall    | 0.798 |
+| F1-Score  | 0.811 |
 ```
 
 ---
@@ -59,7 +60,7 @@ axes[0].set_title('Distribución de Supervivencia')
 axes[0].set_xticklabels(['No Sobrevivió', 'Sobrevivió'], rotation=0)
 
 # Porcentaje
-train['Survived'].value_counts(normalize=True).plot(kind='pie', ax=axes[1], 
+train['Survived'].value_counts(normalize=True).plot(kind='pie', ax=axes[1],
     autopct='%1.1f%%', colors=['#e74c3c', '#2ecc71'])
 axes[1].set_title('Porcentaje de Supervivencia')
 
@@ -115,7 +116,7 @@ results = pd.DataFrame({
 # Visualizar
 fig, ax = plt.subplots(figsize=(10, 5))
 colors = ['#3498db', '#2ecc71', '#e74c3c', '#9b59b6']
-bars = ax.bar(results['Model'], results['CV Accuracy'], yerr=results['CV Std'], 
+bars = ax.bar(results['Model'], results['CV Accuracy'], yerr=results['CV Std'],
               color=colors, capsize=5, alpha=0.8)
 ax.set_ylabel('CV Accuracy')
 ax.set_title('Comparación de Modelos')
@@ -123,7 +124,7 @@ ax.set_ylim(0.7, 0.9)
 
 # Añadir valores
 for bar, acc in zip(bars, results['CV Accuracy']):
-    ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.01, 
+    ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.01,
             f'{acc:.3f}', ha='center', fontsize=10)
 
 plt.tight_layout()
@@ -204,39 +205,44 @@ print(fp[['Age', 'Sex', 'Pclass', 'Fare']].describe())
 # 🚢 Titanic Survival Prediction
 
 ## 📋 Descripción
+
 Modelo de Machine Learning para predecir la supervivencia de pasajeros del Titanic.
 
 ## 🎯 Resultados
+
 - **Accuracy**: 84.3%
 - **F1-Score**: 81.1%
 - **Kaggle Score**: 0.79425
 
 ## 🗂️ Estructura
 ```
+
 titanic-competition/
 ├── notebooks/
-│   ├── 01_EDA.ipynb
-│   ├── 02_Feature_Engineering.ipynb
-│   └── 03_Modeling.ipynb
+│ ├── 01_EDA.ipynb
+│ ├── 02_Feature_Engineering.ipynb
+│ └── 03_Modeling.ipynb
 ├── src/
-│   ├── preprocessing.py
-│   └── pipeline.py
+│ ├── preprocessing.py
+│ └── pipeline.py
 ├── data/
-│   ├── train.csv
-│   └── test.csv
+│ ├── train.csv
+│ └── test.csv
 ├── submissions/
-│   └── submission.csv
+│ └── submission.csv
 ├── models/
-│   └── best_model.pkl
+│ └── best_model.pkl
 └── README.md
-```
+
+````
 
 ## 🔧 Instalación
 ```bash
 pip install -r requirements.txt
-```
+````
 
 ## 🚀 Uso
+
 ```python
 from src.pipeline import TitanicPipeline
 
@@ -246,16 +252,19 @@ predictions = pipeline.predict('data/test.csv')
 ```
 
 ## 📊 Features Importantes
+
 1. Sex (0.25)
 2. Fare (0.18)
 3. Age (0.15)
 4. Pclass (0.12)
 
 ## 📈 Mejoras Futuras
+
 - [ ] Ensemble de modelos
 - [ ] Feature engineering adicional
 - [ ] Análisis de errores más profundo
-```
+
+````
 
 ---
 
@@ -296,10 +305,10 @@ from sklearn.ensemble import GradientBoostingClassifier
 
 def create_pipeline():
     """Crea el pipeline de preprocesamiento y modelo."""
-    
+
     numeric_features = ['Age', 'Fare', 'SibSp', 'Parch']
     categorical_features = ['Sex', 'Embarked', 'Pclass']
-    
+
     preprocessor = ColumnTransformer([
         ('num', Pipeline([
             ('imputer', SimpleImputer(strategy='median')),
@@ -310,7 +319,7 @@ def create_pipeline():
             ('encoder', OneHotEncoder(handle_unknown='ignore'))
         ]), categorical_features)
     ])
-    
+
     return Pipeline([
         ('preprocessor', preprocessor),
         ('classifier', GradientBoostingClassifier(
@@ -325,31 +334,31 @@ def main():
     # Cargar datos
     train = pd.read_csv('train.csv')
     test = pd.read_csv('test.csv')
-    
+
     # Preparar
     features = ['Age', 'Fare', 'SibSp', 'Parch', 'Sex', 'Embarked', 'Pclass']
     X = train[features]
     y = train['Survived']
-    
+
     # Entrenar
     pipeline = create_pipeline()
     pipeline.fit(X, y)
-    
+
     # Predecir
     predictions = pipeline.predict(test[features])
-    
+
     # Submission
     submission = pd.DataFrame({
         'PassengerId': test['PassengerId'],
         'Survived': predictions
     })
     submission.to_csv('submission.csv', index=False)
-    
+
     print("✅ Submission generada: submission.csv")
 
 if __name__ == '__main__':
     main()
-```
+````
 
 ---
 
@@ -368,6 +377,6 @@ if __name__ == '__main__':
 
 ## 🔗 Navegación
 
-| ⬅️ Anterior | 🏠 Semana | Siguiente ➡️ |
-|-------------|----------|--------------|
+| ⬅️ Anterior                             | 🏠 Semana                 | Siguiente ➡️                                                    |
+| --------------------------------------- | ------------------------- | --------------------------------------------------------------- |
 | [Pipelines](02-pipelines-produccion.md) | [Semana 18](../README.md) | [Prácticas](../2-practicas/ejercicio-01-eda-completo/README.md) |

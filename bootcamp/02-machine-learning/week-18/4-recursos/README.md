@@ -5,6 +5,7 @@
 ### Machine Learning End-to-End
 
 - **"Hands-On Machine Learning with Scikit-Learn and TensorFlow"** - Aurélien Géron
+
   - Capítulos sobre pipelines y deployment
   - [GitHub con código](https://github.com/ageron/handson-ml3)
 
@@ -18,13 +19,13 @@
 
 ### Tutoriales Recomendados
 
-| Tema | Recurso | Duración |
-|------|---------|----------|
-| Kaggle Titanic Tutorial | [Kaggle Learn](https://www.kaggle.com/learn/intro-to-machine-learning) | 3h |
-| sklearn Pipelines | [Data School](https://www.youtube.com/watch?v=irHhDMbw3xo) | 45min |
-| Feature Engineering | [Krish Naik](https://www.youtube.com/watch?v=6WDFfaYtN6s) | 1h |
-| GridSearchCV | [StatQuest](https://www.youtube.com/watch?v=Gol_qOgRqfA) | 20min |
-| CRISP-DM | [Data Science Dojo](https://www.youtube.com/watch?v=jS1Y0NgkFgU) | 15min |
+| Tema                    | Recurso                                                                | Duración |
+| ----------------------- | ---------------------------------------------------------------------- | -------- |
+| Kaggle Titanic Tutorial | [Kaggle Learn](https://www.kaggle.com/learn/intro-to-machine-learning) | 3h       |
+| sklearn Pipelines       | [Data School](https://www.youtube.com/watch?v=irHhDMbw3xo)             | 45min    |
+| Feature Engineering     | [Krish Naik](https://www.youtube.com/watch?v=6WDFfaYtN6s)              | 1h       |
+| GridSearchCV            | [StatQuest](https://www.youtube.com/watch?v=Gol_qOgRqfA)               | 20min    |
+| CRISP-DM                | [Data Science Dojo](https://www.youtube.com/watch?v=jS1Y0NgkFgU)       | 15min    |
 
 ### Playlists
 
@@ -75,6 +76,7 @@
 Esta es la semana final del módulo de Machine Learning. Los recursos aquí recopilados consolidan todo lo aprendido en las semanas 9-17.
 
 Para el módulo siguiente (Deep Learning), se recomienda:
+
 - Revisar álgebra lineal básica
 - Familiarizarse con TensorFlow/PyTorch
 - Tener GPU disponible (o usar Google Colab)

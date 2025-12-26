@@ -13,12 +13,14 @@ Construir pipelines reproducibles y robustos para proyectos ML end-to-end.
 ![ML Pipeline](../0-assets/02-ml-pipeline.svg)
 
 **Problemas sin pipelines**:
+
 - Código difícil de mantener
 - Riesgo de data leakage
 - Preprocesamiento inconsistente train/test
 - Difícil de reproducir
 
 **Beneficios de pipelines**:
+
 - Código limpio y modular
 - Prevención de data leakage
 - Fácil de reproducir
@@ -190,10 +192,10 @@ from sklearn.base import BaseEstimator, TransformerMixin
 
 class FamilySizeTransformer(BaseEstimator, TransformerMixin):
     """Crea feature de tamaño familiar."""
-    
+
     def fit(self, X, y=None):
         return self
-    
+
     def transform(self, X):
         X = X.copy()
         X['FamilySize'] = X['SibSp'] + X['Parch'] + 1
@@ -202,16 +204,16 @@ class FamilySizeTransformer(BaseEstimator, TransformerMixin):
 
 class TitleExtractor(BaseEstimator, TransformerMixin):
     """Extrae título del nombre."""
-    
+
     def fit(self, X, y=None):
         return self
-    
+
     def transform(self, X):
         X = X.copy()
         X['Title'] = X['Name'].str.extract(r' ([A-Za-z]+)\.', expand=False)
         # Agrupar títulos raros
         X['Title'] = X['Title'].replace(['Lady', 'Countess', 'Capt', 'Col',
-                                         'Don', 'Dr', 'Major', 'Rev', 'Sir', 
+                                         'Don', 'Dr', 'Major', 'Rev', 'Sir',
                                          'Jonkheer', 'Dona'], 'Rare')
         X['Title'] = X['Title'].replace(['Mlle', 'Ms'], 'Miss')
         X['Title'] = X['Title'].replace('Mme', 'Mrs')
@@ -240,14 +242,14 @@ from sklearn.ensemble import GradientBoostingClassifier
 class FeatureEngineer(BaseEstimator, TransformerMixin):
     def fit(self, X, y=None):
         return self
-    
+
     def transform(self, X):
         X = X.copy()
         # Family size
         X['FamilySize'] = X['SibSp'] + X['Parch'] + 1
         X['IsAlone'] = (X['FamilySize'] == 1).astype(int)
         # Age groups
-        X['AgeGroup'] = pd.cut(X['Age'], bins=[0, 12, 18, 35, 60, 100], 
+        X['AgeGroup'] = pd.cut(X['Age'], bins=[0, 12, 18, 35, 60, 100],
                                labels=['Child', 'Teen', 'Adult', 'Middle', 'Senior'])
         # Fare per person
         X['FarePerPerson'] = X['Fare'] / X['FamilySize']
@@ -349,6 +351,6 @@ pipeline.predict(X_test)         # Usa media de train en test
 
 ## 🔗 Navegación
 
-| ⬅️ Anterior | 🏠 Semana | Siguiente ➡️ |
-|-------------|----------|--------------|
+| ⬅️ Anterior                         | 🏠 Semana                 | Siguiente ➡️                                  |
+| ----------------------------------- | ------------------------- | --------------------------------------------- |
 | [Metodología](01-metodologia-ml.md) | [Semana 18](../README.md) | [Presentación](03-presentacion-resultados.md) |

@@ -12,20 +12,20 @@ El RMS Titanic se hundió el 15 de abril de 1912 durante su viaje inaugural. De 
 
 ### Dataset
 
-| Variable    | Descripción                                 | Tipo       |
-| ----------- | ------------------------------------------- | ---------- |
-| PassengerId | ID único del pasajero                       | Numérico   |
-| Survived    | 0 = No, 1 = Sí (variable target)            | Categórico |
+| Variable    | Descripción                                  | Tipo       |
+| ----------- | -------------------------------------------- | ---------- |
+| PassengerId | ID único del pasajero                        | Numérico   |
+| Survived    | 0 = No, 1 = Sí (variable target)             | Categórico |
 | Pclass      | Clase del ticket (1 = 1ra, 2 = 2da, 3 = 3ra) | Categórico |
-| Name        | Nombre del pasajero                         | Texto      |
-| Sex         | Sexo                                        | Categórico |
-| Age         | Edad en años                                | Numérico   |
-| SibSp       | # de hermanos/esposos a bordo               | Numérico   |
-| Parch       | # de padres/hijos a bordo                   | Numérico   |
-| Ticket      | Número de ticket                            | Texto      |
-| Fare        | Tarifa del pasajero                         | Numérico   |
-| Cabin       | Número de cabina                            | Texto      |
-| Embarked    | Puerto de embarque (C/Q/S)                  | Categórico |
+| Name        | Nombre del pasajero                          | Texto      |
+| Sex         | Sexo                                         | Categórico |
+| Age         | Edad en años                                 | Numérico   |
+| SibSp       | # de hermanos/esposos a bordo                | Numérico   |
+| Parch       | # de padres/hijos a bordo                    | Numérico   |
+| Ticket      | Número de ticket                             | Texto      |
+| Fare        | Tarifa del pasajero                          | Numérico   |
+| Cabin       | Número de cabina                             | Texto      |
+| Embarked    | Puerto de embarque (C/Q/S)                   | Categórico |
 
 ---
 
@@ -84,18 +84,19 @@ titanic-competition/
 
 ## 🎯 Métricas
 
-| Nivel        | Accuracy CV | Descripción                       |
-| ------------ | ----------- | --------------------------------- |
-| 🔴 Baseline  | ~0.62       | DummyClassifier                   |
-| 🟡 Aceptable | ≥ 0.75      | Modelo básico, features básicas   |
-| 🟢 Bueno     | ≥ 0.80      | Feature engineering, tuning       |
-| 🏆 Excelente | ≥ 0.82      | Pipeline optimizado, ensemble     |
+| Nivel        | Accuracy CV | Descripción                     |
+| ------------ | ----------- | ------------------------------- |
+| 🔴 Baseline  | ~0.62       | DummyClassifier                 |
+| 🟡 Aceptable | ≥ 0.75      | Modelo básico, features básicas |
+| 🟢 Bueno     | ≥ 0.80      | Feature engineering, tuning     |
+| 🏆 Excelente | ≥ 0.82      | Pipeline optimizado, ensemble   |
 
 ---
 
 ## 📝 Instrucciones
 
 1. **Configura el entorno**:
+
    ```bash
    cd starter
    pip install -r requirements.txt

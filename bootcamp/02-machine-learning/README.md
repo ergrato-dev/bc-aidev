@@ -25,12 +25,12 @@ Al completar este módulo serás capaz de:
 | [10](week-10) | Regresión             | Lineal, polinomial, regularización (Ridge, Lasso) | ✅     |
 | [11](week-11) | Árboles de Decisión   | Decision Trees, Random Forest, Gradient Boosting  | ✅     |
 | [12](week-12) | SVM, KNN, Naive Bayes | Clasificadores clásicos, kernels, distancias      | ✅     |
-| 13            | Clustering            | K-Means, DBSCAN, clustering jerárquico            | 🔜     |
-| 14            | Reducción Dimensional | PCA, t-SNE, selección de features                 | 🔜     |
-| 15            | Feature Engineering   | Transformaciones, encoding, pipelines             | 🔜     |
-| 16            | Validación y Métricas | Cross-validation, métricas, curvas ROC            | 🔜     |
-| 17            | Optimización          | GridSearch, RandomSearch, Optuna                  | 🔜     |
-| 18            | Proyecto ML           | End-to-end ML pipeline, Kaggle challenge          | 🔜     |
+| [13](week-13) | Ensemble Methods      | Bagging, Boosting, Stacking, Voting               | ✅     |
+| [14](week-14) | Feature Engineering   | Transformaciones, encoding, pipelines             | ✅     |
+| [15](week-15) | Validación y Métricas | Cross-validation, métricas, GridSearchCV          | ✅     |
+| [16](week-16) | Clustering            | K-Means, DBSCAN, clustering jerárquico            | ✅     |
+| [17](week-17) | Reducción Dimensional | PCA, t-SNE, UMAP, visualización                   | ✅     |
+| [18](week-18) | Proyecto Final ML     | End-to-end pipeline, Titanic Competition          | ✅     |
 
 ---
 
