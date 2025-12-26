@@ -1,0 +1,150 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold" font-family="sans-serif">Funciones de Activación</text>
+  
+  <!-- Sigmoid -->
+  <g transform="translate(50, 60)">
+    <rect x="0" y="0" width="250" height="180" rx="10" fill="#1E3A5F" stroke="#2196F3" stroke-width="2"/>
+    <text x="125" y="25" text-anchor="middle" fill="#2196F3" font-size="14" font-weight="bold" font-family="sans-serif">Sigmoid (σ)</text>
+    
+    <!-- Axes -->
+    <line x1="30" y1="100" x2="220" y2="100" stroke="#546E7A" stroke-width="1"/>
+    <line x1="125" y1="45" x2="125" y2="155" stroke="#546E7A" stroke-width="1"/>
+    
+    <!-- Sigmoid curve -->
+    <path d="M35,145 Q60,145 80,140 Q100,130 115,115 Q125,100 135,85 Q150,70 170,60 Q190,55 215,55" 
+          stroke="#4FC3F7" stroke-width="3" fill="none"/>
+    
+    <!-- Labels -->
+    <text x="225" y="105" fill="#78909C" font-size="10" font-family="sans-serif">z</text>
+    <text x="130" y="45" fill="#78909C" font-size="10" font-family="sans-serif">1</text>
+    <text x="130" y="160" fill="#78909C" font-size="10" font-family="sans-serif">0</text>
+    
+    <!-- Formula -->
+    <text x="125" y="175" text-anchor="middle" fill="#B0BEC5" font-size="11" font-family="monospace">σ(z) = 1/(1+e⁻ᶻ)</text>
+  </g>
+  
+  <!-- Tanh -->
+  <g transform="translate(325, 60)">
+    <rect x="0" y="0" width="250" height="180" rx="10" fill="#1E3A5F" stroke="#9C27B0" stroke-width="2"/>
+    <text x="125" y="25" text-anchor="middle" fill="#9C27B0" font-size="14" font-weight="bold" font-family="sans-serif">Tanh</text>
+    
+    <!-- Axes -->
+    <line x1="30" y1="100" x2="220" y2="100" stroke="#546E7A" stroke-width="1"/>
+    <line x1="125" y1="45" x2="125" y2="155" stroke="#546E7A" stroke-width="1"/>
+    
+    <!-- Tanh curve -->
+    <path d="M35,145 Q55,143 75,135 Q95,120 115,105 Q125,100 135,95 Q155,80 175,65 Q195,57 215,55" 
+          stroke="#CE93D8" stroke-width="3" fill="none"/>
+    
+    <!-- Labels -->
+    <text x="225" y="105" fill="#78909C" font-size="10" font-family="sans-serif">z</text>
+    <text x="130" y="50" fill="#78909C" font-size="10" font-family="sans-serif">1</text>
+    <text x="130" y="155" fill="#78909C" font-size="10" font-family="sans-serif">-1</text>
+    
+    <!-- Formula -->
+    <text x="125" y="175" text-anchor="middle" fill="#B0BEC5" font-size="11" font-family="monospace">tanh(z) = (eᶻ-e⁻ᶻ)/(eᶻ+e⁻ᶻ)</text>
+  </g>
+  
+  <!-- ReLU -->
+  <g transform="translate(600, 60)">
+    <rect x="0" y="0" width="250" height="180" rx="10" fill="#1E3A5F" stroke="#4CAF50" stroke-width="2"/>
+    <text x="125" y="25" text-anchor="middle" fill="#4CAF50" font-size="14" font-weight="bold" font-family="sans-serif">ReLU</text>
+    
+    <!-- Axes -->
+    <line x1="30" y1="130" x2="220" y2="130" stroke="#546E7A" stroke-width="1"/>
+    <line x1="125" y1="45" x2="125" y2="155" stroke="#546E7A" stroke-width="1"/>
+    
+    <!-- ReLU curve -->
+    <line x1="35" y1="130" x2="125" y2="130" stroke="#81C784" stroke-width="3"/>
+    <line x1="125" y1="130" x2="215" y2="55" stroke="#81C784" stroke-width="3"/>
+    
+    <!-- Labels -->
+    <text x="225" y="135" fill="#78909C" font-size="10" font-family="sans-serif">z</text>
+    <text x="130" y="50" fill="#78909C" font-size="10" font-family="sans-serif">+</text>
+    <text x="130" y="160" fill="#78909C" font-size="10" font-family="sans-serif">0</text>
+    
+    <!-- Formula -->
+    <text x="125" y="175" text-anchor="middle" fill="#B0BEC5" font-size="11" font-family="monospace">ReLU(z) = max(0, z)</text>
+  </g>
+  
+  <!-- Leaky ReLU -->
+  <g transform="translate(50, 270)">
+    <rect x="0" y="0" width="250" height="180" rx="10" fill="#1E3A5F" stroke="#FF9800" stroke-width="2"/>
+    <text x="125" y="25" text-anchor="middle" fill="#FF9800" font-size="14" font-weight="bold" font-family="sans-serif">Leaky ReLU</text>
+    
+    <!-- Axes -->
+    <line x1="30" y1="120" x2="220" y2="120" stroke="#546E7A" stroke-width="1"/>
+    <line x1="125" y1="45" x2="125" y2="155" stroke="#546E7A" stroke-width="1"/>
+    
+    <!-- Leaky ReLU curve -->
+    <line x1="35" y1="135" x2="125" y2="120" stroke="#FFB74D" stroke-width="3"/>
+    <line x1="125" y1="120" x2="215" y2="55" stroke="#FFB74D" stroke-width="3"/>
+    
+    <!-- Labels -->
+    <text x="225" y="125" fill="#78909C" font-size="10" font-family="sans-serif">z</text>
+    <text x="70" y="150" fill="#FFB74D" font-size="9" font-family="sans-serif">slope=α</text>
+    
+    <!-- Formula -->
+    <text x="125" y="175" text-anchor="middle" fill="#B0BEC5" font-size="10" font-family="monospace">f(z) = z if z>0, αz otherwise</text>
+  </g>
+  
+  <!-- Softmax -->
+  <g transform="translate(325, 270)">
+    <rect x="0" y="0" width="250" height="180" rx="10" fill="#1E3A5F" stroke="#E91E63" stroke-width="2"/>
+    <text x="125" y="25" text-anchor="middle" fill="#E91E63" font-size="14" font-weight="bold" font-family="sans-serif">Softmax</text>
+    
+    <!-- Visual representation -->
+    <g transform="translate(40, 50)">
+      <!-- Input vector -->
+      <rect x="0" y="20" width="50" height="80" rx="5" fill="#263238" stroke="#546E7A"/>
+      <text x="25" y="45" text-anchor="middle" fill="#E91E63" font-size="10" font-family="sans-serif">z₁</text>
+      <text x="25" y="65" text-anchor="middle" fill="#E91E63" font-size="10" font-family="sans-serif">z₂</text>
+      <text x="25" y="85" text-anchor="middle" fill="#E91E63" font-size="10" font-family="sans-serif">z₃</text>
+      
+      <!-- Arrow -->
+      <text x="75" y="65" fill="#F48FB1" font-size="20" font-family="sans-serif">→</text>
+      
+      <!-- Output probabilities -->
+      <rect x="100" y="20" width="70" height="80" rx="5" fill="#263238" stroke="#546E7A"/>
+      <text x="135" y="45" text-anchor="middle" fill="#4CAF50" font-size="10" font-family="sans-serif">0.70</text>
+      <text x="135" y="65" text-anchor="middle" fill="#4CAF50" font-size="10" font-family="sans-serif">0.20</text>
+      <text x="135" y="85" text-anchor="middle" fill="#4CAF50" font-size="10" font-family="sans-serif">0.10</text>
+      <text x="135" y="110" text-anchor="middle" fill="#78909C" font-size="9" font-family="sans-serif">Σ = 1</text>
+    </g>
+    
+    <!-- Formula -->
+    <text x="125" y="175" text-anchor="middle" fill="#B0BEC5" font-size="10" font-family="monospace">softmax(zᵢ) = eᶻⁱ/Σeᶻʲ</text>
+  </g>
+  
+  <!-- Comparison Table -->
+  <g transform="translate(600, 270)">
+    <rect x="0" y="0" width="250" height="180" rx="10" fill="#263238" stroke="#546E7A" stroke-width="2"/>
+    <text x="125" y="25" text-anchor="middle" fill="#B0BEC5" font-size="14" font-weight="bold" font-family="sans-serif">Cuándo Usar</text>
+    
+    <g font-size="10" font-family="sans-serif">
+      <text x="15" y="50" fill="#4FC3F7">Sigmoid:</text>
+      <text x="75" y="50" fill="#78909C">Binario, salida (0,1)</text>
+      
+      <text x="15" y="75" fill="#CE93D8">Tanh:</text>
+      <text x="75" y="75" fill="#78909C">Ocultas, salida (-1,1)</text>
+      
+      <text x="15" y="100" fill="#81C784">ReLU:</text>
+      <text x="75" y="100" fill="#78909C">Default en ocultas</text>
+      
+      <text x="15" y="125" fill="#FFB74D">Leaky ReLU:</text>
+      <text x="75" y="125" fill="#78909C">Evita dying ReLU</text>
+      
+      <text x="15" y="150" fill="#F48FB1">Softmax:</text>
+      <text x="75" y="150" fill="#78909C">Multiclase, última capa</text>
+    </g>
+    
+    <line x1="15" y1="165" x2="235" y2="165" stroke="#546E7A" stroke-width="1"/>
+    <text x="125" y="178" text-anchor="middle" fill="#FFC107" font-size="9" font-family="sans-serif">⚡ ReLU es el estándar moderno</text>
+  </g>
+  
+  <!-- Bottom note -->
+  <text x="450" y="480" text-anchor="middle" fill="#78909C" font-size="12" font-family="sans-serif">Las derivadas de estas funciones son cruciales para backpropagation</text>
+</svg>

@@ -1,0 +1,111 @@
+<svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bioGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#4CAF50;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="artGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#2196F3;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="900" height="400" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold" font-family="sans-serif">Neurona Biológica vs Neurona Artificial</text>
+  
+  <!-- Biological Neuron Section -->
+  <rect x="20" y="60" width="420" height="320" rx="15" fill="url(#bioGrad)" stroke="#4CAF50" stroke-width="2"/>
+  <text x="230" y="90" text-anchor="middle" fill="#4CAF50" font-size="16" font-weight="bold" font-family="sans-serif">Neurona Biológica</text>
+  
+  <!-- Dendrites -->
+  <g stroke="#81C784" stroke-width="3" fill="none">
+    <path d="M80,180 Q100,150 130,160"/>
+    <path d="M70,200 Q95,190 130,190"/>
+    <path d="M80,230 Q100,240 130,220"/>
+    <circle cx="80" cy="180" r="6" fill="#81C784"/>
+    <circle cx="70" cy="200" r="6" fill="#81C784"/>
+    <circle cx="80" cy="230" r="6" fill="#81C784"/>
+  </g>
+  
+  <!-- Cell Body (Soma) -->
+  <ellipse cx="180" cy="200" rx="50" ry="45" fill="#4CAF50" opacity="0.8"/>
+  <ellipse cx="175" cy="195" rx="20" ry="18" fill="#2E7D32" opacity="0.6"/>
+  <text x="180" y="205" text-anchor="middle" fill="white" font-size="11" font-family="sans-serif">Soma</text>
+  
+  <!-- Axon -->
+  <path d="M230,200 Q280,200 320,200 Q360,190 400,200" stroke="#66BB6A" stroke-width="6" fill="none"/>
+  
+  <!-- Axon terminals -->
+  <g fill="#81C784">
+    <circle cx="400" cy="200" r="8"/>
+    <circle cx="390" cy="180" r="6"/>
+    <circle cx="390" cy="220" r="6"/>
+  </g>
+  
+  <!-- Labels for biological -->
+  <text x="60" y="270" fill="#A5D6A7" font-size="11" font-family="sans-serif">Dendritas</text>
+  <text x="55" y="285" fill="#A5D6A7" font-size="10" font-family="sans-serif">(Inputs)</text>
+  <text x="290" y="170" fill="#A5D6A7" font-size="11" font-family="sans-serif">Axón</text>
+  <text x="375" y="250" fill="#A5D6A7" font-size="11" font-family="sans-serif">Terminales</text>
+  <text x="380" y="265" fill="#A5D6A7" font-size="10" font-family="sans-serif">(Output)</text>
+  
+  <!-- Artificial Neuron Section -->
+  <rect x="460" y="60" width="420" height="320" rx="15" fill="url(#artGrad)" stroke="#2196F3" stroke-width="2"/>
+  <text x="670" y="90" text-anchor="middle" fill="#2196F3" font-size="16" font-weight="bold" font-family="sans-serif">Neurona Artificial</text>
+  
+  <!-- Inputs -->
+  <g fill="#64B5F6">
+    <circle cx="510" cy="140" r="20"/>
+    <circle cx="510" cy="200" r="20"/>
+    <circle cx="510" cy="260" r="20"/>
+  </g>
+  <text x="510" y="145" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">x₁</text>
+  <text x="510" y="205" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">x₂</text>
+  <text x="510" y="265" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">x₃</text>
+  
+  <!-- Weights -->
+  <line x1="530" y1="140" x2="620" y2="185" stroke="#90CAF9" stroke-width="2"/>
+  <line x1="530" y1="200" x2="620" y2="200" stroke="#90CAF9" stroke-width="2"/>
+  <line x1="530" y1="260" x2="620" y2="215" stroke="#90CAF9" stroke-width="2"/>
+  
+  <text x="560" y="155" fill="#90CAF9" font-size="11" font-family="sans-serif">w₁</text>
+  <text x="575" y="195" fill="#90CAF9" font-size="11" font-family="sans-serif">w₂</text>
+  <text x="560" y="250" fill="#90CAF9" font-size="11" font-family="sans-serif">w₃</text>
+  
+  <!-- Sum node -->
+  <circle cx="660" cy="200" r="35" fill="#1976D2"/>
+  <text x="660" y="195" text-anchor="middle" fill="white" font-size="16" font-family="sans-serif">Σ</text>
+  <text x="660" y="212" text-anchor="middle" fill="white" font-size="10" font-family="sans-serif">+b</text>
+  
+  <!-- Activation -->
+  <rect x="720" y="175" width="60" height="50" rx="8" fill="#0D47A1"/>
+  <text x="750" y="195" text-anchor="middle" fill="white" font-size="11" font-family="sans-serif">f(z)</text>
+  <text x="750" y="212" text-anchor="middle" fill="#90CAF9" font-size="9" font-family="sans-serif">activation</text>
+  
+  <!-- Connection sum to activation -->
+  <line x1="695" y1="200" x2="720" y2="200" stroke="#64B5F6" stroke-width="2"/>
+  
+  <!-- Output -->
+  <line x1="780" y1="200" x2="820" y2="200" stroke="#64B5F6" stroke-width="2"/>
+  <circle cx="840" cy="200" r="20" fill="#4CAF50"/>
+  <text x="840" y="205" text-anchor="middle" fill="white" font-size="12" font-family="sans-serif">y</text>
+  
+  <!-- Labels for artificial -->
+  <text x="510" y="300" text-anchor="middle" fill="#90CAF9" font-size="11" font-family="sans-serif">Inputs</text>
+  <text x="575" y="280" fill="#90CAF9" font-size="11" font-family="sans-serif">Pesos</text>
+  <text x="660" y="255" text-anchor="middle" fill="#90CAF9" font-size="11" font-family="sans-serif">Suma</text>
+  <text x="750" y="240" text-anchor="middle" fill="#90CAF9" font-size="11" font-family="sans-serif">Activación</text>
+  <text x="840" y="240" text-anchor="middle" fill="#90CAF9" font-size="11" font-family="sans-serif">Output</text>
+  
+  <!-- Mapping arrows -->
+  <g fill="#FFB74D" opacity="0.7">
+    <text x="445" y="160" text-anchor="middle" font-size="20" font-family="sans-serif">↔</text>
+    <text x="445" y="205" text-anchor="middle" font-size="20" font-family="sans-serif">↔</text>
+    <text x="445" y="250" text-anchor="middle" font-size="20" font-family="sans-serif">↔</text>
+  </g>
+  
+  <!-- Formula at bottom -->
+  <text x="670" y="360" text-anchor="middle" fill="#E3F2FD" font-size="14" font-family="monospace">y = f(Σ wᵢxᵢ + b) = f(w·x + b)</text>
+</svg>
