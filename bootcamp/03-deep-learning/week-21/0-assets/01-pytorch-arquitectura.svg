@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Arquitectura de PyTorch</text>
+  
+  <!-- Hardware Layer -->
+  <rect x="50" y="420" width="700" height="50" rx="8" fill="#2d2d44"/>
+  <text x="400" y="450" text-anchor="middle" fill="#888" font-family="Arial, sans-serif" font-size="14">Hardware: CPU / GPU (CUDA) / MPS (Apple Silicon)</text>
+  
+  <!-- ATen Layer (C++ Backend) -->
+  <rect x="50" y="340" width="700" height="60" rx="8" fill="#3d3d5c"/>
+  <text x="400" y="375" text-anchor="middle" fill="#EE4C2C" font-family="Arial, sans-serif" font-size="16" font-weight="bold">ATen + C10 (C++ Core)</text>
+  
+  <!-- Core Components -->
+  <g transform="translate(50, 250)">
+    <rect width="160" height="70" rx="8" fill="#4a4a6a"/>
+    <text x="80" y="25" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">torch.Tensor</text>
+    <text x="80" y="45" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">Estructura de datos</text>
+    <text x="80" y="58" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">multidimensional</text>
+  </g>
+  
+  <g transform="translate(230, 250)">
+    <rect width="160" height="70" rx="8" fill="#4a4a6a"/>
+    <text x="80" y="25" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">torch.autograd</text>
+    <text x="80" y="45" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">Diferenciación</text>
+    <text x="80" y="58" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">automática</text>
+  </g>
+  
+  <g transform="translate(410, 250)">
+    <rect width="160" height="70" rx="8" fill="#4a4a6a"/>
+    <text x="80" y="25" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">torch.nn</text>
+    <text x="80" y="45" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">Capas y módulos</text>
+    <text x="80" y="58" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">de redes</text>
+  </g>
+  
+  <g transform="translate(590, 250)">
+    <rect width="160" height="70" rx="8" fill="#4a4a6a"/>
+    <text x="80" y="25" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">torch.optim</text>
+    <text x="80" y="45" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">SGD, Adam</text>
+    <text x="80" y="58" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">Optimizadores</text>
+  </g>
+  
+  <!-- High-Level API Layer -->
+  <rect x="50" y="150" width="700" height="80" rx="8" fill="#EE4C2C" fill-opacity="0.2" stroke="#EE4C2C" stroke-width="2"/>
+  <text x="400" y="180" text-anchor="middle" fill="#EE4C2C" font-family="Arial, sans-serif" font-size="18" font-weight="bold">PyTorch Python API</text>
+  <text x="400" y="205" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12">torch | torch.nn | torch.autograd | torch.utils.data</text>
+  <text x="400" y="220" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">Define-by-Run • Dynamic Computational Graph • Eager Execution</text>
+  
+  <!-- Ecosystem Layer -->
+  <g transform="translate(50, 70)">
+    <rect width="160" height="60" rx="8" fill="#2196F3" fill-opacity="0.3" stroke="#2196F3"/>
+    <text x="80" y="25" text-anchor="middle" fill="#2196F3" font-family="Arial, sans-serif" font-size="12" font-weight="bold">torchvision</text>
+    <text x="80" y="42" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">Computer Vision</text>
+  </g>
+  
+  <g transform="translate(230, 70)">
+    <rect width="160" height="60" rx="8" fill="#4CAF50" fill-opacity="0.3" stroke="#4CAF50"/>
+    <text x="80" y="25" text-anchor="middle" fill="#4CAF50" font-family="Arial, sans-serif" font-size="12" font-weight="bold">torchaudio</text>
+    <text x="80" y="42" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">Audio Processing</text>
+  </g>
+  
+  <g transform="translate(410, 70)">
+    <rect width="160" height="60" rx="8" fill="#9C27B0" fill-opacity="0.3" stroke="#9C27B0"/>
+    <text x="80" y="25" text-anchor="middle" fill="#9C27B0" font-family="Arial, sans-serif" font-size="12" font-weight="bold">torchtext</text>
+    <text x="80" y="42" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">NLP</text>
+  </g>
+  
+  <g transform="translate(590, 70)">
+    <rect width="160" height="60" rx="8" fill="#FF9800" fill-opacity="0.3" stroke="#FF9800"/>
+    <text x="80" y="25" text-anchor="middle" fill="#FF9800" font-family="Arial, sans-serif" font-size="12" font-weight="bold">PyTorch Lightning</text>
+    <text x="80" y="42" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">High-Level Training</text>
+  </g>
+  
+  <!-- Legend -->
+  <text x="50" y="485" fill="#666" font-family="Arial, sans-serif" font-size="10">Bootcamp IA: Zero to Hero | Semana 21</text>
+</svg>

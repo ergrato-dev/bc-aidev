@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <!-- Background -->
+  <rect width="800" height="520" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="bold">Anatomía de nn.Module</text>
+  
+  <!-- Main Module Box -->
+  <rect x="50" y="60" width="700" height="400" rx="12" fill="#2d2d44" stroke="#EE4C2C" stroke-width="3"/>
+  <text x="400" y="90" text-anchor="middle" fill="#EE4C2C" font-family="Arial, sans-serif" font-size="18" font-weight="bold">class MiRed(nn.Module)</text>
+  
+  <!-- __init__ Section -->
+  <rect x="70" y="110" width="310" height="170" rx="8" fill="#3d3d5c"/>
+  <text x="225" y="135" text-anchor="middle" fill="#4CAF50" font-family="Arial, sans-serif" font-size="14" font-weight="bold">__init__(self)</text>
+  
+  <text x="85" y="160" fill="#569CD6" font-family="Consolas, monospace" font-size="11">super().__init__()</text>
+  
+  <text x="85" y="185" fill="#6A9955" font-family="Consolas, monospace" font-size="10"># Definir capas</text>
+  <text x="85" y="205" fill="#fff" font-family="Consolas, monospace" font-size="11">self.fc1 = nn.Linear(784, 256)</text>
+  <text x="85" y="225" fill="#fff" font-family="Consolas, monospace" font-size="11">self.fc2 = nn.Linear(256, 128)</text>
+  <text x="85" y="245" fill="#fff" font-family="Consolas, monospace" font-size="11">self.fc3 = nn.Linear(128, 10)</text>
+  <text x="85" y="265" fill="#fff" font-family="Consolas, monospace" font-size="11">self.dropout = nn.Dropout(0.2)</text>
+  
+  <!-- forward Section -->
+  <rect x="420" y="110" width="310" height="170" rx="8" fill="#3d3d5c"/>
+  <text x="575" y="135" text-anchor="middle" fill="#2196F3" font-family="Arial, sans-serif" font-size="14" font-weight="bold">forward(self, x)</text>
+  
+  <text x="435" y="165" fill="#6A9955" font-family="Consolas, monospace" font-size="10"># Flujo de datos</text>
+  <text x="435" y="185" fill="#fff" font-family="Consolas, monospace" font-size="11">x = F.relu(self.fc1(x))</text>
+  <text x="435" y="205" fill="#fff" font-family="Consolas, monospace" font-size="11">x = self.dropout(x)</text>
+  <text x="435" y="225" fill="#fff" font-family="Consolas, monospace" font-size="11">x = F.relu(self.fc2(x))</text>
+  <text x="435" y="245" fill="#fff" font-family="Consolas, monospace" font-size="11">x = self.dropout(x)</text>
+  <text x="435" y="265" fill="#fff" font-family="Consolas, monospace" font-size="11">return self.fc3(x)</text>
+  
+  <!-- Methods Section -->
+  <rect x="70" y="300" width="200" height="145" rx="8" fill="#2d4a3e" stroke="#4CAF50"/>
+  <text x="170" y="325" text-anchor="middle" fill="#4CAF50" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Métodos Heredados</text>
+  
+  <text x="85" y="350" fill="#aaa" font-family="Consolas, monospace" font-size="10">.parameters()</text>
+  <text x="85" y="370" fill="#aaa" font-family="Consolas, monospace" font-size="10">.to(device)</text>
+  <text x="85" y="390" fill="#aaa" font-family="Consolas, monospace" font-size="10">.train() / .eval()</text>
+  <text x="85" y="410" fill="#aaa" font-family="Consolas, monospace" font-size="10">.state_dict()</text>
+  <text x="85" y="430" fill="#aaa" font-family="Consolas, monospace" font-size="10">.load_state_dict()</text>
+  
+  <!-- Attributes Section -->
+  <rect x="300" y="300" width="200" height="145" rx="8" fill="#3d3a4a" stroke="#9C27B0"/>
+  <text x="400" y="325" text-anchor="middle" fill="#9C27B0" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Atributos</text>
+  
+  <text x="315" y="350" fill="#aaa" font-family="Consolas, monospace" font-size="10">.training</text>
+  <text x="315" y="370" fill="#aaa" font-family="Consolas, monospace" font-size="10">._modules</text>
+  <text x="315" y="390" fill="#aaa" font-family="Consolas, monospace" font-size="10">._parameters</text>
+  <text x="315" y="410" fill="#aaa" font-family="Consolas, monospace" font-size="10">._buffers</text>
+  <text x="315" y="430" fill="#aaa" font-family="Consolas, monospace" font-size="10">.named_parameters()</text>
+  
+  <!-- Usage Section -->
+  <rect x="530" y="300" width="200" height="145" rx="8" fill="#4a3d2d" stroke="#FF9800"/>
+  <text x="630" y="325" text-anchor="middle" fill="#FF9800" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Uso</text>
+  
+  <text x="545" y="355" fill="#fff" font-family="Consolas, monospace" font-size="10">model = MiRed()</text>
+  <text x="545" y="375" fill="#fff" font-family="Consolas, monospace" font-size="10">model.to(device)</text>
+  <text x="545" y="395" fill="#fff" font-family="Consolas, monospace" font-size="10">output = model(x)</text>
+  <text x="545" y="420" fill="#6A9955" font-family="Consolas, monospace" font-size="10"># Llama forward()</text>
+  <text x="545" y="440" fill="#6A9955" font-family="Consolas, monospace" font-size="10"># automáticamente</text>
+  
+  <!-- Legend -->
+  <text x="50" y="505" fill="#666" font-family="Arial, sans-serif" font-size="10">Bootcamp IA: Zero to Hero | Semana 21</text>
+</svg>

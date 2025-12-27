@@ -23,7 +23,7 @@ Al completar este módulo serás capaz de:
 | ------ | ---------------- | ---------------------------------------------------- | ------ |
 | 19     | Redes Neuronales | Perceptrón, backpropagation, funciones de activación | ✅     |
 | 20     | TensorFlow/Keras | API Sequential, capas, compilación, entrenamiento    | ✅     |
-| 21     | PyTorch          | Tensores, autograd, nn.Module, training loop         | 🔜     |
+| 21     | PyTorch          | Tensores, autograd, nn.Module, training loop         | ✅     |
 | 22     | CNNs I           | Convoluciones, pooling, arquitecturas (LeNet, VGG)   | 🔜     |
 | 23     | CNNs II          | ResNet, Transfer Learning, fine-tuning               | 🔜     |
 | 24     | RNNs             | Secuencias, LSTM, GRU, series temporales             | 🔜     |

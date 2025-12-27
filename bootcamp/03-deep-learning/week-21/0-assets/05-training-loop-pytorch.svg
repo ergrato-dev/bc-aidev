@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550">
+  <!-- Background -->
+  <rect width="800" height="550" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="bold">Training Loop en PyTorch</text>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#EE4C2C"/>
+    </marker>
+  </defs>
+  
+  <!-- Step 1: Zero Grad -->
+  <g transform="translate(50, 70)">
+    <rect width="150" height="90" rx="10" fill="#2d4a3e" stroke="#4CAF50" stroke-width="2"/>
+    <text x="75" y="25" text-anchor="middle" fill="#4CAF50" font-family="Arial, sans-serif" font-size="14" font-weight="bold">1. Zero Grad</text>
+    <text x="75" y="50" text-anchor="middle" fill="#fff" font-family="Consolas, monospace" font-size="10">optimizer</text>
+    <text x="75" y="68" text-anchor="middle" fill="#fff" font-family="Consolas, monospace" font-size="10">.zero_grad()</text>
+    <text x="75" y="85" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="9">Limpiar gradientes</text>
+  </g>
+  
+  <!-- Arrow 1-2 -->
+  <line x1="200" y1="115" x2="240" y2="115" stroke="#EE4C2C" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Step 2: Forward -->
+  <g transform="translate(250, 70)">
+    <rect width="150" height="90" rx="10" fill="#3d3a4a" stroke="#9C27B0" stroke-width="2"/>
+    <text x="75" y="25" text-anchor="middle" fill="#9C27B0" font-family="Arial, sans-serif" font-size="14" font-weight="bold">2. Forward</text>
+    <text x="75" y="50" text-anchor="middle" fill="#fff" font-family="Consolas, monospace" font-size="10">output =</text>
+    <text x="75" y="68" text-anchor="middle" fill="#fff" font-family="Consolas, monospace" font-size="10">model(data)</text>
+    <text x="75" y="85" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="9">Predicción</text>
+  </g>
+  
+  <!-- Arrow 2-3 -->
+  <line x1="400" y1="115" x2="440" y2="115" stroke="#EE4C2C" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Step 3: Loss -->
+  <g transform="translate(450, 70)">
+    <rect width="150" height="90" rx="10" fill="#2d3a4a" stroke="#2196F3" stroke-width="2"/>
+    <text x="75" y="25" text-anchor="middle" fill="#2196F3" font-family="Arial, sans-serif" font-size="14" font-weight="bold">3. Loss</text>
+    <text x="75" y="50" text-anchor="middle" fill="#fff" font-family="Consolas, monospace" font-size="10">loss =</text>
+    <text x="75" y="68" text-anchor="middle" fill="#fff" font-family="Consolas, monospace" font-size="10">criterion(out, y)</text>
+    <text x="75" y="85" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="9">Calcular error</text>
+  </g>
+  
+  <!-- Arrow 3-4 -->
+  <line x1="600" y1="115" x2="640" y2="115" stroke="#EE4C2C" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Step 4: Backward -->
+  <g transform="translate(650, 70)">
+    <rect width="120" height="90" rx="10" fill="#4a3d2d" stroke="#FF9800" stroke-width="2"/>
+    <text x="60" y="25" text-anchor="middle" fill="#FF9800" font-family="Arial, sans-serif" font-size="14" font-weight="bold">4. Backward</text>
+    <text x="60" y="55" text-anchor="middle" fill="#fff" font-family="Consolas, monospace" font-size="10">loss</text>
+    <text x="60" y="70" text-anchor="middle" fill="#fff" font-family="Consolas, monospace" font-size="10">.backward()</text>
+    <text x="60" y="85" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="9">Gradientes</text>
+  </g>
+  
+  <!-- Arrow 4-5 (down) -->
+  <path d="M710 160 L710 190 L125 190 L125 220" stroke="#EE4C2C" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Step 5: Update -->
+  <g transform="translate(50, 220)">
+    <rect width="150" height="90" rx="10" fill="#4a2d3d" stroke="#E91E63" stroke-width="2"/>
+    <text x="75" y="25" text-anchor="middle" fill="#E91E63" font-family="Arial, sans-serif" font-size="14" font-weight="bold">5. Update</text>
+    <text x="75" y="50" text-anchor="middle" fill="#fff" font-family="Consolas, monospace" font-size="10">optimizer</text>
+    <text x="75" y="68" text-anchor="middle" fill="#fff" font-family="Consolas, monospace" font-size="10">.step()</text>
+    <text x="75" y="85" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="9">Actualizar pesos</text>
+  </g>
+  
+  <!-- Arrow back to 1 (loop) -->
+  <path d="M200 265 L230 265 L230 340 L30 340 L30 115 L50 115" stroke="#EE4C2C" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <text x="130" y="358" text-anchor="middle" fill="#EE4C2C" font-family="Arial, sans-serif" font-size="11">Siguiente batch</text>
+  
+  <!-- Code Example -->
+  <rect x="280" y="200" width="490" height="200" rx="8" fill="#2d2d44"/>
+  <text x="300" y="225" fill="#6A9955" font-family="Consolas, monospace" font-size="11"># Training loop completo</text>
+  
+  <text x="300" y="250" fill="#C586C0" font-family="Consolas, monospace" font-size="11">for</text>
+  <text x="330" y="250" fill="#fff" font-family="Consolas, monospace" font-size="11">epoch</text>
+  <text x="375" y="250" fill="#C586C0" font-family="Consolas, monospace" font-size="11">in</text>
+  <text x="400" y="250" fill="#fff" font-family="Consolas, monospace" font-size="11">range(epochs):</text>
+  
+  <text x="320" y="272" fill="#C586C0" font-family="Consolas, monospace" font-size="11">for</text>
+  <text x="350" y="272" fill="#fff" font-family="Consolas, monospace" font-size="11">data, target</text>
+  <text x="445" y="272" fill="#C586C0" font-family="Consolas, monospace" font-size="11">in</text>
+  <text x="465" y="272" fill="#fff" font-family="Consolas, monospace" font-size="11">train_loader:</text>
+  
+  <text x="340" y="294" fill="#fff" font-family="Consolas, monospace" font-size="11">optimizer.zero_grad()</text>
+  <text x="540" y="294" fill="#4CAF50" font-family="Consolas, monospace" font-size="10"># 1</text>
+  
+  <text x="340" y="316" fill="#fff" font-family="Consolas, monospace" font-size="11">output = model(data)</text>
+  <text x="540" y="316" fill="#9C27B0" font-family="Consolas, monospace" font-size="10"># 2</text>
+  
+  <text x="340" y="338" fill="#fff" font-family="Consolas, monospace" font-size="11">loss = criterion(output, target)</text>
+  <text x="590" y="338" fill="#2196F3" font-family="Consolas, monospace" font-size="10"># 3</text>
+  
+  <text x="340" y="360" fill="#fff" font-family="Consolas, monospace" font-size="11">loss.backward()</text>
+  <text x="480" y="360" fill="#FF9800" font-family="Consolas, monospace" font-size="10"># 4</text>
+  
+  <text x="340" y="382" fill="#fff" font-family="Consolas, monospace" font-size="11">optimizer.step()</text>
+  <text x="490" y="382" fill="#E91E63" font-family="Consolas, monospace" font-size="10"># 5</text>
+  
+  <!-- Key Points -->
+  <rect x="50" y="420" width="700" height="90" rx="8" fill="#2d2d44"/>
+  <text x="400" y="445" text-anchor="middle" fill="#EE4C2C" font-family="Arial, sans-serif" font-size="14" font-weight="bold">⚠️ Puntos Clave</text>
+  
+  <text x="70" y="470" fill="#fff" font-family="Arial, sans-serif" font-size="11">•</text>
+  <text x="85" y="470" fill="#4CAF50" font-family="Consolas, monospace" font-size="11">zero_grad()</text>
+  <text x="175" y="470" fill="#aaa" font-family="Arial, sans-serif" font-size="11">SIEMPRE antes de backward (gradientes se acumulan)</text>
+  
+  <text x="70" y="490" fill="#fff" font-family="Arial, sans-serif" font-size="11">•</text>
+  <text x="85" y="490" fill="#FF9800" font-family="Consolas, monospace" font-size="11">backward()</text>
+  <text x="170" y="490" fill="#aaa" font-family="Arial, sans-serif" font-size="11">calcula gradientes,</text>
+  <text x="320" y="490" fill="#E91E63" font-family="Consolas, monospace" font-size="11">step()</text>
+  <text x="360" y="490" fill="#aaa" font-family="Arial, sans-serif" font-size="11">actualiza parámetros</text>
+  
+  <!-- Legend -->
+  <text x="50" y="535" fill="#666" font-family="Arial, sans-serif" font-size="10">Bootcamp IA: Zero to Hero | Semana 21</text>
+</svg>

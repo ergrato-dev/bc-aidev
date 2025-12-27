@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="bold">Operaciones con Tensores</text>
+  
+  <!-- Creation Section -->
+  <g transform="translate(30, 60)">
+    <rect width="230" height="150" rx="8" fill="#2d4a3e" stroke="#4CAF50" stroke-width="2"/>
+    <text x="115" y="25" text-anchor="middle" fill="#4CAF50" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Creación</text>
+    
+    <text x="15" y="50" fill="#aaa" font-family="Consolas, monospace" font-size="11">torch.tensor([1,2,3])</text>
+    <text x="15" y="70" fill="#aaa" font-family="Consolas, monospace" font-size="11">torch.zeros(3, 4)</text>
+    <text x="15" y="90" fill="#aaa" font-family="Consolas, monospace" font-size="11">torch.ones(2, 3)</text>
+    <text x="15" y="110" fill="#aaa" font-family="Consolas, monospace" font-size="11">torch.rand(3, 3)</text>
+    <text x="15" y="130" fill="#aaa" font-family="Consolas, monospace" font-size="11">torch.arange(0, 10)</text>
+  </g>
+  
+  <!-- Math Operations Section -->
+  <g transform="translate(285, 60)">
+    <rect width="230" height="150" rx="8" fill="#3d3a4a" stroke="#9C27B0" stroke-width="2"/>
+    <text x="115" y="25" text-anchor="middle" fill="#9C27B0" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Matemáticas</text>
+    
+    <text x="15" y="50" fill="#aaa" font-family="Consolas, monospace" font-size="11">a + b, a - b</text>
+    <text x="15" y="70" fill="#aaa" font-family="Consolas, monospace" font-size="11">a * b, a / b</text>
+    <text x="15" y="90" fill="#aaa" font-family="Consolas, monospace" font-size="11">a @ b (matmul)</text>
+    <text x="15" y="110" fill="#aaa" font-family="Consolas, monospace" font-size="11">torch.sum(), .mean()</text>
+    <text x="15" y="130" fill="#aaa" font-family="Consolas, monospace" font-size="11">torch.max(), .min()</text>
+  </g>
+  
+  <!-- Shape Operations Section -->
+  <g transform="translate(540, 60)">
+    <rect width="230" height="150" rx="8" fill="#2d3a4a" stroke="#2196F3" stroke-width="2"/>
+    <text x="115" y="25" text-anchor="middle" fill="#2196F3" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Forma</text>
+    
+    <text x="15" y="50" fill="#aaa" font-family="Consolas, monospace" font-size="11">.reshape(3, 4)</text>
+    <text x="15" y="70" fill="#aaa" font-family="Consolas, monospace" font-size="11">.view(2, -1)</text>
+    <text x="15" y="90" fill="#aaa" font-family="Consolas, monospace" font-size="11">.squeeze()</text>
+    <text x="15" y="110" fill="#aaa" font-family="Consolas, monospace" font-size="11">.unsqueeze(0)</text>
+    <text x="15" y="130" fill="#aaa" font-family="Consolas, monospace" font-size="11">.permute(2, 0, 1)</text>
+  </g>
+  
+  <!-- Indexing Section -->
+  <g transform="translate(30, 230)">
+    <rect width="230" height="150" rx="8" fill="#4a3d2d" stroke="#FF9800" stroke-width="2"/>
+    <text x="115" y="25" text-anchor="middle" fill="#FF9800" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Indexing</text>
+    
+    <text x="15" y="50" fill="#aaa" font-family="Consolas, monospace" font-size="11">t[0], t[-1]</text>
+    <text x="15" y="70" fill="#aaa" font-family="Consolas, monospace" font-size="11">t[1:3], t[::2]</text>
+    <text x="15" y="90" fill="#aaa" font-family="Consolas, monospace" font-size="11">t[:, 0]</text>
+    <text x="15" y="110" fill="#aaa" font-family="Consolas, monospace" font-size="11">t[mask]</text>
+    <text x="15" y="130" fill="#aaa" font-family="Consolas, monospace" font-size="11">t[indices]</text>
+  </g>
+  
+  <!-- Combining Section -->
+  <g transform="translate(285, 230)">
+    <rect width="230" height="150" rx="8" fill="#4a2d3d" stroke="#E91E63" stroke-width="2"/>
+    <text x="115" y="25" text-anchor="middle" fill="#E91E63" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Combinar</text>
+    
+    <text x="15" y="50" fill="#aaa" font-family="Consolas, monospace" font-size="11">torch.cat([a,b], dim=0)</text>
+    <text x="15" y="70" fill="#aaa" font-family="Consolas, monospace" font-size="11">torch.stack([a,b])</text>
+    <text x="15" y="90" fill="#aaa" font-family="Consolas, monospace" font-size="11">torch.split(t, 2)</text>
+    <text x="15" y="110" fill="#aaa" font-family="Consolas, monospace" font-size="11">torch.chunk(t, 3)</text>
+    <text x="15" y="130" fill="#aaa" font-family="Consolas, monospace" font-size="11">a.expand(3, 4)</text>
+  </g>
+  
+  <!-- Device Section -->
+  <g transform="translate(540, 230)">
+    <rect width="230" height="150" rx="8" fill="#4a4a2d" stroke="#CDDC39" stroke-width="2"/>
+    <text x="115" y="25" text-anchor="middle" fill="#CDDC39" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Dispositivo</text>
+    
+    <text x="15" y="50" fill="#aaa" font-family="Consolas, monospace" font-size="11">.to('cuda')</text>
+    <text x="15" y="70" fill="#aaa" font-family="Consolas, monospace" font-size="11">.to('cpu')</text>
+    <text x="15" y="90" fill="#aaa" font-family="Consolas, monospace" font-size="11">.cuda()</text>
+    <text x="15" y="110" fill="#aaa" font-family="Consolas, monospace" font-size="11">.cpu()</text>
+    <text x="15" y="130" fill="#aaa" font-family="Consolas, monospace" font-size="11">.device</text>
+  </g>
+  
+  <!-- Legend -->
+  <text x="50" y="435" fill="#666" font-family="Arial, sans-serif" font-size="10">Bootcamp IA: Zero to Hero | Semana 21</text>
+</svg>
