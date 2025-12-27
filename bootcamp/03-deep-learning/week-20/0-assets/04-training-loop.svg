@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <!-- Background -->
+  <rect width="900" height="400" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Training Loop en Keras</text>
+  
+  <!-- Main flow -->
+  <g transform="translate(50, 70)">
+    <!-- Data -->
+    <rect x="0" y="80" width="100" height="60" rx="8" fill="#9C27B0" fill-opacity="0.3" stroke="#9C27B0" stroke-width="2"/>
+    <text x="50" y="105" text-anchor="middle" fill="#9C27B0" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Data</text>
+    <text x="50" y="122" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">(X, y)</text>
+    
+    <!-- Arrow -->
+    <line x1="100" y1="110" x2="140" y2="110" stroke="#666" stroke-width="2"/>
+    <polygon points="145,110 135,105 135,115" fill="#666"/>
+    
+    <!-- Model -->
+    <rect x="150" y="60" width="120" height="100" rx="8" fill="#2196F3" fill-opacity="0.3" stroke="#2196F3" stroke-width="2"/>
+    <text x="210" y="90" text-anchor="middle" fill="#2196F3" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Model</text>
+    <text x="210" y="110" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">Forward</text>
+    <text x="210" y="125" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">Pass</text>
+    <text x="210" y="145" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="10">ŷ = f(X, W)</text>
+    
+    <!-- Arrow -->
+    <line x1="270" y1="110" x2="310" y2="110" stroke="#666" stroke-width="2"/>
+    <polygon points="315,110 305,105 305,115" fill="#666"/>
+    
+    <!-- Loss -->
+    <rect x="320" y="80" width="100" height="60" rx="8" fill="#FF5722" fill-opacity="0.3" stroke="#FF5722" stroke-width="2"/>
+    <text x="370" y="105" text-anchor="middle" fill="#FF5722" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Loss</text>
+    <text x="370" y="122" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">L(y, ŷ)</text>
+    
+    <!-- Arrow -->
+    <line x1="420" y1="110" x2="460" y2="110" stroke="#666" stroke-width="2"/>
+    <polygon points="465,110 455,105 455,115" fill="#666"/>
+    
+    <!-- Gradient -->
+    <rect x="470" y="80" width="100" height="60" rx="8" fill="#FF9800" fill-opacity="0.3" stroke="#FF9800" stroke-width="2"/>
+    <text x="520" y="100" text-anchor="middle" fill="#FF9800" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Gradient</text>
+    <text x="520" y="118" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">∂L/∂W</text>
+    <text x="520" y="132" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="9">Backprop</text>
+    
+    <!-- Arrow -->
+    <line x1="570" y1="110" x2="610" y2="110" stroke="#666" stroke-width="2"/>
+    <polygon points="615,110 605,105 605,115" fill="#666"/>
+    
+    <!-- Optimizer -->
+    <rect x="620" y="80" width="120" height="60" rx="8" fill="#4CAF50" fill-opacity="0.3" stroke="#4CAF50" stroke-width="2"/>
+    <text x="680" y="100" text-anchor="middle" fill="#4CAF50" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Optimizer</text>
+    <text x="680" y="118" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">W = W - η∇L</text>
+    <text x="680" y="132" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="9">Adam, SGD</text>
+    
+    <!-- Feedback loop -->
+    <path d="M680 140 L680 200 L210 200 L210 160" stroke="#666" stroke-width="2" fill="none"/>
+    <polygon points="210,155 205,165 215,165" fill="#666"/>
+    <text x="445" y="215" text-anchor="middle" fill="#888" font-family="Arial, sans-serif" font-size="11">Update weights → Next batch</text>
+  </g>
+  
+  <!-- Epoch indicator -->
+  <g transform="translate(100, 300)">
+    <text x="0" y="0" fill="#fff" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Epoch 1</text>
+    <rect x="70" y="-12" width="150" height="16" rx="4" fill="#2d2d44"/>
+    <rect x="70" y="-12" width="50" height="16" rx="4" fill="#4CAF50"/>
+    <text x="230" y="0" fill="#aaa" font-family="Arial, sans-serif" font-size="11">Batch 1/100</text>
+  </g>
+  
+  <!-- Metrics -->
+  <g transform="translate(450, 290)">
+    <rect x="0" y="0" width="350" height="70" rx="8" fill="#2d2d44"/>
+    <text x="175" y="20" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Metrics (monitored by Callbacks)</text>
+    <text x="25" y="45" fill="#4CAF50" font-family="Arial, sans-serif" font-size="11">loss: 0.234</text>
+    <text x="120" y="45" fill="#4CAF50" font-family="Arial, sans-serif" font-size="11">accuracy: 0.92</text>
+    <text x="25" y="60" fill="#2196F3" font-family="Arial, sans-serif" font-size="11">val_loss: 0.312</text>
+    <text x="120" y="60" fill="#2196F3" font-family="Arial, sans-serif" font-size="11">val_accuracy: 0.89</text>
+    <text x="240" y="52" fill="#FF9800" font-family="Arial, sans-serif" font-size="11">lr: 0.001</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="450" y="385" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="10">model.fit(X, y, epochs=10, batch_size=32) ejecuta este loop automáticamente</text>
+</svg>

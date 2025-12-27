@@ -23,7 +23,7 @@ Construirás una red neuronal que pueda:
 ```
 Input Layer    Hidden Layer    Output Layer
     (2)            (4)             (1)
-    
+
    [x₁]──┐     ┌──[h₁]──┐
          ├─────┤        ├─────[ŷ]
    [x₂]──┘     └──[h₄]──┘
@@ -137,15 +137,15 @@ X, y = make_moons(n_samples=200, noise=0.2)
 
 ## ✅ Criterios de Evaluación
 
-| Criterio | Puntos |
-|----------|--------|
-| Forward propagation correcto | 20 |
-| Backpropagation correcto | 25 |
-| Loop de entrenamiento funcional | 15 |
-| XOR resuelto (100% accuracy) | 20 |
-| Visualizaciones | 10 |
-| Código limpio y documentado | 10 |
-| **Total** | **100** |
+| Criterio                        | Puntos  |
+| ------------------------------- | ------- |
+| Forward propagation correcto    | 20      |
+| Backpropagation correcto        | 25      |
+| Loop de entrenamiento funcional | 15      |
+| XOR resuelto (100% accuracy)    | 20      |
+| Visualizaciones                 | 10      |
+| Código limpio y documentado     | 10      |
+| **Total**                       | **100** |
 
 ---
 

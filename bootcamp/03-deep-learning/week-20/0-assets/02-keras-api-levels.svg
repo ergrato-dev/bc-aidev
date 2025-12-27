@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="bold">Niveles de API en Keras</text>
+  
+  <!-- Pyramid Structure -->
+  <!-- Level 3 - Highest (Sequential) -->
+  <polygon points="400,80 550,170 250,170" fill="#4CAF50" fill-opacity="0.3" stroke="#4CAF50" stroke-width="2"/>
+  <text x="400" y="130" text-anchor="middle" fill="#4CAF50" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Sequential</text>
+  <text x="400" y="150" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="11">Más simple</text>
+  
+  <!-- Level 2 - Medium (Functional) -->
+  <polygon points="250,170 550,170 620,260 180,260" fill="#2196F3" fill-opacity="0.3" stroke="#2196F3" stroke-width="2"/>
+  <text x="400" y="205" text-anchor="middle" fill="#2196F3" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Functional API</text>
+  <text x="400" y="225" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="11">Grafos complejos</text>
+  <text x="400" y="245" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="11">Múltiples I/O</text>
+  
+  <!-- Level 1 - Lowest (Subclassing) -->
+  <polygon points="180,260 620,260 700,350 100,350" fill="#FF6F00" fill-opacity="0.3" stroke="#FF6F00" stroke-width="2"/>
+  <text x="400" y="290" text-anchor="middle" fill="#FF6F00" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Model Subclassing</text>
+  <text x="400" y="310" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="11">Control total</text>
+  <text x="400" y="330" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="11">Forward pass personalizado</text>
+  
+  <!-- Side labels -->
+  <text x="720" y="125" fill="#4CAF50" font-family="Arial, sans-serif" font-size="11">↑ Facilidad</text>
+  <text x="720" y="320" fill="#FF6F00" font-family="Arial, sans-serif" font-size="11">↓ Flexibilidad</text>
+  
+  <!-- Code examples -->
+  <g transform="translate(30, 360)">
+    <rect width="230" height="75" rx="6" fill="#2d2d44"/>
+    <text x="10" y="18" fill="#4CAF50" font-family="monospace" font-size="10">Sequential([</text>
+    <text x="10" y="32" fill="#aaa" font-family="monospace" font-size="10">  Dense(64, 'relu'),</text>
+    <text x="10" y="46" fill="#aaa" font-family="monospace" font-size="10">  Dense(10, 'softmax')</text>
+    <text x="10" y="60" fill="#4CAF50" font-family="monospace" font-size="10">])</text>
+  </g>
+  
+  <g transform="translate(285, 360)">
+    <rect width="230" height="75" rx="6" fill="#2d2d44"/>
+    <text x="10" y="18" fill="#2196F3" font-family="monospace" font-size="10">x = Dense(64)(inputs)</text>
+    <text x="10" y="32" fill="#2196F3" font-family="monospace" font-size="10">out = Dense(10)(x)</text>
+    <text x="10" y="46" fill="#aaa" font-family="monospace" font-size="10">Model(inputs, out)</text>
+  </g>
+  
+  <g transform="translate(540, 360)">
+    <rect width="230" height="75" rx="6" fill="#2d2d44"/>
+    <text x="10" y="18" fill="#FF6F00" font-family="monospace" font-size="10">class MyModel(Model):</text>
+    <text x="10" y="32" fill="#aaa" font-family="monospace" font-size="10">  def call(self, x):</text>
+    <text x="10" y="46" fill="#aaa" font-family="monospace" font-size="10">    return self.dense(x)</text>
+  </g>
+</svg>

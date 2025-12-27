@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <!-- Background -->
+  <rect width="900" height="400" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Sequential vs Functional API</text>
+  
+  <!-- Sequential Side -->
+  <g transform="translate(50, 60)">
+    <text x="150" y="20" text-anchor="middle" fill="#4CAF50" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Sequential API</text>
+    
+    <!-- Linear flow -->
+    <rect x="80" y="50" width="140" height="40" rx="6" fill="#4CAF50" fill-opacity="0.3" stroke="#4CAF50"/>
+    <text x="150" y="75" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12">Input (784)</text>
+    
+    <line x1="150" y1="90" x2="150" y2="110" stroke="#666" stroke-width="2"/>
+    <polygon points="150,115 145,105 155,105" fill="#666"/>
+    
+    <rect x="80" y="115" width="140" height="40" rx="6" fill="#4CAF50" fill-opacity="0.3" stroke="#4CAF50"/>
+    <text x="150" y="140" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12">Dense(64)</text>
+    
+    <line x1="150" y1="155" x2="150" y2="175" stroke="#666" stroke-width="2"/>
+    <polygon points="150,180 145,170 155,170" fill="#666"/>
+    
+    <rect x="80" y="180" width="140" height="40" rx="6" fill="#4CAF50" fill-opacity="0.3" stroke="#4CAF50"/>
+    <text x="150" y="205" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12">Dense(32)</text>
+    
+    <line x1="150" y1="220" x2="150" y2="240" stroke="#666" stroke-width="2"/>
+    <polygon points="150,245 145,235 155,235" fill="#666"/>
+    
+    <rect x="80" y="245" width="140" height="40" rx="6" fill="#4CAF50" fill-opacity="0.3" stroke="#4CAF50"/>
+    <text x="150" y="270" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12">Output (10)</text>
+    
+    <!-- Check marks -->
+    <text x="250" y="75" fill="#4CAF50" font-family="Arial, sans-serif" font-size="11">✓ Simple</text>
+    <text x="250" y="140" fill="#4CAF50" font-family="Arial, sans-serif" font-size="11">✓ Lineal</text>
+    <text x="250" y="205" fill="#4CAF50" font-family="Arial, sans-serif" font-size="11">✓ Una E/S</text>
+  </g>
+  
+  <!-- Divider -->
+  <line x1="450" y1="60" x2="450" y2="360" stroke="#444" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Functional Side -->
+  <g transform="translate(500, 60)">
+    <text x="175" y="20" text-anchor="middle" fill="#2196F3" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Functional API</text>
+    
+    <!-- Multi-input -->
+    <rect x="30" y="50" width="100" height="35" rx="6" fill="#2196F3" fill-opacity="0.3" stroke="#2196F3"/>
+    <text x="80" y="72" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="11">Input A</text>
+    
+    <rect x="220" y="50" width="100" height="35" rx="6" fill="#2196F3" fill-opacity="0.3" stroke="#2196F3"/>
+    <text x="270" y="72" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="11">Input B</text>
+    
+    <!-- Dense layers -->
+    <rect x="30" y="105" width="100" height="35" rx="6" fill="#2196F3" fill-opacity="0.3" stroke="#2196F3"/>
+    <text x="80" y="127" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="11">Dense(64)</text>
+    
+    <rect x="220" y="105" width="100" height="35" rx="6" fill="#2196F3" fill-opacity="0.3" stroke="#2196F3"/>
+    <text x="270" y="127" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="11">Dense(64)</text>
+    
+    <!-- Arrows to merge -->
+    <line x1="80" y1="85" x2="80" y2="105" stroke="#666" stroke-width="2"/>
+    <line x1="270" y1="85" x2="270" y2="105" stroke="#666" stroke-width="2"/>
+    
+    <line x1="80" y1="140" x2="80" y2="155" stroke="#666" stroke-width="2"/>
+    <line x1="80" y1="155" x2="175" y2="155" stroke="#666" stroke-width="2"/>
+    <line x1="270" y1="140" x2="270" y2="155" stroke="#666" stroke-width="2"/>
+    <line x1="270" y1="155" x2="175" y2="155" stroke="#666" stroke-width="2"/>
+    <line x1="175" y1="155" x2="175" y2="165" stroke="#666" stroke-width="2"/>
+    
+    <!-- Concatenate -->
+    <rect x="125" y="165" width="100" height="35" rx="6" fill="#FF9800" fill-opacity="0.3" stroke="#FF9800"/>
+    <text x="175" y="187" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="11">Concatenate</text>
+    
+    <!-- Shared layer with skip connection -->
+    <rect x="125" y="220" width="100" height="35" rx="6" fill="#2196F3" fill-opacity="0.3" stroke="#2196F3"/>
+    <text x="175" y="242" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="11">Dense(32)</text>
+    
+    <line x1="175" y1="200" x2="175" y2="220" stroke="#666" stroke-width="2"/>
+    
+    <!-- Skip connection -->
+    <path d="M225 182 Q280 182 280 250 Q280 282 225 282" stroke="#9C27B0" stroke-width="2" fill="none" stroke-dasharray="4,2"/>
+    <text x="300" y="235" fill="#9C27B0" font-family="Arial, sans-serif" font-size="10">Skip</text>
+    
+    <!-- Multi-output -->
+    <line x1="175" y1="255" x2="175" y2="270" stroke="#666" stroke-width="2"/>
+    <line x1="175" y1="270" x2="80" y2="270" stroke="#666" stroke-width="2"/>
+    <line x1="175" y1="270" x2="270" y2="270" stroke="#666" stroke-width="2"/>
+    <line x1="80" y1="270" x2="80" y2="280" stroke="#666" stroke-width="2"/>
+    <line x1="270" y1="270" x2="270" y2="280" stroke="#666" stroke-width="2"/>
+    
+    <rect x="30" y="280" width="100" height="35" rx="6" fill="#4CAF50" fill-opacity="0.3" stroke="#4CAF50"/>
+    <text x="80" y="302" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="11">Output 1</text>
+    
+    <rect x="220" y="280" width="100" height="35" rx="6" fill="#4CAF50" fill-opacity="0.3" stroke="#4CAF50"/>
+    <text x="270" y="302" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="11">Output 2</text>
+    
+    <!-- Check marks -->
+    <text x="345" y="72" fill="#2196F3" font-family="Arial, sans-serif" font-size="11">✓ Multi-input</text>
+    <text x="345" y="187" fill="#FF9800" font-family="Arial, sans-serif" font-size="11">✓ Merge layers</text>
+    <text x="345" y="302" fill="#4CAF50" font-family="Arial, sans-serif" font-size="11">✓ Multi-output</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="450" y="385" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="11">Sequential: Modelos lineales simples | Functional: Arquitecturas complejas y flexibles</text>
+</svg>

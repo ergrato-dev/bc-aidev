@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450">
+  <!-- Background -->
+  <rect width="900" height="450" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Callbacks en Keras - Workflow</text>
+  
+  <!-- Timeline -->
+  <line x1="100" y1="80" x2="800" y2="80" stroke="#444" stroke-width="3"/>
+  
+  <!-- Epoch markers -->
+  <g fill="#666" font-family="Arial, sans-serif" font-size="10">
+    <circle cx="150" cy="80" r="8" fill="#2196F3"/>
+    <text x="150" y="100" text-anchor="middle">Epoch 1</text>
+    
+    <circle cx="300" cy="80" r="8" fill="#2196F3"/>
+    <text x="300" y="100" text-anchor="middle">Epoch 5</text>
+    
+    <circle cx="450" cy="80" r="8" fill="#2196F3"/>
+    <text x="450" y="100" text-anchor="middle">Epoch 10</text>
+    
+    <circle cx="600" cy="80" r="8" fill="#FF5722"/>
+    <text x="600" y="100" text-anchor="middle">Epoch 15</text>
+    
+    <circle cx="750" cy="80" r="8" fill="#666"/>
+    <text x="750" y="100" text-anchor="middle" fill="#666">Epoch 20</text>
+  </g>
+  
+  <!-- Callbacks -->
+  <!-- EarlyStopping -->
+  <g transform="translate(50, 130)">
+    <rect width="200" height="80" rx="8" fill="#FF5722" fill-opacity="0.2" stroke="#FF5722" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#FF5722" font-family="Arial, sans-serif" font-size="13" font-weight="bold">EarlyStopping</text>
+    <text x="100" y="45" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">monitor='val_loss'</text>
+    <text x="100" y="60" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">patience=5</text>
+    <text x="100" y="75" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="10">→ Detiene en epoch 15</text>
+  </g>
+  
+  <!-- Arrow from EarlyStopping to epoch 15 -->
+  <path d="M250 170 Q425 170 550 100" stroke="#FF5722" stroke-width="2" fill="none" stroke-dasharray="4,2"/>
+  <text x="415" y="155" fill="#FF5722" font-family="Arial, sans-serif" font-size="9">¡STOP!</text>
+  
+  <!-- ModelCheckpoint -->
+  <g transform="translate(280, 130)">
+    <rect width="200" height="80" rx="8" fill="#4CAF50" fill-opacity="0.2" stroke="#4CAF50" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#4CAF50" font-family="Arial, sans-serif" font-size="13" font-weight="bold">ModelCheckpoint</text>
+    <text x="100" y="45" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">monitor='val_accuracy'</text>
+    <text x="100" y="60" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">save_best_only=True</text>
+    <text x="100" y="75" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="10">→ Guarda mejor modelo</text>
+  </g>
+  
+  <!-- Save indicators -->
+  <g fill="#4CAF50" font-family="Arial, sans-serif" font-size="9">
+    <text x="300" y="118">💾</text>
+    <text x="450" y="118">💾</text>
+  </g>
+  
+  <!-- ReduceLROnPlateau -->
+  <g transform="translate(510, 130)">
+    <rect width="200" height="80" rx="8" fill="#FF9800" fill-opacity="0.2" stroke="#FF9800" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#FF9800" font-family="Arial, sans-serif" font-size="13" font-weight="bold">ReduceLROnPlateau</text>
+    <text x="100" y="45" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">factor=0.5, patience=3</text>
+    <text x="100" y="60" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">min_lr=1e-6</text>
+    <text x="100" y="75" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="10">→ Reduce LR si estanca</text>
+  </g>
+  
+  <!-- LR reduction indicator -->
+  <path d="M610 220 L610 100" stroke="#FF9800" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="625" y="120" fill="#FF9800" font-family="Arial, sans-serif" font-size="9">LR: 0.001→0.0005</text>
+  
+  <!-- TensorBoard -->
+  <g transform="translate(740, 130)">
+    <rect width="140" height="80" rx="8" fill="#E91E63" fill-opacity="0.2" stroke="#E91E63" stroke-width="2"/>
+    <text x="70" y="25" text-anchor="middle" fill="#E91E63" font-family="Arial, sans-serif" font-size="13" font-weight="bold">TensorBoard</text>
+    <text x="70" y="50" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">Logging</text>
+    <text x="70" y="65" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">en cada época</text>
+  </g>
+  
+  <!-- Metrics Graph -->
+  <g transform="translate(100, 250)">
+    <rect width="700" height="150" rx="8" fill="#2d2d44"/>
+    <text x="350" y="25" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Training Progress</text>
+    
+    <!-- Axes -->
+    <line x1="50" y1="120" x2="650" y2="120" stroke="#555" stroke-width="1"/>
+    <line x1="50" y1="40" x2="50" y2="120" stroke="#555" stroke-width="1"/>
+    
+    <!-- Train loss curve -->
+    <path d="M50 100 Q150 80 200 70 Q300 55 400 50 Q500 48 550 47" 
+          stroke="#2196F3" stroke-width="2" fill="none"/>
+    
+    <!-- Val loss curve -->
+    <path d="M50 95 Q150 75 200 68 Q300 60 400 58 Q500 62 550 70" 
+          stroke="#FF5722" stroke-width="2" fill="none"/>
+    
+    <!-- Best point -->
+    <circle cx="400" cy="58" r="6" fill="#4CAF50"/>
+    <text x="400" y="52" text-anchor="middle" fill="#4CAF50" font-family="Arial, sans-serif" font-size="9">Best</text>
+    
+    <!-- Stop point -->
+    <circle cx="550" cy="70" r="6" fill="#FF5722"/>
+    <text x="565" y="75" fill="#FF5722" font-family="Arial, sans-serif" font-size="9">Stop</text>
+    
+    <!-- Legend -->
+    <line x1="580" y1="45" x2="610" y2="45" stroke="#2196F3" stroke-width="2"/>
+    <text x="615" y="48" fill="#2196F3" font-family="Arial, sans-serif" font-size="10">train_loss</text>
+    <line x1="580" y1="60" x2="610" y2="60" stroke="#FF5722" stroke-width="2"/>
+    <text x="615" y="63" fill="#FF5722" font-family="Arial, sans-serif" font-size="10">val_loss</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="450" y="430" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="10">Callbacks permiten controlar, monitorear y modificar el proceso de entrenamiento automáticamente</text>
+</svg>

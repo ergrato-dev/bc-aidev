@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="tfGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6F00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8F00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Arquitectura de TensorFlow</text>
+  
+  <!-- Hardware Layer -->
+  <rect x="50" y="420" width="700" height="50" rx="8" fill="#2d2d44"/>
+  <text x="400" y="450" text-anchor="middle" fill="#888" font-family="Arial, sans-serif" font-size="14">Hardware: CPU / GPU / TPU</text>
+  
+  <!-- TF Core Layer -->
+  <rect x="50" y="340" width="700" height="60" rx="8" fill="#3d3d5c"/>
+  <text x="400" y="375" text-anchor="middle" fill="#FF6F00" font-family="Arial, sans-serif" font-size="16" font-weight="bold">TensorFlow Core (C++)</text>
+  
+  <!-- Operations boxes -->
+  <g transform="translate(50, 250)">
+    <rect width="160" height="70" rx="8" fill="#4a4a6a"/>
+    <text x="80" y="25" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Tensores</text>
+    <text x="80" y="45" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">tf.Tensor</text>
+    <text x="80" y="58" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">tf.Variable</text>
+  </g>
+  
+  <g transform="translate(230, 250)">
+    <rect width="160" height="70" rx="8" fill="#4a4a6a"/>
+    <text x="80" y="25" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Operaciones</text>
+    <text x="80" y="45" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">tf.matmul, tf.add</text>
+    <text x="80" y="58" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">tf.nn.relu</text>
+  </g>
+  
+  <g transform="translate(410, 250)">
+    <rect width="160" height="70" rx="8" fill="#4a4a6a"/>
+    <text x="80" y="25" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Gradientes</text>
+    <text x="80" y="45" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">tf.GradientTape</text>
+    <text x="80" y="58" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">Autodiff</text>
+  </g>
+  
+  <g transform="translate(590, 250)">
+    <rect width="160" height="70" rx="8" fill="#4a4a6a"/>
+    <text x="80" y="25" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">tf.data</text>
+    <text x="80" y="45" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">Dataset API</text>
+    <text x="80" y="58" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">Pipelines</text>
+  </g>
+  
+  <!-- Keras Layer - Highlighted -->
+  <rect x="50" y="150" width="700" height="80" rx="8" fill="#FF6F00" fill-opacity="0.2" stroke="#FF6F00" stroke-width="2"/>
+  <text x="400" y="180" text-anchor="middle" fill="#FF6F00" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Keras (High-Level API)</text>
+  <text x="400" y="205" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12">Sequential | Functional | Model Subclassing</text>
+  <text x="400" y="220" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">layers, models, callbacks, optimizers</text>
+  
+  <!-- Application Layer -->
+  <g transform="translate(50, 70)">
+    <rect width="220" height="60" rx="8" fill="#2196F3" fill-opacity="0.3" stroke="#2196F3"/>
+    <text x="110" y="25" text-anchor="middle" fill="#2196F3" font-family="Arial, sans-serif" font-size="12" font-weight="bold">TensorFlow Extended</text>
+    <text x="110" y="42" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">TFX - MLOps Pipeline</text>
+  </g>
+  
+  <g transform="translate(290, 70)">
+    <rect width="220" height="60" rx="8" fill="#4CAF50" fill-opacity="0.3" stroke="#4CAF50"/>
+    <text x="110" y="25" text-anchor="middle" fill="#4CAF50" font-family="Arial, sans-serif" font-size="12" font-weight="bold">TensorFlow Lite</text>
+    <text x="110" y="42" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">Mobile / Edge</text>
+  </g>
+  
+  <g transform="translate(530, 70)">
+    <rect width="220" height="60" rx="8" fill="#9C27B0" fill-opacity="0.3" stroke="#9C27B0"/>
+    <text x="110" y="25" text-anchor="middle" fill="#9C27B0" font-family="Arial, sans-serif" font-size="12" font-weight="bold">TensorFlow.js</text>
+    <text x="110" y="42" text-anchor="middle" fill="#aaa" font-family="Arial, sans-serif" font-size="10">Browser / Node.js</text>
+  </g>
+  
+  <!-- Legend -->
+  <text x="50" y="485" fill="#666" font-family="Arial, sans-serif" font-size="10">Bootcamp IA: Zero to Hero | Semana 20</text>
+</svg>

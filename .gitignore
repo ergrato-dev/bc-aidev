@@ -215,3 +215,4 @@ site/
 # Soluciones de Proyectos (ocultas para estudiantes)
 # --------------------------------------------
 **/.solution/
+**/3-proyecto/**/solution/
