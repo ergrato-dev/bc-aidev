@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420">
+  <!-- Background -->
+  <rect width="900" height="420" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Tipos de Pooling</text>
+  
+  <!-- MAX POOLING -->
+  <text x="225" y="70" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#3B82F6" text-anchor="middle">Max Pooling 2×2</text>
+  
+  <!-- Input grid for max pool -->
+  <g transform="translate(80, 90)">
+    <text x="70" y="-8" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Input 4×4</text>
+    
+    <!-- First quadrant (highlighted) -->
+    <rect x="0" y="0" width="35" height="35" fill="#1e40af" stroke="#3B82F6" stroke-width="2"/>
+    <rect x="35" y="0" width="35" height="35" fill="#1e40af" stroke="#3B82F6" stroke-width="2"/>
+    <rect x="0" y="35" width="35" height="35" fill="#1e40af" stroke="#3B82F6" stroke-width="2"/>
+    <rect x="35" y="35" width="35" height="35" fill="#1e40af" stroke="#3B82F6" stroke-width="2"/>
+    
+    <!-- Second quadrant -->
+    <rect x="70" y="0" width="35" height="35" fill="#7c3aed20" stroke="#7c3aed" stroke-width="2"/>
+    <rect x="105" y="0" width="35" height="35" fill="#7c3aed20" stroke="#7c3aed" stroke-width="2"/>
+    <rect x="70" y="35" width="35" height="35" fill="#7c3aed20" stroke="#7c3aed" stroke-width="2"/>
+    <rect x="105" y="35" width="35" height="35" fill="#7c3aed20" stroke="#7c3aed" stroke-width="2"/>
+    
+    <!-- Third quadrant -->
+    <rect x="0" y="70" width="35" height="35" fill="#10b98120" stroke="#10b981" stroke-width="2"/>
+    <rect x="35" y="70" width="35" height="35" fill="#10b98120" stroke="#10b981" stroke-width="2"/>
+    <rect x="0" y="105" width="35" height="35" fill="#10b98120" stroke="#10b981" stroke-width="2"/>
+    <rect x="35" y="105" width="35" height="35" fill="#10b98120" stroke="#10b981" stroke-width="2"/>
+    
+    <!-- Fourth quadrant -->
+    <rect x="70" y="70" width="35" height="35" fill="#f59e0b20" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="105" y="70" width="35" height="35" fill="#f59e0b20" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="70" y="105" width="35" height="35" fill="#f59e0b20" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="105" y="105" width="35" height="35" fill="#f59e0b20" stroke="#f59e0b" stroke-width="2"/>
+    
+    <!-- Values -->
+    <text x="17" y="24" font-family="monospace" font-size="12" fill="#60a5fa" text-anchor="middle">1</text>
+    <text x="52" y="24" font-family="monospace" font-size="12" fill="#60a5fa" text-anchor="middle">3</text>
+    <text x="87" y="24" font-family="monospace" font-size="12" fill="#a78bfa" text-anchor="middle">2</text>
+    <text x="122" y="24" font-family="monospace" font-size="12" fill="#a78bfa" text-anchor="middle">1</text>
+    
+    <text x="17" y="59" font-family="monospace" font-size="12" fill="#60a5fa" text-anchor="middle">2</text>
+    <text x="52" y="59" font-family="monospace" font-size="12" fill="#ffffff" font-weight="bold" text-anchor="middle">4</text>
+    <text x="87" y="59" font-family="monospace" font-size="12" fill="#a78bfa" text-anchor="middle">1</text>
+    <text x="122" y="59" font-family="monospace" font-size="12" fill="#ffffff" font-weight="bold" text-anchor="middle">4</text>
+    
+    <text x="17" y="94" font-family="monospace" font-size="12" fill="#34d399" text-anchor="middle">6</text>
+    <text x="52" y="94" font-family="monospace" font-size="12" fill="#34d399" text-anchor="middle">2</text>
+    <text x="87" y="94" font-family="monospace" font-size="12" fill="#fbbf24" text-anchor="middle">3</text>
+    <text x="122" y="94" font-family="monospace" font-size="12" fill="#fbbf24" text-anchor="middle">1</text>
+    
+    <text x="17" y="129" font-family="monospace" font-size="12" fill="#34d399" text-anchor="middle">1</text>
+    <text x="52" y="129" font-family="monospace" font-size="12" fill="#34d399" text-anchor="middle">4</text>
+    <text x="87" y="129" font-family="monospace" font-size="12" fill="#fbbf24" text-anchor="middle">2</text>
+    <text x="122" y="129" font-family="monospace" font-size="12" fill="#ffffff" font-weight="bold" text-anchor="middle">5</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M240 160 L280 160" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <text x="260" y="150" font-family="system-ui, sans-serif" font-size="10" fill="#f59e0b" text-anchor="middle">max</text>
+  
+  <!-- Output grid for max pool -->
+  <g transform="translate(300, 115)">
+    <text x="35" y="-8" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Output 2×2</text>
+    
+    <rect x="0" y="0" width="35" height="35" fill="#1e40af" stroke="#3B82F6" stroke-width="2"/>
+    <rect x="35" y="0" width="35" height="35" fill="#7c3aed" stroke="#7c3aed" stroke-width="2"/>
+    <rect x="0" y="35" width="35" height="35" fill="#10b981" stroke="#10b981" stroke-width="2"/>
+    <rect x="35" y="35" width="35" height="35" fill="#f59e0b" stroke="#f59e0b" stroke-width="2"/>
+    
+    <text x="17" y="24" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">4</text>
+    <text x="52" y="24" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">4</text>
+    <text x="17" y="59" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">6</text>
+    <text x="52" y="59" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">5</text>
+  </g>
+  
+  <!-- AVERAGE POOLING -->
+  <text x="675" y="70" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#10b981" text-anchor="middle">Average Pooling 2×2</text>
+  
+  <!-- Input grid for avg pool -->
+  <g transform="translate(530, 90)">
+    <text x="70" y="-8" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Input 4×4</text>
+    
+    <!-- Same grid structure -->
+    <rect x="0" y="0" width="35" height="35" fill="#0f766e20" stroke="#14b8a6" stroke-width="2"/>
+    <rect x="35" y="0" width="35" height="35" fill="#0f766e20" stroke="#14b8a6" stroke-width="2"/>
+    <rect x="0" y="35" width="35" height="35" fill="#0f766e20" stroke="#14b8a6" stroke-width="2"/>
+    <rect x="35" y="35" width="35" height="35" fill="#0f766e20" stroke="#14b8a6" stroke-width="2"/>
+    
+    <rect x="70" y="0" width="35" height="35" fill="#7c3aed20" stroke="#7c3aed" stroke-width="2"/>
+    <rect x="105" y="0" width="35" height="35" fill="#7c3aed20" stroke="#7c3aed" stroke-width="2"/>
+    <rect x="70" y="35" width="35" height="35" fill="#7c3aed20" stroke="#7c3aed" stroke-width="2"/>
+    <rect x="105" y="35" width="35" height="35" fill="#7c3aed20" stroke="#7c3aed" stroke-width="2"/>
+    
+    <rect x="0" y="70" width="35" height="35" fill="#3B82F620" stroke="#3B82F6" stroke-width="2"/>
+    <rect x="35" y="70" width="35" height="35" fill="#3B82F620" stroke="#3B82F6" stroke-width="2"/>
+    <rect x="0" y="105" width="35" height="35" fill="#3B82F620" stroke="#3B82F6" stroke-width="2"/>
+    <rect x="35" y="105" width="35" height="35" fill="#3B82F620" stroke="#3B82F6" stroke-width="2"/>
+    
+    <rect x="70" y="70" width="35" height="35" fill="#f59e0b20" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="105" y="70" width="35" height="35" fill="#f59e0b20" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="70" y="105" width="35" height="35" fill="#f59e0b20" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="105" y="105" width="35" height="35" fill="#f59e0b20" stroke="#f59e0b" stroke-width="2"/>
+    
+    <!-- Values -->
+    <text x="17" y="24" font-family="monospace" font-size="12" fill="#14b8a6" text-anchor="middle">1</text>
+    <text x="52" y="24" font-family="monospace" font-size="12" fill="#14b8a6" text-anchor="middle">3</text>
+    <text x="87" y="24" font-family="monospace" font-size="12" fill="#a78bfa" text-anchor="middle">2</text>
+    <text x="122" y="24" font-family="monospace" font-size="12" fill="#a78bfa" text-anchor="middle">2</text>
+    
+    <text x="17" y="59" font-family="monospace" font-size="12" fill="#14b8a6" text-anchor="middle">2</text>
+    <text x="52" y="59" font-family="monospace" font-size="12" fill="#14b8a6" text-anchor="middle">4</text>
+    <text x="87" y="59" font-family="monospace" font-size="12" fill="#a78bfa" text-anchor="middle">2</text>
+    <text x="122" y="59" font-family="monospace" font-size="12" fill="#a78bfa" text-anchor="middle">2</text>
+    
+    <text x="17" y="94" font-family="monospace" font-size="12" fill="#60a5fa" text-anchor="middle">4</text>
+    <text x="52" y="94" font-family="monospace" font-size="12" fill="#60a5fa" text-anchor="middle">2</text>
+    <text x="87" y="94" font-family="monospace" font-size="12" fill="#fbbf24" text-anchor="middle">3</text>
+    <text x="122" y="94" font-family="monospace" font-size="12" fill="#fbbf24" text-anchor="middle">1</text>
+    
+    <text x="17" y="129" font-family="monospace" font-size="12" fill="#60a5fa" text-anchor="middle">2</text>
+    <text x="52" y="129" font-family="monospace" font-size="12" fill="#60a5fa" text-anchor="middle">4</text>
+    <text x="87" y="129" font-family="monospace" font-size="12" fill="#fbbf24" text-anchor="middle">2</text>
+    <text x="122" y="129" font-family="monospace" font-size="12" fill="#fbbf24" text-anchor="middle">6</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M690 160 L730 160" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="710" y="150" font-family="system-ui, sans-serif" font-size="10" fill="#f59e0b" text-anchor="middle">avg</text>
+  
+  <!-- Output grid for avg pool -->
+  <g transform="translate(750, 115)">
+    <text x="35" y="-8" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Output 2×2</text>
+    
+    <rect x="0" y="0" width="35" height="35" fill="#14b8a6" stroke="#14b8a6" stroke-width="2"/>
+    <rect x="35" y="0" width="35" height="35" fill="#7c3aed" stroke="#7c3aed" stroke-width="2"/>
+    <rect x="0" y="35" width="35" height="35" fill="#3B82F6" stroke="#3B82F6" stroke-width="2"/>
+    <rect x="35" y="35" width="35" height="35" fill="#f59e0b" stroke="#f59e0b" stroke-width="2"/>
+    
+    <text x="17" y="24" font-family="monospace" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">2.5</text>
+    <text x="52" y="24" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">2</text>
+    <text x="17" y="59" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">3</text>
+    <text x="52" y="59" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">3</text>
+  </g>
+  
+  <!-- GLOBAL POOLING -->
+  <text x="450" y="270" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">Global Average Pooling</text>
+  
+  <!-- Input for global pool -->
+  <g transform="translate(200, 290)">
+    <text x="70" y="-8" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Input H×W×C</text>
+    
+    <!-- Channel 1 -->
+    <rect x="0" y="0" width="60" height="60" fill="#3B82F620" stroke="#3B82F6" stroke-width="2" rx="4"/>
+    <text x="30" y="35" font-family="system-ui, sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">Channel 1</text>
+    
+    <!-- Channel 2 -->
+    <rect x="40" y="20" width="60" height="60" fill="#10b98120" stroke="#10b981" stroke-width="2" rx="4"/>
+    <text x="70" y="55" font-family="system-ui, sans-serif" font-size="10" fill="#34d399" text-anchor="middle">Channel 2</text>
+    
+    <!-- Channel 3 -->
+    <rect x="80" y="40" width="60" height="60" fill="#f59e0b20" stroke="#f59e0b" stroke-width="2" rx="4"/>
+    <text x="110" y="75" font-family="system-ui, sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">Channel C</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M380 340 L480 340" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="430" y="330" font-family="system-ui, sans-serif" font-size="10" fill="#f59e0b" text-anchor="middle">mean per channel</text>
+  
+  <!-- Output for global pool -->
+  <g transform="translate(520, 305)">
+    <text x="60" y="-8" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Output 1×1×C</text>
+    
+    <rect x="30" y="0" width="25" height="70" fill="#1e293b" stroke="#334155" stroke-width="1" rx="4"/>
+    
+    <rect x="33" y="5" width="19" height="18" fill="#3B82F6" stroke="#3B82F6" stroke-width="1" rx="2"/>
+    <rect x="33" y="27" width="19" height="18" fill="#10b981" stroke="#10b981" stroke-width="1" rx="2"/>
+    <rect x="33" y="49" width="19" height="18" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" rx="2"/>
+    
+    <text x="42" y="18" font-family="monospace" font-size="9" fill="#ffffff" text-anchor="middle">v1</text>
+    <text x="42" y="40" font-family="monospace" font-size="9" fill="#ffffff" text-anchor="middle">v2</text>
+    <text x="42" y="62" font-family="monospace" font-size="9" fill="#ffffff" text-anchor="middle">vC</text>
+    
+    <text x="90" y="40" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="start">Vector de</text>
+    <text x="90" y="55" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="start">C valores</text>
+  </g>
+  
+  <!-- Comparison table -->
+  <rect x="30" y="385" width="840" height="25" fill="#1e293b" stroke="#334155" stroke-width="1" rx="4"/>
+  <text x="130" y="402" font-family="system-ui, sans-serif" font-size="11" fill="#3B82F6" text-anchor="middle">Max: Preserva features dominantes</text>
+  <text x="450" y="402" font-family="system-ui, sans-serif" font-size="11" fill="#10b981" text-anchor="middle">Average: Suaviza la información</text>
+  <text x="740" y="402" font-family="system-ui, sans-serif" font-size="11" fill="#f59e0b" text-anchor="middle">Global: Reduce a vector (reemplaza FC)</text>
+</svg>

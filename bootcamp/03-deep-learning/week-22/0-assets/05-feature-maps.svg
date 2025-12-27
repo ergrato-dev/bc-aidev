@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <!-- Background -->
+  <rect width="900" height="400" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="450" y="30" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Feature Maps: Jerarquía de Características</text>
+  
+  <!-- Input Image -->
+  <g transform="translate(30, 70)">
+    <text x="50" y="-10" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Input</text>
+    <rect x="0" y="0" width="100" height="100" fill="#374151" stroke="#4B5563" stroke-width="2" rx="4"/>
+    
+    <!-- Simple cat face representation -->
+    <circle cx="35" cy="40" r="8" fill="none" stroke="#60a5fa" stroke-width="2"/>
+    <circle cx="65" cy="40" r="8" fill="none" stroke="#60a5fa" stroke-width="2"/>
+    <ellipse cx="50" cy="60" rx="15" ry="10" fill="none" stroke="#60a5fa" stroke-width="2"/>
+    <path d="M20 20 L35 35 M80 20 L65 35" stroke="#60a5fa" stroke-width="2" fill="none"/>
+    
+    <text x="50" y="120" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Imagen original</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M140 120 L170 120" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrowF)"/>
+  <defs>
+    <marker id="arrowF" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#475569"/>
+    </marker>
+  </defs>
+  
+  <!-- Layer 1: Edges -->
+  <g transform="translate(180, 55)">
+    <text x="60" y="-10" font-family="system-ui, sans-serif" font-size="12" fill="#3B82F6" text-anchor="middle">Capa 1: Bordes</text>
+    
+    <!-- Feature map 1 -->
+    <rect x="0" y="0" width="55" height="55" fill="#1e40af20" stroke="#3B82F6" stroke-width="2" rx="3"/>
+    <line x1="10" y1="27" x2="45" y2="27" stroke="#60a5fa" stroke-width="3"/>
+    <text x="27" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">Horizontal</text>
+    
+    <!-- Feature map 2 -->
+    <rect x="65" y="0" width="55" height="55" fill="#1e40af20" stroke="#3B82F6" stroke-width="2" rx="3"/>
+    <line x1="92" y1="10" x2="92" y2="45" stroke="#60a5fa" stroke-width="3"/>
+    <text x="92" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">Vertical</text>
+    
+    <!-- Feature map 3 -->
+    <rect x="0" y="80" width="55" height="55" fill="#1e40af20" stroke="#3B82F6" stroke-width="2" rx="3"/>
+    <line x1="10" y1="125" x2="45" y2="90" stroke="#60a5fa" stroke-width="3"/>
+    <text x="27" y="150" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">Diagonal /</text>
+    
+    <!-- Feature map 4 -->
+    <rect x="65" y="80" width="55" height="55" fill="#1e40af20" stroke="#3B82F6" stroke-width="2" rx="3"/>
+    <line x1="75" y1="90" x2="110" y2="125" stroke="#60a5fa" stroke-width="3"/>
+    <text x="92" y="150" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">Diagonal \</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M315 120 L345 120" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrowF)"/>
+  
+  <!-- Layer 2: Shapes -->
+  <g transform="translate(355, 55)">
+    <text x="60" y="-10" font-family="system-ui, sans-serif" font-size="12" fill="#10b981" text-anchor="middle">Capa 2: Formas</text>
+    
+    <!-- Feature map 1 - Circle -->
+    <rect x="0" y="0" width="55" height="55" fill="#0d948820" stroke="#14b8a6" stroke-width="2" rx="3"/>
+    <circle cx="27" cy="27" r="15" fill="none" stroke="#5eead4" stroke-width="2"/>
+    <text x="27" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">Círculos</text>
+    
+    <!-- Feature map 2 - Corner -->
+    <rect x="65" y="0" width="55" height="55" fill="#0d948820" stroke="#14b8a6" stroke-width="2" rx="3"/>
+    <path d="M80 40 L92 15 L104 40" fill="none" stroke="#5eead4" stroke-width="2"/>
+    <text x="92" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">Esquinas</text>
+    
+    <!-- Feature map 3 - Curves -->
+    <rect x="0" y="80" width="55" height="55" fill="#0d948820" stroke="#14b8a6" stroke-width="2" rx="3"/>
+    <path d="M10 120 Q27 95 44 120" fill="none" stroke="#5eead4" stroke-width="2"/>
+    <text x="27" y="150" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">Curvas</text>
+    
+    <!-- Feature map 4 - Textures -->
+    <rect x="65" y="80" width="55" height="55" fill="#0d948820" stroke="#14b8a6" stroke-width="2" rx="3"/>
+    <line x1="75" y1="95" x2="85" y2="95" stroke="#5eead4" stroke-width="1"/>
+    <line x1="90" y1="95" x2="100" y2="95" stroke="#5eead4" stroke-width="1"/>
+    <line x1="105" y1="95" x2="115" y2="95" stroke="#5eead4" stroke-width="1"/>
+    <line x1="75" y1="107" x2="85" y2="107" stroke="#5eead4" stroke-width="1"/>
+    <line x1="90" y1="107" x2="100" y2="107" stroke="#5eead4" stroke-width="1"/>
+    <line x1="105" y1="107" x2="115" y2="107" stroke="#5eead4" stroke-width="1"/>
+    <line x1="75" y1="119" x2="85" y2="119" stroke="#5eead4" stroke-width="1"/>
+    <line x1="90" y1="119" x2="100" y2="119" stroke="#5eead4" stroke-width="1"/>
+    <line x1="105" y1="119" x2="115" y2="119" stroke="#5eead4" stroke-width="1"/>
+    <text x="92" y="150" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">Texturas</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M490 120 L520 120" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrowF)"/>
+  
+  <!-- Layer 3: Parts -->
+  <g transform="translate(530, 55)">
+    <text x="60" y="-10" font-family="system-ui, sans-serif" font-size="12" fill="#f59e0b" text-anchor="middle">Capa 3: Partes</text>
+    
+    <!-- Feature map 1 - Eye -->
+    <rect x="0" y="0" width="55" height="55" fill="#f59e0b20" stroke="#f59e0b" stroke-width="2" rx="3"/>
+    <circle cx="27" cy="27" r="12" fill="none" stroke="#fbbf24" stroke-width="2"/>
+    <circle cx="27" cy="27" r="5" fill="#fbbf24"/>
+    <text x="27" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">Ojos</text>
+    
+    <!-- Feature map 2 - Ear -->
+    <rect x="65" y="0" width="55" height="55" fill="#f59e0b20" stroke="#f59e0b" stroke-width="2" rx="3"/>
+    <path d="M80 40 L92 10 L104 40" fill="none" stroke="#fbbf24" stroke-width="2"/>
+    <text x="92" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">Orejas</text>
+    
+    <!-- Feature map 3 - Nose -->
+    <rect x="0" y="80" width="55" height="55" fill="#f59e0b20" stroke="#f59e0b" stroke-width="2" rx="3"/>
+    <ellipse cx="27" cy="107" rx="10" ry="7" fill="none" stroke="#fbbf24" stroke-width="2"/>
+    <text x="27" y="150" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">Nariz</text>
+    
+    <!-- Feature map 4 - Whiskers -->
+    <rect x="65" y="80" width="55" height="55" fill="#f59e0b20" stroke="#f59e0b" stroke-width="2" rx="3"/>
+    <line x1="75" y1="100" x2="110" y2="95" stroke="#fbbf24" stroke-width="1"/>
+    <line x1="75" y1="107" x2="110" y2="107" stroke="#fbbf24" stroke-width="1"/>
+    <line x1="75" y1="114" x2="110" y2="119" stroke="#fbbf24" stroke-width="1"/>
+    <text x="92" y="150" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">Bigotes</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M665 120 L695 120" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrowF)"/>
+  
+  <!-- Layer N: Objects -->
+  <g transform="translate(705, 70)">
+    <text x="80" y="-25" font-family="system-ui, sans-serif" font-size="12" fill="#ef4444" text-anchor="middle">Capa N: Objetos</text>
+    
+    <!-- Full cat representation -->
+    <rect x="0" y="0" width="160" height="100" fill="#dc262620" stroke="#ef4444" stroke-width="2" rx="4"/>
+    
+    <!-- Cat icon -->
+    <g transform="translate(50, 15)">
+      <circle cx="20" cy="30" r="6" fill="none" stroke="#fca5a5" stroke-width="2"/>
+      <circle cx="45" cy="30" r="6" fill="none" stroke="#fca5a5" stroke-width="2"/>
+      <ellipse cx="32" cy="45" rx="12" ry="8" fill="none" stroke="#fca5a5" stroke-width="2"/>
+      <path d="M10 15 L20 28 M55 15 L45 28" stroke="#fca5a5" stroke-width="2" fill="none"/>
+      <circle cx="32" cy="55" r="20" fill="none" stroke="#fca5a5" stroke-width="1" stroke-dasharray="3,3"/>
+    </g>
+    
+    <text x="80" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#fca5a5" text-anchor="middle">Gato completo</text>
+  </g>
+  
+  <!-- Bottom explanation -->
+  <rect x="30" y="230" width="840" height="150" fill="#1e293b" stroke="#334155" stroke-width="1" rx="8"/>
+  
+  <text x="450" y="260" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Jerarquía de Features en CNNs</text>
+  
+  <!-- Layer descriptions -->
+  <g transform="translate(60, 280)">
+    <rect x="0" y="0" width="180" height="80" fill="#1e40af20" stroke="#3B82F6" stroke-width="1" rx="4"/>
+    <text x="90" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#60a5fa" text-anchor="middle">Capas Iniciales</text>
+    <text x="90" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Detectan bordes, texturas</text>
+    <text x="90" y="58" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">y patrones simples</text>
+    <text x="90" y="74" font-family="monospace" font-size="9" fill="#60a5fa" text-anchor="middle">Features genéricas</text>
+  </g>
+  
+  <g transform="translate(270, 280)">
+    <rect x="0" y="0" width="180" height="80" fill="#0d948820" stroke="#14b8a6" stroke-width="1" rx="4"/>
+    <text x="90" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#5eead4" text-anchor="middle">Capas Medias</text>
+    <text x="90" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Combinan en formas</text>
+    <text x="90" y="58" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">geométricas complejas</text>
+    <text x="90" y="74" font-family="monospace" font-size="9" fill="#5eead4" text-anchor="middle">Features intermedias</text>
+  </g>
+  
+  <g transform="translate(480, 280)">
+    <rect x="0" y="0" width="180" height="80" fill="#f59e0b20" stroke="#f59e0b" stroke-width="1" rx="4"/>
+    <text x="90" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fbbf24" text-anchor="middle">Capas Profundas</text>
+    <text x="90" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Partes de objetos</text>
+    <text x="90" y="58" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">(ojos, ruedas, etc.)</text>
+    <text x="90" y="74" font-family="monospace" font-size="9" fill="#fbbf24" text-anchor="middle">Features específicas</text>
+  </g>
+  
+  <g transform="translate(690, 280)">
+    <rect x="0" y="0" width="160" height="80" fill="#dc262620" stroke="#ef4444" stroke-width="1" rx="4"/>
+    <text x="80" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fca5a5" text-anchor="middle">Capas Finales</text>
+    <text x="80" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Objetos completos</text>
+    <text x="80" y="58" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">y categorías</text>
+    <text x="80" y="74" font-family="monospace" font-size="9" fill="#fca5a5" text-anchor="middle">Features semánticas</text>
+  </g>
+</svg>

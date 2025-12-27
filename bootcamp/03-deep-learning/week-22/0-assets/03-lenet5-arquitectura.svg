@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450">
+  <!-- Background -->
+  <rect width="900" height="450" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Arquitectura LeNet-5</text>
+  <text x="450" y="55" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Yann LeCun, 1998 - Primera CNN exitosa para reconocimiento de dígitos</text>
+  
+  <!-- Input -->
+  <g transform="translate(30, 100)">
+    <rect x="0" y="0" width="50" height="80" fill="#374151" stroke="#4B5563" stroke-width="2" rx="4"/>
+    <text x="25" y="45" font-family="system-ui, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">Input</text>
+    <text x="25" y="60" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">32×32×1</text>
+    <text x="25" y="100" font-family="system-ui, sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle">Grayscale</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M85 140 L105 140" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#475569"/>
+    </marker>
+  </defs>
+  
+  <!-- C1: Conv -->
+  <g transform="translate(110, 80)">
+    <rect x="0" y="0" width="55" height="120" fill="#1e40af" stroke="#3B82F6" stroke-width="2" rx="4"/>
+    <text x="27" y="25" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">C1</text>
+    <text x="27" y="45" font-family="system-ui, sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">Conv</text>
+    <text x="27" y="60" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">5×5</text>
+    <text x="27" y="80" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">6 filters</text>
+    <line x1="5" y1="90" x2="50" y2="90" stroke="#3B82F6" stroke-width="1"/>
+    <text x="27" y="105" font-family="monospace" font-size="9" fill="#60a5fa" text-anchor="middle">28×28×6</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M170 140 L190 140" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- S2: Pool -->
+  <g transform="translate(195, 95)">
+    <rect x="0" y="0" width="45" height="90" fill="#7c3aed" stroke="#8B5CF6" stroke-width="2" rx="4"/>
+    <text x="22" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">S2</text>
+    <text x="22" y="40" font-family="system-ui, sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">AvgPool</text>
+    <text x="22" y="55" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">2×2</text>
+    <line x1="5" y1="65" x2="40" y2="65" stroke="#8B5CF6" stroke-width="1"/>
+    <text x="22" y="80" font-family="monospace" font-size="9" fill="#a78bfa" text-anchor="middle">14×14×6</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M245 140 L265 140" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- C3: Conv -->
+  <g transform="translate(270, 75)">
+    <rect x="0" y="0" width="55" height="130" fill="#1e40af" stroke="#3B82F6" stroke-width="2" rx="4"/>
+    <text x="27" y="25" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">C3</text>
+    <text x="27" y="45" font-family="system-ui, sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">Conv</text>
+    <text x="27" y="60" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">5×5</text>
+    <text x="27" y="80" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">16 filters</text>
+    <line x1="5" y1="95" x2="50" y2="95" stroke="#3B82F6" stroke-width="1"/>
+    <text x="27" y="110" font-family="monospace" font-size="9" fill="#60a5fa" text-anchor="middle">10×10×16</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M330 140 L350 140" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- S4: Pool -->
+  <g transform="translate(355, 95)">
+    <rect x="0" y="0" width="45" height="90" fill="#7c3aed" stroke="#8B5CF6" stroke-width="2" rx="4"/>
+    <text x="22" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">S4</text>
+    <text x="22" y="40" font-family="system-ui, sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">AvgPool</text>
+    <text x="22" y="55" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">2×2</text>
+    <line x1="5" y1="65" x2="40" y2="65" stroke="#8B5CF6" stroke-width="1"/>
+    <text x="22" y="80" font-family="monospace" font-size="9" fill="#a78bfa" text-anchor="middle">5×5×16</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M405 140 L425 140" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- C5: Conv (acts as FC) -->
+  <g transform="translate(430, 85)">
+    <rect x="0" y="0" width="55" height="110" fill="#0d9488" stroke="#14b8a6" stroke-width="2" rx="4"/>
+    <text x="27" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">C5</text>
+    <text x="27" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#5eead4" text-anchor="middle">Conv</text>
+    <text x="27" y="57" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">5×5</text>
+    <text x="27" y="72" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">120 filters</text>
+    <line x1="5" y1="82" x2="50" y2="82" stroke="#14b8a6" stroke-width="1"/>
+    <text x="27" y="97" font-family="monospace" font-size="9" fill="#5eead4" text-anchor="middle">1×1×120</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M490 140 L510 140" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- F6: FC -->
+  <g transform="translate(515, 100)">
+    <rect x="0" y="0" width="50" height="80" fill="#dc2626" stroke="#ef4444" stroke-width="2" rx="4"/>
+    <text x="25" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">F6</text>
+    <text x="25" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#fca5a5" text-anchor="middle">FC</text>
+    <line x1="5" y1="55" x2="45" y2="55" stroke="#ef4444" stroke-width="1"/>
+    <text x="25" y="70" font-family="monospace" font-size="10" fill="#fca5a5" text-anchor="middle">84</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M570 140 L590 140" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Output: FC -->
+  <g transform="translate(595, 105)">
+    <rect x="0" y="0" width="55" height="70" fill="#f59e0b" stroke="#fbbf24" stroke-width="2" rx="4"/>
+    <text x="27" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#1a1a2e" text-anchor="middle">Output</text>
+    <text x="27" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#1a1a2e" text-anchor="middle">FC</text>
+    <line x1="5" y1="50" x2="50" y2="50" stroke="#1a1a2e" stroke-width="1"/>
+    <text x="27" y="63" font-family="monospace" font-size="10" fill="#1a1a2e" text-anchor="middle">10</text>
+  </g>
+  
+  <!-- Digits output visualization -->
+  <g transform="translate(670, 95)">
+    <text x="60" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Classes</text>
+    <g transform="translate(0, 10)">
+      <rect x="0" y="0" width="22" height="22" fill="#374151" stroke="#4B5563" stroke-width="1" rx="2"/>
+      <text x="11" y="16" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">0</text>
+      
+      <rect x="24" y="0" width="22" height="22" fill="#374151" stroke="#4B5563" stroke-width="1" rx="2"/>
+      <text x="35" y="16" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">1</text>
+      
+      <rect x="48" y="0" width="22" height="22" fill="#374151" stroke="#4B5563" stroke-width="1" rx="2"/>
+      <text x="59" y="16" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">2</text>
+      
+      <rect x="72" y="0" width="22" height="22" fill="#374151" stroke="#4B5563" stroke-width="1" rx="2"/>
+      <text x="83" y="16" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">3</text>
+      
+      <rect x="96" y="0" width="22" height="22" fill="#374151" stroke="#4B5563" stroke-width="1" rx="2"/>
+      <text x="107" y="16" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">4</text>
+    </g>
+    <g transform="translate(0, 35)">
+      <rect x="0" y="0" width="22" height="22" fill="#374151" stroke="#4B5563" stroke-width="1" rx="2"/>
+      <text x="11" y="16" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">5</text>
+      
+      <rect x="24" y="0" width="22" height="22" fill="#374151" stroke="#4B5563" stroke-width="1" rx="2"/>
+      <text x="35" y="16" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">6</text>
+      
+      <rect x="48" y="0" width="22" height="22" fill="#10b981" stroke="#34d399" stroke-width="2" rx="2"/>
+      <text x="59" y="16" font-family="monospace" font-size="12" fill="#ffffff" font-weight="bold" text-anchor="middle">7</text>
+      
+      <rect x="72" y="0" width="22" height="22" fill="#374151" stroke="#4B5563" stroke-width="1" rx="2"/>
+      <text x="83" y="16" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">8</text>
+      
+      <rect x="96" y="0" width="22" height="22" fill="#374151" stroke="#4B5563" stroke-width="1" rx="2"/>
+      <text x="107" y="16" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">9</text>
+    </g>
+  </g>
+  
+  <!-- Feature extraction label -->
+  <rect x="100" y="220" width="320" height="25" fill="none" stroke="#3B82F6" stroke-width="1" stroke-dasharray="5,3" rx="4"/>
+  <text x="260" y="237" font-family="system-ui, sans-serif" font-size="11" fill="#3B82F6" text-anchor="middle">Feature Extraction</text>
+  
+  <!-- Classification label -->
+  <rect x="505" y="220" width="155" height="25" fill="none" stroke="#ef4444" stroke-width="1" stroke-dasharray="5,3" rx="4"/>
+  <text x="582" y="237" font-family="system-ui, sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">Classification</text>
+  
+  <!-- Stats table -->
+  <rect x="30" y="270" width="400" height="160" fill="#1e293b" stroke="#334155" stroke-width="1" rx="8"/>
+  <text x="230" y="295" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Estadísticas LeNet-5</text>
+  
+  <text x="50" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Capa</text>
+  <text x="150" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Output</text>
+  <text x="260" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Params</text>
+  <text x="360" y="320" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Activación</text>
+  
+  <line x1="40" y1="328" x2="420" y2="328" stroke="#334155" stroke-width="1"/>
+  
+  <text x="50" y="348" font-family="monospace" font-size="11" fill="#60a5fa">C1</text>
+  <text x="150" y="348" font-family="monospace" font-size="11" fill="#94a3b8">28×28×6</text>
+  <text x="260" y="348" font-family="monospace" font-size="11" fill="#94a3b8">156</text>
+  <text x="360" y="348" font-family="monospace" font-size="11" fill="#94a3b8">Tanh</text>
+  
+  <text x="50" y="368" font-family="monospace" font-size="11" fill="#a78bfa">S2</text>
+  <text x="150" y="368" font-family="monospace" font-size="11" fill="#94a3b8">14×14×6</text>
+  <text x="260" y="368" font-family="monospace" font-size="11" fill="#94a3b8">0</text>
+  <text x="360" y="368" font-family="monospace" font-size="11" fill="#94a3b8">-</text>
+  
+  <text x="50" y="388" font-family="monospace" font-size="11" fill="#60a5fa">C3</text>
+  <text x="150" y="388" font-family="monospace" font-size="11" fill="#94a3b8">10×10×16</text>
+  <text x="260" y="388" font-family="monospace" font-size="11" fill="#94a3b8">2,416</text>
+  <text x="360" y="388" font-family="monospace" font-size="11" fill="#94a3b8">Tanh</text>
+  
+  <text x="50" y="408" font-family="monospace" font-size="11" fill="#fca5a5">F6+Out</text>
+  <text x="150" y="408" font-family="monospace" font-size="11" fill="#94a3b8">84→10</text>
+  <text x="260" y="408" font-family="monospace" font-size="11" fill="#94a3b8">11,014</text>
+  <text x="360" y="408" font-family="monospace" font-size="11" fill="#94a3b8">Tanh</text>
+  
+  <!-- Total params -->
+  <rect x="470" y="270" width="400" height="160" fill="#1e293b" stroke="#334155" stroke-width="1" rx="8"/>
+  <text x="670" y="295" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Características Clave</text>
+  
+  <text x="490" y="325" font-family="system-ui, sans-serif" font-size="12" fill="#10b981">✓</text>
+  <text x="510" y="325" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Primera CNN práctica exitosa</text>
+  
+  <text x="490" y="350" font-family="system-ui, sans-serif" font-size="12" fill="#10b981">✓</text>
+  <text x="510" y="350" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Total: ~61,000 parámetros</text>
+  
+  <text x="490" y="375" font-family="system-ui, sans-serif" font-size="12" fill="#10b981">✓</text>
+  <text x="510" y="375" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Kernels 5×5 (grandes para la época)</text>
+  
+  <text x="490" y="400" font-family="system-ui, sans-serif" font-size="12" fill="#10b981">✓</text>
+  <text x="510" y="400" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Average Pooling (no Max)</text>
+  
+  <text x="490" y="425" font-family="system-ui, sans-serif" font-size="12" fill="#10b981">✓</text>
+  <text x="510" y="425" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Usado en cheques bancarios</text>
+</svg>

@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 500">
+  <!-- Background -->
+  <rect width="950" height="500" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="475" y="30" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Arquitectura VGG-16</text>
+  <text x="475" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Visual Geometry Group, Oxford 2014 - Profundidad con filtros 3×3</text>
+  
+  <!-- Input -->
+  <g transform="translate(15, 85)">
+    <rect x="0" y="0" width="30" height="100" fill="#374151" stroke="#4B5563" stroke-width="2" rx="3"/>
+    <text x="15" y="45" font-family="system-ui, sans-serif" font-size="8" fill="#ffffff" text-anchor="middle">Input</text>
+    <text x="15" y="60" font-family="monospace" font-size="7" fill="#94a3b8" text-anchor="middle">224×224</text>
+    <text x="15" y="72" font-family="monospace" font-size="7" fill="#94a3b8" text-anchor="middle">×3</text>
+  </g>
+  
+  <!-- Block 1: 2× Conv 64 -->
+  <g transform="translate(55, 80)">
+    <rect x="0" y="0" width="70" height="110" fill="#1e40af20" stroke="#3B82F6" stroke-width="2" rx="4"/>
+    <text x="35" y="20" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#60a5fa" text-anchor="middle">Block 1</text>
+    
+    <rect x="8" y="30" width="54" height="25" fill="#1e40af" stroke="#3B82F6" stroke-width="1" rx="2"/>
+    <text x="35" y="47" font-family="monospace" font-size="8" fill="#ffffff" text-anchor="middle">Conv 64</text>
+    
+    <rect x="8" y="60" width="54" height="25" fill="#1e40af" stroke="#3B82F6" stroke-width="1" rx="2"/>
+    <text x="35" y="77" font-family="monospace" font-size="8" fill="#ffffff" text-anchor="middle">Conv 64</text>
+    
+    <text x="35" y="100" font-family="monospace" font-size="7" fill="#94a3b8" text-anchor="middle">112×112×64</text>
+  </g>
+  
+  <!-- Pool -->
+  <rect x="130" y="125" width="18" height="30" fill="#7c3aed" stroke="#8B5CF6" stroke-width="1" rx="2"/>
+  <text x="139" y="144" font-family="monospace" font-size="7" fill="#ffffff" text-anchor="middle">P</text>
+  
+  <!-- Block 2: 2× Conv 128 -->
+  <g transform="translate(155, 80)">
+    <rect x="0" y="0" width="70" height="110" fill="#1e40af20" stroke="#3B82F6" stroke-width="2" rx="4"/>
+    <text x="35" y="20" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#60a5fa" text-anchor="middle">Block 2</text>
+    
+    <rect x="8" y="30" width="54" height="25" fill="#1e40af" stroke="#3B82F6" stroke-width="1" rx="2"/>
+    <text x="35" y="47" font-family="monospace" font-size="8" fill="#ffffff" text-anchor="middle">Conv 128</text>
+    
+    <rect x="8" y="60" width="54" height="25" fill="#1e40af" stroke="#3B82F6" stroke-width="1" rx="2"/>
+    <text x="35" y="77" font-family="monospace" font-size="8" fill="#ffffff" text-anchor="middle">Conv 128</text>
+    
+    <text x="35" y="100" font-family="monospace" font-size="7" fill="#94a3b8" text-anchor="middle">56×56×128</text>
+  </g>
+  
+  <!-- Pool -->
+  <rect x="230" y="125" width="18" height="30" fill="#7c3aed" stroke="#8B5CF6" stroke-width="1" rx="2"/>
+  <text x="239" y="144" font-family="monospace" font-size="7" fill="#ffffff" text-anchor="middle">P</text>
+  
+  <!-- Block 3: 3× Conv 256 -->
+  <g transform="translate(255, 70)">
+    <rect x="0" y="0" width="70" height="130" fill="#0d9488" stroke="#14b8a6" stroke-width="2" rx="4"/>
+    <text x="35" y="20" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#5eead4" text-anchor="middle">Block 3</text>
+    
+    <rect x="8" y="30" width="54" height="22" fill="#0d9488" stroke="#14b8a6" stroke-width="1" rx="2"/>
+    <text x="35" y="45" font-family="monospace" font-size="8" fill="#ffffff" text-anchor="middle">Conv 256</text>
+    
+    <rect x="8" y="55" width="54" height="22" fill="#0d9488" stroke="#14b8a6" stroke-width="1" rx="2"/>
+    <text x="35" y="70" font-family="monospace" font-size="8" fill="#ffffff" text-anchor="middle">Conv 256</text>
+    
+    <rect x="8" y="80" width="54" height="22" fill="#0d9488" stroke="#14b8a6" stroke-width="1" rx="2"/>
+    <text x="35" y="95" font-family="monospace" font-size="8" fill="#ffffff" text-anchor="middle">Conv 256</text>
+    
+    <text x="35" y="120" font-family="monospace" font-size="7" fill="#94a3b8" text-anchor="middle">28×28×256</text>
+  </g>
+  
+  <!-- Pool -->
+  <rect x="330" y="125" width="18" height="30" fill="#7c3aed" stroke="#8B5CF6" stroke-width="1" rx="2"/>
+  <text x="339" y="144" font-family="monospace" font-size="7" fill="#ffffff" text-anchor="middle">P</text>
+  
+  <!-- Block 4: 3× Conv 512 -->
+  <g transform="translate(355, 70)">
+    <rect x="0" y="0" width="70" height="130" fill="#dc2626" stroke="#ef4444" stroke-width="2" rx="4"/>
+    <text x="35" y="20" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#fca5a5" text-anchor="middle">Block 4</text>
+    
+    <rect x="8" y="30" width="54" height="22" fill="#dc2626" stroke="#ef4444" stroke-width="1" rx="2"/>
+    <text x="35" y="45" font-family="monospace" font-size="8" fill="#ffffff" text-anchor="middle">Conv 512</text>
+    
+    <rect x="8" y="55" width="54" height="22" fill="#dc2626" stroke="#ef4444" stroke-width="1" rx="2"/>
+    <text x="35" y="70" font-family="monospace" font-size="8" fill="#ffffff" text-anchor="middle">Conv 512</text>
+    
+    <rect x="8" y="80" width="54" height="22" fill="#dc2626" stroke="#ef4444" stroke-width="1" rx="2"/>
+    <text x="35" y="95" font-family="monospace" font-size="8" fill="#ffffff" text-anchor="middle">Conv 512</text>
+    
+    <text x="35" y="120" font-family="monospace" font-size="7" fill="#94a3b8" text-anchor="middle">14×14×512</text>
+  </g>
+  
+  <!-- Pool -->
+  <rect x="430" y="125" width="18" height="30" fill="#7c3aed" stroke="#8B5CF6" stroke-width="1" rx="2"/>
+  <text x="439" y="144" font-family="monospace" font-size="7" fill="#ffffff" text-anchor="middle">P</text>
+  
+  <!-- Block 5: 3× Conv 512 -->
+  <g transform="translate(455, 70)">
+    <rect x="0" y="0" width="70" height="130" fill="#dc2626" stroke="#ef4444" stroke-width="2" rx="4"/>
+    <text x="35" y="20" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#fca5a5" text-anchor="middle">Block 5</text>
+    
+    <rect x="8" y="30" width="54" height="22" fill="#dc2626" stroke="#ef4444" stroke-width="1" rx="2"/>
+    <text x="35" y="45" font-family="monospace" font-size="8" fill="#ffffff" text-anchor="middle">Conv 512</text>
+    
+    <rect x="8" y="55" width="54" height="22" fill="#dc2626" stroke="#ef4444" stroke-width="1" rx="2"/>
+    <text x="35" y="70" font-family="monospace" font-size="8" fill="#ffffff" text-anchor="middle">Conv 512</text>
+    
+    <rect x="8" y="80" width="54" height="22" fill="#dc2626" stroke="#ef4444" stroke-width="1" rx="2"/>
+    <text x="35" y="95" font-family="monospace" font-size="8" fill="#ffffff" text-anchor="middle">Conv 512</text>
+    
+    <text x="35" y="120" font-family="monospace" font-size="7" fill="#94a3b8" text-anchor="middle">7×7×512</text>
+  </g>
+  
+  <!-- Pool -->
+  <rect x="530" y="125" width="18" height="30" fill="#7c3aed" stroke="#8B5CF6" stroke-width="1" rx="2"/>
+  <text x="539" y="144" font-family="monospace" font-size="7" fill="#ffffff" text-anchor="middle">P</text>
+  
+  <!-- Flatten -->
+  <rect x="555" y="115" width="25" height="50" fill="#475569" stroke="#64748b" stroke-width="1" rx="2"/>
+  <text x="567" y="145" font-family="monospace" font-size="7" fill="#ffffff" text-anchor="middle" transform="rotate(-90 567 145)">Flatten</text>
+  
+  <!-- FC Layers -->
+  <g transform="translate(590, 90)">
+    <rect x="0" y="0" width="50" height="100" fill="#f59e0b" stroke="#fbbf24" stroke-width="2" rx="4"/>
+    <text x="25" y="20" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#1a1a2e" text-anchor="middle">FC</text>
+    
+    <rect x="8" y="30" width="34" height="18" fill="#d97706" stroke="#fbbf24" stroke-width="1" rx="2"/>
+    <text x="25" y="43" font-family="monospace" font-size="7" fill="#ffffff" text-anchor="middle">4096</text>
+    
+    <rect x="8" y="52" width="34" height="18" fill="#d97706" stroke="#fbbf24" stroke-width="1" rx="2"/>
+    <text x="25" y="65" font-family="monospace" font-size="7" fill="#ffffff" text-anchor="middle">4096</text>
+    
+    <rect x="8" y="74" width="34" height="18" fill="#d97706" stroke="#fbbf24" stroke-width="1" rx="2"/>
+    <text x="25" y="87" font-family="monospace" font-size="7" fill="#ffffff" text-anchor="middle">1000</text>
+  </g>
+  
+  <!-- Output -->
+  <g transform="translate(650, 110)">
+    <rect x="0" y="0" width="45" height="60" fill="#10b981" stroke="#34d399" stroke-width="2" rx="4"/>
+    <text x="22" y="25" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">Output</text>
+    <text x="22" y="45" font-family="monospace" font-size="9" fill="#ffffff" text-anchor="middle">1000</text>
+    <text x="22" y="55" font-family="monospace" font-size="7" fill="#94a3b8" text-anchor="middle">classes</text>
+  </g>
+  
+  <!-- Key insight box -->
+  <rect x="710" y="70" width="220" height="130" fill="#1e293b" stroke="#334155" stroke-width="1" rx="8"/>
+  <text x="820" y="95" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#f59e0b" text-anchor="middle">¿Por qué 3×3?</text>
+  
+  <text x="725" y="120" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Dos 3×3 = un 5×5</text>
+  <text x="725" y="140" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Tres 3×3 = un 7×7</text>
+  
+  <text x="725" y="165" font-family="system-ui, sans-serif" font-size="10" fill="#10b981">✓ Menos parámetros</text>
+  <text x="725" y="185" font-family="system-ui, sans-serif" font-size="10" fill="#10b981">✓ Más no-linealidades</text>
+  
+  <!-- Stats -->
+  <rect x="20" y="230" width="280" height="130" fill="#1e293b" stroke="#334155" stroke-width="1" rx="8"/>
+  <text x="160" y="255" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Parámetros por Bloque</text>
+  
+  <text x="40" y="280" font-family="system-ui, sans-serif" font-size="10" fill="#60a5fa">Block 1-2 (64,128):</text>
+  <text x="200" y="280" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="end">~200K</text>
+  
+  <text x="40" y="300" font-family="system-ui, sans-serif" font-size="10" fill="#5eead4">Block 3 (256):</text>
+  <text x="200" y="300" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="end">~1.5M</text>
+  
+  <text x="40" y="320" font-family="system-ui, sans-serif" font-size="10" fill="#fca5a5">Block 4-5 (512):</text>
+  <text x="200" y="320" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="end">~7M</text>
+  
+  <text x="40" y="345" font-family="system-ui, sans-serif" font-size="10" fill="#fbbf24">FC layers:</text>
+  <text x="200" y="345" font-family="monospace" font-size="10" fill="#fbbf24" font-weight="bold" text-anchor="end">~124M</text>
+  
+  <!-- Pattern -->
+  <rect x="320" y="230" width="300" height="130" fill="#1e293b" stroke="#334155" stroke-width="1" rx="8"/>
+  <text x="470" y="255" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Patrón de Diseño</text>
+  
+  <text x="340" y="285" font-family="monospace" font-size="11" fill="#60a5fa">224 → 112 → 56 → 28 → 14 → 7</text>
+  <text x="340" y="305" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Espacial: ÷2 cada pool</text>
+  
+  <text x="340" y="330" font-family="monospace" font-size="11" fill="#fca5a5">3 → 64 → 128 → 256 → 512 → 512</text>
+  <text x="340" y="350" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Canales: ×2 cada bloque</text>
+  
+  <!-- Total params -->
+  <rect x="640" y="230" width="290" height="130" fill="#1e293b" stroke="#334155" stroke-width="1" rx="8"/>
+  <text x="785" y="255" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Resumen VGG-16</text>
+  
+  <text x="660" y="285" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Total parámetros:</text>
+  <text x="860" y="285" font-family="monospace" font-size="12" fill="#f59e0b" font-weight="bold" text-anchor="end">138M</text>
+  
+  <text x="660" y="310" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Capas con pesos:</text>
+  <text x="860" y="310" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="end">16</text>
+  
+  <text x="660" y="335" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Tamaño kernel:</text>
+  <text x="860" y="335" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="end">3×3 (todas)</text>
+  
+  <text x="660" y="355" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">ImageNet Top-5:</text>
+  <text x="860" y="355" font-family="monospace" font-size="12" fill="#10b981" text-anchor="end">92.7%</text>
+  
+  <!-- Comparison bar -->
+  <rect x="20" y="380" width="910" height="100" fill="#1e293b" stroke="#334155" stroke-width="1" rx="8"/>
+  <text x="475" y="405" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Variantes VGG</text>
+  
+  <!-- VGG-11 -->
+  <g transform="translate(60, 420)">
+    <rect x="0" y="0" width="80" height="45" fill="#374151" stroke="#4B5563" stroke-width="1" rx="4"/>
+    <text x="40" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">VGG-11</text>
+    <text x="40" y="35" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">8 conv + 3 FC</text>
+  </g>
+  
+  <!-- VGG-13 -->
+  <g transform="translate(180, 420)">
+    <rect x="0" y="0" width="80" height="45" fill="#374151" stroke="#4B5563" stroke-width="1" rx="4"/>
+    <text x="40" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">VGG-13</text>
+    <text x="40" y="35" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">10 conv + 3 FC</text>
+  </g>
+  
+  <!-- VGG-16 -->
+  <g transform="translate(300, 420)">
+    <rect x="0" y="0" width="80" height="45" fill="#3B82F6" stroke="#60a5fa" stroke-width="2" rx="4"/>
+    <text x="40" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">VGG-16</text>
+    <text x="40" y="35" font-family="monospace" font-size="9" fill="#ffffff" text-anchor="middle">13 conv + 3 FC</text>
+  </g>
+  
+  <!-- VGG-19 -->
+  <g transform="translate(420, 420)">
+    <rect x="0" y="0" width="80" height="45" fill="#374151" stroke="#4B5563" stroke-width="1" rx="4"/>
+    <text x="40" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">VGG-19</text>
+    <text x="40" y="35" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">16 conv + 3 FC</text>
+  </g>
+  
+  <!-- Usage note -->
+  <g transform="translate(540, 420)">
+    <text x="0" y="15" font-family="system-ui, sans-serif" font-size="11" fill="#f59e0b">Uso común:</text>
+    <text x="0" y="35" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">• Transfer learning (features)</text>
+    <text x="180" y="35" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">• Style transfer</text>
+  </g>
+</svg>
