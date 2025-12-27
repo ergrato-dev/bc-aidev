@@ -1,0 +1,76 @@
+<svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#10b981"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="700" height="280" fill="#1e1e2e"/>
+  
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="18" font-weight="bold">RNN Desplegada en el Tiempo</text>
+  
+  <!-- Time steps -->
+  <text x="100" y="60" text-anchor="middle" fill="#6c7086" font-family="Inter, sans-serif" font-size="12">t=0</text>
+  <text x="250" y="60" text-anchor="middle" fill="#6c7086" font-family="Inter, sans-serif" font-size="12">t=1</text>
+  <text x="400" y="60" text-anchor="middle" fill="#6c7086" font-family="Inter, sans-serif" font-size="12">t=2</text>
+  <text x="550" y="60" text-anchor="middle" fill="#6c7086" font-family="Inter, sans-serif" font-size="12">t=3</text>
+  
+  <!-- Input labels -->
+  <text x="100" y="250" text-anchor="middle" fill="#89b4fa" font-family="Inter, sans-serif" font-size="14" font-weight="bold">x₀</text>
+  <text x="250" y="250" text-anchor="middle" fill="#89b4fa" font-family="Inter, sans-serif" font-size="14" font-weight="bold">x₁</text>
+  <text x="400" y="250" text-anchor="middle" fill="#89b4fa" font-family="Inter, sans-serif" font-size="14" font-weight="bold">x₂</text>
+  <text x="550" y="250" text-anchor="middle" fill="#89b4fa" font-family="Inter, sans-serif" font-size="14" font-weight="bold">x₃</text>
+  
+  <!-- Input arrows -->
+  <line x1="100" y1="235" x2="100" y2="175" stroke="#89b4fa" stroke-width="2" marker-end="url(#arrow1)"/>
+  <line x1="250" y1="235" x2="250" y2="175" stroke="#89b4fa" stroke-width="2" marker-end="url(#arrow1)"/>
+  <line x1="400" y1="235" x2="400" y2="175" stroke="#89b4fa" stroke-width="2" marker-end="url(#arrow1)"/>
+  <line x1="550" y1="235" x2="550" y2="175" stroke="#89b4fa" stroke-width="2" marker-end="url(#arrow1)"/>
+  
+  <!-- RNN Cells -->
+  <rect x="60" y="120" width="80" height="50" rx="8" fill="#313244" stroke="#f38ba8" stroke-width="2"/>
+  <text x="100" y="150" text-anchor="middle" fill="#f38ba8" font-family="Inter, sans-serif" font-size="14" font-weight="bold">RNN</text>
+  
+  <rect x="210" y="120" width="80" height="50" rx="8" fill="#313244" stroke="#f38ba8" stroke-width="2"/>
+  <text x="250" y="150" text-anchor="middle" fill="#f38ba8" font-family="Inter, sans-serif" font-size="14" font-weight="bold">RNN</text>
+  
+  <rect x="360" y="120" width="80" height="50" rx="8" fill="#313244" stroke="#f38ba8" stroke-width="2"/>
+  <text x="400" y="150" text-anchor="middle" fill="#f38ba8" font-family="Inter, sans-serif" font-size="14" font-weight="bold">RNN</text>
+  
+  <rect x="510" y="120" width="80" height="50" rx="8" fill="#313244" stroke="#f38ba8" stroke-width="2"/>
+  <text x="550" y="150" text-anchor="middle" fill="#f38ba8" font-family="Inter, sans-serif" font-size="14" font-weight="bold">RNN</text>
+  
+  <!-- Hidden state arrows (horizontal) -->
+  <line x1="140" y1="145" x2="205" y2="145" stroke="#a6e3a1" stroke-width="2" marker-end="url(#arrow1)"/>
+  <text x="172" y="138" text-anchor="middle" fill="#a6e3a1" font-family="Inter, sans-serif" font-size="11">h₀</text>
+  
+  <line x1="290" y1="145" x2="355" y2="145" stroke="#a6e3a1" stroke-width="2" marker-end="url(#arrow1)"/>
+  <text x="322" y="138" text-anchor="middle" fill="#a6e3a1" font-family="Inter, sans-serif" font-size="11">h₁</text>
+  
+  <line x1="440" y1="145" x2="505" y2="145" stroke="#a6e3a1" stroke-width="2" marker-end="url(#arrow1)"/>
+  <text x="472" y="138" text-anchor="middle" fill="#a6e3a1" font-family="Inter, sans-serif" font-size="11">h₂</text>
+  
+  <line x1="590" y1="145" x2="655" y2="145" stroke="#a6e3a1" stroke-width="2" marker-end="url(#arrow1)"/>
+  <text x="622" y="138" text-anchor="middle" fill="#a6e3a1" font-family="Inter, sans-serif" font-size="11">h₃</text>
+  
+  <!-- Initial hidden state -->
+  <line x1="25" y1="145" x2="55" y2="145" stroke="#a6e3a1" stroke-width="2" marker-end="url(#arrow1)"/>
+  <text x="15" y="150" text-anchor="middle" fill="#6c7086" font-family="Inter, sans-serif" font-size="11">h₋₁</text>
+  
+  <!-- Output arrows -->
+  <line x1="100" y1="120" x2="100" y2="85" stroke="#f9e2af" stroke-width="2" marker-end="url(#arrow1)"/>
+  <line x1="250" y1="120" x2="250" y2="85" stroke="#f9e2af" stroke-width="2" marker-end="url(#arrow1)"/>
+  <line x1="400" y1="120" x2="400" y2="85" stroke="#f9e2af" stroke-width="2" marker-end="url(#arrow1)"/>
+  <line x1="550" y1="120" x2="550" y2="85" stroke="#f9e2af" stroke-width="2" marker-end="url(#arrow1)"/>
+  
+  <!-- Output labels -->
+  <text x="100" y="78" text-anchor="middle" fill="#f9e2af" font-family="Inter, sans-serif" font-size="14" font-weight="bold">y₀</text>
+  <text x="250" y="78" text-anchor="middle" fill="#f9e2af" font-family="Inter, sans-serif" font-size="14" font-weight="bold">y₁</text>
+  <text x="400" y="78" text-anchor="middle" fill="#f9e2af" font-family="Inter, sans-serif" font-size="14" font-weight="bold">y₂</text>
+  <text x="550" y="78" text-anchor="middle" fill="#f9e2af" font-family="Inter, sans-serif" font-size="14" font-weight="bold">y₃</text>
+  
+  <!-- Note -->
+  <text x="350" y="270" text-anchor="middle" fill="#6c7086" font-family="Inter, sans-serif" font-size="11" font-style="italic">Todos los bloques RNN comparten los mismos pesos W</text>
+</svg>

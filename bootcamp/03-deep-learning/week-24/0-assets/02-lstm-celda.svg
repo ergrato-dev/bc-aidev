@@ -1,0 +1,124 @@
+<svg viewBox="0 0 650 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a6e3a1"/>
+    </marker>
+    <marker id="arrow2b" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f9e2af"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="650" height="450" fill="#1e1e2e"/>
+  
+  <!-- Title -->
+  <text x="325" y="30" text-anchor="middle" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="18" font-weight="bold">Celda LSTM</text>
+  
+  <!-- Cell State line (top highway) -->
+  <line x1="50" y1="80" x2="600" y2="80" stroke="#fab387" stroke-width="3"/>
+  <text x="325" y="60" text-anchor="middle" fill="#fab387" font-family="Inter, sans-serif" font-size="12" font-weight="bold">Cell State (Cₜ)</text>
+  
+  <!-- Forget gate -->
+  <rect x="100" y="140" width="70" height="40" rx="6" fill="#313244" stroke="#f38ba8" stroke-width="2"/>
+  <text x="135" y="165" text-anchor="middle" fill="#f38ba8" font-family="Inter, sans-serif" font-size="14" font-weight="bold">σ</text>
+  <text x="135" y="195" text-anchor="middle" fill="#f38ba8" font-family="Inter, sans-serif" font-size="10">forget</text>
+  
+  <!-- Multiply symbol for forget -->
+  <circle cx="135" cy="80" r="12" fill="#313244" stroke="#f38ba8" stroke-width="2"/>
+  <text x="135" y="85" text-anchor="middle" fill="#f38ba8" font-family="Inter, sans-serif" font-size="16">×</text>
+  <line x1="135" y1="140" x2="135" y2="95" stroke="#f38ba8" stroke-width="2" marker-end="url(#arrow2)"/>
+  
+  <!-- Input gate -->
+  <rect x="220" y="140" width="70" height="40" rx="6" fill="#313244" stroke="#89b4fa" stroke-width="2"/>
+  <text x="255" y="165" text-anchor="middle" fill="#89b4fa" font-family="Inter, sans-serif" font-size="14" font-weight="bold">σ</text>
+  <text x="255" y="195" text-anchor="middle" fill="#89b4fa" font-family="Inter, sans-serif" font-size="10">input</text>
+  
+  <!-- Candidate -->
+  <rect x="320" y="140" width="70" height="40" rx="6" fill="#313244" stroke="#a6e3a1" stroke-width="2"/>
+  <text x="355" y="165" text-anchor="middle" fill="#a6e3a1" font-family="Inter, sans-serif" font-size="14" font-weight="bold">tanh</text>
+  <text x="355" y="195" text-anchor="middle" fill="#a6e3a1" font-family="Inter, sans-serif" font-size="10">candidate</text>
+  
+  <!-- Multiply for input -->
+  <circle cx="305" cy="110" r="12" fill="#313244" stroke="#89b4fa" stroke-width="2"/>
+  <text x="305" y="115" text-anchor="middle" fill="#89b4fa" font-family="Inter, sans-serif" font-size="16">×</text>
+  <line x1="255" y1="140" x2="255" y2="120" stroke="#89b4fa" stroke-width="2"/>
+  <line x1="255" y1="120" x2="293" y2="110" stroke="#89b4fa" stroke-width="2"/>
+  <line x1="355" y1="140" x2="355" y2="120" stroke="#a6e3a1" stroke-width="2"/>
+  <line x1="355" y1="120" x2="317" y2="110" stroke="#a6e3a1" stroke-width="2"/>
+  
+  <!-- Add symbol -->
+  <circle cx="305" cy="80" r="12" fill="#313244" stroke="#f9e2af" stroke-width="2"/>
+  <text x="305" y="85" text-anchor="middle" fill="#f9e2af" font-family="Inter, sans-serif" font-size="16">+</text>
+  <line x1="305" y1="98" x2="305" y2="92" stroke="#f9e2af" stroke-width="2"/>
+  
+  <!-- Connect forget to add -->
+  <line x1="147" y1="80" x2="293" y2="80" stroke="#fab387" stroke-width="2"/>
+  
+  <!-- Output gate -->
+  <rect x="450" y="140" width="70" height="40" rx="6" fill="#313244" stroke="#cba6f7" stroke-width="2"/>
+  <text x="485" y="165" text-anchor="middle" fill="#cba6f7" font-family="Inter, sans-serif" font-size="14" font-weight="bold">σ</text>
+  <text x="485" y="195" text-anchor="middle" fill="#cba6f7" font-family="Inter, sans-serif" font-size="10">output</text>
+  
+  <!-- tanh for output -->
+  <rect x="450" y="55" width="70" height="30" rx="6" fill="#313244" stroke="#f9e2af" stroke-width="2"/>
+  <text x="485" y="75" text-anchor="middle" fill="#f9e2af" font-family="Inter, sans-serif" font-size="12">tanh</text>
+  
+  <!-- Multiply for output -->
+  <circle cx="550" cy="110" r="12" fill="#313244" stroke="#cba6f7" stroke-width="2"/>
+  <text x="550" y="115" text-anchor="middle" fill="#cba6f7" font-family="Inter, sans-serif" font-size="16">×</text>
+  <line x1="485" y1="140" x2="485" y2="120" stroke="#cba6f7" stroke-width="2"/>
+  <line x1="485" y1="120" x2="538" y2="110" stroke="#cba6f7" stroke-width="2"/>
+  <line x1="485" y1="55" x2="485" y2="45" stroke="#f9e2af" stroke-width="2"/>
+  <line x1="485" y1="45" x2="550" y2="45" stroke="#f9e2af" stroke-width="2"/>
+  <line x1="550" y1="45" x2="550" y2="98" stroke="#f9e2af" stroke-width="2"/>
+  
+  <!-- Cell state continues -->
+  <line x1="317" y1="80" x2="420" y2="80" stroke="#fab387" stroke-width="3"/>
+  <line x1="420" y1="80" x2="420" y2="70" stroke="#fab387" stroke-width="2"/>
+  <line x1="420" y1="70" x2="450" y2="70" stroke="#fab387" stroke-width="2"/>
+  <line x1="520" y1="70" x2="600" y2="70" stroke="#fab387" stroke-width="3"/>
+  
+  <!-- Hidden state input -->
+  <line x1="50" y1="320" x2="80" y2="320" stroke="#a6e3a1" stroke-width="2"/>
+  <text x="65" y="340" text-anchor="middle" fill="#a6e3a1" font-family="Inter, sans-serif" font-size="11">hₜ₋₁</text>
+  
+  <!-- Hidden state connections to gates -->
+  <line x1="80" y1="320" x2="80" y2="250" stroke="#a6e3a1" stroke-width="2"/>
+  <line x1="80" y1="250" x2="500" y2="250" stroke="#a6e3a1" stroke-width="2"/>
+  
+  <line x1="135" y1="250" x2="135" y2="180" stroke="#a6e3a1" stroke-width="1.5"/>
+  <line x1="255" y1="250" x2="255" y2="180" stroke="#a6e3a1" stroke-width="1.5"/>
+  <line x1="355" y1="250" x2="355" y2="180" stroke="#a6e3a1" stroke-width="1.5"/>
+  <line x1="485" y1="250" x2="485" y2="180" stroke="#a6e3a1" stroke-width="1.5"/>
+  
+  <!-- Input x_t -->
+  <line x1="50" y1="370" x2="80" y2="370" stroke="#89b4fa" stroke-width="2"/>
+  <text x="65" y="390" text-anchor="middle" fill="#89b4fa" font-family="Inter, sans-serif" font-size="11">xₜ</text>
+  
+  <!-- Input connections to gates -->
+  <line x1="80" y1="370" x2="80" y2="280" stroke="#89b4fa" stroke-width="2"/>
+  <line x1="80" y1="280" x2="500" y2="280" stroke="#89b4fa" stroke-width="2"/>
+  
+  <line x1="135" y1="280" x2="135" y2="250" stroke="#89b4fa" stroke-width="1.5"/>
+  <line x1="255" y1="280" x2="255" y2="250" stroke="#89b4fa" stroke-width="1.5"/>
+  <line x1="355" y1="280" x2="355" y2="250" stroke="#89b4fa" stroke-width="1.5"/>
+  <line x1="485" y1="280" x2="485" y2="250" stroke="#89b4fa" stroke-width="1.5"/>
+  
+  <!-- Output h_t -->
+  <line x1="550" y1="122" x2="550" y2="320" stroke="#a6e3a1" stroke-width="2"/>
+  <line x1="550" y1="320" x2="600" y2="320" stroke="#a6e3a1" stroke-width="2" marker-end="url(#arrow2)"/>
+  <text x="575" y="340" text-anchor="middle" fill="#a6e3a1" font-family="Inter, sans-serif" font-size="11">hₜ</text>
+  
+  <!-- Legend -->
+  <rect x="50" y="405" width="550" height="35" rx="6" fill="#313244"/>
+  <circle cx="80" cy="422" r="8" fill="#f38ba8"/>
+  <text x="100" y="427" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="10">Forget</text>
+  <circle cx="170" cy="422" r="8" fill="#89b4fa"/>
+  <text x="190" y="427" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="10">Input</text>
+  <circle cx="250" cy="422" r="8" fill="#a6e3a1"/>
+  <text x="280" y="427" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="10">Candidate</text>
+  <circle cx="370" cy="422" r="8" fill="#cba6f7"/>
+  <text x="395" y="427" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="10">Output</text>
+  <circle cx="460" cy="422" r="8" fill="#fab387"/>
+  <text x="495" y="427" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="10">Cell State</text>
+</svg>

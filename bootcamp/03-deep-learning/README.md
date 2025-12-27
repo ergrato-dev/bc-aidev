@@ -26,7 +26,7 @@ Al completar este módulo serás capaz de:
 | 21     | PyTorch          | Tensores, autograd, nn.Module, training loop         | ✅     |
 | 22     | CNNs I           | Convoluciones, pooling, arquitecturas (LeNet, VGG)   | ✅     |
 | 23     | CNNs II          | ResNet, Transfer Learning, fine-tuning               | ✅     |
-| 24     | RNNs             | Secuencias, LSTM, GRU, series temporales             | 🔜     |
+| 24     | RNNs             | Secuencias, LSTM, GRU, series temporales             | ✅     |
 | 25     | Transformers     | Attention, arquitectura, positional encoding         | 🔜     |
 | 26     | Regularización   | Dropout, batch normalization, data augmentation      | 🔜     |
 | 27     | Optimización DL  | Optimizers, learning rate schedules, callbacks       | 🔜     |
