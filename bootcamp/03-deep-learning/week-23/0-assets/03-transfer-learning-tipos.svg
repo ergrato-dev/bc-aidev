@@ -1,0 +1,75 @@
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="700" height="320" fill="#1e1e2e"/>
+  
+  <!-- Title -->
+  <text x="350" y="25" fill="#cdd6f4" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Transfer Learning: Feature Extraction vs Fine-tuning</text>
+  
+  <!-- Feature Extraction -->
+  <text x="175" y="55" fill="#10b981" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Feature Extraction</text>
+  
+  <!-- Backbone frozen -->
+  <rect x="75" y="70" width="200" height="140" rx="8" fill="#374151" stroke="#6b7280" stroke-width="2"/>
+  <text x="175" y="92" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">BACKBONE</text>
+  
+  <!-- Frozen layers -->
+  <rect x="95" y="100" width="160" height="22" rx="4" fill="#4b5563"/>
+  <text x="175" y="115" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Conv layers (frozen)</text>
+  
+  <rect x="95" y="128" width="160" height="22" rx="4" fill="#4b5563"/>
+  <text x="175" y="143" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">More conv (frozen)</text>
+  
+  <rect x="95" y="156" width="160" height="22" rx="4" fill="#4b5563"/>
+  <text x="175" y="171" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Final conv (frozen)</text>
+  
+  <!-- Lock icon -->
+  <text x="265" y="140" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="20">🔒</text>
+  
+  <!-- Frozen label -->
+  <text x="175" y="200" fill="#6b7280" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">requires_grad = False</text>
+  
+  <!-- New classifier -->
+  <rect x="100" y="220" width="150" height="35" rx="6" fill="#10b981" stroke="#34d399" stroke-width="2"/>
+  <text x="175" y="242" fill="white" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">New Classifier</text>
+  
+  <!-- Train label -->
+  <text x="175" y="270" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">requires_grad = True</text>
+  
+  <!-- Stats -->
+  <text x="175" y="295" fill="#a5b4fc" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">~2% params entrenables</text>
+  
+  <!-- Divider -->
+  <line x1="350" y1="50" x2="350" y2="310" stroke="#45475a" stroke-width="1" stroke-dasharray="4,3"/>
+  
+  <!-- Fine-tuning -->
+  <text x="525" y="55" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Fine-tuning</text>
+  
+  <!-- Backbone mixed -->
+  <rect x="425" y="70" width="200" height="140" rx="8" fill="#1f2937" stroke="#6b7280" stroke-width="2"/>
+  <text x="525" y="92" fill="#d1d5db" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">BACKBONE</text>
+  
+  <!-- Frozen layer -->
+  <rect x="445" y="100" width="160" height="22" rx="4" fill="#4b5563"/>
+  <text x="525" y="115" fill="#9ca3af" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Early layers (frozen)</text>
+  <text x="450" y="115" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="12">🔒</text>
+  
+  <!-- Trainable layers -->
+  <rect x="445" y="128" width="160" height="22" rx="4" fill="#7c3aed"/>
+  <text x="525" y="143" fill="white" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Mid layers (LR bajo)</text>
+  
+  <rect x="445" y="156" width="160" height="22" rx="4" fill="#8b5cf6"/>
+  <text x="525" y="171" fill="white" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Late layers (LR medio)</text>
+  
+  <!-- Mixed label -->
+  <text x="525" y="200" fill="#a5b4fc" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">LR diferencial por capa</text>
+  
+  <!-- New classifier -->
+  <rect x="450" y="220" width="150" height="35" rx="6" fill="#10b981" stroke="#34d399" stroke-width="2"/>
+  <text x="525" y="242" fill="white" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">New Classifier</text>
+  
+  <!-- Train label -->
+  <text x="525" y="270" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">LR más alto</text>
+  
+  <!-- Stats -->
+  <text x="525" y="295" fill="#a5b4fc" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">~30-100% params entrenables</text>
+</svg>
