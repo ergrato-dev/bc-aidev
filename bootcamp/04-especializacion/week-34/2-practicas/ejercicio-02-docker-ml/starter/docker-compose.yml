@@ -1,0 +1,73 @@
+# Docker Compose para ML API
+#
+# Este archivo orquesta los servicios necesarios para
+# ejecutar la API de Machine Learning.
+#
+# Ejecutar: docker compose up --build
+# Detener: docker compose down
+
+version: '3.8'
+
+services:
+  # ============================================
+  # PASO 1: Servicio ML API
+  # ============================================
+  # Descomenta la configuración del servicio
+  
+  # api:
+  #   # Construir desde Dockerfile local
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   
+  #   # Nombre del contenedor
+  #   container_name: ml-api
+  #   
+  #   # ============================================
+  #   # PASO 2: Mapeo de Puertos
+  #   # ============================================
+  #   # Puerto host:puerto contenedor
+  #   ports:
+  #     - "8000:8000"
+  #   
+  #   # ============================================
+  #   # PASO 3: Variables de Entorno
+  #   # ============================================
+  #   environment:
+  #     - APP_NAME=ML API
+  #     - APP_VERSION=1.0.0
+  #     - LOG_LEVEL=INFO
+  #     - MODEL_PATH=/app/models/model.pkl
+  #   
+  #   # ============================================
+  #   # PASO 4: Volúmenes
+  #   # ============================================
+  #   # Montar carpeta de modelos (read-only)
+  #   volumes:
+  #     - ./models:/app/models:ro
+  #   
+  #   # ============================================
+  #   # PASO 5: Health Check
+  #   # ============================================
+  #   healthcheck:
+  #     test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 3
+  #     start_period: 10s
+  #   
+  #   # ============================================
+  #   # PASO 6: Política de Reinicio
+  #   # ============================================
+  #   restart: unless-stopped
+
+
+# ============================================
+# PASO 7: Redes (opcional)
+# ============================================
+# Descomenta para usar red personalizada
+
+# networks:
+#   default:
+#     name: ml-network
+#     driver: bridge

@@ -1,0 +1,26 @@
+# Configuración de Prometheus
+#
+# Prometheus scrapea métricas de los targets configurados
+# y las almacena en su base de datos de series temporales.
+
+global:
+  # Intervalo de scraping (cada cuánto recolecta métricas)
+  scrape_interval: 15s
+  
+  # Intervalo de evaluación de reglas
+  evaluation_interval: 15s
+
+# Configuración de scraping
+scrape_configs:
+  # Prometheus se monitorea a sí mismo
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+  
+  # ML API - nuestro servicio
+  - job_name: 'ml-api'
+    static_configs:
+      # 'api' es el nombre del servicio en docker-compose
+      - targets: ['api:8000']
+    metrics_path: '/metrics'
+    scrape_interval: 10s

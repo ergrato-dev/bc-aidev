@@ -26,7 +26,7 @@ Al completar este módulo serás capaz de:
 | 31     | LLMs            | GPT, BERT, prompt engineering, fine-tuning              | ✅     |
 | 32     | RAG             | Retrieval Augmented Generation, vector databases        | ✅     |
 | 33     | Computer Vision | Detección de objetos, segmentación, YOLO                | ✅     |
-| 34     | MLOps           | APIs (FastAPI), Docker, deployment, monitoreo           | 🔜     |
+| 34     | MLOps           | APIs (FastAPI), Docker, deployment, monitoreo           | ✅     |
 
 ---
 

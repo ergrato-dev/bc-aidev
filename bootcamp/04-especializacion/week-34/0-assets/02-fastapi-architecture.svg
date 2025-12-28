@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="550" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="24" font-weight="bold">Arquitectura FastAPI para ML</text>
+  
+  <!-- Client Section -->
+  <g transform="translate(50, 80)">
+    <rect x="0" y="0" width="120" height="100" rx="10" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+    <text x="60" y="30" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Cliente</text>
+    <text x="60" y="55" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Web App</text>
+    <text x="60" y="72" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Mobile</text>
+    <text x="60" y="89" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">API Client</text>
+  </g>
+  
+  <!-- Arrow Client -> FastAPI -->
+  <g transform="translate(170, 115)">
+    <line x1="0" y1="15" x2="80" y2="15" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="40" y="8" text-anchor="middle" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="10">HTTP/JSON</text>
+  </g>
+  
+  <!-- FastAPI Application Box -->
+  <g transform="translate(250, 70)">
+    <rect x="0" y="0" width="400" height="380" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <text x="200" y="30" text-anchor="middle" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">FastAPI Application</text>
+    
+    <!-- Uvicorn Server -->
+    <rect x="20" y="50" width="360" height="40" rx="6" fill="#0f172a" stroke="#22d3ee" stroke-width="1"/>
+    <text x="200" y="75" text-anchor="middle" fill="#22d3ee" font-family="system-ui, sans-serif" font-size="12">Uvicorn ASGI Server</text>
+    
+    <!-- Middleware Layer -->
+    <rect x="20" y="100" width="360" height="50" rx="6" fill="#0f172a" stroke="#a78bfa" stroke-width="1"/>
+    <text x="200" y="120" text-anchor="middle" fill="#a78bfa" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Middleware</text>
+    <text x="200" y="140" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">CORS | Logging | Metrics | Auth</text>
+    
+    <!-- Routes -->
+    <g transform="translate(20, 160)">
+      <rect x="0" y="0" width="170" height="90" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+      <text x="85" y="25" text-anchor="middle" fill="#10b981" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Routers</text>
+      <text x="85" y="45" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">POST /predict</text>
+      <text x="85" y="60" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">GET /health</text>
+      <text x="85" y="75" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">GET /metrics</text>
+    </g>
+    
+    <!-- Pydantic Models -->
+    <g transform="translate(210, 160)">
+      <rect x="0" y="0" width="170" height="90" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="1"/>
+      <text x="85" y="25" text-anchor="middle" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Pydantic</text>
+      <text x="85" y="45" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Request Schema</text>
+      <text x="85" y="60" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Response Schema</text>
+      <text x="85" y="75" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Validation</text>
+    </g>
+    
+    <!-- ML Service -->
+    <g transform="translate(20, 260)">
+      <rect x="0" y="0" width="360" height="100" rx="6" fill="#0f172a" stroke="#ec4899" stroke-width="1"/>
+      <text x="180" y="25" text-anchor="middle" fill="#f472b6" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">ML Service Layer</text>
+      
+      <!-- Model Loader -->
+      <rect x="15" y="40" width="100" height="50" rx="4" fill="#1e293b" stroke="#64748b" stroke-width="1"/>
+      <text x="65" y="60" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Model</text>
+      <text x="65" y="75" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Loader</text>
+      
+      <!-- Preprocessor -->
+      <rect x="130" y="40" width="100" height="50" rx="4" fill="#1e293b" stroke="#64748b" stroke-width="1"/>
+      <text x="180" y="60" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Pre</text>
+      <text x="180" y="75" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">processor</text>
+      
+      <!-- Predictor -->
+      <rect x="245" y="40" width="100" height="50" rx="4" fill="#1e293b" stroke="#64748b" stroke-width="1"/>
+      <text x="295" y="60" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Predictor</text>
+      <text x="295" y="75" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Engine</text>
+    </g>
+  </g>
+  
+  <!-- Model File -->
+  <g transform="translate(700, 100)">
+    <rect x="0" y="0" width="140" height="80" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+    <text x="70" y="35" text-anchor="middle" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">model.pkl</text>
+    <text x="70" y="55" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Scikit-learn</text>
+    <text x="70" y="70" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">TensorFlow</text>
+  </g>
+  
+  <!-- Arrow FastAPI -> Model -->
+  <line x1="650" y1="140" x2="698" y2="140" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Prometheus -->
+  <g transform="translate(700, 220)">
+    <rect x="0" y="0" width="140" height="70" rx="10" fill="#1e293b" stroke="#ef4444" stroke-width="2"/>
+    <text x="70" y="30" text-anchor="middle" fill="#f87171" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Prometheus</text>
+    <text x="70" y="50" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Scrape /metrics</text>
+  </g>
+  
+  <!-- Arrow FastAPI -> Prometheus -->
+  <line x1="650" y1="255" x2="698" y2="255" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Swagger/Docs -->
+  <g transform="translate(700, 320)">
+    <rect x="0" y="0" width="140" height="70" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+    <text x="70" y="30" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">OpenAPI</text>
+    <text x="70" y="50" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">/docs Swagger</text>
+  </g>
+  
+  <!-- Arrow FastAPI -> Swagger -->
+  <line x1="650" y1="355" x2="698" y2="355" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Request/Response Flow -->
+  <g transform="translate(50, 470)">
+    <rect x="0" y="0" width="800" height="60" rx="8" fill="#1e293b"/>
+    <text x="400" y="20" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Flujo de Request/Response</text>
+    
+    <!-- Flow steps -->
+    <text x="80" y="45" text-anchor="middle" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="10">1. Request</text>
+    <text x="200" y="45" text-anchor="middle" fill="#a78bfa" font-family="system-ui, sans-serif" font-size="10">2. Middleware</text>
+    <text x="330" y="45" text-anchor="middle" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="10">3. Validate</text>
+    <text x="460" y="45" text-anchor="middle" fill="#f472b6" font-family="system-ui, sans-serif" font-size="10">4. Predict</text>
+    <text x="590" y="45" text-anchor="middle" fill="#10b981" font-family="system-ui, sans-serif" font-size="10">5. Response</text>
+    <text x="720" y="45" text-anchor="middle" fill="#22d3ee" font-family="system-ui, sans-serif" font-size="10">6. Log/Metrics</text>
+    
+    <!-- Arrows -->
+    <line x1="130" y1="42" x2="155" y2="42" stroke="#475569" stroke-width="1"/>
+    <line x1="255" y1="42" x2="285" y2="42" stroke="#475569" stroke-width="1"/>
+    <line x1="375" y1="42" x2="415" y2="42" stroke="#475569" stroke-width="1"/>
+    <line x1="505" y1="42" x2="545" y2="42" stroke="#475569" stroke-width="1"/>
+    <line x1="635" y1="42" x2="675" y2="42" stroke="#475569" stroke-width="1"/>
+  </g>
+</svg>
