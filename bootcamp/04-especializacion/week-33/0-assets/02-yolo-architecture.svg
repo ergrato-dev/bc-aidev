@@ -1,0 +1,153 @@
+<svg viewBox="0 0 900 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="yoloGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="450" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">Arquitectura YOLO</text>
+  <text x="450" y="55" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">You Only Look Once - One-Stage Detector</text>
+  
+  <!-- Input Image -->
+  <g transform="translate(30, 90)">
+    <rect x="0" y="0" width="100" height="100" rx="8" fill="#334155" stroke="#64748b" stroke-width="2"/>
+    <text x="50" y="55" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Input</text>
+    <text x="50" y="70" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">640×640×3</text>
+    <!-- Sample objects -->
+    <rect x="20" y="20" width="25" height="30" rx="2" fill="none" stroke="#10B981" stroke-width="1" stroke-dasharray="3,2"/>
+    <rect x="55" y="40" width="30" height="35" rx="2" fill="none" stroke="#F59E0B" stroke-width="1" stroke-dasharray="3,2"/>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M140 140 L170 140" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowGray)"/>
+  
+  <!-- Backbone -->
+  <g transform="translate(180, 80)">
+    <rect x="0" y="0" width="140" height="120" rx="10" fill="#1e293b" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="70" y="25" text-anchor="middle" fill="#8B5CF6" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Backbone</text>
+    <text x="70" y="45" text-anchor="middle" fill="#c4b5fd" font-family="system-ui, sans-serif" font-size="10">CSPDarknet</text>
+    
+    <!-- Feature extraction layers -->
+    <rect x="20" y="55" width="100" height="15" rx="3" fill="#8B5CF6" fill-opacity="0.3"/>
+    <rect x="30" y="75" width="80" height="12" rx="3" fill="#8B5CF6" fill-opacity="0.4"/>
+    <rect x="40" y="92" width="60" height="10" rx="3" fill="#8B5CF6" fill-opacity="0.5"/>
+    
+    <text x="70" y="115" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">Feature Extraction</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M330 140 L360 140" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowGray)"/>
+  
+  <!-- Neck (FPN + PAN) -->
+  <g transform="translate(370, 80)">
+    <rect x="0" y="0" width="140" height="120" rx="10" fill="#1e293b" stroke="#10B981" stroke-width="2"/>
+    <text x="70" y="25" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Neck</text>
+    <text x="70" y="45" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="10">FPN + PAN</text>
+    
+    <!-- Multi-scale pyramid -->
+    <rect x="50" y="55" width="40" height="12" rx="2" fill="#10B981" fill-opacity="0.3"/>
+    <rect x="40" y="70" width="60" height="12" rx="2" fill="#10B981" fill-opacity="0.4"/>
+    <rect x="30" y="85" width="80" height="12" rx="2" fill="#10B981" fill-opacity="0.5"/>
+    
+    <text x="70" y="115" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">Multi-scale Features</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M520 140 L550 140" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowGray)"/>
+  
+  <!-- Head -->
+  <g transform="translate(560, 80)">
+    <rect x="0" y="0" width="140" height="120" rx="10" fill="#1e293b" stroke="#F59E0B" stroke-width="2"/>
+    <text x="70" y="25" text-anchor="middle" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Head</text>
+    <text x="70" y="45" text-anchor="middle" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="10">Detect / Segment</text>
+    
+    <!-- Output predictions -->
+    <rect x="20" y="55" width="100" height="20" rx="3" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-width="1"/>
+    <text x="70" y="68" text-anchor="middle" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="8">Classes</text>
+    
+    <rect x="20" y="80" width="100" height="20" rx="3" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-width="1"/>
+    <text x="70" y="93" text-anchor="middle" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="8">Bboxes + Conf</text>
+    
+    <text x="70" y="115" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">Grid Predictions</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M710 140 L740 140" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowGray)"/>
+  
+  <!-- Output -->
+  <g transform="translate(750, 80)">
+    <rect x="0" y="0" width="120" height="120" rx="10" fill="#1e293b" stroke="#EC4899" stroke-width="2"/>
+    <text x="60" y="25" text-anchor="middle" fill="#EC4899" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Output</text>
+    
+    <!-- Detection results -->
+    <text x="60" y="50" text-anchor="middle" fill="#f9a8d4" font-family="system-ui, sans-serif" font-size="9">NMS Applied</text>
+    
+    <rect x="15" y="60" width="90" height="50" rx="4" fill="#334155"/>
+    <rect x="25" y="70" width="20" height="15" rx="2" fill="none" stroke="#10B981" stroke-width="1.5"/>
+    <rect x="55" y="80" width="25" height="20" rx="2" fill="none" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="35" y="95" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="7">0.95</text>
+    <text x="67" y="108" text-anchor="middle" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="7">0.88</text>
+    
+    <text x="60" y="120" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">Detecciones</text>
+  </g>
+  
+  <!-- YOLO Versions -->
+  <g transform="translate(50, 240)">
+    <text x="400" y="0" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">Modelos YOLOv8 (Ultralytics)</text>
+    
+    <!-- Table -->
+    <g transform="translate(100, 20)">
+      <!-- Header -->
+      <rect x="0" y="0" width="600" height="35" rx="6" fill="#334155"/>
+      <text x="60" y="23" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Modelo</text>
+      <text x="170" y="23" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Params</text>
+      <text x="280" y="23" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">mAP</text>
+      <text x="390" y="23" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Velocidad</text>
+      <text x="520" y="23" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Uso</text>
+      
+      <!-- YOLOv8n -->
+      <rect x="0" y="40" width="600" height="30" rx="4" fill="#1e293b"/>
+      <text x="60" y="60" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="11">YOLOv8n</text>
+      <text x="170" y="60" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">3.2M</text>
+      <text x="280" y="60" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">37.3</text>
+      <text x="390" y="60" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="11">⚡ Muy rápido</text>
+      <text x="520" y="60" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Edge / Mobile</text>
+      
+      <!-- YOLOv8s -->
+      <rect x="0" y="75" width="600" height="30" rx="4" fill="#0f172a"/>
+      <text x="60" y="95" text-anchor="middle" fill="#3B82F6" font-family="system-ui, sans-serif" font-size="11">YOLOv8s</text>
+      <text x="170" y="95" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">11.2M</text>
+      <text x="280" y="95" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">44.9</text>
+      <text x="390" y="95" text-anchor="middle" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="11">Rápido</text>
+      <text x="520" y="95" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Balanceado</text>
+      
+      <!-- YOLOv8m -->
+      <rect x="0" y="110" width="600" height="30" rx="4" fill="#1e293b"/>
+      <text x="60" y="130" text-anchor="middle" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="11">YOLOv8m</text>
+      <text x="170" y="130" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">25.9M</text>
+      <text x="280" y="130" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">50.2</text>
+      <text x="390" y="130" text-anchor="middle" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="11">Medio</text>
+      <text x="520" y="130" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Precisión</text>
+      
+      <!-- YOLOv8x -->
+      <rect x="0" y="145" width="600" height="30" rx="4" fill="#0f172a"/>
+      <text x="60" y="165" text-anchor="middle" fill="#EC4899" font-family="system-ui, sans-serif" font-size="11">YOLOv8x</text>
+      <text x="170" y="165" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">68.2M</text>
+      <text x="280" y="165" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">53.9</text>
+      <text x="390" y="165" text-anchor="middle" fill="#f472b6" font-family="system-ui, sans-serif" font-size="11">Lento</text>
+      <text x="520" y="165" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Máxima precisión</text>
+    </g>
+  </g>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowGray" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>

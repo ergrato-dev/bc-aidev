@@ -1,0 +1,90 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">Intersection over Union (IoU)</text>
+  <text x="400" y="55" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Métrica fundamental para evaluar detección y segmentación</text>
+  
+  <!-- Visual Explanation -->
+  <g transform="translate(50, 90)">
+    <!-- Ground Truth Box -->
+    <rect x="0" y="0" width="160" height="120" rx="8" fill="#10B981" fill-opacity="0.3" stroke="#10B981" stroke-width="3"/>
+    <text x="80" y="-10" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Ground Truth</text>
+    
+    <!-- Predicted Box (overlapping) -->
+    <rect x="80" y="40" width="160" height="120" rx="8" fill="#3B82F6" fill-opacity="0.3" stroke="#3B82F6" stroke-width="3"/>
+    <text x="160" y="175" text-anchor="middle" fill="#3B82F6" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Predicción</text>
+    
+    <!-- Intersection area (highlighted) -->
+    <rect x="80" y="40" width="80" height="80" rx="4" fill="#EC4899" fill-opacity="0.6" stroke="#EC4899" stroke-width="2"/>
+    <text x="120" y="85" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Inter-</text>
+    <text x="120" y="100" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">sección</text>
+  </g>
+  
+  <!-- Formula -->
+  <g transform="translate(320, 100)">
+    <rect x="0" y="0" width="200" height="100" rx="10" fill="#1e293b" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="100" y="30" text-anchor="middle" fill="#c4b5fd" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Fórmula IoU</text>
+    
+    <text x="100" y="60" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">IoU = </text>
+    <line x1="65" y1="72" x2="155" y2="72" stroke="#f8fafc" stroke-width="2"/>
+    <text x="100" y="68" text-anchor="middle" fill="#EC4899" font-family="system-ui, sans-serif" font-size="12">Intersección</text>
+    <text x="100" y="90" text-anchor="middle" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="12">Unión</text>
+  </g>
+  
+  <!-- Calculation Example -->
+  <g transform="translate(550, 100)">
+    <rect x="0" y="0" width="200" height="100" rx="10" fill="#1e293b" stroke="#10B981" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Ejemplo</text>
+    
+    <text x="100" y="50" text-anchor="middle" fill="#EC4899" font-family="system-ui, sans-serif" font-size="11">Intersección: 6,400 px²</text>
+    <text x="100" y="68" text-anchor="middle" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="11">Unión: 25,600 px²</text>
+    <text x="100" y="90" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">IoU = 0.25</text>
+  </g>
+  
+  <!-- IoU Scale -->
+  <g transform="translate(50, 250)">
+    <text x="350" y="0" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">Escala de Interpretación IoU</text>
+    
+    <!-- Scale bar -->
+    <rect x="50" y="25" width="600" height="30" rx="6" fill="#1e293b"/>
+    
+    <!-- Bad zone (0-0.3) -->
+    <rect x="50" y="25" width="180" height="30" rx="6" fill="#EF4444" fill-opacity="0.3"/>
+    <text x="140" y="45" text-anchor="middle" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="11">Malo (&lt;0.3)</text>
+    
+    <!-- Medium zone (0.3-0.5) -->
+    <rect x="230" y="25" width="120" height="30" fill="#F59E0B" fill-opacity="0.3"/>
+    <text x="290" y="45" text-anchor="middle" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="11">Regular</text>
+    
+    <!-- Good zone (0.5-0.75) -->
+    <rect x="350" y="25" width="150" height="30" fill="#10B981" fill-opacity="0.3"/>
+    <text x="425" y="45" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="11">Bueno (0.5-0.75)</text>
+    
+    <!-- Excellent zone (0.75-1.0) -->
+    <rect x="500" y="25" width="150" height="30" rx="6" fill="#8B5CF6" fill-opacity="0.3"/>
+    <text x="575" y="45" text-anchor="middle" fill="#c4b5fd" font-family="system-ui, sans-serif" font-size="11">Excelente (&gt;0.75)</text>
+    
+    <!-- Scale numbers -->
+    <text x="50" y="75" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">0.0</text>
+    <text x="230" y="75" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">0.3</text>
+    <text x="350" y="75" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">0.5</text>
+    <text x="500" y="75" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">0.75</text>
+    <text x="650" y="75" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">1.0</text>
+    
+    <!-- Threshold indicator -->
+    <line x1="350" y1="20" x2="350" y2="60" stroke="#F59E0B" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="350" y="95" text-anchor="middle" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="10">Umbral típico: 0.5</text>
+  </g>
+  
+  <!-- Code snippet -->
+  <g transform="translate(50, 340)">
+    <rect x="0" y="0" width="700" height="45" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="15" y="18" fill="#94a3b8" font-family="monospace" font-size="10">def</text>
+    <text x="35" y="18" fill="#10B981" font-family="monospace" font-size="10">calculate_iou</text>
+    <text x="115" y="18" fill="#94a3b8" font-family="monospace" font-size="10">(box1, box2):</text>
+    <text x="15" y="36" fill="#64748b" font-family="monospace" font-size="10">    inter = max(0, min(x2,x2')-max(x1,x1')) * max(0, min(y2,y2')-max(y1,y1'))</text>
+    <text x="580" y="18" fill="#64748b" font-family="monospace" font-size="10"># NumPy/PyTorch</text>
+  </g>
+</svg>

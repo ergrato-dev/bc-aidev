@@ -1,0 +1,205 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="550" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">Tipos de Segmentación de Imágenes</text>
+  
+  <!-- Original Image -->
+  <g transform="translate(50, 70)">
+    <rect x="0" y="0" width="180" height="140" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+    <text x="90" y="25" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Imagen Original</text>
+    
+    <!-- Scene representation -->
+    <rect x="20" y="40" width="140" height="90" rx="4" fill="#334155"/>
+    <!-- Sky -->
+    <rect x="20" y="40" width="140" height="30" fill="#1e3a5f"/>
+    <!-- Ground -->
+    <rect x="20" y="100" width="140" height="30" fill="#2d4a2d"/>
+    <!-- Person 1 -->
+    <rect x="40" y="55" width="25" height="50" rx="3" fill="#94a3b8"/>
+    <circle cx="52" cy="50" r="8" fill="#94a3b8"/>
+    <!-- Person 2 -->
+    <rect x="100" y="60" width="25" height="45" rx="3" fill="#94a3b8"/>
+    <circle cx="112" cy="55" r="8" fill="#94a3b8"/>
+    <!-- Car -->
+    <rect x="60" y="90" width="40" height="20" rx="4" fill="#78716c"/>
+    <circle cx="70" cy="112" r="5" fill="#1e293b"/>
+    <circle cx="90" cy="112" r="5" fill="#1e293b"/>
+  </g>
+  
+  <!-- Arrows -->
+  <path d="M240 140 L280 90" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowSeg)"/>
+  <path d="M240 140 L280 230" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowSeg)"/>
+  <path d="M240 140 L280 370" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowSeg)"/>
+  
+  <!-- Semantic Segmentation -->
+  <g transform="translate(300, 50)">
+    <rect x="0" y="0" width="260" height="160" rx="10" fill="#1e293b" stroke="#3B82F6" stroke-width="2"/>
+    <text x="130" y="25" text-anchor="middle" fill="#3B82F6" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Segmentación Semántica</text>
+    
+    <!-- Result image -->
+    <g transform="translate(20, 35)">
+      <rect x="0" y="0" width="100" height="70" rx="4" fill="#334155"/>
+      <!-- Sky class -->
+      <rect x="0" y="0" width="100" height="20" fill="#60a5fa" fill-opacity="0.7"/>
+      <!-- Ground class -->
+      <rect x="0" y="50" width="100" height="20" fill="#4ade80" fill-opacity="0.7"/>
+      <!-- Person class (same color for all) -->
+      <rect x="15" y="15" width="18" height="35" fill="#f87171" fill-opacity="0.7"/>
+      <rect x="65" y="18" width="18" height="32" fill="#f87171" fill-opacity="0.7"/>
+      <!-- Car class -->
+      <rect x="35" y="45" width="28" height="14" fill="#a78bfa" fill-opacity="0.7"/>
+    </g>
+    
+    <!-- Legend -->
+    <g transform="translate(130, 40)">
+      <rect x="0" y="0" width="12" height="12" fill="#60a5fa" fill-opacity="0.7"/>
+      <text x="18" y="10" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Cielo</text>
+      
+      <rect x="0" y="18" width="12" height="12" fill="#4ade80" fill-opacity="0.7"/>
+      <text x="18" y="28" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Suelo</text>
+      
+      <rect x="0" y="36" width="12" height="12" fill="#f87171" fill-opacity="0.7"/>
+      <text x="18" y="46" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Persona</text>
+      
+      <rect x="0" y="54" width="12" height="12" fill="#a78bfa" fill-opacity="0.7"/>
+      <text x="18" y="64" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Coche</text>
+    </g>
+    
+    <text x="130" y="125" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">• Cada clase → mismo color</text>
+    <text x="130" y="140" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">• No distingue instancias individuales</text>
+    <text x="130" y="155" text-anchor="middle" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="10">Output: H×W tensor (class per pixel)</text>
+  </g>
+  
+  <!-- Instance Segmentation -->
+  <g transform="translate(300, 230)">
+    <rect x="0" y="0" width="260" height="160" rx="10" fill="#1e293b" stroke="#F59E0B" stroke-width="2"/>
+    <text x="130" y="25" text-anchor="middle" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Segmentación de Instancias</text>
+    
+    <!-- Result image -->
+    <g transform="translate(20, 35)">
+      <rect x="0" y="0" width="100" height="70" rx="4" fill="#334155"/>
+      <!-- Background stays gray -->
+      <!-- Person 1 (unique color) -->
+      <rect x="15" y="15" width="18" height="35" fill="#f87171" fill-opacity="0.8"/>
+      <text x="24" y="13" text-anchor="middle" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="8" font-weight="bold">1</text>
+      <!-- Person 2 (different unique color) -->
+      <rect x="65" y="18" width="18" height="32" fill="#34d399" fill-opacity="0.8"/>
+      <text x="74" y="16" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="8" font-weight="bold">2</text>
+      <!-- Car (unique color) -->
+      <rect x="35" y="45" width="28" height="14" fill="#a78bfa" fill-opacity="0.8"/>
+      <text x="49" y="43" text-anchor="middle" fill="#c4b5fd" font-family="system-ui, sans-serif" font-size="8" font-weight="bold">3</text>
+    </g>
+    
+    <!-- Legend -->
+    <g transform="translate(130, 40)">
+      <rect x="0" y="0" width="12" height="12" fill="#f87171" fill-opacity="0.8"/>
+      <text x="18" y="10" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Persona #1</text>
+      
+      <rect x="0" y="18" width="12" height="12" fill="#34d399" fill-opacity="0.8"/>
+      <text x="18" y="28" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Persona #2</text>
+      
+      <rect x="0" y="36" width="12" height="12" fill="#a78bfa" fill-opacity="0.8"/>
+      <text x="18" y="46" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Coche #1</text>
+    </g>
+    
+    <text x="130" y="110" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">• Cada objeto → color único</text>
+    <text x="130" y="125" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">• Solo objetos "things" (contables)</text>
+    <text x="130" y="140" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">• Background no segmentado</text>
+    <text x="130" y="155" text-anchor="middle" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="10">Output: N máscaras + N labels</text>
+  </g>
+  
+  <!-- Panoptic Segmentation -->
+  <g transform="translate(300, 410)">
+    <rect x="0" y="0" width="260" height="130" rx="10" fill="#1e293b" stroke="#EC4899" stroke-width="2"/>
+    <text x="130" y="25" text-anchor="middle" fill="#EC4899" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Segmentación Panóptica</text>
+    
+    <!-- Result image -->
+    <g transform="translate(20, 35)">
+      <rect x="0" y="0" width="100" height="70" rx="4" fill="#334155"/>
+      <!-- Sky (stuff) -->
+      <rect x="0" y="0" width="100" height="20" fill="#60a5fa" fill-opacity="0.7"/>
+      <!-- Ground (stuff) -->
+      <rect x="0" y="50" width="100" height="20" fill="#4ade80" fill-opacity="0.7"/>
+      <!-- Person 1 (thing) -->
+      <rect x="15" y="15" width="18" height="35" fill="#f87171" fill-opacity="0.8"/>
+      <!-- Person 2 (thing) -->
+      <rect x="65" y="18" width="18" height="32" fill="#34d399" fill-opacity="0.8"/>
+      <!-- Car (thing) -->
+      <rect x="35" y="45" width="28" height="14" fill="#a78bfa" fill-opacity="0.8"/>
+    </g>
+    
+    <!-- Legend -->
+    <g transform="translate(130, 40)">
+      <text x="0" y="0" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="10">Stuff: Cielo, Suelo</text>
+      <text x="0" y="16" fill="#fca5a5" font-family="system-ui, sans-serif" font-size="10">Things: Personas, Coches</text>
+      <text x="0" y="40" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">• Semántica + Instancias</text>
+      <text x="0" y="56" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">• Todo píxel clasificado</text>
+    </g>
+    
+    <text x="130" y="120" text-anchor="middle" fill="#f9a8d4" font-family="system-ui, sans-serif" font-size="10">Output: Mapa completo (class + instance)</text>
+  </g>
+  
+  <!-- Comparison Table -->
+  <g transform="translate(580, 50)">
+    <rect x="0" y="0" width="280" height="210" rx="10" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <text x="140" y="25" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Comparativa</text>
+    
+    <!-- Headers -->
+    <text x="40" y="55" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Tipo</text>
+    <text x="120" y="55" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Stuff</text>
+    <text x="180" y="55" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Things</text>
+    <text x="240" y="55" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Instance</text>
+    
+    <line x1="10" y1="65" x2="270" y2="65" stroke="#334155" stroke-width="1"/>
+    
+    <!-- Semantic row -->
+    <text x="50" y="85" text-anchor="middle" fill="#3B82F6" font-family="system-ui, sans-serif" font-size="11">Semántica</text>
+    <text x="120" y="85" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="12">✓</text>
+    <text x="180" y="85" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="12">✓</text>
+    <text x="240" y="85" text-anchor="middle" fill="#ef4444" font-family="system-ui, sans-serif" font-size="12">✗</text>
+    
+    <!-- Instance row -->
+    <text x="50" y="115" text-anchor="middle" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="11">Instancias</text>
+    <text x="120" y="115" text-anchor="middle" fill="#ef4444" font-family="system-ui, sans-serif" font-size="12">✗</text>
+    <text x="180" y="115" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="12">✓</text>
+    <text x="240" y="115" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="12">✓</text>
+    
+    <!-- Panoptic row -->
+    <text x="50" y="145" text-anchor="middle" fill="#EC4899" font-family="system-ui, sans-serif" font-size="11">Panóptica</text>
+    <text x="120" y="145" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="12">✓</text>
+    <text x="180" y="145" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="12">✓</text>
+    <text x="240" y="145" text-anchor="middle" fill="#4ade80" font-family="system-ui, sans-serif" font-size="12">✓</text>
+    
+    <line x1="10" y1="160" x2="270" y2="160" stroke="#334155" stroke-width="1"/>
+    
+    <text x="140" y="180" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">Stuff = Fondo (cielo, suelo, pared)</text>
+    <text x="140" y="195" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">Things = Objetos contables</text>
+  </g>
+  
+  <!-- Use Cases -->
+  <g transform="translate(580, 280)">
+    <rect x="0" y="0" width="280" height="160" rx="10" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <text x="140" y="25" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Casos de Uso</text>
+    
+    <text x="20" y="50" fill="#3B82F6" font-family="system-ui, sans-serif" font-size="11">Semántica:</text>
+    <text x="20" y="68" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">• Autonomous driving (road)</text>
+    <text x="20" y="82" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">• Medical imaging (tumors)</text>
+    
+    <text x="20" y="105" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="11">Instancias:</text>
+    <text x="20" y="120" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">• Object counting</text>
+    <text x="20" y="135" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">• Robotics manipulation</text>
+    
+    <text x="150" y="105" fill="#EC4899" font-family="system-ui, sans-serif" font-size="11">Panóptica:</text>
+    <text x="150" y="120" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">• Scene understanding</text>
+    <text x="150" y="135" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">• AR/VR environments</text>
+  </g>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowSeg" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>
