@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .title { fill: #ffffff; font-family: system-ui, -apple-system, sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #a0a0a0; font-family: system-ui, -apple-system, sans-serif; font-size: 14px; }
+      .label { fill: #ffffff; font-family: system-ui, -apple-system, sans-serif; font-size: 14px; font-weight: bold; }
+      .label-small { fill: #cccccc; font-family: system-ui, -apple-system, sans-serif; font-size: 12px; }
+      .formula { fill: #ffd93d; font-family: system-ui, -apple-system, sans-serif; font-size: 13px; }
+      .box { fill: #2d2d44; stroke: #4a4a6a; stroke-width: 2; rx: 8; }
+      .box-step { fill: #3d3d5c; stroke: #4ecdc4; stroke-width: 2; rx: 6; }
+      .arrow { fill: none; stroke: #4ecdc4; stroke-width: 2; marker-end: url(#arrowhead); }
+      .data-bar { fill: #ff6b6b; }
+      .data-bar-norm { fill: #4ecdc4; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ecdc4"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="900" height="520"/>
+  
+  <!-- Title -->
+  <text class="title" x="450" y="35" text-anchor="middle">Batch Normalization</text>
+  <text class="subtitle" x="450" y="57" text-anchor="middle">Normaliza activaciones para entrenamiento más rápido y estable</text>
+  
+  <!-- Before Normalization -->
+  <g transform="translate(50, 90)">
+    <rect class="box" x="0" y="0" width="200" height="180"/>
+    <text class="label" x="100" y="25" text-anchor="middle">Antes de BN</text>
+    <text class="label-small" x="100" y="45" text-anchor="middle" fill="#888888">Distribución variable</text>
+    
+    <!-- Histogram bars (uneven distribution) -->
+    <rect class="data-bar" x="30" y="130" width="20" height="30"/>
+    <rect class="data-bar" x="55" y="100" width="20" height="60"/>
+    <rect class="data-bar" x="80" y="70" width="20" height="90"/>
+    <rect class="data-bar" x="105" y="90" width="20" height="70"/>
+    <rect class="data-bar" x="130" y="120" width="20" height="40"/>
+    <rect class="data-bar" x="155" y="140" width="20" height="20"/>
+    
+    <text class="label-small" x="100" y="175" text-anchor="middle">μ ≠ 0, σ ≠ 1</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path class="arrow" d="M 260,180 L 300,180"/>
+  
+  <!-- Step 1: Calculate Mean -->
+  <g transform="translate(310, 100)">
+    <rect class="box-step" x="0" y="0" width="120" height="65"/>
+    <text class="label" x="60" y="22" text-anchor="middle" font-size="12">Paso 1</text>
+    <text class="formula" x="60" y="42" text-anchor="middle">μ = Σxᵢ / m</text>
+    <text class="label-small" x="60" y="58" text-anchor="middle">Media batch</text>
+  </g>
+  
+  <!-- Step 2: Calculate Variance -->
+  <g transform="translate(310, 180)">
+    <rect class="box-step" x="0" y="0" width="120" height="65"/>
+    <text class="label" x="60" y="22" text-anchor="middle" font-size="12">Paso 2</text>
+    <text class="formula" x="60" y="42" text-anchor="middle">σ² = Σ(xᵢ-μ)²/m</text>
+    <text class="label-small" x="60" y="58" text-anchor="middle">Varianza</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path class="arrow" d="M 440,180 L 480,180"/>
+  
+  <!-- Step 3: Normalize -->
+  <g transform="translate(490, 100)">
+    <rect class="box-step" x="0" y="0" width="130" height="65"/>
+    <text class="label" x="65" y="22" text-anchor="middle" font-size="12">Paso 3</text>
+    <text class="formula" x="65" y="42" text-anchor="middle">x̂ = (x-μ)/√(σ²+ε)</text>
+    <text class="label-small" x="65" y="58" text-anchor="middle">Normalizar</text>
+  </g>
+  
+  <!-- Step 4: Scale and Shift -->
+  <g transform="translate(490, 180)">
+    <rect class="box-step" x="0" y="0" width="130" height="65"/>
+    <text class="label" x="65" y="22" text-anchor="middle" font-size="12">Paso 4</text>
+    <text class="formula" x="65" y="42" text-anchor="middle">y = γx̂ + β</text>
+    <text class="label-small" x="65" y="58" text-anchor="middle">Escalar</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path class="arrow" d="M 630,180 L 670,180"/>
+  
+  <!-- After Normalization -->
+  <g transform="translate(680, 90)">
+    <rect class="box" x="0" y="0" width="200" height="180"/>
+    <text class="label" x="100" y="25" text-anchor="middle">Después de BN</text>
+    <text class="label-small" x="100" y="45" text-anchor="middle" fill="#888888">Distribución normalizada</text>
+    
+    <!-- Histogram bars (normal distribution) -->
+    <rect class="data-bar-norm" x="30" y="140" width="20" height="20"/>
+    <rect class="data-bar-norm" x="55" y="115" width="20" height="45"/>
+    <rect class="data-bar-norm" x="80" y="80" width="20" height="80"/>
+    <rect class="data-bar-norm" x="105" y="80" width="20" height="80"/>
+    <rect class="data-bar-norm" x="130" y="115" width="20" height="45"/>
+    <rect class="data-bar-norm" x="155" y="140" width="20" height="20"/>
+    
+    <text class="label-small" x="100" y="175" text-anchor="middle">μ ≈ 0, σ ≈ 1</text>
+  </g>
+  
+  <!-- Parameters Box -->
+  <g transform="translate(50, 300)">
+    <rect class="box" x="0" y="0" width="260" height="120"/>
+    <text class="label" x="130" y="25" text-anchor="middle">Parámetros Aprendibles</text>
+    
+    <text class="formula" x="20" y="50">γ (gamma)</text>
+    <text class="label-small" x="20" y="68">Escala - revierte normalización</text>
+    
+    <text class="formula" x="20" y="90">β (beta)</text>
+    <text class="label-small" x="20" y="108">Desplazamiento de media</text>
+  </g>
+  
+  <!-- Train vs Eval Box -->
+  <g transform="translate(330, 300)">
+    <rect class="box" x="0" y="0" width="260" height="120"/>
+    <text class="label" x="130" y="25" text-anchor="middle">Train vs Eval</text>
+    
+    <text class="label-small" x="20" y="48" fill="#4ecdc4">model.train()</text>
+    <text class="label-small" x="20" y="66">Usa μ, σ del mini-batch</text>
+    
+    <text class="label-small" x="20" y="88" fill="#ffd93d">model.eval()</text>
+    <text class="label-small" x="20" y="106">Usa running_mean/var</text>
+  </g>
+  
+  <!-- Benefits Box -->
+  <g transform="translate(610, 300)">
+    <rect class="box" x="0" y="0" width="260" height="120"/>
+    <text class="label" x="130" y="25" text-anchor="middle">Beneficios</text>
+    
+    <text class="label-small" x="20" y="48">✓ Entrenamiento más rápido</text>
+    <text class="label-small" x="20" y="66">✓ Learning rates mayores</text>
+    <text class="label-small" x="20" y="84">✓ Menos sensible a init</text>
+    <text class="label-small" x="20" y="102">✓ Efecto regularizador</text>
+  </g>
+  
+  <!-- Usage Pattern -->
+  <g transform="translate(50, 430)">
+    <rect class="box" x="0" y="0" width="820" height="70"/>
+    <text class="label" x="410" y="25" text-anchor="middle">Patrón de Uso</text>
+    
+    <text class="formula" x="410" y="55" text-anchor="middle">Linear/Conv → BatchNorm → ReLU → Dropout (opcional)</text>
+  </g>
+</svg>
