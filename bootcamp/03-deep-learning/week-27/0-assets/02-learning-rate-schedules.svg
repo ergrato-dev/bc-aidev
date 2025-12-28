@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 20px; font-weight: bold; }
+      .subtitle { fill: #9cdcfe; font-family: system-ui, sans-serif; font-size: 14px; }
+      .label { fill: #d4d4d4; font-family: system-ui, sans-serif; font-size: 12px; }
+      .axis { stroke: #666666; stroke-width: 1; }
+      .axis-label { fill: #888888; font-family: system-ui, sans-serif; font-size: 11px; }
+      .grid { stroke: #333333; stroke-width: 0.5; }
+      .path-step { stroke: #3794ff; stroke-width: 2.5; fill: none; }
+      .path-cosine { stroke: #4ec9b0; stroke-width: 2.5; fill: none; }
+      .path-onecycle { stroke: #ffcc00; stroke-width: 2.5; fill: none; }
+      .path-plateau { stroke: #c586c0; stroke-width: 2.5; fill: none; }
+      .legend-box { fill: #252525; stroke: #444444; rx: 8; }
+      .text-small { fill: #b0b0b0; font-family: system-ui, sans-serif; font-size: 11px; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+  
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Learning Rate Schedules</text>
+  
+  <!-- Graph 1: StepLR -->
+  <g transform="translate(50, 60)">
+    <text class="subtitle" x="150" y="15" text-anchor="middle">StepLR</text>
+    <!-- Axes -->
+    <line class="axis" x1="30" y1="120" x2="300" y2="120"/>
+    <line class="axis" x1="30" y1="20" x2="30" y2="120"/>
+    <text class="axis-label" x="165" y="140">Epochs</text>
+    <text class="axis-label" x="10" y="70" transform="rotate(-90, 10, 70)">LR</text>
+    <!-- Grid -->
+    <line class="grid" x1="30" y1="40" x2="300" y2="40"/>
+    <line class="grid" x1="30" y1="60" x2="300" y2="60"/>
+    <line class="grid" x1="30" y1="80" x2="300" y2="80"/>
+    <line class="grid" x1="30" y1="100" x2="300" y2="100"/>
+    <!-- StepLR Path -->
+    <path class="path-step" d="M30,30 L100,30 L100,50 L170,50 L170,70 L240,70 L240,90 L300,90"/>
+  </g>
+  
+  <!-- Graph 2: CosineAnnealing -->
+  <g transform="translate(420, 60)">
+    <text class="subtitle" x="150" y="15" text-anchor="middle">CosineAnnealing</text>
+    <!-- Axes -->
+    <line class="axis" x1="30" y1="120" x2="300" y2="120"/>
+    <line class="axis" x1="30" y1="20" x2="30" y2="120"/>
+    <text class="axis-label" x="165" y="140">Epochs</text>
+    <text class="axis-label" x="10" y="70" transform="rotate(-90, 10, 70)">LR</text>
+    <!-- Grid -->
+    <line class="grid" x1="30" y1="40" x2="300" y2="40"/>
+    <line class="grid" x1="30" y1="60" x2="300" y2="60"/>
+    <line class="grid" x1="30" y1="80" x2="300" y2="80"/>
+    <line class="grid" x1="30" y1="100" x2="300" y2="100"/>
+    <!-- Cosine Path -->
+    <path class="path-cosine" d="M30,30 Q80,30 100,40 Q140,55 165,75 Q200,100 240,110 Q270,115 300,115"/>
+  </g>
+  
+  <!-- Graph 3: OneCycleLR -->
+  <g transform="translate(50, 260)">
+    <text class="subtitle" x="150" y="15" text-anchor="middle">OneCycleLR</text>
+    <!-- Axes -->
+    <line class="axis" x1="30" y1="120" x2="300" y2="120"/>
+    <line class="axis" x1="30" y1="20" x2="30" y2="120"/>
+    <text class="axis-label" x="165" y="140">Epochs</text>
+    <text class="axis-label" x="10" y="70" transform="rotate(-90, 10, 70)">LR</text>
+    <!-- Grid -->
+    <line class="grid" x1="30" y1="40" x2="300" y2="40"/>
+    <line class="grid" x1="30" y1="60" x2="300" y2="60"/>
+    <line class="grid" x1="30" y1="80" x2="300" y2="80"/>
+    <line class="grid" x1="30" y1="100" x2="300" y2="100"/>
+    <!-- OneCycle Path: warmup + decay -->
+    <path class="path-onecycle" d="M30,100 Q60,80 90,30 Q150,30 180,50 Q240,90 270,110 L300,115"/>
+    <!-- Annotations -->
+    <text class="text-small" x="60" y="115">warmup</text>
+    <text class="text-small" x="200" y="75">decay</text>
+  </g>
+  
+  <!-- Graph 4: ReduceOnPlateau -->
+  <g transform="translate(420, 260)">
+    <text class="subtitle" x="150" y="15" text-anchor="middle">ReduceOnPlateau</text>
+    <!-- Axes -->
+    <line class="axis" x1="30" y1="120" x2="300" y2="120"/>
+    <line class="axis" x1="30" y1="20" x2="30" y2="120"/>
+    <text class="axis-label" x="165" y="140">Epochs</text>
+    <text class="axis-label" x="10" y="70" transform="rotate(-90, 10, 70)">LR</text>
+    <!-- Grid -->
+    <line class="grid" x1="30" y1="40" x2="300" y2="40"/>
+    <line class="grid" x1="30" y1="60" x2="300" y2="60"/>
+    <line class="grid" x1="30" y1="80" x2="300" y2="80"/>
+    <line class="grid" x1="30" y1="100" x2="300" y2="100"/>
+    <!-- Plateau Path: drops when val_loss plateaus -->
+    <path class="path-plateau" d="M30,30 L80,30 L80,50 L150,50 L150,75 L220,75 L220,95 L300,95"/>
+    <!-- Plateau indicators -->
+    <circle cx="80" cy="30" r="4" fill="#c586c0"/>
+    <circle cx="150" cy="50" r="4" fill="#c586c0"/>
+    <circle cx="220" cy="75" r="4" fill="#c586c0"/>
+    <text class="text-small" x="80" y="20">↓</text>
+    <text class="text-small" x="150" y="43">↓</text>
+    <text class="text-small" x="220" y="68">↓</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(250, 440)">
+    <rect class="legend-box" x="0" y="0" width="300" height="50"/>
+    <line x1="20" y1="20" x2="50" y2="20" stroke="#3794ff" stroke-width="2.5"/>
+    <text class="label" x="60" y="24">StepLR</text>
+    <line x1="110" y1="20" x2="140" y2="20" stroke="#4ec9b0" stroke-width="2.5"/>
+    <text class="label" x="150" y="24">Cosine</text>
+    <line x1="20" y1="38" x2="50" y2="38" stroke="#ffcc00" stroke-width="2.5"/>
+    <text class="label" x="60" y="42">OneCycle</text>
+    <line x1="130" y1="38" x2="160" y2="38" stroke="#c586c0" stroke-width="2.5"/>
+    <text class="label" x="170" y="42">Plateau</text>
+  </g>
+</svg>

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 20px; font-weight: bold; }
+      .subtitle { fill: #9cdcfe; font-family: system-ui, sans-serif; font-size: 14px; }
+      .label { fill: #d4d4d4; font-family: system-ui, sans-serif; font-size: 12px; }
+      .box-sgd { fill: #264f78; stroke: #3794ff; stroke-width: 2; rx: 8; }
+      .box-momentum { fill: #4d3d00; stroke: #ffcc00; stroke-width: 2; rx: 8; }
+      .box-adam { fill: #2d4a2d; stroke: #4ec9b0; stroke-width: 2; rx: 8; }
+      .box-adamw { fill: #4a2d4a; stroke: #c586c0; stroke-width: 2; rx: 8; }
+      .text-box { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 13px; }
+      .text-small { fill: #b0b0b0; font-family: system-ui, sans-serif; font-size: 11px; }
+      .arrow { stroke: #569cd6; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .axis { stroke: #666666; stroke-width: 1; }
+      .path-sgd { stroke: #3794ff; stroke-width: 2; fill: none; }
+      .path-momentum { stroke: #ffcc00; stroke-width: 2; fill: none; }
+      .path-adam { stroke: #4ec9b0; stroke-width: 2; fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#569cd6"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+  
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Comparación de Optimizadores</text>
+  
+  <!-- SGD Box -->
+  <rect class="box-sgd" x="30" y="60" width="170" height="100"/>
+  <text class="text-box" x="115" y="85" text-anchor="middle" font-weight="bold">SGD</text>
+  <text class="text-small" x="115" y="105" text-anchor="middle">w = w - lr × ∇L</text>
+  <text class="text-small" x="115" y="125" text-anchor="middle">Simple y estable</text>
+  <text class="text-small" x="115" y="145" text-anchor="middle">Convergencia lenta</text>
+  
+  <!-- Momentum Box -->
+  <rect class="box-momentum" x="220" y="60" width="170" height="100"/>
+  <text class="text-box" x="305" y="85" text-anchor="middle" font-weight="bold">SGD + Momentum</text>
+  <text class="text-small" x="305" y="105" text-anchor="middle">v = β×v + ∇L</text>
+  <text class="text-small" x="305" y="125" text-anchor="middle">Acelera convergencia</text>
+  <text class="text-small" x="305" y="145" text-anchor="middle">β típico: 0.9</text>
+  
+  <!-- Adam Box -->
+  <rect class="box-adam" x="410" y="60" width="170" height="100"/>
+  <text class="text-box" x="495" y="85" text-anchor="middle" font-weight="bold">Adam</text>
+  <text class="text-small" x="495" y="105" text-anchor="middle">m + v adaptativos</text>
+  <text class="text-small" x="495" y="125" text-anchor="middle">LR por parámetro</text>
+  <text class="text-small" x="495" y="145" text-anchor="middle">Rápido pero puede</text>
+  
+  <!-- AdamW Box -->
+  <rect class="box-adamw" x="600" y="60" width="170" height="100"/>
+  <text class="text-box" x="685" y="85" text-anchor="middle" font-weight="bold">AdamW</text>
+  <text class="text-small" x="685" y="105" text-anchor="middle">Weight decay correcto</text>
+  <text class="text-small" x="685" y="125" text-anchor="middle">Mejor generalización</text>
+  <text class="text-small" x="685" y="145" text-anchor="middle">Recomendado</text>
+  
+  <!-- Arrows between boxes -->
+  <path class="arrow" d="M200,110 L220,110"/>
+  <path class="arrow" d="M390,110 L410,110"/>
+  <path class="arrow" d="M580,110 L600,110"/>
+  
+  <!-- Loss Landscape Visualization -->
+  <text class="subtitle" x="400" y="195" text-anchor="middle">Trayectoria en Loss Landscape</text>
+  
+  <!-- Contour plot simulation -->
+  <g transform="translate(150, 220)">
+    <!-- Axes -->
+    <line class="axis" x1="0" y1="250" x2="500" y2="250"/>
+    <line class="axis" x1="0" y1="0" x2="0" y2="250"/>
+    
+    <!-- Contour ellipses -->
+    <ellipse cx="400" cy="200" rx="80" ry="40" fill="none" stroke="#333333" stroke-width="1"/>
+    <ellipse cx="400" cy="200" rx="140" ry="70" fill="none" stroke="#333333" stroke-width="1"/>
+    <ellipse cx="400" cy="200" rx="200" ry="100" fill="none" stroke="#333333" stroke-width="1"/>
+    <ellipse cx="400" cy="200" rx="260" ry="130" fill="none" stroke="#333333" stroke-width="1"/>
+    
+    <!-- Minimum point -->
+    <circle cx="400" cy="200" r="6" fill="#4ec9b0"/>
+    <text class="text-small" x="400" y="225" text-anchor="middle">Mínimo</text>
+    
+    <!-- SGD path (zigzag) -->
+    <path class="path-sgd" d="M50,50 L100,100 L80,130 L130,150 L110,175 L160,185 L140,195 L200,200 L180,205 L250,200 L230,202 L300,200 L350,200 L400,200"/>
+    
+    <!-- Momentum path (smoother) -->
+    <path class="path-momentum" d="M50,70 Q150,150 250,180 Q320,195 400,200"/>
+    
+    <!-- Adam path (direct) -->
+    <path class="path-adam" d="M50,90 Q200,170 400,200"/>
+    
+    <!-- Start point -->
+    <circle cx="50" cy="50" r="5" fill="#3794ff"/>
+    <circle cx="50" cy="70" r="5" fill="#ffcc00"/>
+    <circle cx="50" cy="90" r="5" fill="#4ec9b0"/>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(550, 280)">
+    <rect x="0" y="0" width="200" height="100" fill="#252525" rx="8" stroke="#444444"/>
+    <text class="label" x="100" y="20" text-anchor="middle" font-weight="bold">Leyenda</text>
+    <line x1="15" y1="40" x2="45" y2="40" stroke="#3794ff" stroke-width="2"/>
+    <text class="text-small" x="55" y="44">SGD (oscilante)</text>
+    <line x1="15" y1="60" x2="45" y2="60" stroke="#ffcc00" stroke-width="2"/>
+    <text class="text-small" x="55" y="64">Momentum (suave)</text>
+    <line x1="15" y1="80" x2="45" y2="80" stroke="#4ec9b0" stroke-width="2"/>
+    <text class="text-small" x="55" y="84">Adam (directo)</text>
+  </g>
+</svg>

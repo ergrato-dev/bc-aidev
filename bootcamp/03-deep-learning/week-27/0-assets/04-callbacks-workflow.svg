@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 20px; font-weight: bold; }
+      .subtitle { fill: #9cdcfe; font-family: system-ui, sans-serif; font-size: 14px; }
+      .label { fill: #d4d4d4; font-family: system-ui, sans-serif; font-size: 12px; }
+      .text-small { fill: #b0b0b0; font-family: system-ui, sans-serif; font-size: 11px; }
+      .box-main { fill: #264f78; stroke: #3794ff; stroke-width: 2; rx: 8; }
+      .box-callback { fill: #2d4a2d; stroke: #4ec9b0; stroke-width: 2; rx: 8; }
+      .box-action { fill: #4d3d00; stroke: #ffcc00; stroke-width: 2; rx: 8; }
+      .box-stop { fill: #4a2d2d; stroke: #f14c4c; stroke-width: 2; rx: 8; }
+      .arrow { stroke: #569cd6; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .arrow-callback { stroke: #4ec9b0; stroke-width: 1.5; fill: none; stroke-dasharray: 5,3; }
+      .flow-line { stroke: #666666; stroke-width: 1.5; fill: none; }
+      .text-box { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 13px; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#569cd6"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="800" height="560"/>
+  
+  <!-- Title -->
+  <text class="title" x="400" y="30" text-anchor="middle">Callbacks y Checkpoints - Flujo de Trabajo</text>
+  
+  <!-- Main Training Loop -->
+  <g transform="translate(50, 60)">
+    <!-- Start -->
+    <circle cx="60" cy="30" r="20" fill="#264f78" stroke="#3794ff" stroke-width="2"/>
+    <text class="text-box" x="60" y="35" text-anchor="middle">Start</text>
+    
+    <!-- on_train_begin -->
+    <rect class="box-callback" x="20" y="70" width="130" height="40"/>
+    <text class="label" x="85" y="95" text-anchor="middle">on_train_begin</text>
+    
+    <!-- Epoch Loop -->
+    <rect class="box-main" x="20" y="130" width="130" height="45"/>
+    <text class="text-box" x="85" y="150" text-anchor="middle">Epoch Loop</text>
+    <text class="text-small" x="85" y="165" text-anchor="middle">for epoch in range(N)</text>
+    
+    <!-- on_epoch_begin -->
+    <rect class="box-callback" x="20" y="195" width="130" height="40"/>
+    <text class="label" x="85" y="220" text-anchor="middle">on_epoch_begin</text>
+    
+    <!-- Train Batches -->
+    <rect class="box-main" x="20" y="255" width="130" height="45"/>
+    <text class="text-box" x="85" y="275" text-anchor="middle">Train Batches</text>
+    <text class="text-small" x="85" y="290" text-anchor="middle">forward + backward</text>
+    
+    <!-- Validation -->
+    <rect class="box-main" x="20" y="320" width="130" height="40"/>
+    <text class="text-box" x="85" y="345" text-anchor="middle">Validation</text>
+    
+    <!-- on_epoch_end -->
+    <rect class="box-callback" x="20" y="380" width="130" height="40"/>
+    <text class="label" x="85" y="405" text-anchor="middle">on_epoch_end</text>
+    
+    <!-- Arrows -->
+    <path class="arrow" d="M60,50 L60,70"/>
+    <path class="arrow" d="M85,110 L85,130"/>
+    <path class="arrow" d="M85,175 L85,195"/>
+    <path class="arrow" d="M85,235 L85,255"/>
+    <path class="arrow" d="M85,300 L85,320"/>
+    <path class="arrow" d="M85,360 L85,380"/>
+    
+    <!-- Loop back arrow -->
+    <path class="flow-line" d="M150,400 L170,400 L170,150 L150,150" marker-end="url(#arrowhead)"/>
+    <text class="text-small" x="180" y="275" transform="rotate(90, 180, 275)">next epoch</text>
+  </g>
+  
+  <!-- Callbacks Detail -->
+  <g transform="translate(280, 70)">
+    <text class="subtitle" x="200" y="0" text-anchor="middle">Callbacks Ejecutados</text>
+    
+    <!-- Early Stopping -->
+    <rect class="box-action" x="30" y="30" width="180" height="70"/>
+    <text class="text-box" x="120" y="55" text-anchor="middle">Early Stopping</text>
+    <text class="text-small" x="120" y="75" text-anchor="middle">if no improvement:</text>
+    <text class="text-small" x="120" y="90" text-anchor="middle">counter += 1</text>
+    
+    <path class="arrow-callback" d="M210,65 L280,65"/>
+    
+    <!-- Stop condition -->
+    <rect class="box-stop" x="280" y="40" width="120" height="50"/>
+    <text class="label" x="340" y="60" text-anchor="middle">counter ≥ patience</text>
+    <text class="text-small" x="340" y="78" text-anchor="middle">→ STOP</text>
+    
+    <!-- Model Checkpoint -->
+    <rect class="box-action" x="30" y="120" width="180" height="70"/>
+    <text class="text-box" x="120" y="145" text-anchor="middle">Model Checkpoint</text>
+    <text class="text-small" x="120" y="165" text-anchor="middle">if val_acc > best:</text>
+    <text class="text-small" x="120" y="180" text-anchor="middle">save(model)</text>
+    
+    <path class="arrow-callback" d="M210,155 L280,155"/>
+    
+    <!-- Save action -->
+    <rect class="box-callback" x="280" y="130" width="120" height="50"/>
+    <text class="label" x="340" y="150" text-anchor="middle">best_model.pth</text>
+    <text class="text-small" x="340" y="168" text-anchor="middle">💾 saved</text>
+    
+    <!-- LR Scheduler -->
+    <rect class="box-action" x="30" y="210" width="180" height="70"/>
+    <text class="text-box" x="120" y="235" text-anchor="middle">LR Scheduler</text>
+    <text class="text-small" x="120" y="255" text-anchor="middle">scheduler.step()</text>
+    <text class="text-small" x="120" y="270" text-anchor="middle">adjust learning rate</text>
+    
+    <path class="arrow-callback" d="M210,245 L280,245"/>
+    
+    <!-- LR update -->
+    <rect class="box-callback" x="280" y="220" width="120" height="50"/>
+    <text class="label" x="340" y="240" text-anchor="middle">lr: 0.01 → 0.001</text>
+    <text class="text-small" x="340" y="258" text-anchor="middle">📉 reduced</text>
+    
+    <!-- Gradient Clipping -->
+    <rect class="box-action" x="30" y="300" width="180" height="70"/>
+    <text class="text-box" x="120" y="325" text-anchor="middle">Gradient Clipping</text>
+    <text class="text-small" x="120" y="345" text-anchor="middle">clip_grad_norm_</text>
+    <text class="text-small" x="120" y="360" text-anchor="middle">max_norm=1.0</text>
+    
+    <path class="arrow-callback" d="M210,335 L280,335"/>
+    
+    <!-- Clip action -->
+    <rect class="box-callback" x="280" y="310" width="120" height="50"/>
+    <text class="label" x="340" y="330" text-anchor="middle">‖∇‖ ≤ 1.0</text>
+    <text class="text-small" x="340" y="348" text-anchor="middle">✂️ clipped</text>
+  </g>
+  
+  <!-- Bottom Summary -->
+  <g transform="translate(100, 500)">
+    <rect x="0" y="0" width="600" height="45" fill="#252525" rx="8" stroke="#444444"/>
+    <text class="label" x="300" y="18" text-anchor="middle">Orden típico: Gradient Clipping → Optimizer Step → LR Scheduler → Checkpoint → Early Stop</text>
+    <text class="text-small" x="300" y="36" text-anchor="middle">Los callbacks permiten modularizar y monitorear el entrenamiento de forma limpia</text>
+  </g>
+</svg>
