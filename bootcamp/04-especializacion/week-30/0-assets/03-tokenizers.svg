@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480">
+  <rect width="900" height="480" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">Tokenización en Hugging Face</text>
+  
+  <!-- Input text -->
+  <rect x="300" y="70" width="300" height="45" rx="8" fill="#16213e" stroke="#e94560" stroke-width="2"/>
+  <text x="450" y="98" font-family="monospace" font-size="14" fill="#e94560" text-anchor="middle">"Hello, how are you?"</text>
+  
+  <!-- Arrow down -->
+  <path d="M450 115 L450 145" stroke="#4a4a6a" stroke-width="2" marker-end="url(#arrow2)"/>
+  
+  <!-- Step 1: Tokenize -->
+  <rect x="100" y="150" width="300" height="80" rx="10" fill="#16213e" stroke="#4fc3f7" stroke-width="2"/>
+  <text x="250" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#4fc3f7" text-anchor="middle">1. tokenize()</text>
+  <text x="250" y="210" font-family="monospace" font-size="11" fill="#ff9800" text-anchor="middle">["hello", ",", "how", "are", "you", "?"]</text>
+  
+  <!-- Step 2: Convert to IDs -->
+  <rect x="500" y="150" width="300" height="80" rx="10" fill="#16213e" stroke="#4ecdc4" stroke-width="2"/>
+  <text x="650" y="180" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#4ecdc4" text-anchor="middle">2. convert_tokens_to_ids()</text>
+  <text x="650" y="210" font-family="monospace" font-size="11" fill="#ff9800" text-anchor="middle">[7592, 1010, 2129, 2024, 2017, 1029]</text>
+  
+  <!-- Arrow between -->
+  <path d="M400 190 L500 190" stroke="#4a4a6a" stroke-width="2" marker-end="url(#arrow2)"/>
+  
+  <!-- Step 3: Add special tokens -->
+  <rect x="150" y="270" width="560" height="80" rx="10" fill="#16213e" stroke="#9c27b0" stroke-width="2"/>
+  <text x="430" y="300" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#9c27b0" text-anchor="middle">3. Añadir tokens especiales</text>
+  <text x="430" y="325" font-family="monospace" font-size="10" fill="#ff9800" text-anchor="middle">[CLS] hello , how are you ? [SEP]</text>
+  <text x="430" y="343" font-family="monospace" font-size="10" fill="#4fc3f7" text-anchor="middle">→ [101, 7592, 1010, 2129, 2024, 2017, 1029, 102]</text>
+  
+  <!-- Arrow down -->
+  <path d="M450 350 L450 380" stroke="#4a4a6a" stroke-width="2" marker-end="url(#arrow2)"/>
+  
+  <!-- Output -->
+  <rect x="100" y="385" width="700" height="80" rx="10" fill="#0d0d1a" stroke="#4caf50" stroke-width="2"/>
+  <text x="450" y="415" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#4caf50" text-anchor="middle">Output: BatchEncoding</text>
+  
+  <text x="180" y="445" font-family="monospace" font-size="10" fill="#a0a0a0">input_ids:</text>
+  <text x="330" y="445" font-family="monospace" font-size="10" fill="#4caf50">[101, 7592, 1010, 2129, 2024, 2017, 1029, 102]</text>
+  
+  <text x="500" y="445" font-family="monospace" font-size="10" fill="#a0a0a0">attention_mask:</text>
+  <text x="650" y="445" font-family="monospace" font-size="10" fill="#4caf50">[1, 1, 1, 1, 1, 1, 1, 1]</text>
+  
+  <!-- Legend -->
+  <rect x="720" y="270" width="160" height="80" rx="8" fill="#0d0d1a"/>
+  <text x="800" y="295" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">Tokens Especiales</text>
+  <text x="800" y="318" font-family="monospace" font-size="10" fill="#9c27b0" text-anchor="middle">[CLS] = 101</text>
+  <text x="800" y="338" font-family="monospace" font-size="10" fill="#9c27b0" text-anchor="middle">[SEP] = 102</text>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a4a6a"/>
+    </marker>
+  </defs>
+</svg>
