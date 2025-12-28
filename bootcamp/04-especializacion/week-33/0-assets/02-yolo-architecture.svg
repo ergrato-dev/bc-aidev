@@ -91,9 +91,9 @@
     <rect x="25" y="70" width="20" height="15" rx="2" fill="none" stroke="#10B981" stroke-width="1.5"/>
     <rect x="55" y="80" width="25" height="20" rx="2" fill="none" stroke="#F59E0B" stroke-width="1.5"/>
     <text x="35" y="95" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="7">0.95</text>
-    <text x="67" y="108" text-anchor="middle" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="7">0.88</text>
+    <text x="67" y="98" text-anchor="middle" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="7">0.88</text>
     
-    <text x="60" y="120" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">Detecciones</text>
+    <text x="60" y="115" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">Detecciones</text>
   </g>
   
   <!-- YOLO Versions -->
