@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480">
+  <rect width="900" height="480" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">Tipos de Tokenización</text>
+  
+  <!-- Input text -->
+  <rect x="300" y="70" width="300" height="50" rx="10" fill="#16213e" stroke="#e94560" stroke-width="2"/>
+  <text x="450" y="100" font-family="monospace" font-size="16" fill="#e94560" text-anchor="middle">"infelizmente"</text>
+  
+  <!-- Three branches -->
+  <path d="M450 120 L150 170" stroke="#4a4a6a" stroke-width="2"/>
+  <path d="M450 120 L450 170" stroke="#4a4a6a" stroke-width="2"/>
+  <path d="M450 120 L750 170" stroke="#4a4a6a" stroke-width="2"/>
+  
+  <!-- Word-level -->
+  <rect x="50" y="170" width="200" height="120" rx="10" fill="#16213e" stroke="#ff6b6b" stroke-width="2"/>
+  <text x="150" y="200" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ff6b6b" text-anchor="middle">Por Palabras</text>
+  <text x="150" y="225" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#a0a0a0" text-anchor="middle">(Word-level)</text>
+  
+  <rect x="70" y="240" width="160" height="35" rx="5" fill="#2a2a4a"/>
+  <text x="150" y="263" font-family="monospace" font-size="12" fill="#ff9800" text-anchor="middle">["infelizmente"]</text>
+  
+  <!-- Character-level -->
+  <rect x="350" y="170" width="200" height="120" rx="10" fill="#16213e" stroke="#4ecdc4" stroke-width="2"/>
+  <text x="450" y="200" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#4ecdc4" text-anchor="middle">Por Caracteres</text>
+  <text x="450" y="225" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#a0a0a0" text-anchor="middle">(Character-level)</text>
+  
+  <rect x="365" y="240" width="170" height="35" rx="5" fill="#2a2a4a"/>
+  <text x="450" y="263" font-family="monospace" font-size="10" fill="#ff9800" text-anchor="middle">["i","n","f","e","l","i",...]</text>
+  
+  <!-- Subword-level -->
+  <rect x="650" y="170" width="200" height="120" rx="10" fill="#16213e" stroke="#4caf50" stroke-width="2"/>
+  <text x="750" y="200" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#4caf50" text-anchor="middle">Por Subpalabras</text>
+  <text x="750" y="225" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#a0a0a0" text-anchor="middle">(Subword-level)</text>
+  
+  <rect x="665" y="240" width="170" height="35" rx="5" fill="#2a2a4a"/>
+  <text x="750" y="263" font-family="monospace" font-size="11" fill="#ff9800" text-anchor="middle">["in","feliz","mente"]</text>
+  
+  <!-- Comparison table -->
+  <rect x="50" y="320" width="800" height="140" rx="10" fill="#0d0d1a"/>
+  
+  <!-- Table header -->
+  <text x="150" y="350" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Característica</text>
+  <text x="350" y="350" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ff6b6b" text-anchor="middle">Palabra</text>
+  <text x="550" y="350" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#4ecdc4" text-anchor="middle">Carácter</text>
+  <text x="750" y="350" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#4caf50" text-anchor="middle">Subpalabra</text>
+  
+  <line x1="50" y1="365" x2="850" y2="365" stroke="#2a2a4a" stroke-width="1"/>
+  
+  <!-- Row 1: Vocab size -->
+  <text x="150" y="390" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#a0a0a0" text-anchor="middle">Tamaño vocab</text>
+  <text x="350" y="390" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#ff6b6b" text-anchor="middle">50K - 100K+</text>
+  <text x="550" y="390" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#4ecdc4" text-anchor="middle">~100</text>
+  <text x="750" y="390" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#4caf50" text-anchor="middle">30K - 50K</text>
+  
+  <!-- Row 2: Sequence length -->
+  <text x="150" y="415" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#a0a0a0" text-anchor="middle">Long. secuencia</text>
+  <text x="350" y="415" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#ff6b6b" text-anchor="middle">Corta</text>
+  <text x="550" y="415" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#4ecdc4" text-anchor="middle">Muy larga</text>
+  <text x="750" y="415" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#4caf50" text-anchor="middle">Media</text>
+  
+  <!-- Row 3: OOV -->
+  <text x="150" y="440" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#a0a0a0" text-anchor="middle">Maneja OOV</text>
+  <text x="350" y="440" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#ff6b6b" text-anchor="middle">❌ No</text>
+  <text x="550" y="440" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#4ecdc4" text-anchor="middle">✅ Sí</text>
+  <text x="750" y="440" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#4caf50" text-anchor="middle">✅ Sí</text>
+  
+  <!-- Best choice indicator -->
+  <rect x="645" y="165" width="210" height="130" rx="12" fill="none" stroke="#4caf50" stroke-width="3" stroke-dasharray="5,3"/>
+  <text x="750" y="305" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#4caf50" text-anchor="middle">★ Mejor equilibrio</text>
+</svg>
