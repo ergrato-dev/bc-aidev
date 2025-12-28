@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="bold">Comparativa de Vector Databases</text>
+  
+  <!-- ChromaDB -->
+  <rect x="30" y="65" width="170" height="150" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+  <rect x="30" y="65" width="170" height="35" rx="10" fill="#10b981"/>
+  <rect x="30" y="90" width="170" height="10" fill="#10b981"/>
+  <text x="115" y="90" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">ChromaDB</text>
+  
+  <text x="45" y="125" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="10">✓ Embebida / Local</text>
+  <text x="45" y="145" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="10">✓ Python-native</text>
+  <text x="45" y="165" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="10">✓ Fácil de usar</text>
+  <text x="45" y="185" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">• Ideal: Prototipos</text>
+  <text x="45" y="205" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">~1M vectores</text>
+  
+  <!-- Pinecone -->
+  <rect x="220" y="65" width="170" height="150" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="220" y="65" width="170" height="35" rx="10" fill="#3b82f6"/>
+  <rect x="220" y="90" width="170" height="10" fill="#3b82f6"/>
+  <text x="305" y="90" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Pinecone</text>
+  
+  <text x="235" y="125" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="10">✓ Serverless cloud</text>
+  <text x="235" y="145" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="10">✓ Auto-scaling</text>
+  <text x="235" y="165" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="10">✓ Managed service</text>
+  <text x="235" y="185" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">• Ideal: Producción</text>
+  <text x="235" y="205" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">~Billones vectores</text>
+  
+  <!-- Weaviate -->
+  <rect x="410" y="65" width="170" height="150" rx="10" fill="#1e293b" stroke="#8b5cf6" stroke-width="2"/>
+  <rect x="410" y="65" width="170" height="35" rx="10" fill="#8b5cf6"/>
+  <rect x="410" y="90" width="170" height="10" fill="#8b5cf6"/>
+  <text x="495" y="90" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Weaviate</text>
+  
+  <text x="425" y="125" fill="#c4b5fd" font-family="system-ui, sans-serif" font-size="10">✓ Self-hosted/Cloud</text>
+  <text x="425" y="145" fill="#c4b5fd" font-family="system-ui, sans-serif" font-size="10">✓ GraphQL API</text>
+  <text x="425" y="165" fill="#c4b5fd" font-family="system-ui, sans-serif" font-size="10">✓ ML módulos</text>
+  <text x="425" y="185" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">• Ideal: Enterprise</text>
+  <text x="425" y="205" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">~100M vectores</text>
+  
+  <!-- Qdrant -->
+  <rect x="600" y="65" width="170" height="150" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="600" y="65" width="170" height="35" rx="10" fill="#f59e0b"/>
+  <rect x="600" y="90" width="170" height="10" fill="#f59e0b"/>
+  <text x="685" y="90" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">Qdrant</text>
+  
+  <text x="615" y="125" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="10">✓ Rust (muy rápido)</text>
+  <text x="615" y="145" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="10">✓ Filtros avanzados</text>
+  <text x="615" y="165" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="10">✓ Sparse vectors</text>
+  <text x="615" y="185" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">• Ideal: Performance</text>
+  <text x="615" y="205" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">~100M vectores</text>
+  
+  <!-- Comparison Table -->
+  <rect x="30" y="235" width="740" height="145" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  
+  <!-- Table Header -->
+  <rect x="30" y="235" width="740" height="30" rx="8" fill="#334155"/>
+  <text x="130" y="255" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Feature</text>
+  <text x="280" y="255" text-anchor="middle" fill="#10b981" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">ChromaDB</text>
+  <text x="420" y="255" text-anchor="middle" fill="#3b82f6" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Pinecone</text>
+  <text x="560" y="255" text-anchor="middle" fill="#8b5cf6" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Weaviate</text>
+  <text x="700" y="255" text-anchor="middle" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Qdrant</text>
+  
+  <!-- Row 1 -->
+  <text x="50" y="285" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Hosting</text>
+  <text x="280" y="285" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="10">Local</text>
+  <text x="420" y="285" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="10">Cloud</text>
+  <text x="560" y="285" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="10">Hybrid</text>
+  <text x="700" y="285" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="10">Hybrid</text>
+  
+  <!-- Row 2 -->
+  <text x="50" y="310" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Precio</text>
+  <text x="280" y="310" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="10">Free</text>
+  <text x="420" y="310" text-anchor="middle" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="10">$$</text>
+  <text x="560" y="310" text-anchor="middle" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="10">Free/$</text>
+  <text x="700" y="310" text-anchor="middle" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="10">Free/$</text>
+  
+  <!-- Row 3 -->
+  <text x="50" y="335" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Metadata Filter</text>
+  <text x="280" y="335" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="10">✓</text>
+  <text x="420" y="335" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="10">✓</text>
+  <text x="560" y="335" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="10">✓</text>
+  <text x="700" y="335" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="10">✓✓</text>
+  
+  <!-- Row 4 -->
+  <text x="50" y="360" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Hybrid Search</text>
+  <text x="280" y="360" text-anchor="middle" fill="#ef4444" font-family="system-ui, sans-serif" font-size="10">✗</text>
+  <text x="420" y="360" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="10">✓</text>
+  <text x="560" y="360" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="10">✓</text>
+  <text x="700" y="360" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="10">✓</text>
+</svg>

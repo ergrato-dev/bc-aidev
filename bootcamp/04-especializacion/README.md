@@ -24,7 +24,7 @@ Al completar este módulo serás capaz de:
 | 29     | NLP Fundamentos | Tokenización, embeddings, Word2Vec                      | ✅     |
 | 30     | Hugging Face    | Transformers library, pipelines, modelos pre-entrenados | ✅     |
 | 31     | LLMs            | GPT, BERT, prompt engineering, fine-tuning              | ✅     |
-| 32     | RAG             | Retrieval Augmented Generation, vector databases        | 🔜     |
+| 32     | RAG             | Retrieval Augmented Generation, vector databases        | ✅     |
 | 33     | Computer Vision | Detección de objetos, segmentación, YOLO                | 🔜     |
 | 34     | MLOps           | APIs (FastAPI), Docker, deployment, monitoreo           | 🔜     |
 
