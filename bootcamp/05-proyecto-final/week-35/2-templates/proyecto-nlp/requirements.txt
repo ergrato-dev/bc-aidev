@@ -1,0 +1,22 @@
+# NLP Project
+
+# Core
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.0.0
+
+# NLP
+transformers>=4.36.0
+torch>=2.0.0
+sentence-transformers>=2.2.0
+
+# RAG (opcional)
+langchain>=0.1.0
+chromadb>=0.4.0
+
+# Data
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Utils
+python-dotenv>=1.0.0

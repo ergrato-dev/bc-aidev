@@ -20,8 +20,8 @@ Al completar este módulo serás capaz de:
 
 | Semana | Tema                  | Descripción                                   | Estado |
 | ------ | --------------------- | --------------------------------------------- | ------ |
-| 35     | Desarrollo            | Implementación del proyecto final completo    | 🔜     |
-| 36     | Deploy y Presentación | Despliegue en producción, documentación, demo | 🔜     |
+| 35     | Desarrollo            | Implementación del proyecto final completo    | ✅     |
+| 36     | Deploy y Presentación | Despliegue en producción, documentación, demo | ✅     |
 
 ---
 
