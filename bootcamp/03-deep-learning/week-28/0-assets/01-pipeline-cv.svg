@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="480" fill="#1e1e2e"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#cdd6f4" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">Pipeline de Computer Vision con Transfer Learning</text>
+  
+  <!-- Phase 1: Data -->
+  <g transform="translate(40, 70)">
+    <rect x="0" y="0" width="140" height="100" rx="8" fill="#313244" stroke="#89b4fa" stroke-width="2"/>
+    <text x="70" y="25" text-anchor="middle" fill="#89b4fa" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">1. DATOS</text>
+    <text x="70" y="48" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">Imágenes</text>
+    <text x="70" y="65" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">CIFAR / Flowers</text>
+    <text x="70" y="82" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">Custom Dataset</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <line x1="185" y1="120" x2="215" y2="120" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Phase 2: Preprocessing -->
+  <g transform="translate(220, 70)">
+    <rect x="0" y="0" width="140" height="100" rx="8" fill="#313244" stroke="#a6e3a1" stroke-width="2"/>
+    <text x="70" y="25" text-anchor="middle" fill="#a6e3a1" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">2. PREPROCESO</text>
+    <text x="70" y="48" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">Resize (224×224)</text>
+    <text x="70" y="65" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">Normalize</text>
+    <text x="70" y="82" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">Augmentation</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <line x1="365" y1="120" x2="395" y2="120" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Phase 3: Model -->
+  <g transform="translate(400, 70)">
+    <rect x="0" y="0" width="160" height="100" rx="8" fill="#313244" stroke="#f9e2af" stroke-width="2"/>
+    <text x="80" y="25" text-anchor="middle" fill="#f9e2af" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">3. MODELO</text>
+    <text x="80" y="48" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">ResNet / EfficientNet</text>
+    <text x="80" y="65" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">Freeze Backbone</text>
+    <text x="80" y="82" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">Custom Classifier</text>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <line x1="565" y1="120" x2="595" y2="120" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Phase 4: Training -->
+  <g transform="translate(600, 70)">
+    <rect x="0" y="0" width="160" height="100" rx="8" fill="#313244" stroke="#cba6f7" stroke-width="2"/>
+    <text x="80" y="25" text-anchor="middle" fill="#cba6f7" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">4. ENTRENA</text>
+    <text x="80" y="48" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">AdamW + LR Schedule</text>
+    <text x="80" y="65" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">Early Stopping</text>
+    <text x="80" y="82" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">Checkpoints</text>
+  </g>
+  
+  <!-- Data Augmentation Detail Box -->
+  <g transform="translate(40, 195)">
+    <rect x="0" y="0" width="230" height="120" rx="8" fill="#1e1e2e" stroke="#a6e3a1" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="115" y="22" text-anchor="middle" fill="#a6e3a1" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Data Augmentation</text>
+    <text x="20" y="45" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• RandomHorizontalFlip</text>
+    <text x="20" y="62" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• RandomRotation(15°)</text>
+    <text x="20" y="79" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• ColorJitter</text>
+    <text x="20" y="96" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• RandomResizedCrop</text>
+    <text x="20" y="113" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• RandomErasing</text>
+  </g>
+  
+  <!-- Transfer Learning Detail Box -->
+  <g transform="translate(285, 195)">
+    <rect x="0" y="0" width="230" height="120" rx="8" fill="#1e1e2e" stroke="#f9e2af" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="115" y="22" text-anchor="middle" fill="#f9e2af" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Transfer Learning</text>
+    <text x="20" y="45" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">1. Cargar pesos ImageNet</text>
+    <text x="20" y="62" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">2. Congelar backbone</text>
+    <text x="20" y="79" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">3. Entrenar clasificador</text>
+    <text x="20" y="96" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">4. Descongelar últimas capas</text>
+    <text x="20" y="113" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">5. Fine-tune con lr bajo</text>
+  </g>
+  
+  <!-- Training Details Box -->
+  <g transform="translate(530, 195)">
+    <rect x="0" y="0" width="230" height="120" rx="8" fill="#1e1e2e" stroke="#cba6f7" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="115" y="22" text-anchor="middle" fill="#cba6f7" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Configuración</text>
+    <text x="20" y="45" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• lr: 1e-3 → 1e-5 (fine-tune)</text>
+    <text x="20" y="62" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• batch_size: 32</text>
+    <text x="20" y="79" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• epochs: 20 (early stop)</text>
+    <text x="20" y="96" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• optimizer: AdamW</text>
+    <text x="20" y="113" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• weight_decay: 0.01</text>
+  </g>
+  
+  <!-- Evaluation Section -->
+  <g transform="translate(40, 340)">
+    <rect x="0" y="0" width="350" height="120" rx="8" fill="#313244" stroke="#f38ba8" stroke-width="2"/>
+    <text x="175" y="25" text-anchor="middle" fill="#f38ba8" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">5. EVALUACIÓN</text>
+    
+    <!-- Metrics -->
+    <text x="25" y="50" fill="#cdd6f4" font-family="system-ui, sans-serif" font-size="11">Métricas:</text>
+    <text x="25" y="68" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• Accuracy, Precision, Recall, F1</text>
+    <text x="25" y="85" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• Confusion Matrix</text>
+    <text x="25" y="102" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• Per-class metrics</text>
+    
+    <!-- Visualization -->
+    <text x="200" y="50" fill="#cdd6f4" font-family="system-ui, sans-serif" font-size="11">Visualización:</text>
+    <text x="200" y="68" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• Loss/Accuracy curves</text>
+    <text x="200" y="85" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• Sample predictions</text>
+    <text x="200" y="102" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• Error analysis</text>
+  </g>
+  
+  <!-- Deploy Section -->
+  <g transform="translate(410, 340)">
+    <rect x="0" y="0" width="350" height="120" rx="8" fill="#313244" stroke="#94e2d5" stroke-width="2"/>
+    <text x="175" y="25" text-anchor="middle" fill="#94e2d5" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">6. DEPLOY (Bonus)</text>
+    
+    <!-- Save -->
+    <text x="25" y="50" fill="#cdd6f4" font-family="system-ui, sans-serif" font-size="11">Guardar:</text>
+    <text x="25" y="68" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• torch.save(model.state_dict())</text>
+    <text x="25" y="85" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• Export ONNX</text>
+    <text x="25" y="102" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• TorchScript</text>
+    
+    <!-- Serve -->
+    <text x="200" y="50" fill="#cdd6f4" font-family="system-ui, sans-serif" font-size="11">Servir:</text>
+    <text x="200" y="68" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• Gradio demo</text>
+    <text x="200" y="85" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• FastAPI endpoint</text>
+    <text x="200" y="102" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• Hugging Face Spaces</text>
+  </g>
+</svg>

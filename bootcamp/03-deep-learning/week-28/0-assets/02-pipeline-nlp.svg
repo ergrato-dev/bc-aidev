@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="480" fill="#1e1e2e"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#cdd6f4" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">Pipeline de NLP con Transformers</text>
+  
+  <!-- Phase 1: Data -->
+  <g transform="translate(40, 70)">
+    <rect x="0" y="0" width="140" height="100" rx="8" fill="#313244" stroke="#89b4fa" stroke-width="2"/>
+    <text x="70" y="25" text-anchor="middle" fill="#89b4fa" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">1. DATOS</text>
+    <text x="70" y="48" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">Textos + Labels</text>
+    <text x="70" y="65" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">IMDB / SST-2</text>
+    <text x="70" y="82" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">Custom CSV</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <line x1="185" y1="120" x2="215" y2="120" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Phase 2: Tokenization -->
+  <g transform="translate(220, 70)">
+    <rect x="0" y="0" width="140" height="100" rx="8" fill="#313244" stroke="#a6e3a1" stroke-width="2"/>
+    <text x="70" y="25" text-anchor="middle" fill="#a6e3a1" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">2. TOKENIZAR</text>
+    <text x="70" y="48" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">AutoTokenizer</text>
+    <text x="70" y="65" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">Padding/Truncate</text>
+    <text x="70" y="82" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">max_length=256</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <line x1="365" y1="120" x2="395" y2="120" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Phase 3: Model -->
+  <g transform="translate(400, 70)">
+    <rect x="0" y="0" width="160" height="100" rx="8" fill="#313244" stroke="#f9e2af" stroke-width="2"/>
+    <text x="80" y="25" text-anchor="middle" fill="#f9e2af" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">3. MODELO</text>
+    <text x="80" y="48" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">DistilBERT / BERT</text>
+    <text x="80" y="65" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">RoBERTa</text>
+    <text x="80" y="82" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">+ Classification Head</text>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <line x1="565" y1="120" x2="595" y2="120" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Phase 4: Training -->
+  <g transform="translate(600, 70)">
+    <rect x="0" y="0" width="160" height="100" rx="8" fill="#313244" stroke="#cba6f7" stroke-width="2"/>
+    <text x="80" y="25" text-anchor="middle" fill="#cba6f7" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">4. ENTRENAR</text>
+    <text x="80" y="48" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">HF Trainer API</text>
+    <text x="80" y="65" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">Early Stopping</text>
+    <text x="80" y="82" text-anchor="middle" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="11">Best model save</text>
+  </g>
+  
+  <!-- Tokenization Detail Box -->
+  <g transform="translate(40, 195)">
+    <rect x="0" y="0" width="230" height="120" rx="8" fill="#1e1e2e" stroke="#a6e3a1" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="115" y="22" text-anchor="middle" fill="#a6e3a1" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Tokenización</text>
+    <text x="20" y="45" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">"Great movie!" →</text>
+    <text x="20" y="62" fill="#89b4fa" font-family="system-ui, sans-serif" font-size="10">[CLS] great movie ! [SEP] [PAD]</text>
+    <text x="20" y="82" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">input_ids: [101, 2307, 3185, ...]</text>
+    <text x="20" y="99" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">attention_mask: [1, 1, 1, 0, ...]</text>
+    <text x="20" y="113" fill="#6c7086" font-family="system-ui, sans-serif" font-size="9">token_type_ids (BERT only)</text>
+  </g>
+  
+  <!-- Model Architecture Box -->
+  <g transform="translate(285, 195)">
+    <rect x="0" y="0" width="230" height="120" rx="8" fill="#1e1e2e" stroke="#f9e2af" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="115" y="22" text-anchor="middle" fill="#f9e2af" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">Arquitectura</text>
+    
+    <!-- Mini diagram -->
+    <rect x="20" y="38" width="80" height="25" rx="4" fill="#45475a"/>
+    <text x="60" y="55" text-anchor="middle" fill="#89b4fa" font-family="system-ui, sans-serif" font-size="9">Embeddings</text>
+    
+    <rect x="20" y="68" width="80" height="25" rx="4" fill="#45475a"/>
+    <text x="60" y="85" text-anchor="middle" fill="#a6e3a1" font-family="system-ui, sans-serif" font-size="9">Transformer</text>
+    
+    <rect x="20" y="98" width="80" height="18" rx="4" fill="#45475a"/>
+    <text x="60" y="110" text-anchor="middle" fill="#f9e2af" font-family="system-ui, sans-serif" font-size="9">Classifier</text>
+    
+    <!-- Labels -->
+    <text x="115" y="55" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="9">WordPiece tokens</text>
+    <text x="115" y="85" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="9">6-12 layers (frozen)</text>
+    <text x="115" y="110" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="9">Linear → num_labels</text>
+  </g>
+  
+  <!-- Training Details Box -->
+  <g transform="translate(530, 195)">
+    <rect x="0" y="0" width="230" height="120" rx="8" fill="#1e1e2e" stroke="#cba6f7" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="115" y="22" text-anchor="middle" fill="#cba6f7" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">TrainingArguments</text>
+    <text x="20" y="45" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• learning_rate: 2e-5</text>
+    <text x="20" y="62" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• batch_size: 16</text>
+    <text x="20" y="79" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• epochs: 3-5</text>
+    <text x="20" y="96" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• warmup_ratio: 0.1</text>
+    <text x="20" y="113" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• weight_decay: 0.01</text>
+  </g>
+  
+  <!-- Evaluation Section -->
+  <g transform="translate(40, 340)">
+    <rect x="0" y="0" width="350" height="120" rx="8" fill="#313244" stroke="#f38ba8" stroke-width="2"/>
+    <text x="175" y="25" text-anchor="middle" fill="#f38ba8" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">5. EVALUACIÓN</text>
+    
+    <!-- Metrics -->
+    <text x="25" y="50" fill="#cdd6f4" font-family="system-ui, sans-serif" font-size="11">Métricas:</text>
+    <text x="25" y="68" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• Accuracy, F1-Score</text>
+    <text x="25" y="85" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• Precision, Recall</text>
+    <text x="25" y="102" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• Confusion Matrix</text>
+    
+    <!-- Analysis -->
+    <text x="200" y="50" fill="#cdd6f4" font-family="system-ui, sans-serif" font-size="11">Análisis:</text>
+    <text x="200" y="68" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• Errores por clase</text>
+    <text x="200" y="85" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• Textos mal clasificados</text>
+    <text x="200" y="102" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">• Confidence scores</text>
+  </g>
+  
+  <!-- Inference Section -->
+  <g transform="translate(410, 340)">
+    <rect x="0" y="0" width="350" height="120" rx="8" fill="#313244" stroke="#94e2d5" stroke-width="2"/>
+    <text x="175" y="25" text-anchor="middle" fill="#94e2d5" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">6. INFERENCIA</text>
+    
+    <!-- Pipeline -->
+    <text x="25" y="50" fill="#cdd6f4" font-family="system-ui, sans-serif" font-size="11">Pipeline:</text>
+    <text x="25" y="68" fill="#89b4fa" font-family="system-ui, sans-serif" font-size="10">classifier = pipeline(</text>
+    <text x="35" y="82" fill="#89b4fa" font-family="system-ui, sans-serif" font-size="10">"text-classification",</text>
+    <text x="35" y="96" fill="#89b4fa" font-family="system-ui, sans-serif" font-size="10">model="./model")</text>
+    
+    <!-- Output -->
+    <text x="200" y="50" fill="#cdd6f4" font-family="system-ui, sans-serif" font-size="11">Output:</text>
+    <text x="200" y="68" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">[{</text>
+    <text x="210" y="82" fill="#a6e3a1" font-family="system-ui, sans-serif" font-size="10">'label': 'POSITIVE',</text>
+    <text x="210" y="96" fill="#f9e2af" font-family="system-ui, sans-serif" font-size="10">'score': 0.9876</text>
+    <text x="200" y="110" fill="#a6adc8" font-family="system-ui, sans-serif" font-size="10">}]</text>
+  </g>
+</svg>
