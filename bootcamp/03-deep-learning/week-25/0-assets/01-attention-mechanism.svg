@@ -1,0 +1,78 @@
+<svg viewBox="0 0 650 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a6e3a1"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="650" height="320" fill="#1e1e2e"/>
+  
+  <!-- Title -->
+  <text x="325" y="28" text-anchor="middle" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="18" font-weight="bold">Scaled Dot-Product Attention</text>
+  
+  <!-- Query box -->
+  <rect x="50" y="60" width="80" height="40" rx="6" fill="#313244" stroke="#89b4fa" stroke-width="2"/>
+  <text x="90" y="85" text-anchor="middle" fill="#89b4fa" font-family="Inter, sans-serif" font-size="14" font-weight="bold">Q</text>
+  
+  <!-- Key box -->
+  <rect x="50" y="130" width="80" height="40" rx="6" fill="#313244" stroke="#f9e2af" stroke-width="2"/>
+  <text x="90" y="155" text-anchor="middle" fill="#f9e2af" font-family="Inter, sans-serif" font-size="14" font-weight="bold">K</text>
+  
+  <!-- Value box -->
+  <rect x="50" y="200" width="80" height="40" rx="6" fill="#313244" stroke="#a6e3a1" stroke-width="2"/>
+  <text x="90" y="225" text-anchor="middle" fill="#a6e3a1" font-family="Inter, sans-serif" font-size="14" font-weight="bold">V</text>
+  
+  <!-- MatMul QK^T -->
+  <rect x="180" y="95" width="80" height="40" rx="6" fill="#313244" stroke="#cba6f7" stroke-width="2"/>
+  <text x="220" y="120" text-anchor="middle" fill="#cba6f7" font-family="Inter, sans-serif" font-size="12" font-weight="bold">MatMul</text>
+  
+  <!-- Lines to MatMul -->
+  <line x1="130" y1="80" x2="160" y2="80" stroke="#89b4fa" stroke-width="2"/>
+  <line x1="160" y1="80" x2="160" y2="115" stroke="#89b4fa" stroke-width="2"/>
+  <line x1="160" y1="115" x2="180" y2="115" stroke="#89b4fa" stroke-width="2"/>
+  
+  <line x1="130" y1="150" x2="160" y2="150" stroke="#f9e2af" stroke-width="2"/>
+  <line x1="160" y1="150" x2="160" y2="115" stroke="#f9e2af" stroke-width="2"/>
+  
+  <!-- K^T label -->
+  <text x="145" y="145" fill="#f9e2af" font-family="Inter, sans-serif" font-size="10">Kᵀ</text>
+  
+  <!-- Scale -->
+  <rect x="290" y="95" width="80" height="40" rx="6" fill="#313244" stroke="#fab387" stroke-width="2"/>
+  <text x="330" y="115" text-anchor="middle" fill="#fab387" font-family="Inter, sans-serif" font-size="11" font-weight="bold">Scale</text>
+  <text x="330" y="128" text-anchor="middle" fill="#fab387" font-family="Inter, sans-serif" font-size="10">÷√dₖ</text>
+  
+  <line x1="260" y1="115" x2="290" y2="115" stroke="#cba6f7" stroke-width="2" marker-end="url(#arr1)"/>
+  
+  <!-- Mask (optional) -->
+  <rect x="290" y="150" width="80" height="30" rx="6" fill="#313244" stroke="#6c7086" stroke-width="1" stroke-dasharray="4"/>
+  <text x="330" y="170" text-anchor="middle" fill="#6c7086" font-family="Inter, sans-serif" font-size="10">Mask (opt)</text>
+  <line x1="330" y1="135" x2="330" y2="150" stroke="#6c7086" stroke-width="1" stroke-dasharray="4"/>
+  
+  <!-- Softmax -->
+  <rect x="400" y="95" width="80" height="40" rx="6" fill="#313244" stroke="#f38ba8" stroke-width="2"/>
+  <text x="440" y="120" text-anchor="middle" fill="#f38ba8" font-family="Inter, sans-serif" font-size="12" font-weight="bold">Softmax</text>
+  
+  <line x1="370" y1="115" x2="400" y2="115" stroke="#fab387" stroke-width="2" marker-end="url(#arr1)"/>
+  
+  <!-- MatMul with V -->
+  <rect x="510" y="95" width="80" height="40" rx="6" fill="#313244" stroke="#cba6f7" stroke-width="2"/>
+  <text x="550" y="120" text-anchor="middle" fill="#cba6f7" font-family="Inter, sans-serif" font-size="12" font-weight="bold">MatMul</text>
+  
+  <line x1="480" y1="115" x2="510" y2="115" stroke="#f38ba8" stroke-width="2" marker-end="url(#arr1)"/>
+  
+  <!-- V to MatMul -->
+  <line x1="130" y1="220" x2="550" y2="220" stroke="#a6e3a1" stroke-width="2"/>
+  <line x1="550" y1="220" x2="550" y2="135" stroke="#a6e3a1" stroke-width="2"/>
+  
+  <!-- Output -->
+  <rect x="510" y="200" width="80" height="40" rx="6" fill="#313244" stroke="#94e2d5" stroke-width="2"/>
+  <text x="550" y="225" text-anchor="middle" fill="#94e2d5" font-family="Inter, sans-serif" font-size="14" font-weight="bold">Output</text>
+  
+  <line x1="550" y1="135" x2="550" y2="200" stroke="#cba6f7" stroke-width="2" marker-end="url(#arr1)"/>
+  
+  <!-- Formula -->
+  <rect x="120" y="265" width="410" height="40" rx="8" fill="#313244"/>
+  <text x="325" y="290" text-anchor="middle" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="13">Attention(Q, K, V) = softmax(QKᵀ / √dₖ) · V</text>
+</svg>

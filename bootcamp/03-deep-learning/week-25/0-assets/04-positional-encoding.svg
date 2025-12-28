@@ -1,0 +1,57 @@
+<svg viewBox="0 0 650 350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="650" height="350" fill="#1e1e2e"/>
+  
+  <!-- Title -->
+  <text x="325" y="28" text-anchor="middle" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="18" font-weight="bold">Positional Encoding</text>
+  
+  <!-- Why needed box -->
+  <rect x="30" y="50" width="200" height="80" rx="8" fill="#313244" stroke="#f38ba8" stroke-width="2"/>
+  <text x="130" y="75" text-anchor="middle" fill="#f38ba8" font-family="Inter, sans-serif" font-size="12" font-weight="bold">¿Por qué?</text>
+  <text x="130" y="95" text-anchor="middle" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="10">Self-Attention es</text>
+  <text x="130" y="110" text-anchor="middle" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="10">permutation invariant</text>
+  <text x="130" y="125" text-anchor="middle" fill="#6c7086" font-family="Inter, sans-serif" font-size="9">(no sabe el orden)</text>
+  
+  <!-- Solution box -->
+  <rect x="260" y="50" width="160" height="80" rx="8" fill="#313244" stroke="#a6e3a1" stroke-width="2"/>
+  <text x="340" y="75" text-anchor="middle" fill="#a6e3a1" font-family="Inter, sans-serif" font-size="12" font-weight="bold">Solución</text>
+  <text x="340" y="95" text-anchor="middle" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="10">Añadir información</text>
+  <text x="340" y="110" text-anchor="middle" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="10">de posición</text>
+  <text x="340" y="125" text-anchor="middle" fill="#6c7086" font-family="Inter, sans-serif" font-size="9">Input + PE</text>
+  
+  <!-- Formula box -->
+  <rect x="450" y="50" width="170" height="80" rx="8" fill="#313244" stroke="#89b4fa" stroke-width="2"/>
+  <text x="535" y="72" text-anchor="middle" fill="#89b4fa" font-family="Inter, sans-serif" font-size="11" font-weight="bold">Fórmulas</text>
+  <text x="535" y="92" text-anchor="middle" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="10">PE(pos,2i) = sin(pos/10000^(2i/d))</text>
+  <text x="535" y="112" text-anchor="middle" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="10">PE(pos,2i+1) = cos(pos/10000^(2i/d))</text>
+  
+  <!-- Visualization: Wave patterns -->
+  <text x="325" y="160" text-anchor="middle" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="12" font-weight="bold">Visualización: Diferentes frecuencias por dimensión</text>
+  
+  <!-- Axis -->
+  <line x1="80" y1="280" x2="570" y2="280" stroke="#6c7086" stroke-width="1"/>
+  <line x1="80" y1="180" x2="80" y2="280" stroke="#6c7086" stroke-width="1"/>
+  <text x="325" y="300" text-anchor="middle" fill="#6c7086" font-family="Inter, sans-serif" font-size="10">Posición en la secuencia →</text>
+  <text x="50" y="230" text-anchor="middle" fill="#6c7086" font-family="Inter, sans-serif" font-size="10" transform="rotate(-90, 50, 230)">Valor</text>
+  
+  <!-- High frequency wave (dim 0) -->
+  <path d="M80,230 Q95,180 110,230 T140,230 T170,230 T200,230 T230,230 T260,230 T290,230 T320,230 T350,230 T380,230 T410,230 T440,230 T470,230 T500,230 T530,230 T560,230" 
+        stroke="#f38ba8" stroke-width="2" fill="none"/>
+  
+  <!-- Medium frequency wave (dim 10) -->
+  <path d="M80,230 Q120,190 160,230 T240,230 T320,230 T400,230 T480,230 T560,230" 
+        stroke="#f9e2af" stroke-width="2" fill="none"/>
+  
+  <!-- Low frequency wave (dim 30) -->
+  <path d="M80,230 Q200,180 320,230 T560,230" 
+        stroke="#a6e3a1" stroke-width="2" fill="none"/>
+  
+  <!-- Legend -->
+  <rect x="180" y="310" width="290" height="30" rx="6" fill="#313244"/>
+  <line x1="200" y1="325" x2="230" y2="325" stroke="#f38ba8" stroke-width="2"/>
+  <text x="245" y="329" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="9">dim 0 (alta freq)</text>
+  <line x1="310" y1="325" x2="340" y2="325" stroke="#f9e2af" stroke-width="2"/>
+  <text x="355" y="329" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="9">dim 10</text>
+  <line x1="400" y1="325" x2="430" y2="325" stroke="#a6e3a1" stroke-width="2"/>
+  <text x="445" y="329" fill="#cdd6f4" font-family="Inter, sans-serif" font-size="9">dim 30 (baja)</text>
+</svg>
